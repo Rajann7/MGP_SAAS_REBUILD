@@ -1,0 +1,10 @@
+
+> my-gujarat-property@0.1.0 lint
+> eslint
+
+
+C:\mgpweb\src\lib\actions\public-search.ts
+  3:10  warning  'createServiceClient' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+

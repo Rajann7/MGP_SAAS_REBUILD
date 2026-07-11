@@ -1,0 +1,316 @@
+.claude/launch.json 52ms
+[90m.claude/settings.local.json[39m 13ms (unchanged)
+[90m.prettierrc[39m 22ms (unchanged)
+[90meslint.config.mjs[39m 25ms (unchanged)
+newdesign/batch 1 - Design System (Standalone).html 446ms
+newdesign/Batch 10 - Billing &amp; Payments (Standalone).html 260ms
+newdesign/Batch 11 - Admin Management (Standalone).html 336ms
+newdesign/Batch 12 - Admin Billing (Standalone).html 286ms
+newdesign/Batch 13 - Admin Ads Notifications System (Standalone).html 174ms
+newdesign/Batch 14 - Admin CMS &amp; SEO (Standalone).html 248ms
+newdesign/Batch 15 - Admin Audit Security Reports (Standalone).html 137ms
+newdesign/Batch 16 - Public Content Pages (Standalone).html 168ms
+newdesign/Batch 17 - Advanced PWA Localization Tools (Standalone).html 184ms
+newdesign/batch 2- Auth Flows (Standalone).html 210ms
+newdesign/Batch 3 - Public Home + Search (Standalone).html 282ms
+newdesign/batch 4 - Detail Pages (Standalone).html 139ms
+newdesign/Batch 5 - Posting Wizards (Standalone).html 199ms
+newdesign/Batch 6 - Owner Dashboard (Standalone).html 195ms
+newdesign/Batch 7 - Broker Dashboard (Standalone).html 199ms
+newdesign/Batch 8 - Builder Dashboard (Standalone).html 195ms
+newdesign/Batch 9 - Shared Detail Views (Standalone) (1).html 178ms
+[90mnext.config.ts[39m 92ms (unchanged)
+[90mpackage-lock.json[39m 199ms (unchanged)
+[90mpackage.json[39m 2ms (unchanged)
+[90mpostcss.config.mjs[39m 3ms (unchanged)
+[90mscripts/seed-limited-staff.mjs[39m 17ms (unchanged)
+[90mscripts/seed-super-admin.mjs[39m 23ms (unchanged)
+[90msrc/app/admin/audit/page.tsx[39m 50ms (unchanged)
+[90msrc/app/admin/billing/page.tsx[39m 87ms (unchanged)
+[90msrc/app/admin/cms/page.tsx[39m 10ms (unchanged)
+[90msrc/app/admin/invite/layout.tsx[39m 8ms (unchanged)
+src/app/admin/invite/page.tsx 82ms
+[90msrc/app/admin/leads/page.tsx[39m 82ms (unchanged)
+[90msrc/app/admin/login/layout.tsx[39m 5ms (unchanged)
+src/app/admin/login/page.tsx 125ms
+[90msrc/app/admin/moderation/page.tsx[39m 19ms (unchanged)
+[90msrc/app/admin/moderation/projects/page.tsx[39m 24ms (unchanged)
+[90msrc/app/admin/moderation/properties/page.tsx[39m 19ms (unchanged)
+[90msrc/app/admin/moderation/requirements/page.tsx[39m 6ms (unchanged)
+[90msrc/app/admin/page.tsx[39m 28ms (unchanged)
+[90msrc/app/admin/providers/page.tsx[39m 10ms (unchanged)
+[90msrc/app/admin/settings/page.tsx[39m 8ms (unchanged)
+[90msrc/app/admin/staff/[id]/page.tsx[39m 39ms (unchanged)
+[90msrc/app/admin/staff/invites/page.tsx[39m 2ms (unchanged)
+[90msrc/app/admin/staff/page.tsx[39m 10ms (unchanged)
+[90msrc/app/admin/support/page.tsx[39m 11ms (unchanged)
+[90msrc/app/admin/users/[id]/page.tsx[39m 13ms (unchanged)
+[90msrc/app/admin/users/page.tsx[39m 7ms (unchanged)
+[90msrc/app/admin/verification/page.tsx[39m 15ms (unchanged)
+src/app/api/webhooks/razorpay/route.ts 73ms
+[90msrc/app/auth/callback/route.ts[39m 15ms (unchanged)
+[90msrc/app/broker/[slug]/not-found.tsx[39m 9ms (unchanged)
+src/app/broker/[slug]/page.tsx 62ms
+[90msrc/app/builder/[slug]/not-found.tsx[39m 8ms (unchanged)
+src/app/builder/[slug]/page.tsx 47ms
+[90msrc/app/compare/page.tsx[39m 6ms (unchanged)
+[90msrc/app/dashboard/billing/gst/page.tsx[39m 12ms (unchanged)
+[90msrc/app/dashboard/broker/billing/page.tsx[39m 13ms (unchanged)
+[90msrc/app/dashboard/broker/leads/page.tsx[39m 16ms (unchanged)
+[90msrc/app/dashboard/broker/notifications/page.tsx[39m 16ms (unchanged)
+[90msrc/app/dashboard/broker/page.tsx[39m 24ms (unchanged)
+src/app/dashboard/broker/properties/[id]/edit/page.tsx 22ms
+src/app/dashboard/broker/properties/new/page.tsx 26ms
+[90msrc/app/dashboard/broker/properties/page.tsx[39m 33ms (unchanged)
+[90msrc/app/dashboard/broker/proposals/page.tsx[39m 10ms (unchanged)
+[90msrc/app/dashboard/broker/public-profile/page.tsx[39m 13ms (unchanged)
+[90msrc/app/dashboard/broker/requirements/[id]/edit/page.tsx[39m 10ms (unchanged)
+[90msrc/app/dashboard/broker/requirements/new/page.tsx[39m 8ms (unchanged)
+[90msrc/app/dashboard/broker/requirements/page.tsx[39m 16ms (unchanged)
+[90msrc/app/dashboard/broker/saved/page.tsx[39m 14ms (unchanged)
+[90msrc/app/dashboard/broker/verification/page.tsx[39m 9ms (unchanged)
+[90msrc/app/dashboard/builder/ads/page.tsx[39m 8ms (unchanged)
+[90msrc/app/dashboard/builder/agents/page.tsx[39m 9ms (unchanged)
+[90msrc/app/dashboard/builder/billing/page.tsx[39m 12ms (unchanged)
+[90msrc/app/dashboard/builder/leads/page.tsx[39m 11ms (unchanged)
+[90msrc/app/dashboard/builder/notifications/page.tsx[39m 11ms (unchanged)
+[90msrc/app/dashboard/builder/page.tsx[39m 23ms (unchanged)
+src/app/dashboard/builder/projects/[id]/edit/page.tsx 18ms
+[90msrc/app/dashboard/builder/projects/[id]/units/page.tsx[39m 16ms (unchanged)
+src/app/dashboard/builder/projects/new/page.tsx 29ms
+[90msrc/app/dashboard/builder/projects/page.tsx[39m 30ms (unchanged)
+[90msrc/app/dashboard/builder/public-profile/page.tsx[39m 13ms (unchanged)
+[90msrc/app/dashboard/builder/requirements/page.tsx[39m 10ms (unchanged)
+[90msrc/app/dashboard/builder/verification/page.tsx[39m 12ms (unchanged)
+[90msrc/app/dashboard/leads/[id]/page.tsx[39m 20ms (unchanged)
+[90msrc/app/dashboard/messages/page.tsx[39m 8ms (unchanged)
+[90msrc/app/dashboard/owner/billing/page.tsx[39m 15ms (unchanged)
+src/app/dashboard/owner/leads/page.tsx 32ms
+[90msrc/app/dashboard/owner/notifications/page.tsx[39m 9ms (unchanged)
+src/app/dashboard/owner/page.tsx 117ms
+src/app/dashboard/owner/properties/[id]/edit/page.tsx 22ms
+src/app/dashboard/owner/properties/new/page.tsx 20ms
+src/app/dashboard/owner/properties/page.tsx 71ms
+src/app/dashboard/owner/requirements/[id]/edit/page.tsx 23ms
+[90msrc/app/dashboard/owner/requirements/[id]/proposals/page.tsx[39m 14ms (unchanged)
+[90msrc/app/dashboard/owner/requirements/new/page.tsx[39m 12ms (unchanged)
+src/app/dashboard/owner/requirements/page.tsx 52ms
+[90msrc/app/dashboard/owner/saved/page.tsx[39m 12ms (unchanged)
+[90msrc/app/dashboard/owner/verification/page.tsx[39m 9ms (unchanged)
+[90msrc/app/dashboard/page.tsx[39m 14ms (unchanged)
+[90msrc/app/globals.css[39m 136ms (unchanged)
+[90msrc/app/layout.tsx[39m 11ms (unchanged)
+[90msrc/app/legal/privacy/page.tsx[39m 13ms (unchanged)
+[90msrc/app/legal/refund/page.tsx[39m 23ms (unchanged)
+[90msrc/app/legal/terms/page.tsx[39m 12ms (unchanged)
+src/app/login/page.tsx 18ms
+src/app/owner/[id]/page.tsx 42ms
+[90msrc/app/page.tsx[39m 6ms (unchanged)
+[90msrc/app/pricing/page.tsx[39m 12ms (unchanged)
+[90msrc/app/profile/page.tsx[39m 32ms (unchanged)
+[90msrc/app/project/[slug]/not-found.tsx[39m 5ms (unchanged)
+src/app/project/[slug]/page.tsx 167ms
+[90msrc/app/property/[slug]/not-found.tsx[39m 7ms (unchanged)
+src/app/property/[slug]/page.tsx 111ms
+[90msrc/app/robots.ts[39m 5ms (unchanged)
+[90msrc/app/search/page.tsx[39m 48ms (unchanged)
+[90msrc/app/sitemap.ts[39m 16ms (unchanged)
+[90msrc/app/support/page.tsx[39m 21ms (unchanged)
+[90msrc/app/unauthorized/page.tsx[39m 12ms (unchanged)
+src/components/admin/ModerationQueueClient.tsx 32ms
+[90msrc/components/admin/StaffManagementClient.tsx[39m 75ms (unchanged)
+[90msrc/components/admin/StaffPermissionEditor.tsx[39m 47ms (unchanged)
+[90msrc/components/admin/UserDetailClient.tsx[39m 52ms (unchanged)
+[90msrc/components/admin/UserListClient.tsx[39m 21ms (unchanged)
+[90msrc/components/auth/AuthModal.tsx[39m 23ms (unchanged)
+[90msrc/components/auth/AuthModalProvider.tsx[39m 10ms (unchanged)
+[90msrc/components/auth/AuthTrigger.tsx[39m 8ms (unchanged)
+[90msrc/components/auth/LogoutButton.tsx[39m 4ms (unchanged)
+src/components/auth/MobileOtpForm.tsx 93ms
+src/components/auth/OtpInput.tsx 62ms
+src/components/auth/RegisterRoleForm.tsx 120ms
+[90msrc/components/auth/RoleSelector.tsx[39m 86ms (unchanged)
+[90msrc/components/auth/SetupRequiredState.tsx[39m 7ms (unchanged)
+[90msrc/components/auth/SuspendedState.tsx[39m 9ms (unchanged)
+[90msrc/components/auth/UnauthorizedState.tsx[39m 31ms (unchanged)
+[90msrc/components/billing/BillingDashboard.tsx[39m 105ms (unchanged)
+[90msrc/components/billing/GstProfileForm.tsx[39m 33ms (unchanged)
+src/components/compare/CompareButton.tsx 11ms
+src/components/compare/CompareProvider.tsx 46ms
+[90msrc/components/compare/CompareTray.tsx[39m 10ms (unchanged)
+src/components/compare/CompareView.tsx 33ms
+[90msrc/components/dashboard/AccountStatusCard.tsx[39m 10ms (unchanged)
+[90msrc/components/dashboard/ActionCard.tsx[39m 14ms (unchanged)
+[90msrc/components/dashboard/AvatarMenu.tsx[39m 22ms (unchanged)
+[90msrc/components/dashboard/ConfirmDialog.tsx[39m 14ms (unchanged)
+src/components/dashboard/DashboardMobileBackHeader.tsx 8ms
+[90msrc/components/dashboard/DashboardMobileHeader.tsx[39m 37ms (unchanged)
+src/components/dashboard/DashboardMobileTabBar.tsx 20ms
+src/components/dashboard/DashboardPageHeader.tsx 11ms
+[90msrc/components/dashboard/DashboardPlaceholderPanel.tsx[39m 22ms (unchanged)
+[90msrc/components/dashboard/DashboardShell.tsx[39m 10ms (unchanged)
+src/components/dashboard/DashboardShellV2.tsx 18ms
+src/components/dashboard/DashboardSidebar.tsx 25ms
+[90msrc/components/dashboard/DashboardTopbar.tsx[39m 10ms (unchanged)
+[90msrc/components/dashboard/EntityListCard.tsx[39m 18ms (unchanged)
+[90msrc/components/dashboard/EntityRowActions.tsx[39m 161ms (unchanged)
+[90msrc/components/dashboard/navConfig.ts[39m 113ms (unchanged)
+[90msrc/components/dashboard/NotificationBell.tsx[39m 37ms (unchanged)
+src/components/dashboard/OwnerEntityCard.tsx 54ms
+src/components/dashboard/StatCardGradient.tsx 49ms
+[90msrc/components/dashboard/StatGrid.tsx[39m 9ms (unchanged)
+[90msrc/components/dashboard/StatusTabs.tsx[39m 16ms (unchanged)
+src/components/dashboard/UnitInventoryClient.tsx 224ms
+[90msrc/components/dashboard/VerificationStatusPanel.tsx[39m 19ms (unchanged)
+[90msrc/components/detail/Breadcrumbs.tsx[39m 8ms (unchanged)
+src/components/detail/DetailCTABar.tsx 154ms
+src/components/detail/DetailGallery.tsx 27ms
+src/components/detail/DetailHeader.tsx 94ms
+[90msrc/components/detail/DetailOverflowMenu.tsx[39m 45ms (unchanged)
+src/components/detail/DetailSections.tsx 67ms
+[90msrc/components/detail/DetailShell.tsx[39m 10ms (unchanged)
+src/components/detail/FullscreenGallery.tsx 35ms
+src/components/detail/ProjectDetailView.tsx 50ms
+[90msrc/components/detail/ProjectTabs.tsx[39m 8ms (unchanged)
+[90msrc/components/detail/ReportModal.tsx[39m 49ms (unchanged)
+[90msrc/components/detail/SeoJsonLd.tsx[39m 12ms (unchanged)
+[90msrc/components/detail/UnavailableEntityState.tsx[39m 7ms (unchanged)
+[90msrc/components/forms/DraftResumeCard.tsx[39m 16ms (unchanged)
+[90msrc/components/forms/ProjectDraftResumeCard.tsx[39m 19ms (unchanged)
+src/components/forms/ProjectForm.tsx 282ms
+src/components/forms/PropertyForm.tsx 467ms
+src/components/forms/RequirementForm.tsx 181ms
+src/components/forms/wizard/EditReapprovalGate.tsx 6ms
+src/components/forms/wizard/MediaUploadStep.tsx 122ms
+[90msrc/components/forms/wizard/useWizardAutosave.ts[39m 18ms (unchanged)
+[90msrc/components/forms/wizard/WizardFooter.tsx[39m 16ms (unchanged)
+[90msrc/components/forms/wizard/WizardMobileHeader.tsx[39m 8ms (unchanged)
+src/components/forms/WizardProgress.tsx 14ms
+[90msrc/components/forms/WizardShell.tsx[39m 8ms (unchanged)
+[90msrc/components/layout/AdminMobileDrawer.tsx[39m 22ms (unchanged)
+[90msrc/components/layout/AdminShell.tsx[39m 16ms (unchanged)
+[90msrc/components/layout/AdminSidebar.tsx[39m 45ms (unchanged)
+src/components/layout/AdminTopbar.tsx 10ms
+[90msrc/components/layout/Logo.tsx[39m 16ms (unchanged)
+src/components/layout/PublicFooter.tsx 21ms
+[90msrc/components/layout/PublicHeader.tsx[39m 100ms (unchanged)
+src/components/layout/PublicHeaderClient.tsx 163ms
+[90msrc/components/layout/PublicLayout.tsx[39m 77ms (unchanged)
+[90msrc/components/leads/CrmStageBadge.tsx[39m 11ms (unchanged)
+[90msrc/components/leads/LeadAvatar.tsx[39m 11ms (unchanged)
+[90msrc/components/leads/LeadDetailClient.tsx[39m 254ms (unchanged)
+src/components/leads/LeadKanbanBoard.tsx 61ms
+[90msrc/components/leads/LeadListClient.tsx[39m 8ms (unchanged)
+src/components/leads/LeadsTable.tsx 27ms
+src/components/leads/LeadStageBadge.tsx 17ms
+src/components/leads/LeadStageTabs.tsx 18ms
+[90msrc/components/location/CityProvider.tsx[39m 24ms (unchanged)
+[90msrc/components/messages/ThreadListClient.tsx[39m 10ms (unchanged)
+[90msrc/components/notifications/NotificationListClient.tsx[39m 23ms (unchanged)
+[90msrc/components/pricing/PricingPlans.tsx[39m 147ms (unchanged)
+[90msrc/components/profile/BuilderProjectTabs.tsx[39m 108ms (unchanged)
+src/components/profile/ClaimProfileCard.tsx 149ms
+[90msrc/components/profile/ProfileBlocks.tsx[39m 28ms (unchanged)
+[90msrc/components/profile/ProfileContactButton.tsx[39m 35ms (unchanged)
+src/components/profile/PublicProfileHeader.tsx 19ms
+[90msrc/components/proposals/ProposalListClient.tsx[39m 40ms (unchanged)
+[90msrc/components/proposals/RequirementProposeClient.tsx[39m 28ms (unchanged)
+[90msrc/components/public/CitySelector.tsx[39m 34ms (unchanged)
+[90msrc/components/public/ClearHistoryButton.tsx[39m 7ms (unchanged)
+src/components/public/HomeCategoryTiles.tsx 7ms
+src/components/public/HomeFeaturedProjects.tsx 20ms
+src/components/public/HomeFeaturedProperties.tsx 36ms
+src/components/public/HomeHeroSearch.tsx 89ms
+src/components/public/HomeHowItWorks.tsx 8ms
+src/components/public/HomeRecentlyViewed.tsx 15ms
+src/components/public/HomeRoleCards.tsx 13ms
+src/components/public/HomeTrust.tsx 10ms
+[90msrc/components/saved/SavedItemsClient.tsx[39m 15ms (unchanged)
+[90msrc/components/search/FilterChips.tsx[39m 4ms (unchanged)
+[90msrc/components/search/MobileFilterSheet.tsx[39m 38ms (unchanged)
+[90msrc/components/search/ProjectResultCard.tsx[39m 17ms (unchanged)
+src/components/search/PropertyResultCard.tsx 32ms
+[90msrc/components/search/QuickFilters.tsx[39m 121ms (unchanged)
+src/components/search/RequestLocationModal.tsx 34ms
+[90msrc/components/search/RequirementResultCard.tsx[39m 13ms (unchanged)
+src/components/search/SaveSearchButton.tsx 34ms
+[90msrc/components/search/SearchEmptyState.tsx[39m 8ms (unchanged)
+[90msrc/components/search/SearchPagination.tsx[39m 9ms (unchanged)
+[90msrc/components/search/SearchResultsClient.tsx[39m 134ms (unchanged)
+src/components/search/SearchShellHeader.tsx 17ms
+[90msrc/components/search/SearchTabs.tsx[39m 9ms (unchanged)
+[90msrc/components/search/SortDropdown.tsx[39m 12ms (unchanged)
+[90msrc/components/ui/Alert.tsx[39m 10ms (unchanged)
+[90msrc/components/ui/Button.tsx[39m 15ms (unchanged)
+[90msrc/components/ui/Card.tsx[39m 9ms (unchanged)
+src/components/ui/EmptyState.tsx 11ms
+[90msrc/components/ui/EntityStatusBadge.tsx[39m 8ms (unchanged)
+[90msrc/components/ui/FormField.tsx[39m 9ms (unchanged)
+[90msrc/components/ui/Skeleton.tsx[39m 6ms (unchanged)
+[90msrc/components/ui/Stepper.tsx[39m 8ms (unchanged)
+[90msrc/components/ui/SuccessScreen.tsx[39m 10ms (unchanged)
+[90msrc/components/ui/ThemeToggle.tsx[39m 13ms (unchanged)
+[90msrc/config/index.ts[39m 10ms (unchanged)
+[90msrc/lib/actions/admin/audit.ts[39m 9ms (unchanged)
+[90msrc/lib/actions/admin/billing.ts[39m 28ms (unchanged)
+[90msrc/lib/actions/admin/leads.ts[39m 22ms (unchanged)
+[90msrc/lib/actions/admin/moderation.ts[39m 89ms (unchanged)
+[90msrc/lib/actions/admin/staff.ts[39m 172ms (unchanged)
+[90msrc/lib/actions/admin/users.ts[39m 120ms (unchanged)
+[90msrc/lib/actions/admin/verification.ts[39m 8ms (unchanged)
+[90msrc/lib/actions/billing.ts[39m 242ms (unchanged)
+src/lib/actions/blocks.ts 19ms
+[90msrc/lib/actions/claims.ts[39m 13ms (unchanged)
+src/lib/actions/contact.ts 151ms
+[90msrc/lib/actions/leads.ts[39m 208ms (unchanged)
+[90msrc/lib/actions/location-request.ts[39m 13ms (unchanged)
+src/lib/actions/media.ts 114ms
+[90msrc/lib/actions/messages.ts[39m 83ms (unchanged)
+[90msrc/lib/actions/notifications.ts[39m 25ms (unchanged)
+[90msrc/lib/actions/payments.ts[39m 83ms (unchanged)
+[90msrc/lib/actions/projects.ts[39m 163ms (unchanged)
+src/lib/actions/properties.ts 191ms
+[90msrc/lib/actions/proposals.ts[39m 125ms (unchanged)
+src/lib/actions/public-search.ts 158ms
+src/lib/actions/reports.ts 16ms
+[90msrc/lib/actions/requirements.ts[39m 112ms (unchanged)
+src/lib/actions/saved.ts 97ms
+[90msrc/lib/actions/site-visits.ts[39m 61ms (unchanged)
+src/lib/actions/staff-invite.ts 57ms
+src/lib/actions/units.ts 143ms
+[90msrc/lib/admin/audit.ts[39m 10ms (unchanged)
+[90msrc/lib/admin/navConfig.ts[39m 36ms (unchanged)
+[90msrc/lib/admin/providerStatus.ts[39m 6ms (unchanged)
+src/lib/admin/role-presets.ts 13ms
+src/lib/auth/actions.ts 148ms
+[90msrc/lib/auth/session.ts[39m 39ms (unchanged)
+[90msrc/lib/billing/format.ts[39m 12ms (unchanged)
+[90msrc/lib/billing/gates.ts[39m 52ms (unchanged)
+[90msrc/lib/billing/gst.ts[39m 14ms (unchanged)
+[90msrc/lib/billing/subscription.ts[39m 73ms (unchanged)
+[90msrc/lib/cn.ts[39m 2ms (unchanged)
+[90msrc/lib/crm/events.ts[39m 6ms (unchanged)
+[90msrc/lib/dashboard/navForRole.ts[39m 7ms (unchanged)
+[90msrc/lib/feature-flags/index.ts[39m 4ms (unchanged)
+[90msrc/lib/home/featured.ts[39m 6ms (unchanged)
+[90msrc/lib/leads/inquiry-config.ts[39m 9ms (unchanged)
+[90msrc/lib/notifications/create.ts[39m 10ms (unchanged)
+[90msrc/lib/permissions/communication-permissions.ts[39m 19ms (unchanged)
+[90msrc/lib/permissions/entity-permissions.ts[39m 20ms (unchanged)
+[90msrc/lib/permissions/index.ts[39m 79ms (unchanged)
+[90msrc/lib/razorpay/client.ts[39m 52ms (unchanged)
+[90msrc/lib/reports/config.ts[39m 7ms (unchanged)
+[90msrc/lib/search/config.ts[39m 118ms (unchanged)
+[90msrc/lib/search/format.ts[39m 19ms (unchanged)
+[90msrc/lib/seo/index.ts[39m 14ms (unchanged)
+[90msrc/lib/supabase/client.ts[39m 4ms (unchanged)
+[90msrc/lib/supabase/server.ts[39m 11ms (unchanged)
+[90msrc/lib/supabase/service.ts[39m 4ms (unchanged)
+[90msrc/lib/utils/cn.ts[39m 20ms (unchanged)
+[90msrc/lib/validators/auth.ts[39m 27ms (unchanged)
+src/lib/validators/project.ts 70ms
+src/lib/validators/property.ts 70ms
+[90msrc/lib/validators/requirement.ts[39m 68ms (unchanged)
+[90msrc/proxy.ts[39m 49ms (unchanged)
+src/types/index.ts 180ms
+tsconfig.json 7ms

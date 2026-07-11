@@ -1,0 +1,104 @@
+Checking formatting...
+[[33mwarn[39m] .claude/launch.json
+[[33mwarn[39m] newdesign/batch 1 - Design System (Standalone).html
+[[33mwarn[39m] newdesign/Batch 10 - Billing &amp; Payments (Standalone).html
+[[33mwarn[39m] newdesign/Batch 11 - Admin Management (Standalone).html
+[[33mwarn[39m] newdesign/Batch 12 - Admin Billing (Standalone).html
+[[33mwarn[39m] newdesign/Batch 13 - Admin Ads Notifications System (Standalone).html
+[[33mwarn[39m] newdesign/Batch 14 - Admin CMS &amp; SEO (Standalone).html
+[[33mwarn[39m] newdesign/Batch 15 - Admin Audit Security Reports (Standalone).html
+[[33mwarn[39m] newdesign/Batch 16 - Public Content Pages (Standalone).html
+[[33mwarn[39m] newdesign/Batch 17 - Advanced PWA Localization Tools (Standalone).html
+[[33mwarn[39m] newdesign/batch 2- Auth Flows (Standalone).html
+[[33mwarn[39m] newdesign/Batch 3 - Public Home + Search (Standalone).html
+[[33mwarn[39m] newdesign/batch 4 - Detail Pages (Standalone).html
+[[33mwarn[39m] newdesign/Batch 5 - Posting Wizards (Standalone).html
+[[33mwarn[39m] newdesign/Batch 6 - Owner Dashboard (Standalone).html
+[[33mwarn[39m] newdesign/Batch 7 - Broker Dashboard (Standalone).html
+[[33mwarn[39m] newdesign/Batch 8 - Builder Dashboard (Standalone).html
+[[33mwarn[39m] newdesign/Batch 9 - Shared Detail Views (Standalone) (1).html
+[[33mwarn[39m] src/app/admin/invite/page.tsx
+[[33mwarn[39m] src/app/admin/login/page.tsx
+[[33mwarn[39m] src/app/api/webhooks/razorpay/route.ts
+[[33mwarn[39m] src/app/broker/[slug]/page.tsx
+[[33mwarn[39m] src/app/builder/[slug]/page.tsx
+[[33mwarn[39m] src/app/dashboard/broker/properties/[id]/edit/page.tsx
+[[33mwarn[39m] src/app/dashboard/broker/properties/new/page.tsx
+[[33mwarn[39m] src/app/dashboard/builder/projects/[id]/edit/page.tsx
+[[33mwarn[39m] src/app/dashboard/builder/projects/new/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/leads/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/properties/[id]/edit/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/properties/new/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/properties/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/requirements/[id]/edit/page.tsx
+[[33mwarn[39m] src/app/dashboard/owner/requirements/page.tsx
+[[33mwarn[39m] src/app/login/page.tsx
+[[33mwarn[39m] src/app/owner/[id]/page.tsx
+[[33mwarn[39m] src/app/project/[slug]/page.tsx
+[[33mwarn[39m] src/app/property/[slug]/page.tsx
+[[33mwarn[39m] src/components/admin/ModerationQueueClient.tsx
+[[33mwarn[39m] src/components/auth/MobileOtpForm.tsx
+[[33mwarn[39m] src/components/auth/OtpInput.tsx
+[[33mwarn[39m] src/components/auth/RegisterRoleForm.tsx
+[[33mwarn[39m] src/components/compare/CompareButton.tsx
+[[33mwarn[39m] src/components/compare/CompareProvider.tsx
+[[33mwarn[39m] src/components/compare/CompareView.tsx
+[[33mwarn[39m] src/components/dashboard/DashboardMobileBackHeader.tsx
+[[33mwarn[39m] src/components/dashboard/DashboardMobileTabBar.tsx
+[[33mwarn[39m] src/components/dashboard/DashboardPageHeader.tsx
+[[33mwarn[39m] src/components/dashboard/DashboardShellV2.tsx
+[[33mwarn[39m] src/components/dashboard/DashboardSidebar.tsx
+[[33mwarn[39m] src/components/dashboard/OwnerEntityCard.tsx
+[[33mwarn[39m] src/components/dashboard/StatCardGradient.tsx
+[[33mwarn[39m] src/components/dashboard/UnitInventoryClient.tsx
+[[33mwarn[39m] src/components/detail/DetailCTABar.tsx
+[[33mwarn[39m] src/components/detail/DetailGallery.tsx
+[[33mwarn[39m] src/components/detail/DetailHeader.tsx
+[[33mwarn[39m] src/components/detail/DetailSections.tsx
+[[33mwarn[39m] src/components/detail/FullscreenGallery.tsx
+[[33mwarn[39m] src/components/detail/ProjectDetailView.tsx
+[[33mwarn[39m] src/components/forms/ProjectForm.tsx
+[[33mwarn[39m] src/components/forms/PropertyForm.tsx
+[[33mwarn[39m] src/components/forms/RequirementForm.tsx
+[[33mwarn[39m] src/components/forms/wizard/EditReapprovalGate.tsx
+[[33mwarn[39m] src/components/forms/wizard/MediaUploadStep.tsx
+[[33mwarn[39m] src/components/forms/WizardProgress.tsx
+[[33mwarn[39m] src/components/layout/AdminTopbar.tsx
+[[33mwarn[39m] src/components/layout/PublicFooter.tsx
+[[33mwarn[39m] src/components/layout/PublicHeaderClient.tsx
+[[33mwarn[39m] src/components/leads/LeadKanbanBoard.tsx
+[[33mwarn[39m] src/components/leads/LeadsTable.tsx
+[[33mwarn[39m] src/components/leads/LeadStageBadge.tsx
+[[33mwarn[39m] src/components/leads/LeadStageTabs.tsx
+[[33mwarn[39m] src/components/profile/ClaimProfileCard.tsx
+[[33mwarn[39m] src/components/profile/PublicProfileHeader.tsx
+[[33mwarn[39m] src/components/public/HomeCategoryTiles.tsx
+[[33mwarn[39m] src/components/public/HomeFeaturedProjects.tsx
+[[33mwarn[39m] src/components/public/HomeFeaturedProperties.tsx
+[[33mwarn[39m] src/components/public/HomeHeroSearch.tsx
+[[33mwarn[39m] src/components/public/HomeHowItWorks.tsx
+[[33mwarn[39m] src/components/public/HomeRecentlyViewed.tsx
+[[33mwarn[39m] src/components/public/HomeRoleCards.tsx
+[[33mwarn[39m] src/components/public/HomeTrust.tsx
+[[33mwarn[39m] src/components/search/PropertyResultCard.tsx
+[[33mwarn[39m] src/components/search/RequestLocationModal.tsx
+[[33mwarn[39m] src/components/search/SaveSearchButton.tsx
+[[33mwarn[39m] src/components/search/SearchShellHeader.tsx
+[[33mwarn[39m] src/components/ui/EmptyState.tsx
+[[33mwarn[39m] src/lib/actions/blocks.ts
+[[33mwarn[39m] src/lib/actions/contact.ts
+[[33mwarn[39m] src/lib/actions/media.ts
+[[33mwarn[39m] src/lib/actions/properties.ts
+[[33mwarn[39m] src/lib/actions/public-search.ts
+[[33mwarn[39m] src/lib/actions/reports.ts
+[[33mwarn[39m] src/lib/actions/saved.ts
+[[33mwarn[39m] src/lib/actions/staff-invite.ts
+[[33mwarn[39m] src/lib/actions/units.ts
+[[33mwarn[39m] src/lib/admin/role-presets.ts
+[[33mwarn[39m] src/lib/auth/actions.ts
+[[33mwarn[39m] src/lib/validators/project.ts
+[[33mwarn[39m] src/lib/validators/property.ts
+[[33mwarn[39m] src/types/index.ts
+[[33mwarn[39m] tsconfig.json
+[[33mwarn[39m] Code style issues found in 102 files. Run Prettier with --write to fix.
