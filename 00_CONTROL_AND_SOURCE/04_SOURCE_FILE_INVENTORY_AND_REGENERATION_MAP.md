@@ -1,0 +1,9185 @@
+---
+title: "My Gujarat Property SaaS Rebuild — Source File Inventory and Regeneration Map"
+document_id: "MGP-CTRL-004"
+version: "1.0.0"
+status: "Canonical Source Inventory"
+format: "Markdown"
+project_root: "MGP_SAAS_REBUILD"
+file_number: 5
+total_planned_files: 47
+path: "00_CONTROL_AND_SOURCE/04_SOURCE_FILE_INVENTORY_AND_REGENERATION_MAP.md"
+last_updated: "2026-07-11"
+requires:
+  - "00_CONTROL_AND_SOURCE/00_MASTER_INDEX.md"
+  - "00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md"
+  - "00_CONTROL_AND_SOURCE/02_USER_REQUIREMENTS_VERBATIM.md"
+  - "00_CONTROL_AND_SOURCE/03_MASTER_UX_PROMPT_VERBATIM.md"
+controls:
+  - "Extraction of all compatible requirements from UPDATEDWEB.zip"
+  - "Removal, replacement, conflict and migration classification"
+  - "Source-to-canonical-document coverage"
+  - "Final requirement traceability and Claude prompt generation"
+---
+
+# My Gujarat Property SaaS Rebuild — Source File Inventory and Regeneration Map
+
+## 1. Purpose
+
+This document is the canonical inventory and regeneration map for the complete legacy source package `UPDATEDWEB.zip`. It proves that every archive file has been identified, integrity-recorded, classified, reviewed at structure level, assigned a regeneration treatment, and mapped to one or more files in the new 47-file documentation system.
+
+This file does **not** make the legacy archive authoritative. The archive is evidence and source material. The user’s latest instructions, the project constitution, approved regenerated specifications, and the preserved Master SaaS UX prompt control the rebuild.
+
+The inventory has five goals:
+
+1. prevent any source file from being silently ignored;
+2. prevent obsolete functionality or failed design prescriptions from being copied into the new system;
+3. preserve compatible business, technical, security, operational and QA knowledge;
+4. expose missing files, duplicate authorities, broken references and unresolved scope;
+5. provide exact source-to-destination coverage for later requirement-level traceability.
+
+---
+
+## 2. Archive Identity and Verified Counts
+
+- Archive: `UPDATEDWEB.zip`
+- Archive byte size: `1189839`
+- Archive SHA-256: `3d9e80fe755e8f6f34cbac793cc42fb80e9194118ea9d3b39df03de7b8b996e8`
+- Top-level logical folder: `UPDATEDWEB/`
+- Non-directory archive members: **58**
+- Markdown source files: **57**
+- PDF source files: **1**
+- Explicit directory entries: **2** (`UPDATEDWEB/docs/`, `UPDATEDWEB/prompts/`)
+- Detailed specification files under `docs/`: **16**
+- Legacy implementation/verification files under `prompts/`: **30**
+- Root-level Markdown files: **11**
+- Root-level PDF files: **1**
+
+### MGP-SOURCE-AUDIT-001 — Count Correction
+
+The verified archive contains **58 actual files**, not 59. The earlier conversational count of 59 actual files was inaccurate. No file was removed during this correction: the archive itself contains 60 entries, of which two are directories and 58 are files. This document uses the verified archive count as the source of truth.
+
+### MGP-SOURCE-AUDIT-002 — PDF Verification
+
+The file `Calude Prompt.pdf` was inspected as a 20-page, non-encrypted A4 PDF with embedded text, no outline, no forms, no attachments and no annotations. Its pages were rendered and visually reviewed, and its text was extracted for inventory. The archive filename typo `Calude` is preserved only as a source path; regenerated documents use correct naming.
+
+---
+
+## 3. Authority and Transfer Rules
+
+### MGP-SOURCE-RULE-001 — Inventory Is Not Approval
+
+A source entry appearing in this inventory does not mean all of its contents are approved. Every atomic requirement must later be classified as:
+
+- `PRESERVE`;
+- `PRESERVE_WITH_REWRITE`;
+- `MODIFY`;
+- `REPLACE`;
+- `REMOVE`;
+- `UNRESOLVED`;
+- `FUTURE/OUT_OF_SCOPE`;
+- `DUPLICATE`; or
+- `EVIDENCE_ONLY`.
+
+### MGP-SOURCE-RULE-002 — No Direct Legacy Copy
+
+No legacy document or prompt may be copied wholesale and declared canonical. Compatible requirements must be rewritten into the new architecture, with conflicts and removed features explicitly handled.
+
+### MGP-SOURCE-RULE-003 — Latest User Instruction Wins
+
+When a legacy source conflicts with the user’s later instruction, the later instruction wins. The source wording remains auditable, but the incompatible rule must not reach code or the final Claude execution prompt.
+
+### MGP-SOURCE-RULE-004 — Removed Features Are Removed Across All Layers
+
+The following legacy concepts require removal or replacement across documentation, UI, routes, components, APIs, database schema, RLS, providers, jobs, analytics, notifications, tests and operational controls:
+
+- inquiry-type selection;
+- reveal-number/contact-reveal interaction;
+- the complete Site Visit module;
+- complete map functionality and map-provider behavior;
+- Builder Agent functionality;
+- the old advertising/promotion model where replaced by builder homepage property/project banners;
+- non-email functional notification delivery, except SMS for OTP;
+- old fixed design-system, layout, header, sidebar, dashboard-section and screen-composition prescriptions.
+
+### MGP-SOURCE-RULE-005 — Functional Knowledge Survives Design Removal
+
+Removing the old design system does not remove valid product behavior, data ownership, permission, validation, status, security, recovery, accessibility, responsive or testing requirements. Those must be separated from visual prescriptions and regenerated.
+
+### MGP-SOURCE-RULE-006 — Prompts Are Historical Execution Sources
+
+All files under `prompts/` and the legacy prompt PDF are superseded execution artifacts. They must not be run against the rebuilt project. Their useful phase discipline, no-fake rules, testing expectations and feature requirements are extracted into File 46 and the new QA system.
+
+### MGP-SOURCE-RULE-007 — Heading Manifest Is Coverage Evidence
+
+Appendix A records every level-1 to level-3 Markdown heading from all 57 Markdown source files in archive order. It is structural coverage evidence and does not replace requirement-level extraction in File 7.
+
+---
+
+## 4. Regeneration Treatment Vocabulary
+
+| Treatment | Meaning |
+|---|---|
+| `CONSOLIDATE_AND_SUPERSEDE` | Merge compatible rules into one new authority and retire competing legacy rulebooks. |
+| `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | Extract compatible requirements and workflow discipline, but never run or retain the old prompt as execution authority. |
+| `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | Rebuild the content in new canonical documents, applying latest decisions and explicit conflict handling. |
+| `PARTIAL_SALVAGE_WITH_EXPLICIT_FEATURE_REMOVAL` | Preserve compatible concepts while removing prohibited modules and their dependencies. |
+| `DEPRECATE_FIXED_DESIGN; SALVAGE_NEUTRAL_UX_RULES` | Reject old visual prescriptions while retaining platform-neutral UX, responsiveness and accessibility principles. |
+
+---
+
+## 5. Critical Archive Findings
+
+### MGP-SOURCE-FINDING-001 — Missing Phase 01 verification prompt
+
+The archive repeatedly references `prompts/01_MANUAL_VERIFICATION_PROJECT_SETUP_BASELINE.md`, but that file is absent. The new File 46 must include a complete setup verification prompt and must never assume the missing file exists.
+
+### MGP-SOURCE-FINDING-002 — Duplicate agent rulebooks
+
+`AGENTS.md` and `CLAUDE.md` are near-duplicates adapted for Codex and Claude. They must not remain competing authorities. Compatible rules consolidate into Files 1, 2, 38, 44, 45 and 46.
+
+### MGP-SOURCE-FINDING-003 — Legacy PDF is a wrapper, not a complete source of truth
+
+The 20-page PDF points to phase files and includes implementation/verification sequencing. It does not replace the underlying docs/prompts and itself references the missing Phase 01 verifier.
+
+### MGP-SOURCE-FINDING-004 — Old design authority conflicts with latest instruction
+
+Legacy homepage/header/footer/hero/dashboard/design-system prescriptions conflict with the user’s direction to remove the current design and let Claude generate a new original UX/UI after reference research. Only neutral UX and quality principles may survive.
+
+### MGP-SOURCE-FINDING-005 — Removed modules are deeply cross-cutting
+
+Map, Site Visit, reveal-number, old promotions, multi-channel notifications and Agent language appear in many root docs, detailed docs and prompts. Removal requires a cross-layer cleanup checklist, not a visual hide.
+
+### MGP-SOURCE-FINDING-006 — Capacity target changed
+
+Legacy performance sources use a 1-lakh-user readiness target. The current user target is 10 lakh live users. The new architecture must translate this into measurable concurrency, traffic, latency, availability, load-test and cost assumptions instead of copying the old number.
+
+### MGP-SOURCE-FINDING-007 — Requirements/proposals are not explicitly removed
+
+The archive contains a substantial requirement/proposal module. The user removed Site Visit but did not explicitly remove requirements/proposals or messaging. These cannot be silently deleted. Their final scope must be decided in File 5 and, if retained, specified within Files 8, 14, 15, 18, 30, 31 and the matrices.
+
+### MGP-SOURCE-FINDING-008 — Builder Agent removal may not equal Broker team removal
+
+Legacy sources use Broker/Agent and staff/team concepts broadly. The user explicitly removed the Agent option from the Builder dashboard. Whether Broker agency/team agents remain is a separate unresolved role decision.
+
+### MGP-SOURCE-FINDING-009 — Notification semantics require separation
+
+Legacy sources mix in-app notifications, email, SMS, WhatsApp and push. The latest delivery-channel rule is email only, with SMS only for OTP. Homepage announcements/popups are a UI concept and must be decided separately from delivery providers.
+
+### MGP-SOURCE-FINDING-010 — Internal new-tab requirement conflicts with connected mobile UX
+
+The user requested many property items to open in new tabs, while the Master UX rules emphasize context preservation and predictable mobile navigation. File 5 must resolve where same-tab, overlay, browser-native new-tab and external links apply.
+
+### MGP-SOURCE-FINDING-011 — Referenced final artifacts are absent
+
+Legacy final prompts reference `FINAL_SIGNOFF_PACKAGE.md`, `FINAL_KNOWN_LIMITATIONS.md`, `FINAL_LAUNCH_CHECKLIST.md` and `FINAL_PROVIDER_TEST_MATRIX.md`, but these are not archive members. Their intent is absorbed into Files 42, 44, 45 and 46 rather than recreated as undocumented extras.
+
+### MGP-SOURCE-FINDING-012 — README reference is not an archive source
+
+The setup prompt references `README.md`, but no README exists in the archive. A project README may be created by implementation when justified, but it is not part of this 47-file documentation count.
+
+### MGP-SOURCE-FINDING-013 — Archive order is not execution order
+
+Some verification files precede implementation files in ZIP order. Execution order must be defined by File 46, not by archive member order.
+
+### MGP-SOURCE-FINDING-014 — Advanced features need scope approval
+
+PWA, localization, analytics and other advanced features appear in the archive. They are not automatically approved merely because they exist in a legacy source. Each must pass product-scope, privacy, performance and value review.
+
+### MGP-SOURCE-FINDING-015 — Data migration is mandatory
+
+Removed features may already have tables, policies, routes, data and provider configuration in the current codebase. The rebuild must inspect the repository and define safe archive/migrate/drop/retain behavior instead of assuming a clean project.
+
+---
+
+## 6. Complete Source-to-Destination Inventory
+
+Every source below is listed once in exact ZIP member order. Destination paths identify where its compatible requirements must be regenerated. A mapping does not authorize incompatible legacy content.
+
+### MGP-SRC-001 — `AGENTS.md`
+
+- **Archive order:** 1 of 58
+- **Source class:** `LEGACY_AGENT_RULEBOOK`
+- **Source title/scope:** My Gujarat Property — Codex Master Rules
+- **Byte size:** `28832`
+- **Lines/words:** `1303` / `4237`
+- **Level 1-3 heading count:** `48`
+- **SHA-256:** `ca4442ba145b133c9135b853fb20b64746e102a350dafcc0bfa65cf924f10184`
+- **Regeneration treatment:** `CONSOLIDATE_AND_SUPERSEDE`
+- **Source-specific handling:** Near-duplicate Codex-oriented master rules. Preserve no-fake, phase, documentation-update and evidence principles; do not keep it as a second competing authority.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `4`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `4`
+  - `old ads/promotion` references detected: `11`
+  - `notification/provider channels` references detected: `23`
+  - `agent/team language` references detected: `7`
+  - `fixed UI/design language` references detected: `12`
+  - `requirement/proposal module` references detected: `14`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-002 — `API_PROVIDER_STATUS.md`
+
+- **Archive order:** 2 of 58
+- **Source class:** `LEGACY_OPERATIONAL_CONTROL`
+- **Source title/scope:** My Gujarat Property — API Provider Status, Setup, Verification And Fallback Rules
+- **Byte size:** `120308`
+- **Lines/words:** `2972` / `14423`
+- **Level 1-3 heading count:** `334`
+- **SHA-256:** `eb85105c174fd56085be87bc582cdf2d28f17c290a576e72ce7bd6fefde12a61`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Provider catalog is historical source. Removed map/WhatsApp/push flows must not be restored. Final provider registry must reflect email delivery and SMS OTP only unless the user later approves more.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `41`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `1`
+  - `old ads/promotion` references detected: `18`
+  - `notification/provider channels` references detected: `213`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `3`
+  - `requirement/proposal module` references detected: `27`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-003 — `brain.md`
+
+- **Archive order:** 3 of 58
+- **Source class:** `LEGACY_OPERATIONAL_CONTROL`
+- **Source title/scope:** My Gujarat Property — Project Memory, Status And Resume Guide
+- **Byte size:** `50654`
+- **Lines/words:** `2227` / `6928`
+- **Level 1-3 heading count:** `63`
+- **SHA-256:** `d387e4ed608e7fa2f985ee6e42f05208af3b82e94b07a3c7d51ad55069cc6672`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Broad project memory and resume guide. Treat as a source snapshot only; extract compatible decisions and move unresolved or obsolete decisions to conflict/deprecation control.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `9`
+  - `site visit` references detected: `12`
+  - `reveal-number/contact-reveal` references detected: `8`
+  - `old ads/promotion` references detected: `43`
+  - `notification/provider channels` references detected: `61`
+  - `agent/team language` references detected: `13`
+  - `fixed UI/design language` references detected: `32`
+  - `requirement/proposal module` references detected: `62`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/00_MASTER_INDEX.md`
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-004 — `BUGS_AND_FIXES.md`
+
+- **Archive order:** 4 of 58
+- **Source class:** `LEGACY_OPERATIONAL_CONTROL`
+- **Source title/scope:** My Gujarat Property — Bugs, Fixes, Workarounds And Retest Log
+- **Byte size:** `56572`
+- **Lines/words:** `2130` / `7692`
+- **Level 1-3 heading count:** `214`
+- **SHA-256:** `1ccc42ca4f0c37720d9dc08010faf4a3c9158240f1ee02b1333cb810e4addd3d`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `reveal-number/contact-reveal` references detected: `7`
+  - `old ads/promotion` references detected: `2`
+  - `notification/provider channels` references detected: `19`
+  - `fixed UI/design language` references detected: `9`
+  - `requirement/proposal module` references detected: `11`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-005 — `Calude Prompt.pdf`
+
+- **Archive order:** 5 of 58
+- **Source class:** `PDF_EXECUTION_WRAPPER`
+- **Source title/scope:** CLAUDE RUN PROMPTS — MY GUJARAT PROPERTY
+- **Byte size:** `223951`
+- **Pages:** `20`
+- **Extracted text lines/words:** `921` / `4396`
+- **SHA-256:** `f7a5747f3a3dc0b05a3068ee54d1ed308ec10582d423080307496b9ba1478df2`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Twenty-page execution wrapper for Prompts 00-15 and paired verification. Preserve the implementation-then-verification discipline and truthful status reporting; supersede all old phase content and paths.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `2`
+  - `site visit` references detected: `6`
+  - `old ads/promotion` references detected: `18`
+  - `notification/provider channels` references detected: `22`
+  - `fixed UI/design language` references detected: `24`
+  - `requirement/proposal module` references detected: `35`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/04_SOURCE_FILE_INVENTORY_AND_REGENERATION_MAP.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-006 — `CHANGELOG.md`
+
+- **Archive order:** 6 of 58
+- **Source class:** `LEGACY_OPERATIONAL_CONTROL`
+- **Source title/scope:** My Gujarat Property — Changelog
+- **Byte size:** `33824`
+- **Lines/words:** `1299` / `4430`
+- **Level 1-3 heading count:** `143`
+- **SHA-256:** `5e75a642d286a579ec17ecf8b12aa3a01ddc917931ac60aa9b7438b255e18396`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `3`
+  - `old ads/promotion` references detected: `7`
+  - `notification/provider channels` references detected: `14`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `3`
+  - `requirement/proposal module` references detected: `16`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-007 — `CLAUDE.md`
+
+- **Archive order:** 7 of 58
+- **Source class:** `LEGACY_AGENT_RULEBOOK`
+- **Source title/scope:** My Gujarat Property — Claude Code Master Rules
+- **Byte size:** `28861`
+- **Lines/words:** `1303` / `4239`
+- **Level 1-3 heading count:** `48`
+- **SHA-256:** `9f501dbdd94a9ffa16e9c56c4f75f562a874ff473b15511d9e8706d6f2880d33`
+- **Regeneration treatment:** `CONSOLIDATE_AND_SUPERSEDE`
+- **Source-specific handling:** Near-duplicate Claude Code master rules. Rebuild into the new constitution, skill workflow and final execution prompt rather than copying the old structure.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `4`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `4`
+  - `old ads/promotion` references detected: `11`
+  - `notification/provider channels` references detected: `23`
+  - `agent/team language` references detected: `4`
+  - `fixed UI/design language` references detected: `12`
+  - `requirement/proposal module` references detected: `14`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-008 — `DEPLOYMENT_ROLLBACK.md`
+
+- **Archive order:** 8 of 58
+- **Source class:** `LEGACY_OPERATIONAL_CONTROL`
+- **Source title/scope:** My Gujarat Property — Deployment, Backup, Migration And Rollback Rules
+- **Byte size:** `49435`
+- **Lines/words:** `1842` / `6730`
+- **Level 1-3 heading count:** `191`
+- **SHA-256:** `31781890451513c9941bfa7ea1013a243575d976765c5fe4f71ad5125a12f955`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `7`
+  - `old ads/promotion` references detected: `12`
+  - `notification/provider channels` references detected: `19`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `6`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-009 — `docs/01_PROJECT_MASTER_AND_SCOPE.md`
+
+- **Archive order:** 9 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Project Master, Scope, Roles, Modules And Non-Negotiable Rules
+- **Byte size:** `49430`
+- **Lines/words:** `2276` / `6683`
+- **Level 1-3 heading count:** `92`
+- **SHA-256:** `65f259ba76ebb7d98995711c6f3c099f642680f8a8c2441008aa7c6d91c1424a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `site visit` references detected: `12`
+  - `reveal-number/contact-reveal` references detected: `7`
+  - `old ads/promotion` references detected: `49`
+  - `notification/provider channels` references detected: `44`
+  - `agent/team language` references detected: `11`
+  - `fixed UI/design language` references detected: `25`
+  - `requirement/proposal module` references detected: `65`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-010 — `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`
+
+- **Archive order:** 10 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Claude Workflow, Token-Light Rules, Context Discipline And Phase Execution Guide
+- **Byte size:** `42061`
+- **Lines/words:** `1761` / `5563`
+- **Level 1-3 heading count:** `103`
+- **SHA-256:** `38174cf0c086dfaa3cc86855033ab2ae12173a803cea7eaa900af0bcde3115fe`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `4`
+  - `old ads/promotion` references detected: `9`
+  - `notification/provider channels` references detected: `12`
+  - `fixed UI/design language` references detected: `16`
+  - `requirement/proposal module` references detected: `10`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-011 — `docs/03_ARCHITECTURE_TECH_STACK_DATABASE_RLS.md`
+
+- **Archive order:** 11 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Architecture, Tech Stack, Database, Supabase, RLS And System Design
+- **Byte size:** `65313`
+- **Lines/words:** `3621` / `8269`
+- **Level 1-3 heading count:** `164`
+- **SHA-256:** `31d4532deae9edef36183b016569c80ced3eb7f7b3ca45adf9eac0933d043495`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `9`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `5`
+  - `old ads/promotion` references detected: `25`
+  - `notification/provider channels` references detected: `62`
+  - `agent/team language` references detected: `5`
+  - `fixed UI/design language` references detected: `11`
+  - `requirement/proposal module` references detected: `32`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-012 — `docs/04_AUTH_LOGIN_REGISTER_ROLES_PERMISSIONS.md`
+
+- **Archive order:** 12 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Auth, Login, Register, Roles, Permissions And Access Control
+- **Byte size:** `57388`
+- **Lines/words:** `2183` / `7689`
+- **Level 1-3 heading count:** `100`
+- **SHA-256:** `07efb144021facca7a5338c696be3cde424b56ac56349ccb9c3b5bfb7f24d32a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `site visit` references detected: `6`
+  - `reveal-number/contact-reveal` references detected: `15`
+  - `old ads/promotion` references detected: `21`
+  - `notification/provider channels` references detected: `31`
+  - `agent/team language` references detected: `21`
+  - `fixed UI/design language` references detected: `7`
+  - `requirement/proposal module` references detected: `51`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-013 — `docs/05_PUBLIC_ROLES_HOME_PROFILE_DASHBOARD.md`
+
+- **Archive order:** 13 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Public Website, Roles, Homepage, Profiles And Dashboards
+- **Byte size:** `53298`
+- **Lines/words:** `2349` / `7469`
+- **Level 1-3 heading count:** `90`
+- **SHA-256:** `556113ba4177ebba780751dfea57c29fa77b7fb871894680f874d82097dba8a2`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `4`
+  - `site visit` references detected: `14`
+  - `reveal-number/contact-reveal` references detected: `11`
+  - `old ads/promotion` references detected: `37`
+  - `notification/provider channels` references detected: `49`
+  - `agent/team language` references detected: `20`
+  - `fixed UI/design language` references detected: `103`
+  - `requirement/proposal module` references detected: `69`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-014 — `docs/06_PROPERTY_PROJECT_REQUIREMENT_FULL_MATRIX.md`
+
+- **Archive order:** 14 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Property, Project And Requirement Full Matrix
+- **Byte size:** `66378`
+- **Lines/words:** `2761` / `8810`
+- **Level 1-3 heading count:** `101`
+- **SHA-256:** `14d722608f4b4dbdd4ecda332211efe28ac18758334cc31d68f0e5f1d0216d1f`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `12`
+  - `site visit` references detected: `2`
+  - `reveal-number/contact-reveal` references detected: `17`
+  - `old ads/promotion` references detected: `34`
+  - `notification/provider channels` references detected: `13`
+  - `agent/team language` references detected: `7`
+  - `fixed UI/design language` references detected: `4`
+  - `requirement/proposal module` references detected: `114`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-015 — `docs/07_LEADS_CRM_PROPOSALS_SITE_VISITS_MESSAGES.md`
+
+- **Archive order:** 15 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Leads, CRM, Proposals, Site Visits, Messages And Communication System
+- **Byte size:** `55260`
+- **Lines/words:** `2298` / `7299`
+- **Level 1-3 heading count:** `102`
+- **SHA-256:** `7b83b09ca1cd0f37b4dda549a126bf1267372f45414c0c00dbc81b76da458eb1`
+- **Regeneration treatment:** `PARTIAL_SALVAGE_WITH_EXPLICIT_FEATURE_REMOVAL`
+- **Source-specific handling:** Site Visit is explicitly removed. Direct inquiry and property/project-context lead management remain. Requirements, proposals and messaging require canonical scope decisions rather than silent deletion.
+- **Conflict/removal review flags:**
+  - `site visit` references detected: `68`
+  - `reveal-number/contact-reveal` references detected: `77`
+  - `old ads/promotion` references detected: `12`
+  - `notification/provider channels` references detected: `79`
+  - `agent/team language` references detected: `21`
+  - `fixed UI/design language` references detected: `2`
+  - `requirement/proposal module` references detected: `166`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-016 — `docs/08_ADMIN_SUPER_ADMIN_STAFF_MODULES.md`
+
+- **Archive order:** 16 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Admin, Super Admin, Staff Modules, Permissions And Operations System
+- **Byte size:** `72887`
+- **Lines/words:** `3105` / `9612`
+- **Level 1-3 heading count:** `118`
+- **SHA-256:** `6b851c7d3a55eee0d95758eca075368713b1a817b161a5ba35b8202895d16b9a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `3`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `5`
+  - `old ads/promotion` references detected: `64`
+  - `notification/provider channels` references detected: `49`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `7`
+  - `requirement/proposal module` references detected: `35`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-017 — `docs/09_BILLING_SUBSCRIPTION_PAYMENT_GST_TRIAL.md`
+
+- **Archive order:** 17 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Billing, Subscription, Payment, GST, Trial, Coupon And Invoice System
+- **Byte size:** `58004`
+- **Lines/words:** `2476` / `7786`
+- **Level 1-3 heading count:** `101`
+- **SHA-256:** `ebe6b939488d4f26e2034b675d9e451e4c64e639115f78ab6dd749afb73eccb9`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `61`
+  - `notification/provider channels` references detected: `31`
+  - `agent/team language` references detected: `9`
+  - `fixed UI/design language` references detected: `1`
+  - `requirement/proposal module` references detected: `25`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-018 — `docs/10_ADS_PROMOTION_NOTIFICATION_PROVIDER_MODES.md`
+
+- **Archive order:** 18 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Ads, Promotions, Notifications And Provider Modes
+- **Byte size:** `59858`
+- **Lines/words:** `2438` / `8005`
+- **Level 1-3 heading count:** `103`
+- **SHA-256:** `9cece0d8d95985e6d565ca1c4afc18a06f3905adfbc44336c3274144562765c8`
+- **Regeneration treatment:** `PARTIAL_SALVAGE_WITH_EXPLICIT_FEATURE_REMOVAL`
+- **Source-specific handling:** Old ad/promotion model is replaced by builder homepage property/project banner promotion. Notification delivery is narrowed to email, with SMS only for OTP; in-app announcement behavior remains separately decidable.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `12`
+  - `site visit` references detected: `4`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `299`
+  - `notification/provider channels` references detected: `216`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `4`
+  - `requirement/proposal module` references detected: `10`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-019 — `docs/11_LOCATION_SEARCH_SEO_CMS_BLOG_LEGAL.md`
+
+- **Archive order:** 19 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Location, Search, SEO, CMS, Blog, Legal And Support System
+- **Byte size:** `57831`
+- **Lines/words:** `2750` / `7955`
+- **Level 1-3 heading count:** `112`
+- **SHA-256:** `01cfafd8d0f5bdd6851420dde15bbf081e7f13c877a9febbb1729dccc35605f9`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `24`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `1`
+  - `old ads/promotion` references detected: `18`
+  - `notification/provider channels` references detected: `12`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `26`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-020 — `docs/12_MEDIA_UPLOAD_STORAGE_IMAGE_VIDEO_PDF.md`
+
+- **Archive order:** 20 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Media Upload, Storage, Image, Video, PDF, Private Documents, R2 And CDN Rules
+- **Byte size:** `59132`
+- **Lines/words:** `2445` / `8247`
+- **Level 1-3 heading count:** `107`
+- **SHA-256:** `d7cfd3d04e7fd2a5c1aca8393176b0b75c9d1c10390cf3da7f3cb6d72319647a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `old ads/promotion` references detected: `71`
+  - `notification/provider channels` references detected: `6`
+  - `fixed UI/design language` references detected: `3`
+  - `requirement/proposal module` references detected: `6`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-021 — `docs/13_UI_UX_DESIGN_SYSTEM_RESPONSIVE_RULES.md`
+
+- **Archive order:** 21 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — UI, UX, Design System, Responsive And Interaction Rules
+- **Byte size:** `51400`
+- **Lines/words:** `2557` / `7480`
+- **Level 1-3 heading count:** `96`
+- **SHA-256:** `94505ff983f044073a1c75b84cfd0dc39cae387b4fe036de231fe29722795175`
+- **Regeneration treatment:** `DEPRECATE_FIXED_DESIGN; SALVAGE_NEUTRAL_UX_RULES`
+- **Source-specific handling:** Old fixed visual/design authority is explicitly revoked. Preserve only platform-neutral usability, responsiveness, accessibility, content resilience and state-coverage principles.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `13`
+  - `site visit` references detected: `4`
+  - `reveal-number/contact-reveal` references detected: `4`
+  - `old ads/promotion` references detected: `32`
+  - `notification/provider channels` references detected: `31`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `80`
+  - `requirement/proposal module` references detected: `19`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-022 — `docs/14_SECURITY_PRIVACY_CONSENT_FRAUD_LEGAL.md`
+
+- **Archive order:** 22 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Security, Privacy, Consent, Fraud, Legal And Compliance System
+- **Byte size:** `54268`
+- **Lines/words:** `2329` / `7507`
+- **Level 1-3 heading count:** `95`
+- **SHA-256:** `729e931234ae7be11196a20afab3caa0ad56c45d42ca7c29ea71ed48a3303764`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `site visit` references detected: `13`
+  - `reveal-number/contact-reveal` references detected: `28`
+  - `old ads/promotion` references detected: `32`
+  - `notification/provider channels` references detected: `47`
+  - `agent/team language` references detected: `4`
+  - `fixed UI/design language` references detected: `5`
+  - `requirement/proposal module` references detected: `28`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-023 — `docs/15_PERFORMANCE_DEPLOYMENT_ROLLBACK_QA.md`
+
+- **Archive order:** 23 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Performance, Deployment, Rollback, QA And Production Launch System
+- **Byte size:** `56299`
+- **Lines/words:** `2572` / `7821`
+- **Level 1-3 heading count:** `116`
+- **SHA-256:** `39f1abe2ac86be416bd87ee3ec7f6f9b8bfef6b26170673ea66b69d5c4639a6d`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `8`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `9`
+  - `old ads/promotion` references detected: `24`
+  - `notification/provider channels` references detected: `27`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `8`
+  - `requirement/proposal module` references detected: `15`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-024 — `docs/16_ADVANCED_FEATURES_PWA_LOCALIZATION_ANALYTICS.md`
+
+- **Archive order:** 24 of 58
+- **Source class:** `LEGACY_DETAILED_SPECIFICATION`
+- **Source title/scope:** My Gujarat Property — Advanced Features, PWA, Localization, Analytics And Future Roadmap System
+- **Byte size:** `67159`
+- **Lines/words:** `2868` / `8757`
+- **Level 1-3 heading count:** `116`
+- **SHA-256:** `3802804413433f4db1734077267daab575bddc146e1d522e314238d6897b4435`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Advanced features are not automatically included. Each feature must be confirmed against current scope, performance, privacy and mobile-first priorities.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `8`
+  - `site visit` references detected: `9`
+  - `reveal-number/contact-reveal` references detected: `9`
+  - `old ads/promotion` references detected: `41`
+  - `notification/provider channels` references detected: `128`
+  - `agent/team language` references detected: `3`
+  - `fixed UI/design language` references detected: `17`
+  - `requirement/proposal module` references detected: `14`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-025 — `FEATURE_REGISTRY.md`
+
+- **Archive order:** 25 of 58
+- **Source class:** `LEGACY_FEATURE_REGISTRY`
+- **Source title/scope:** My Gujarat Property — Feature Registry
+- **Byte size:** `538411`
+- **Lines/words:** `1966` / `50918`
+- **Level 1-3 heading count:** `44`
+- **SHA-256:** `a577ac09e494b45be31fd52d631aa9becc675cd08351e8f4e361c3589f46846d`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Large cross-product registry. Every feature entry must be classified as preserve, modify, replace, remove, unresolved or future before being converted into the new traceability matrix.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `42`
+  - `site visit` references detected: `45`
+  - `reveal-number/contact-reveal` references detected: `12`
+  - `old ads/promotion` references detected: `234`
+  - `notification/provider channels` references detected: `489`
+  - `agent/team language` references detected: `51`
+  - `fixed UI/design language` references detected: `80`
+  - `requirement/proposal module` references detected: `187`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-026 — `MANUAL_VERIFICATION.md`
+
+- **Archive order:** 26 of 58
+- **Source class:** `LEGACY_QA_CONTROL`
+- **Source title/scope:** My Gujarat Property — Manual Verification, QA And Phase PASS Checklist
+- **Byte size:** `81431`
+- **Lines/words:** `2674` / `10738`
+- **Level 1-3 heading count:** `195`
+- **SHA-256:** `28d97b94dc37f1c703240db93e6fe1a8bfed0121a45175990870e6f3d4bae62a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `8`
+  - `site visit` references detected: `5`
+  - `reveal-number/contact-reveal` references detected: `10`
+  - `old ads/promotion` references detected: `28`
+  - `notification/provider channels` references detected: `36`
+  - `agent/team language` references detected: `17`
+  - `fixed UI/design language` references detected: `26`
+  - `requirement/proposal module` references detected: `44`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-027 — `PERFORMANCE_CHECKLIST.md`
+
+- **Archive order:** 27 of 58
+- **Source class:** `LEGACY_QA_CONTROL`
+- **Source title/scope:** My Gujarat Property — Performance, Scalability, Caching And Load Readiness Checklist
+- **Byte size:** `81531`
+- **Lines/words:** `2368` / `10366`
+- **Level 1-3 heading count:** `182`
+- **SHA-256:** `0a313e3209f53816be9a02a6a41400394287b85a473476727c2d3397a0f050d7`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `8`
+  - `reveal-number/contact-reveal` references detected: `5`
+  - `old ads/promotion` references detected: `30`
+  - `notification/provider channels` references detected: `34`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `19`
+  - `requirement/proposal module` references detected: `14`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-028 — `prompts/00_PROMPT_USAGE_RULES.md`
+
+- **Archive order:** 28 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt Usage Rules For Claude Code
+- **Byte size:** `38248`
+- **Lines/words:** `1460` / `4605`
+- **Level 1-3 heading count:** `58`
+- **SHA-256:** `c695cf654150afcb2fdea3b0ba1581026c787d14c78301eea2f70e296da80bfe`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `4`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `12`
+  - `notification/provider channels` references detected: `20`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `28`
+  - `requirement/proposal module` references detected: `18`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-029 — `prompts/01_PROJECT_SETUP_BASELINE.md`
+
+- **Archive order:** 29 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 01: Project Setup Baseline
+- **Byte size:** `29522`
+- **Lines/words:** `1379` / `3895`
+- **Level 1-3 heading count:** `74`
+- **SHA-256:** `c083139d32683322eb725b51fe97b23574a93aa0b7ade0d0ab6eea8fbcef0d49`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Implementation source exists, but its matching manual-verification file is missing from the archive. The new prompt system must create a complete paired verification phase.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `3`
+  - `old ads/promotion` references detected: `2`
+  - `notification/provider channels` references detected: `23`
+  - `fixed UI/design language` references detected: `13`
+  - `requirement/proposal module` references detected: `5`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-030 — `prompts/02_AUTH_ROLES_RLS_FOUNDATION.md`
+
+- **Archive order:** 30 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 02: Auth, Roles And RLS Foundation
+- **Byte size:** `45309`
+- **Lines/words:** `2212` / `5840`
+- **Level 1-3 heading count:** `105`
+- **SHA-256:** `044bdd49e8a2c02875af6c5caa48d7bee660efec69d3e420cc30f00151d08d85`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `1`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `3`
+  - `notification/provider channels` references detected: `36`
+  - `agent/team language` references detected: `4`
+  - `fixed UI/design language` references detected: `2`
+  - `requirement/proposal module` references detected: `14`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-031 — `prompts/02_MANUAL_VERIFICATION_AUTH_ROLES_RLS_FOUNDATION.md`
+
+- **Archive order:** 31 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 02 Manual Verification: Auth, Roles And RLS Foundation
+- **Byte size:** `41149`
+- **Lines/words:** `1861` / `5583`
+- **Level 1-3 heading count:** `79`
+- **SHA-256:** `f3ba4e4091d0e5e4278e363f76901b93c48576c381cd2f524a819c333940c44b`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `2`
+  - `notification/provider channels` references detected: `28`
+  - `fixed UI/design language` references detected: `20`
+  - `requirement/proposal module` references detected: `3`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-032 — `prompts/03_MANUAL_VERIFICATION_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`
+
+- **Archive order:** 32 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 03 Manual Verification: Public UI, Home, Header, Footer And Hero Search
+- **Byte size:** `35019`
+- **Lines/words:** `1640` / `4824`
+- **Level 1-3 heading count:** `67`
+- **SHA-256:** `20146b563baa91ddcc02c75c9fbedbe75633a6d72c5d876bbd083df787418aa3`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `old ads/promotion` references detected: `3`
+  - `notification/provider channels` references detected: `18`
+  - `fixed UI/design language` references detected: `180`
+  - `requirement/proposal module` references detected: `4`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-033 — `prompts/03_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`
+
+- **Archive order:** 33 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 03: Public UI, Home, Header, Footer And Hero Search
+- **Byte size:** `40778`
+- **Lines/words:** `1929` / `5660`
+- **Level 1-3 heading count:** `85`
+- **SHA-256:** `f77876076e41658524ba0bb6f15a1a79b45a0188f70b54381dc3025bdbd0474a`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `14`
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `6`
+  - `notification/provider channels` references detected: `32`
+  - `fixed UI/design language` references detected: `229`
+  - `requirement/proposal module` references detected: `18`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-034 — `prompts/04_MANUAL_VERIFICATION_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`
+
+- **Archive order:** 34 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 04 Manual Verification: Property, Project And Requirement System
+- **Byte size:** `46249`
+- **Lines/words:** `2100` / `6096`
+- **Level 1-3 heading count:** `76`
+- **SHA-256:** `41971091661183dfb3ff0309846318b57f7fe5f140204133f98053a2eb99d8c6`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `7`
+  - `reveal-number/contact-reveal` references detected: `1`
+  - `old ads/promotion` references detected: `5`
+  - `notification/provider channels` references detected: `10`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `67`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-035 — `prompts/04_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`
+
+- **Archive order:** 35 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 04: Property, Project And Requirement System
+- **Byte size:** `49384`
+- **Lines/words:** `2476` / `6249`
+- **Level 1-3 heading count:** `110`
+- **SHA-256:** `6b7e398ad7274fe5610d6820669d2c7a9aa4df62f7e5bfaf68dd67e1f8a86ba6`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `10`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `8`
+  - `notification/provider channels` references detected: `9`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `15`
+  - `requirement/proposal module` references detected: `101`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-036 — `prompts/05_MANUAL_VERIFICATION_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`
+
+- **Archive order:** 36 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 05 Manual Verification: Public Search, Detail Pages, Profiles And SEO
+- **Byte size:** `45477`
+- **Lines/words:** `2181` / `6058`
+- **Level 1-3 heading count:** `79`
+- **SHA-256:** `dced36aa9b704aee3715db928d6eead8f4e103aa00355febbd3d48bca3b7ed15`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `11`
+  - `old ads/promotion` references detected: `3`
+  - `notification/provider channels` references detected: `20`
+  - `fixed UI/design language` references detected: `10`
+  - `requirement/proposal module` references detected: `30`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-037 — `prompts/05_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`
+
+- **Archive order:** 37 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 05: Public Search, Detail Pages, Profiles And SEO
+- **Byte size:** `45642`
+- **Lines/words:** `2249` / `6087`
+- **Level 1-3 heading count:** `98`
+- **SHA-256:** `3e862cdbe290e4c974359559f0b76b2bcc097bdad68af66e982902020f248d5d`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `7`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `9`
+  - `old ads/promotion` references detected: `2`
+  - `notification/provider channels` references detected: `17`
+  - `fixed UI/design language` references detected: `10`
+  - `requirement/proposal module` references detected: `54`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-038 — `prompts/06_MANUAL_VERIFICATION_OWNER_BROKER_BUILDER_DASHBOARDS.md`
+
+- **Archive order:** 38 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 06 Manual Verification: Owner, Broker And Builder Dashboards
+- **Byte size:** `50298`
+- **Lines/words:** `2302` / `6490`
+- **Level 1-3 heading count:** `80`
+- **SHA-256:** `8fe2fb9dfd5d56ad498e8b47053e0a78ec4bef96090e1d922d2f2b103834376a`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `1`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `37`
+  - `notification/provider channels` references detected: `55`
+  - `agent/team language` references detected: `21`
+  - `fixed UI/design language` references detected: `38`
+  - `requirement/proposal module` references detected: `33`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-039 — `prompts/06_OWNER_BROKER_BUILDER_DASHBOARDS.md`
+
+- **Archive order:** 39 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 06: Owner, Broker And Builder Dashboards
+- **Byte size:** `45704`
+- **Lines/words:** `2171` / `5875`
+- **Level 1-3 heading count:** `93`
+- **SHA-256:** `854ce0f7f38c32033fa1ed9e36a4bcb6415d66b944438b2c9c31118f9936a43b`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `1`
+  - `old ads/promotion` references detected: `31`
+  - `notification/provider channels` references detected: `54`
+  - `agent/team language` references detected: `18`
+  - `fixed UI/design language` references detected: `39`
+  - `requirement/proposal module` references detected: `62`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-040 — `prompts/07_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`
+
+- **Archive order:** 40 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 07: Admin, Staff And Super Admin System
+- **Byte size:** `50829`
+- **Lines/words:** `2416` / `6321`
+- **Level 1-3 heading count:** `96`
+- **SHA-256:** `93c9311a00c50587b5a6843a19ea3403d40ebfec006a9ab66d608337cb7eb686`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `1`
+  - `old ads/promotion` references detected: `7`
+  - `notification/provider channels` references detected: `28`
+  - `fixed UI/design language` references detected: `20`
+  - `requirement/proposal module` references detected: `34`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-041 — `prompts/07_MANUAL_VERIFICATION_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`
+
+- **Archive order:** 41 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 07 Manual Verification: Admin, Staff And Super Admin System
+- **Byte size:** `53765`
+- **Lines/words:** `2413` / `6956`
+- **Level 1-3 heading count:** `79`
+- **SHA-256:** `7dcecd74570b15968a119a9d70d315101e9312336dcdb36b96f18a90d7d0b144`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `1`
+  - `site visit` references detected: `1`
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `8`
+  - `notification/provider channels` references detected: `21`
+  - `fixed UI/design language` references detected: `27`
+  - `requirement/proposal module` references detected: `25`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-042 — `prompts/08_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`
+
+- **Archive order:** 42 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 08: Leads, CRM, Requirements, Proposals And Messages
+- **Byte size:** `55328`
+- **Lines/words:** `2689` / `7022`
+- **Level 1-3 heading count:** `115`
+- **SHA-256:** `4b60bb583a34bba0b53004ce8bc5a97b98d380bf094f10e0212f91f5d9aafe4b`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `site visit` references detected: `52`
+  - `reveal-number/contact-reveal` references detected: `66`
+  - `old ads/promotion` references detected: `3`
+  - `notification/provider channels` references detected: `90`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `182`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-043 — `prompts/08_MANUAL_VERIFICATION_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`
+
+- **Archive order:** 43 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 08 Manual Verification: Leads, CRM, Requirements, Proposals And Messages
+- **Byte size:** `59898`
+- **Lines/words:** `2733` / `7661`
+- **Level 1-3 heading count:** `92`
+- **SHA-256:** `5ac917463957ba6fde64a4d358311176c21c4b4d853c15927b9be15a8e007aac`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `site visit` references detected: `53`
+  - `reveal-number/contact-reveal` references detected: `49`
+  - `old ads/promotion` references detected: `2`
+  - `notification/provider channels` references detected: `94`
+  - `fixed UI/design language` references detected: `7`
+  - `requirement/proposal module` references detected: `150`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-044 — `prompts/09_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`
+
+- **Archive order:** 44 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 09: Billing, Payment, Subscription, Trial And GST
+- **Byte size:** `54738`
+- **Lines/words:** `2604` / `6993`
+- **Level 1-3 heading count:** `108`
+- **SHA-256:** `088896236cdfc7113c85c498a87f2e7d95af567e35ed197938dd8db2c0535638`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `reveal-number/contact-reveal` references detected: `5`
+  - `old ads/promotion` references detected: `10`
+  - `notification/provider channels` references detected: `16`
+  - `agent/team language` references detected: `5`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `43`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-045 — `prompts/09_MANUAL_VERIFICATION_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`
+
+- **Archive order:** 45 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 09 Manual Verification: Billing, Payment, Subscription, Trial And GST
+- **Byte size:** `63522`
+- **Lines/words:** `2811` / `8230`
+- **Level 1-3 heading count:** `97`
+- **SHA-256:** `60852b5d52ef4c1bd1eb995fe17892502d49ae7871af32b4bf4595f4a48ba698`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `8`
+  - `notification/provider channels` references detected: `22`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `6`
+  - `requirement/proposal module` references detected: `11`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-046 — `prompts/10_MANUAL_VERIFICATION_MEDIA_STORAGE_UPLOADS_R2_CDN.md`
+
+- **Archive order:** 46 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 10 Manual Verification: Media Storage, Uploads, R2 And CDN
+- **Byte size:** `68236`
+- **Lines/words:** `2987` / `9253`
+- **Level 1-3 heading count:** `103`
+- **SHA-256:** `22c263b8c3b4807346e6ad894fd8759d8d245a4024b0ca29211b59f0ceb8f66e`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `old ads/promotion` references detected: `19`
+  - `notification/provider channels` references detected: `8`
+  - `fixed UI/design language` references detected: `13`
+  - `requirement/proposal module` references detected: `11`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-047 — `prompts/10_MEDIA_STORAGE_UPLOADS_R2_CDN.md`
+
+- **Archive order:** 47 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 10: Media Storage, Uploads, R2 And CDN
+- **Byte size:** `62728`
+- **Lines/words:** `2894` / `8175`
+- **Level 1-3 heading count:** `116`
+- **SHA-256:** `3743b0004f1f7aed196affacc3f0795c75c5e749b6f444af4d5936a67b1da905`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `old ads/promotion` references detected: `14`
+  - `notification/provider channels` references detected: `4`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `13`
+  - `requirement/proposal module` references detected: `32`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-048 — `prompts/11_LOCATION_SEARCH_SEO_CMS_LEGAL.md`
+
+- **Archive order:** 48 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 11: Location, Search, SEO, CMS And Legal
+- **Byte size:** `61277`
+- **Lines/words:** `2886` / `7670`
+- **Level 1-3 heading count:** `107`
+- **SHA-256:** `6e526b69bd4f3b90dc68a2f3c0b8e1861da3103108473a2bdd1088dd2b003e22`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `18`
+  - `site visit` references detected: `3`
+  - `old ads/promotion` references detected: `9`
+  - `notification/provider channels` references detected: `14`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `16`
+  - `requirement/proposal module` references detected: `32`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-049 — `prompts/11_MANUAL_VERIFICATION_LOCATION_SEARCH_SEO_CMS_LEGAL.md`
+
+- **Archive order:** 49 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 11 Manual Verification: Location, Search, SEO, CMS And Legal
+- **Byte size:** `65243`
+- **Lines/words:** `2993` / `8372`
+- **Level 1-3 heading count:** `91`
+- **SHA-256:** `18bfe934d14bfbefbc985360e6363949d587f3d45b66650d458bd793f56afceb`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `18`
+  - `site visit` references detected: `3`
+  - `old ads/promotion` references detected: `18`
+  - `notification/provider channels` references detected: `18`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `18`
+  - `requirement/proposal module` references detected: `9`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-050 — `prompts/12_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`
+
+- **Archive order:** 50 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 12: Ads, Promotion, Notifications And Providers
+- **Byte size:** `71089`
+- **Lines/words:** `3259` / `8863`
+- **Level 1-3 heading count:** `116`
+- **SHA-256:** `56982cf7f483f4141d5b864b9f48b4fbbfc3d9e1a410f399666b9d332f493ef5`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Old implementation instructions must not be run. Extract compatible provider safety and audit concepts, then implement only the approved builder banner and notification-channel model.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `10`
+  - `site visit` references detected: `6`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `459`
+  - `notification/provider channels` references detected: `396`
+  - `agent/team language` references detected: `4`
+  - `fixed UI/design language` references detected: `12`
+  - `requirement/proposal module` references detected: `40`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-051 — `prompts/12_MANUAL_VERIFICATION_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`
+
+- **Archive order:** 51 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 12 Manual Verification: Ads, Promotion, Notifications And Providers
+- **Byte size:** `81324`
+- **Lines/words:** `3560` / `10410`
+- **Level 1-3 heading count:** `115`
+- **SHA-256:** `5db258cdd0c54f98c1b6cae1e57097a7a3e7f5b1b50b99af07bbfc659f01304d`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Old verification scope must be rewritten to prove removed channels/features are absent and the replacement builder banner lifecycle works end to end.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `14`
+  - `site visit` references detected: `3`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `488`
+  - `notification/provider channels` references detected: `384`
+  - `agent/team language` references detected: `2`
+  - `fixed UI/design language` references detected: `11`
+  - `requirement/proposal module` references detected: `13`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-052 — `prompts/13_MANUAL_VERIFICATION_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`
+
+- **Archive order:** 52 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 13 Manual Verification: Security, Privacy, Fraud And Rate Limits
+- **Byte size:** `75872`
+- **Lines/words:** `3460` / `9879`
+- **Level 1-3 heading count:** `104`
+- **SHA-256:** `83f77b0c92ada3d052b62e1e33e4d9586d65591cea9c000e0bfc2eff8be6b23c`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `2`
+  - `site visit` references detected: `17`
+  - `reveal-number/contact-reveal` references detected: `8`
+  - `old ads/promotion` references detected: `60`
+  - `notification/provider channels` references detected: `64`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `30`
+  - `requirement/proposal module` references detected: `35`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-053 — `prompts/13_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`
+
+- **Archive order:** 53 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 13: Security, Privacy, Fraud And Rate Limits
+- **Byte size:** `62192`
+- **Lines/words:** `2937` / `7998`
+- **Level 1-3 heading count:** `108`
+- **SHA-256:** `a77cb219a4781d80d0e0f728198682b8c384fcadeb0ec6d2fca564923030ea19`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `3`
+  - `site visit` references detected: `8`
+  - `reveal-number/contact-reveal` references detected: `8`
+  - `old ads/promotion` references detected: `38`
+  - `notification/provider channels` references detected: `55`
+  - `agent/team language` references detected: `1`
+  - `fixed UI/design language` references detected: `29`
+  - `requirement/proposal module` references detected: `36`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-054 — `prompts/14_MANUAL_VERIFICATION_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`
+
+- **Archive order:** 54 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 14 Manual Verification: Performance, Caching, Deployment And Launch
+- **Byte size:** `63333`
+- **Lines/words:** `2901` / `8241`
+- **Level 1-3 heading count:** `97`
+- **SHA-256:** `44a9b924e062bcb611d4d83c24813427f75fbc18e9d216cf4c96a85b6f11197b`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `5`
+  - `site visit` references detected: `2`
+  - `old ads/promotion` references detected: `39`
+  - `notification/provider channels` references detected: `42`
+  - `fixed UI/design language` references detected: `12`
+  - `requirement/proposal module` references detected: `11`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-055 — `prompts/14_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`
+
+- **Archive order:** 55 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 14: Performance, Caching, Deployment And Launch
+- **Byte size:** `57528`
+- **Lines/words:** `2610` / `7401`
+- **Level 1-3 heading count:** `107`
+- **SHA-256:** `999feef60d24a93aad3715320351d503bb8959456b617b33226012892fb0562d`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `6`
+  - `site visit` references detected: `2`
+  - `old ads/promotion` references detected: `43`
+  - `notification/provider channels` references detected: `43`
+  - `fixed UI/design language` references detected: `13`
+  - `requirement/proposal module` references detected: `41`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-056 — `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+
+- **Archive order:** 56 of 58
+- **Source class:** `LEGACY_IMPLEMENTATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 15: Final Production API Testing And Signoff
+- **Byte size:** `58321`
+- **Lines/words:** `2562` / `7461`
+- **Level 1-3 heading count:** `106`
+- **SHA-256:** `36e0303699660667aafa4b10d3c3e98933a7f5646ac3010fcd4a720a033b96de`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `17`
+  - `site visit` references detected: `4`
+  - `reveal-number/contact-reveal` references detected: `2`
+  - `old ads/promotion` references detected: `37`
+  - `notification/provider channels` references detected: `122`
+  - `fixed UI/design language` references detected: `14`
+  - `requirement/proposal module` references detected: `21`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-057 — `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+
+- **Archive order:** 57 of 58
+- **Source class:** `LEGACY_VERIFICATION_PROMPT`
+- **Source title/scope:** My Gujarat Property — Prompt 15 Manual Verification: Final Production API Testing And Signoff
+- **Byte size:** `63332`
+- **Lines/words:** `2892` / `8221`
+- **Level 1-3 heading count:** `97`
+- **SHA-256:** `dadfb200a6ed7c2f15f88ab06675ab7eb9fc8128fcf19a64708c24fcd46c3ffc`
+- **Regeneration treatment:** `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `15`
+  - `site visit` references detected: `5`
+  - `reveal-number/contact-reveal` references detected: `3`
+  - `old ads/promotion` references detected: `40`
+  - `notification/provider channels` references detected: `111`
+  - `fixed UI/design language` references detected: `15`
+  - `requirement/proposal module` references detected: `24`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+### MGP-SRC-058 — `SECURITY_RLS_CHECKLIST.md`
+
+- **Archive order:** 58 of 58
+- **Source class:** `LEGACY_QA_CONTROL`
+- **Source title/scope:** My Gujarat Property — Security, RLS, Privacy And Access Control Checklist
+- **Byte size:** `89974`
+- **Lines/words:** `2211` / `10812`
+- **Level 1-3 heading count:** `130`
+- **SHA-256:** `a6c62d06ed5bcc5006a23d481074e4992307847b46837a7d9b210d179288976a`
+- **Regeneration treatment:** `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL`
+- **Source-specific handling:** Extract all compatible functional, data, security, workflow and verification requirements; route conflicts/removals through the canonical decision and deprecation controls.
+- **Conflict/removal review flags:**
+  - `complete map functionality` references detected: `5`
+  - `site visit` references detected: `4`
+  - `reveal-number/contact-reveal` references detected: `16`
+  - `old ads/promotion` references detected: `26`
+  - `notification/provider channels` references detected: `21`
+  - `agent/team language` references detected: `13`
+  - `fixed UI/design language` references detected: `7`
+  - `requirement/proposal module` references detected: `30`
+- **Canonical regeneration destinations:**
+  - `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+  - `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+  - `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+  - `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+  - `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+  - `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+  - `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+  - `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+- **Traceability requirement:** Every atomic rule extracted from this source must receive a requirement ID in File 7 and a final status. Source-level mapping alone is not completion.
+
+---
+
+## 7. Compact Source Mapping Matrix
+
+| Source ID | Legacy path | Treatment | Canonical file numbers |
+|---|---|---|---|
+| MGP-SRC-001 | `AGENTS.md` | `CONSOLIDATE_AND_SUPERSEDE` | 01, 07, 38, 44, 45, 46 |
+| MGP-SRC-002 | `API_PROVIDER_STATUS.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 31, 33, 34, 36, 37, 42, 44, 45, 46 |
+| MGP-SRC-003 | `brain.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 00, 01, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43, 44, 46 |
+| MGP-SRC-004 | `BUGS_AND_FIXES.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 07, 36, 42, 44, 45, 46 |
+| MGP-SRC-005 | `Calude Prompt.pdf` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 04, 07, 38, 42, 44, 45, 46 |
+| MGP-SRC-006 | `CHANGELOG.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 07, 36, 37, 44, 45, 46 |
+| MGP-SRC-007 | `CLAUDE.md` | `CONSOLIDATE_AND_SUPERSEDE` | 01, 07, 38, 44, 45, 46 |
+| MGP-SRC-008 | `DEPLOYMENT_ROLLBACK.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 07, 30, 35, 36, 37, 42, 44, 45, 46 |
+| MGP-SRC-009 | `docs/01_PROJECT_MASTER_AND_SCOPE.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 01, 05, 06, 07, 08, 09, 11, 12, 13, 14, 15, 16, 17, 18, 19, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43, 44 |
+| MGP-SRC-010 | `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 01, 07, 38, 44, 45, 46 |
+| MGP-SRC-011 | `docs/03_ARCHITECTURE_TECH_STACK_DATABASE_RLS.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 09, 21, 29, 30, 31, 32, 34, 35, 36, 37, 40, 42, 43 |
+| MGP-SRC-012 | `docs/04_AUTH_LOGIN_REGISTER_ROLES_PERMISSIONS.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 09, 10, 21, 25, 27, 30, 32, 33, 39, 40, 42, 43 |
+| MGP-SRC-013 | `docs/05_PUBLIC_ROLES_HOME_PROFILE_DASHBOARD.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 09, 11, 15, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 39, 41, 43 |
+| MGP-SRC-014 | `docs/06_PROPERTY_PROJECT_REQUIREMENT_FULL_MATRIX.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 08, 12, 13, 14, 15, 19, 30, 31, 32, 39, 40, 43 |
+| MGP-SRC-015 | `docs/07_LEADS_CRM_PROPOSALS_SITE_VISITS_MESSAGES.md` | `PARTIAL_SALVAGE_WITH_EXPLICIT_FEATURE_REMOVAL` | 05, 07, 08, 14, 15, 18, 25, 27, 30, 31, 32, 33, 39, 40, 42, 43 |
+| MGP-SRC-016 | `docs/08_ADMIN_SUPER_ADMIN_STAFF_MODULES.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 09, 18, 19, 21, 25, 27, 30, 31, 32, 36, 39, 40, 42, 43 |
+| MGP-SRC-017 | `docs/09_BILLING_SUBSCRIPTION_PAYMENT_GST_TRIAL.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 17, 18, 19, 25, 27, 30, 31, 32, 33, 36, 39, 40, 42, 43 |
+| MGP-SRC-018 | `docs/10_ADS_PROMOTION_NOTIFICATION_PROVIDER_MODES.md` | `PARTIAL_SALVAGE_WITH_EXPLICIT_FEATURE_REMOVAL` | 05, 07, 11, 16, 18, 26, 27, 30, 31, 32, 33, 35, 36, 39, 40, 42, 43 |
+| MGP-SRC-019 | `docs/11_LOCATION_SEARCH_SEO_CMS_BLOG_LEGAL.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 06, 07, 11, 19, 21, 25, 26, 27, 28, 30, 31, 34, 39, 41, 42, 43 |
+| MGP-SRC-020 | `docs/12_MEDIA_UPLOAD_STORAGE_IMAGE_VIDEO_PDF.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 12, 13, 16, 19, 27, 30, 31, 32, 34, 35, 37, 39, 40, 42, 43 |
+| MGP-SRC-021 | `docs/13_UI_UX_DESIGN_SYSTEM_RESPONSIVE_RULES.md` | `DEPRECATE_FIXED_DESIGN; SALVAGE_NEUTRAL_UX_RULES` | 05, 07, 20, 21, 22, 23, 24, 25, 26, 27, 28, 39, 41, 42, 43 |
+| MGP-SRC-022 | `docs/14_SECURITY_PRIVACY_CONSENT_FRAUD_LEGAL.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 10, 12, 13, 14, 16, 17, 18, 19, 25, 27, 30, 31, 32, 33, 34, 36, 40, 42, 43, 44 |
+| MGP-SRC-023 | `docs/15_PERFORMANCE_DEPLOYMENT_ROLLBACK_QA.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 24, 27, 29, 30, 31, 32, 34, 35, 36, 37, 41, 42, 44, 45, 46 |
+| MGP-SRC-024 | `docs/16_ADVANCED_FEATURES_PWA_LOCALIZATION_ANALYTICS.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 08, 11, 17, 19, 24, 25, 26, 27, 29, 30, 31, 33, 34, 35, 36, 37, 39, 41, 42, 43 |
+| MGP-SRC-025 | `FEATURE_REGISTRY.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 42, 43, 44, 46 |
+| MGP-SRC-026 | `MANUAL_VERIFICATION.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 07, 39, 40, 41, 42, 43, 44, 45, 46 |
+| MGP-SRC-027 | `PERFORMANCE_CHECKLIST.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 24, 27, 29, 30, 31, 32, 34, 35, 36, 37, 41, 42, 44, 45, 46 |
+| MGP-SRC-028 | `prompts/00_PROMPT_USAGE_RULES.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 01, 07, 38, 42, 44, 45, 46 |
+| MGP-SRC-029 | `prompts/01_PROJECT_SETUP_BASELINE.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 29, 30, 31, 32, 34, 36, 37, 42, 44, 45, 46 |
+| MGP-SRC-030 | `prompts/02_AUTH_ROLES_RLS_FOUNDATION.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 09, 10, 21, 25, 27, 30, 31, 32, 33, 39, 40, 42, 43, 46 |
+| MGP-SRC-031 | `prompts/02_MANUAL_VERIFICATION_AUTH_ROLES_RLS_FOUNDATION.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-032 | `prompts/03_MANUAL_VERIFICATION_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 20, 21, 22, 23, 24, 25, 26, 27, 28, 39, 41, 42, 43, 45, 46 |
+| MGP-SRC-033 | `prompts/03_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 11, 20, 21, 22, 23, 24, 25, 26, 27, 28, 39, 41, 43, 46 |
+| MGP-SRC-034 | `prompts/04_MANUAL_VERIFICATION_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 12, 13, 14, 30, 32, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-035 | `prompts/04_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 08, 12, 13, 14, 15, 19, 25, 27, 30, 31, 32, 34, 39, 40, 43, 46 |
+| MGP-SRC-036 | `prompts/05_MANUAL_VERIFICATION_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 11, 12, 13, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 39, 41, 42, 43, 45, 46 |
+| MGP-SRC-037 | `prompts/05_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 11, 12, 13, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 39, 41, 43, 46 |
+| MGP-SRC-038 | `prompts/06_MANUAL_VERIFICATION_OWNER_BROKER_BUILDER_DASHBOARDS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 09, 15, 17, 20, 21, 22, 23, 24, 25, 26, 27, 39, 40, 41, 42, 43, 45, 46 |
+| MGP-SRC-039 | `prompts/06_OWNER_BROKER_BUILDER_DASHBOARDS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 09, 14, 15, 16, 17, 20, 21, 22, 23, 24, 25, 26, 27, 30, 31, 39, 40, 41, 43, 46 |
+| MGP-SRC-040 | `prompts/07_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 09, 18, 19, 21, 23, 25, 27, 30, 31, 32, 36, 39, 40, 43, 46 |
+| MGP-SRC-041 | `prompts/07_MANUAL_VERIFICATION_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 09, 18, 19, 21, 23, 25, 27, 30, 32, 36, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-042 | `prompts/08_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 08, 14, 15, 18, 25, 27, 30, 31, 32, 33, 39, 40, 43, 46 |
+| MGP-SRC-043 | `prompts/08_MANUAL_VERIFICATION_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 08, 14, 15, 18, 25, 27, 30, 31, 32, 33, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-044 | `prompts/09_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 17, 18, 19, 25, 27, 30, 31, 32, 33, 36, 39, 40, 43, 46 |
+| MGP-SRC-045 | `prompts/09_MANUAL_VERIFICATION_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 17, 18, 19, 25, 27, 30, 31, 32, 33, 36, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-046 | `prompts/10_MANUAL_VERIFICATION_MEDIA_STORAGE_UPLOADS_R2_CDN.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 12, 13, 16, 19, 27, 30, 31, 32, 34, 35, 37, 39, 40, 41, 42, 43, 45, 46 |
+| MGP-SRC-047 | `prompts/10_MEDIA_STORAGE_UPLOADS_R2_CDN.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 12, 13, 16, 19, 27, 30, 31, 32, 34, 35, 37, 39, 40, 43, 46 |
+| MGP-SRC-048 | `prompts/11_LOCATION_SEARCH_SEO_CMS_LEGAL.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 06, 07, 11, 19, 21, 25, 26, 27, 28, 30, 31, 34, 39, 41, 43, 46 |
+| MGP-SRC-049 | `prompts/11_MANUAL_VERIFICATION_LOCATION_SEARCH_SEO_CMS_LEGAL.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 11, 19, 21, 25, 26, 27, 30, 31, 34, 39, 40, 41, 42, 43, 45, 46 |
+| MGP-SRC-050 | `prompts/12_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 11, 16, 18, 26, 27, 30, 31, 32, 33, 35, 36, 39, 40, 43, 46 |
+| MGP-SRC-051 | `prompts/12_MANUAL_VERIFICATION_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 11, 16, 18, 26, 27, 30, 31, 32, 33, 35, 36, 39, 40, 42, 43, 45, 46 |
+| MGP-SRC-052 | `prompts/13_MANUAL_VERIFICATION_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 10, 14, 16, 17, 18, 19, 25, 27, 30, 31, 32, 33, 34, 36, 40, 42, 43, 44, 45, 46 |
+| MGP-SRC-053 | `prompts/13_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 10, 14, 16, 17, 18, 19, 25, 27, 30, 31, 32, 33, 34, 36, 40, 42, 43, 44, 46 |
+| MGP-SRC-054 | `prompts/14_MANUAL_VERIFICATION_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 24, 27, 29, 30, 31, 32, 34, 35, 36, 37, 41, 42, 44, 45, 46 |
+| MGP-SRC-055 | `prompts/14_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 24, 27, 29, 30, 31, 32, 34, 35, 36, 37, 41, 42, 44, 46 |
+| MGP-SRC-056 | `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 05, 07, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46 |
+| MGP-SRC-057 | `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md` | `SUPERSEDE_AFTER_REQUIREMENT_EXTRACTION` | 07, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 42, 43, 44, 45, 46 |
+| MGP-SRC-058 | `SECURITY_RLS_CHECKLIST.md` | `REWRITE_AND_REMAP; DO_NOT_COPY_AS_CANONICAL` | 05, 07, 09, 10, 12, 13, 14, 16, 17, 18, 19, 25, 27, 30, 31, 32, 33, 34, 36, 40, 42, 43, 44, 45, 46 |
+
+---
+
+## 8. Reverse Coverage: New Files to Legacy Sources
+
+The following reverse map shows which legacy source IDs feed each regenerated file. Files 2 and 3 are primarily conversation/attachment preservation authorities, so they may have little or no legacy-ZIP input.
+
+### File 1 — `00_CONTROL_AND_SOURCE/00_MASTER_INDEX.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`
+
+### File 2 — `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGOTIABLES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-003`, `MGP-SRC-007`, `MGP-SRC-009`, `MGP-SRC-010`, `MGP-SRC-028`
+
+### File 3 — `00_CONTROL_AND_SOURCE/02_USER_REQUIREMENTS_VERBATIM.md`
+
+- Legacy ZIP source IDs: none; this file is driven primarily by current user instructions, preserved chat, or the Master UX attachment.
+- Primary non-ZIP source: user requirements in conversation, preserved verbatim.
+
+### File 4 — `00_CONTROL_AND_SOURCE/03_MASTER_UX_PROMPT_VERBATIM.md`
+
+- Legacy ZIP source IDs: none; this file is driven primarily by current user instructions, preserved chat, or the Master UX attachment.
+- Primary non-ZIP source: attached Master SaaS UX prompt, preserved verbatim.
+
+### File 5 — `00_CONTROL_AND_SOURCE/04_SOURCE_FILE_INVENTORY_AND_REGENERATION_MAP.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-005`
+
+### File 6 — `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-033`, `MGP-SRC-035`, `MGP-SRC-037`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-042`, `MGP-SRC-044`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-050`, `MGP-SRC-053`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-058`
+
+### File 7 — `00_CONTROL_AND_SOURCE/06_CANONICAL_GLOSSARY_AND_NAMING.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-019`, `MGP-SRC-025`, `MGP-SRC-048`
+
+### File 8 — `00_CONTROL_AND_SOURCE/07_REQUIREMENT_TRACEABILITY_MATRIX.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-004`, `MGP-SRC-005`, `MGP-SRC-006`, `MGP-SRC-007`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-010`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-028`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 9 — `01_PRODUCT_AND_BUSINESS_SPECS/08_PRODUCT_SCOPE_AND_SUCCESS_CRITERIA.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-035`, `MGP-SRC-042`, `MGP-SRC-043`
+
+### File 10 — `01_PRODUCT_AND_BUSINESS_SPECS/09_ROLE_PERMISSION_TENANCY_AND_SUBDOMAIN_MODEL.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-016`, `MGP-SRC-025`, `MGP-SRC-030`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-058`
+
+### File 11 — `01_PRODUCT_AND_BUSINESS_SPECS/10_AUTH_ONBOARDING_SESSION_AND_REDIRECT_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-012`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-030`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 12 — `01_PRODUCT_AND_BUSINESS_SPECS/11_HOMEPAGE_CITY_SEARCH_DISCOVERY_AND_ANNOUNCEMENT_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-013`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`
+
+### File 13 — `01_PRODUCT_AND_BUSINESS_SPECS/12_PROPERTY_LISTING_LIFECYCLE_AND_DETAIL_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-014`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-058`
+
+### File 14 — `01_PRODUCT_AND_BUSINESS_SPECS/13_PROJECT_UNIT_LIFECYCLE_AND_DETAIL_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-014`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-058`
+
+### File 15 — `01_PRODUCT_AND_BUSINESS_SPECS/14_DIRECT_INQUIRY_LEAD_AND_CONTACT_VISIBILITY_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-039`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 16 — `01_PRODUCT_AND_BUSINESS_SPECS/15_OWNER_BROKER_BUILDER_DASHBOARD_AND_WORKSPACE_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-013`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-025`, `MGP-SRC-035`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-042`, `MGP-SRC-043`
+
+### File 17 — `01_PRODUCT_AND_BUSINESS_SPECS/16_BUILDER_HOME_BANNER_PROMOTION_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-018`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-039`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 18 — `01_PRODUCT_AND_BUSINESS_SPECS/17_PROFILE_SETTINGS_SUBSCRIPTION_BILLING_AND_PAYMENT_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-013`, `MGP-SRC-017`, `MGP-SRC-022`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 19 — `01_PRODUCT_AND_BUSINESS_SPECS/18_ADMIN_SUPER_ADMIN_MODERATION_RECOVERY_AND_AUDIT_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 20 — `01_PRODUCT_AND_BUSINESS_SPECS/19_CMS_SEO_LEGAL_REPORT_SUPPORT_AND_CONTENT_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-014`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 21 — `02_UX_AND_DESIGN_AUTHORITY/20_MASTER_SAAS_UX_NAVIGATION_AND_INTERACTION_REQUIREMENTS.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-021`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`
+
+### File 22 — `02_UX_AND_DESIGN_AUTHORITY/21_INFORMATION_ARCHITECTURE_ROUTE_AND_SCREEN_REGISTRY.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-016`, `MGP-SRC-019`, `MGP-SRC-021`, `MGP-SRC-030`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-048`, `MGP-SRC-049`
+
+### File 23 — `02_UX_AND_DESIGN_AUTHORITY/22_HEADER_SHELL_BOTTOM_NAV_AND_CONTEXTUAL_NAVIGATION_RULES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-021`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`
+
+### File 24 — `02_UX_AND_DESIGN_AUTHORITY/23_PAGE_MODAL_DRAWER_POPOVER_POPUP_AND_NEW_TAB_RULES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-021`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`
+
+### File 25 — `02_UX_AND_DESIGN_AUTHORITY/24_MOBILE_FIRST_RESPONSIVE_ACCESSIBILITY_AND_CONTENT_RULES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-021`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-027`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-054`, `MGP-SRC-055`
+
+### File 26 — `02_UX_AND_DESIGN_AUTHORITY/25_END_TO_END_USER_JOURNEY_AND_STATE_PRESERVATION_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-019`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-024`, `MGP-SRC-030`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-058`
+
+### File 27 — `02_UX_AND_DESIGN_AUTHORITY/26_SEARCH_FILTER_NOTIFICATION_AND_DISCOVERY_UX_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-021`, `MGP-SRC-024`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`
+
+### File 28 — `02_UX_AND_DESIGN_AUTHORITY/27_FORM_VALIDATION_LOADING_EMPTY_SUCCESS_ERROR_AND_RECOVERY_STATES.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-027`, `MGP-SRC-030`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-058`
+
+### File 29 — `02_UX_AND_DESIGN_AUTHORITY/28_DESIGN_RESEARCH_REFERENCE_WEBSITE_AND_ORIGINAL_UI_GENERATION_PROCESS.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-019`, `MGP-SRC-021`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-037`, `MGP-SRC-048`
+
+### File 30 — `03_TECHNICAL_ARCHITECTURE/29_SYSTEM_ARCHITECTURE_STACK_AND_REPOSITORY_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`
+
+### File 31 — `03_TECHNICAL_ARCHITECTURE/30_DATABASE_ENTITY_RELATIONSHIP_OWNERSHIP_AND_MIGRATION_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-037`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 32 — `03_TECHNICAL_ARCHITECTURE/31_API_SERVICE_LAYER_BACKGROUND_JOBS_AND_INTEGRATION_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-035`, `MGP-SRC-037`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 33 — `03_TECHNICAL_ARCHITECTURE/32_AUTHORIZATION_RLS_SECURITY_PRIVACY_AND_ABUSE_PREVENTION_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 34 — `03_TECHNICAL_ARCHITECTURE/33_EMAIL_SMS_OTP_NOTIFICATION_AND_PROVIDER_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-012`, `MGP-SRC-015`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-022`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-030`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 35 — `03_TECHNICAL_ARCHITECTURE/34_MEDIA_UPLOAD_STORAGE_COMPRESSION_AND_DELIVERY_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-035`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 36 — `03_TECHNICAL_ARCHITECTURE/35_PERFORMANCE_CACHING_SCALABILITY_AND_10_LAKH_USER_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-018`, `MGP-SRC-020`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`
+
+### File 37 — `03_TECHNICAL_ARCHITECTURE/36_OBSERVABILITY_LOGGING_AUDIT_BACKUP_AND_DISASTER_RECOVERY_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-004`, `MGP-SRC-006`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 38 — `03_TECHNICAL_ARCHITECTURE/37_CI_CD_ENVIRONMENT_DEPLOYMENT_ROLLBACK_AND_LAUNCH_SPEC.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-006`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-020`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-027`, `MGP-SRC-029`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`
+
+### File 39 — `03_TECHNICAL_ARCHITECTURE/38_SKILL_INSTALLATION_ORCHESTRATION_AND_CLAUDE_AGENT_WORKFLOW.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-005`, `MGP-SRC-007`, `MGP-SRC-010`, `MGP-SRC-028`
+- Additional non-ZIP sources: the nine GitHub skill repositories supplied by the user.
+
+### File 40 — `04_QA_GOVERNANCE_AND_VERIFICATION/39_FEATURE_STATE_ROUTE_ACTION_AND_DESTINATION_MATRIX.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-056`, `MGP-SRC-057`
+
+### File 41 — `04_QA_GOVERNANCE_AND_VERIFICATION/40_ROLE_PERMISSION_DATA_ACCESS_AND_NEGATIVE_TEST_MATRIX.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-020`, `MGP-SRC-022`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 42 — `04_QA_GOVERNANCE_AND_VERIFICATION/41_RESPONSIVE_ACCESSIBILITY_CONTENT_AND_VISUAL_QA_MATRIX.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-013`, `MGP-SRC-019`, `MGP-SRC-021`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-046`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`
+
+### File 43 — `04_QA_GOVERNANCE_AND_VERIFICATION/42_END_TO_END_FUNCTIONAL_SECURITY_AND_PERFORMANCE_TEST_PLAN.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-002`, `MGP-SRC-004`, `MGP-SRC-005`, `MGP-SRC-008`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-028`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-034`, `MGP-SRC-036`, `MGP-SRC-038`, `MGP-SRC-041`, `MGP-SRC-043`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-049`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 44 — `04_QA_GOVERNANCE_AND_VERIFICATION/43_DEPRECATED_FEATURE_REMOVAL_AND_LEGACY_CLEANUP_CHECKLIST.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-003`, `MGP-SRC-009`, `MGP-SRC-011`, `MGP-SRC-012`, `MGP-SRC-013`, `MGP-SRC-014`, `MGP-SRC-015`, `MGP-SRC-016`, `MGP-SRC-017`, `MGP-SRC-018`, `MGP-SRC-019`, `MGP-SRC-020`, `MGP-SRC-021`, `MGP-SRC-022`, `MGP-SRC-024`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 45 — `04_QA_GOVERNANCE_AND_VERIFICATION/44_FINAL_COMPLETENESS_TRACEABILITY_AND_RELEASE_SIGNOFF.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-004`, `MGP-SRC-005`, `MGP-SRC-006`, `MGP-SRC-007`, `MGP-SRC-008`, `MGP-SRC-009`, `MGP-SRC-010`, `MGP-SRC-022`, `MGP-SRC-023`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-028`, `MGP-SRC-029`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 46 — `04_QA_GOVERNANCE_AND_VERIFICATION/45_MANUAL_VERIFICATION_EVIDENCE_AND_PASS_FAIL_TEMPLATE.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-002`, `MGP-SRC-004`, `MGP-SRC-005`, `MGP-SRC-006`, `MGP-SRC-007`, `MGP-SRC-008`, `MGP-SRC-010`, `MGP-SRC-023`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-028`, `MGP-SRC-029`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-034`, `MGP-SRC-036`, `MGP-SRC-038`, `MGP-SRC-041`, `MGP-SRC-043`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-049`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-054`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+### File 47 — `05_CLAUDE_EXECUTION/46_CLAUDE_PHASE_BY_PHASE_BUILD_AND_VERIFICATION_PROMPTS.md`
+
+- Legacy ZIP source IDs: `MGP-SRC-001`, `MGP-SRC-002`, `MGP-SRC-003`, `MGP-SRC-004`, `MGP-SRC-005`, `MGP-SRC-006`, `MGP-SRC-007`, `MGP-SRC-008`, `MGP-SRC-010`, `MGP-SRC-023`, `MGP-SRC-025`, `MGP-SRC-026`, `MGP-SRC-027`, `MGP-SRC-028`, `MGP-SRC-029`, `MGP-SRC-030`, `MGP-SRC-031`, `MGP-SRC-032`, `MGP-SRC-033`, `MGP-SRC-034`, `MGP-SRC-035`, `MGP-SRC-036`, `MGP-SRC-037`, `MGP-SRC-038`, `MGP-SRC-039`, `MGP-SRC-040`, `MGP-SRC-041`, `MGP-SRC-042`, `MGP-SRC-043`, `MGP-SRC-044`, `MGP-SRC-045`, `MGP-SRC-046`, `MGP-SRC-047`, `MGP-SRC-048`, `MGP-SRC-049`, `MGP-SRC-050`, `MGP-SRC-051`, `MGP-SRC-052`, `MGP-SRC-053`, `MGP-SRC-054`, `MGP-SRC-055`, `MGP-SRC-056`, `MGP-SRC-057`, `MGP-SRC-058`
+
+---
+
+## 9. Missing, Broken and Non-Archive References
+
+### 9.1 Material Missing Reference
+
+- `prompts/01_MANUAL_VERIFICATION_PROJECT_SETUP_BASELINE.md` — referenced across the archive but absent. This is a real source-package gap.
+
+### 9.2 Referenced Final Outputs Not Present in the Archive
+
+- `FINAL_SIGNOFF_PACKAGE.md` — treated as a legacy intended output, not as an available source file.
+- `FINAL_KNOWN_LIMITATIONS.md` — treated as a legacy intended output, not as an available source file.
+- `FINAL_LAUNCH_CHECKLIST.md` — treated as a legacy intended output, not as an available source file.
+- `FINAL_PROVIDER_TEST_MATRIX.md` — treated as a legacy intended output, not as an available source file.
+
+### 9.3 Implementation-Repository References
+
+- `README.md` — referenced by setup instructions but absent from the documentation archive; it may exist or be created in the actual code repository.
+
+### 9.4 Placeholder References
+
+References such as `file-name.md`, `path/to/file.md`, `prompts/XX_PHASE_NAME.md` and similar `XX` patterns are templates, not missing concrete files.
+
+### 9.5 Full Detected Missing-Reference Register
+
+- `prompts/01_MANUAL_VERIFICATION_PROJECT_SETUP_BASELINE.md` — `missing/reference outside archive`; referenced by 34 source file(s): `brain.md`, `docs/01_PROJECT_MASTER_AND_SCOPE.md`, `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`, `docs/16_ADVANCED_FEATURES_PWA_LOCALIZATION_ANALYTICS.md`, `prompts/00_PROMPT_USAGE_RULES.md`, `prompts/01_PROJECT_SETUP_BASELINE.md`, `prompts/02_AUTH_ROLES_RLS_FOUNDATION.md`, `prompts/02_MANUAL_VERIFICATION_AUTH_ROLES_RLS_FOUNDATION.md`, `prompts/03_MANUAL_VERIFICATION_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`, `prompts/03_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`, `prompts/04_MANUAL_VERIFICATION_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`, `prompts/04_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`, `prompts/05_MANUAL_VERIFICATION_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`, `prompts/05_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`, `prompts/06_MANUAL_VERIFICATION_OWNER_BROKER_BUILDER_DASHBOARDS.md`, `prompts/06_OWNER_BROKER_BUILDER_DASHBOARDS.md`, `prompts/07_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`, `prompts/07_MANUAL_VERIFICATION_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`, `prompts/08_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`, `prompts/08_MANUAL_VERIFICATION_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`, `prompts/09_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`, `prompts/09_MANUAL_VERIFICATION_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`, `prompts/10_MANUAL_VERIFICATION_MEDIA_STORAGE_UPLOADS_R2_CDN.md`, `prompts/10_MEDIA_STORAGE_UPLOADS_R2_CDN.md`, `prompts/11_LOCATION_SEARCH_SEO_CMS_LEGAL.md`, `prompts/11_MANUAL_VERIFICATION_LOCATION_SEARCH_SEO_CMS_LEGAL.md`, `prompts/12_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`, `prompts/12_MANUAL_VERIFICATION_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`, `prompts/13_MANUAL_VERIFICATION_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`, `prompts/13_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`, `prompts/14_MANUAL_VERIFICATION_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`, `prompts/14_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`, `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`, `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `FINAL_KNOWN_LIMITATIONS.md` — `expected output`; referenced by 2 source file(s): `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`, `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `FINAL_LAUNCH_CHECKLIST.md` — `expected output`; referenced by 2 source file(s): `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`, `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `FINAL_PROVIDER_TEST_MATRIX.md` — `expected output`; referenced by 2 source file(s): `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`, `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `FINAL_SIGNOFF_PACKAGE.md` — `expected output`; referenced by 2 source file(s): `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`, `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `path/to/file.md` — `placeholder/template`; referenced by 2 source file(s): `MANUAL_VERIFICATION.md`, `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`
+- `README.md` — `missing/reference outside archive`; referenced by 1 source file(s): `prompts/01_PROJECT_SETUP_BASELINE.md`
+- `file-name.md` — `placeholder/template`; referenced by 1 source file(s): `CHANGELOG.md`
+- `prompts/XX_MANUAL_VERIFICATION_NAME.md` — `placeholder/template`; referenced by 1 source file(s): `prompts/00_PROMPT_USAGE_RULES.md`
+- `prompts/XX_MANUAL_VERIFICATION_PHASE_NAME.md` — `placeholder/template`; referenced by 1 source file(s): `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`
+- `prompts/XX_PHASE_NAME.md` — `placeholder/template`; referenced by 1 source file(s): `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`
+- `prompts/XX_PROMPT_NAME.md` — `placeholder/template`; referenced by 1 source file(s): `prompts/00_PROMPT_USAGE_RULES.md`
+
+---
+
+## 10. Cross-Source Consolidation Rules
+
+### MGP-CONSOLIDATE-001 — Agent rulebooks
+
+Use one Claude/agent constitution and one skill-orchestration workflow. Do not maintain separate Codex and Claude feature authorities.
+
+### MGP-CONSOLIDATE-002 — Feature registry
+
+Convert legacy feature entries into atomic traceability rows and state/action matrices. Do not retain an unreviewed monolithic registry as the only source of truth.
+
+### MGP-CONSOLIDATE-003 — Status and logs
+
+Unify status terminology across changelog, bugs, verification, providers, deployment, performance and security. Definitions belong in File 6 and evidence format in File 45.
+
+### MGP-CONSOLIDATE-004 — Prompts and verification
+
+Each new implementation phase must have its verification prompt in the same File 46 sequence, with exact preconditions, checks, evidence and stop/go gate.
+
+### MGP-CONSOLIDATE-005 — UX sources
+
+Merge the Master UX prompt, compatible legacy UX principles and latest user corrections. Never copy the old screen layout or treat a reference website as a clone target.
+
+### MGP-CONSOLIDATE-006 — Auth sources
+
+Combine role/auth/RLS/provider/UX rules into one coherent mobile-number + 4-digit SMS OTP flow with session, redirect, rate-limit, recovery and logged-in-route behavior.
+
+### MGP-CONSOLIDATE-007 — Property/project sources
+
+Separate property and project/unit lifecycles while preserving shared moderation, media, ownership, lead, audit and recovery rules.
+
+### MGP-CONSOLIDATE-008 — Inquiry and CRM sources
+
+Replace inquiry-type and reveal-number flows with direct inquiry and approved contact visibility. Remove Site Visit. Decide requirements/proposals/messaging explicitly.
+
+### MGP-CONSOLIDATE-009 — Promotions and notifications
+
+Replace the old advertising model with builder homepage banner promotion; separate in-app announcements from email delivery and SMS OTP.
+
+### MGP-CONSOLIDATE-010 — Admin operations
+
+Convert shallow module lists into connected entity drill-down, reversible actions, reason capture, audit history, permissions and negative tests.
+
+### MGP-CONSOLIDATE-011 — Performance and deployment
+
+Replace legacy 1-lakh claims with measurable 10-lakh-target architecture assumptions, load tests, SLOs, observability, capacity limits, backup, rollback and incident recovery.
+
+### MGP-CONSOLIDATE-012 — Removed design
+
+Design-system generation occurs only after IA, user journeys, action semantics and responsive rules are defined. The new visual system is original and evidence-tested.
+
+---
+
+## 11. No-Silent-Loss Regeneration Procedure
+
+1. Use this source inventory to enumerate all 58 archive files.
+2. Extract atomic requirements from every source section listed in Appendix A.
+3. Assign each requirement a source pointer containing source ID, path and heading/line anchor.
+4. Classify the requirement using the approved status vocabulary.
+5. Apply the authority order and route conflicts to File 5.
+6. Place every approved requirement in at least one canonical specification.
+7. Map cross-layer impacts: role, route, UI, state, data, API, RLS, provider, job, audit, notification and analytics.
+8. Assign implementation phase and exact verification prompt.
+9. Create positive, negative, mobile, accessibility, security, failure and recovery tests where applicable.
+10. Prove removed requirements are absent through File 43.
+11. Prove all approved requirements reach evidence and sign-off through Files 7 and 44.
+12. Block final prompt generation if any source requirement remains unclassified or unmapped.
+
+---
+
+## 12. File 5 Completion Gates
+
+| Gate | Requirement | Status |
+|---|---|---|
+| `MGP-SOURCE-GATE-001` | Archive count equals 58 files, with 57 Markdown and one PDF. | **PASS** |
+| `MGP-SOURCE-GATE-002` | Every archive file has one stable source ID. | **PASS** |
+| `MGP-SOURCE-GATE-003` | Every source file has an integrity hash. | **PASS** |
+| `MGP-SOURCE-GATE-004` | Every source file has at least one canonical regeneration destination. | **PASS** |
+| `MGP-SOURCE-GATE-005` | Every legacy prompt is marked superseded after extraction. | **PASS** |
+| `MGP-SOURCE-GATE-006` | Old fixed design instructions are explicitly non-canonical. | **PASS** |
+| `MGP-SOURCE-GATE-007` | Known removed features are flagged for cross-layer cleanup. | **PASS** |
+| `MGP-SOURCE-GATE-008` | Missing Phase 01 verification source is recorded. | **PASS** |
+| `MGP-SOURCE-GATE-009` | Requirements/proposals, messaging, Broker agents, notification UI and new-tab policy are preserved as decisions rather than guessed. | **PASS** |
+| `MGP-SOURCE-GATE-010` | All level 1-3 headings from all Markdown sources are included in Appendix A. | **PASS** |
+| `MGP-SOURCE-GATE-011` | Requirement-level extraction is explicitly deferred to and required in File 7; source-level mapping is not misrepresented as full traceability. | **PASS** |
+
+---
+
+## Appendix A — Complete Level 1-3 Heading Manifest
+
+This appendix records every Markdown heading at levels 1, 2 and 3 from every Markdown source file. Headings remain in original source order. The manifest provides section-level coverage evidence; source wording remains in the original archive and atomic requirement tracing belongs in File 7.
+
+### MGP-SRC-001 — `AGENTS.md` — 48 headings
+
+- `MGP-SRC-001-H001` — `# AGENTS.md`
+- `MGP-SRC-001-H002` — `# My Gujarat Property — Codex Master Rules`
+- `MGP-SRC-001-H003` — `## 1. Project Identity`
+- `MGP-SRC-001-H004` — `## 2. Absolute Non-Negotiable Rules`
+- `MGP-SRC-001-H005` — `## 3. Required Tech Stack`
+- `MGP-SRC-001-H006` — `## 4. Main Documentation Files`
+- `MGP-SRC-001-H007` — `## 5. Token-Light Workflow Rules`
+- `MGP-SRC-001-H008` — `## 6. Phase Workflow`
+- `MGP-SRC-001-H009` — `## 7. Required Final Response Format For Codex`
+- `MGP-SRC-001-H010` — `## Changed Files`
+- `MGP-SRC-001-H011` — `## SQL / Migration Files`
+- `MGP-SRC-001-H012` — `## Tests Run`
+- `MGP-SRC-001-H013` — `## Verification Result`
+- `MGP-SRC-001-H014` — `## Pending Issues`
+- `MGP-SRC-001-H015` — `## Docs Updated`
+- `MGP-SRC-001-H016` — `## Next Phase`
+- `MGP-SRC-001-H017` — `## 8. Documentation Update Rules`
+- `MGP-SRC-001-H018` — `## 9. Feature Registry Rules`
+- `MGP-SRC-001-H019` — `## 10. Brain Memory Rules`
+- `MGP-SRC-001-H020` — `## 11. SQL, Database And Migration Rules`
+- `MGP-SRC-001-H021` — `## 12. Supabase And RLS Rules`
+- `MGP-SRC-001-H022` — `## 13. Auth Rules`
+- `MGP-SRC-001-H023` — `## 14. Role Rules`
+- `MGP-SRC-001-H024` — `## 15. UI And Responsive Rules`
+- `MGP-SRC-001-H025` — `## 16. Interaction Safety Rules`
+- `MGP-SRC-001-H026` — `## 17. Property, Project And Requirement Rules`
+- `MGP-SRC-001-H027` — `## 18. Admin Rules`
+- `MGP-SRC-001-H028` — `## 19. Billing And Payment Rules`
+- `MGP-SRC-001-H029` — `## 20. Provider Rules`
+- `MGP-SRC-001-H030` — `## 21. Media And Upload Rules`
+- `MGP-SRC-001-H031` — `## 22. Notifications Rules`
+- `MGP-SRC-001-H032` — `## 23. SEO Rules`
+- `MGP-SRC-001-H033` — `## 24. Legal And Consent Rules`
+- `MGP-SRC-001-H034` — `## 25. Performance Rules`
+- `MGP-SRC-001-H035` — `## 26. Next.js 15 And React Rules`
+- `MGP-SRC-001-H036` — `## 27. Security, Abuse And Rate Limit Rules`
+- `MGP-SRC-001-H037` — `## 28. Soft Delete And Audit Rules`
+- `MGP-SRC-001-H038` — `## 29. Deployment And Rollback Rules`
+- `MGP-SRC-001-H039` — `## 30. Production Readiness Rules`
+- `MGP-SRC-001-H040` — `## 31. Manual Verification Rules`
+- `MGP-SRC-001-H041` — `## 32. Existing Work Preservation`
+- `MGP-SRC-001-H042` — `## 33. Error Handling Rules`
+- `MGP-SRC-001-H043` — `## 34. Accessibility Rules`
+- `MGP-SRC-001-H044` — `## 35. Localization Rules`
+- `MGP-SRC-001-H045` — `## 36. Development Data Rules`
+- `MGP-SRC-001-H046` — `## 37. Codex Self-Check Before Final Response`
+- `MGP-SRC-001-H047` — `## 38. Human Approval Required For High-Risk Changes`
+- `MGP-SRC-001-H048` — `## 39. Master Rule`
+
+### MGP-SRC-002 — `API_PROVIDER_STATUS.md` — 334 headings
+
+- `MGP-SRC-002-H001` — `# API_PROVIDER_STATUS.md`
+- `MGP-SRC-002-H002` — `# My Gujarat Property — API Provider Status, Setup, Verification And Fallback Rules`
+- `MGP-SRC-002-H003` — `## 1. Purpose`
+- `MGP-SRC-002-H004` — `## 2. Mandatory Provider Rule`
+- `MGP-SRC-002-H005` — `## 3. Provider Status Values`
+- `MGP-SRC-002-H006` — `## 4. Provider Verification Values`
+- `MGP-SRC-002-H007` — `## 5. Provider Mode Values`
+- `MGP-SRC-002-H008` — `## 6. Provider Environment Safety Rules`
+- `MGP-SRC-002-H009` — `## 7. Required Provider Entry Format`
+- `MGP-SRC-002-H010` — `## PROVIDER-ID — Provider Name`
+- `MGP-SRC-002-H011` — `### Current Status`
+- `MGP-SRC-002-H012` — `### Purpose`
+- `MGP-SRC-002-H013` — `### Provider Options`
+- `MGP-SRC-002-H014` — `### Required Environment Variables`
+- `MGP-SRC-002-H015` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H016` — `### Setup Steps`
+- `MGP-SRC-002-H017` — `### Verification Checklist`
+- `MGP-SRC-002-H018` — `### Failure Behavior`
+- `MGP-SRC-002-H019` — `### Security Requirements`
+- `MGP-SRC-002-H020` — `### Production Readiness`
+- `MGP-SRC-002-H021` — `### Related Docs`
+- `MGP-SRC-002-H022` — `### Pending Issues`
+- `MGP-SRC-002-H023` — `## 8. Current Provider Summary`
+- `MGP-SRC-002-H024` — `# 9. Supabase Providers`
+- `MGP-SRC-002-H025` — `## API-001 — Supabase Auth`
+- `MGP-SRC-002-H026` — `### Current Status`
+- `MGP-SRC-002-H027` — `### Purpose`
+- `MGP-SRC-002-H028` — `### Provider Options`
+- `MGP-SRC-002-H029` — `### Required Environment Variables`
+- `MGP-SRC-002-H030` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H031` — `### Setup Steps`
+- `MGP-SRC-002-H032` — `### Verification Checklist`
+- `MGP-SRC-002-H033` — `### Failure Behavior`
+- `MGP-SRC-002-H034` — `### Security Requirements`
+- `MGP-SRC-002-H035` — `### Production Readiness`
+- `MGP-SRC-002-H036` — `### Related Docs`
+- `MGP-SRC-002-H037` — `### Pending Issues`
+- `MGP-SRC-002-H038` — `## API-002 — Supabase PostgreSQL`
+- `MGP-SRC-002-H039` — `### Current Status`
+- `MGP-SRC-002-H040` — `### Purpose`
+- `MGP-SRC-002-H041` — `### Required Environment Variables`
+- `MGP-SRC-002-H042` — `### Verification Checklist`
+- `MGP-SRC-002-H043` — `### Failure Behavior`
+- `MGP-SRC-002-H044` — `### Security Requirements`
+- `MGP-SRC-002-H045` — `### Production Readiness`
+- `MGP-SRC-002-H046` — `### Pending Issues`
+- `MGP-SRC-002-H047` — `## API-003 — Supabase RLS`
+- `MGP-SRC-002-H048` — `### Current Status`
+- `MGP-SRC-002-H049` — `### Purpose`
+- `MGP-SRC-002-H050` — `### Verification Checklist`
+- `MGP-SRC-002-H051` — `### Failure Behavior`
+- `MGP-SRC-002-H052` — `### Security Requirements`
+- `MGP-SRC-002-H053` — `### Production Readiness`
+- `MGP-SRC-002-H054` — `## API-004 — Supabase Server Client`
+- `MGP-SRC-002-H055` — `### Current Status`
+- `MGP-SRC-002-H056` — `### Purpose`
+- `MGP-SRC-002-H057` — `### Required Environment Variables`
+- `MGP-SRC-002-H058` — `### Verification Checklist`
+- `MGP-SRC-002-H059` — `# 10. OTP And SMS Providers`
+- `MGP-SRC-002-H060` — `## API-005 — OTP Provider`
+- `MGP-SRC-002-H061` — `### Current Status`
+- `MGP-SRC-002-H062` — `### Purpose`
+- `MGP-SRC-002-H063` — `### Provider Options`
+- `MGP-SRC-002-H064` — `### Required Environment Variables`
+- `MGP-SRC-002-H065` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H066` — `### Setup Steps`
+- `MGP-SRC-002-H067` — `### Verification Checklist`
+- `MGP-SRC-002-H068` — `### Failure Behavior`
+- `MGP-SRC-002-H069` — `### Security Requirements`
+- `MGP-SRC-002-H070` — `### Production Readiness`
+- `MGP-SRC-002-H071` — `### Pending Issues`
+- `MGP-SRC-002-H072` — `## API-006 — SMS Provider`
+- `MGP-SRC-002-H073` — `### Current Status`
+- `MGP-SRC-002-H074` — `### Purpose`
+- `MGP-SRC-002-H075` — `### Provider Options`
+- `MGP-SRC-002-H076` — `### Required Environment Variables`
+- `MGP-SRC-002-H077` — `### Verification Checklist`
+- `MGP-SRC-002-H078` — `### Failure Behavior`
+- `MGP-SRC-002-H079` — `### Security Requirements`
+- `MGP-SRC-002-H080` — `### Production Readiness`
+- `MGP-SRC-002-H081` — `# 11. Email Provider`
+- `MGP-SRC-002-H082` — `## API-007 — Email Provider`
+- `MGP-SRC-002-H083` — `### Current Status`
+- `MGP-SRC-002-H084` — `### Purpose`
+- `MGP-SRC-002-H085` — `### Provider Options`
+- `MGP-SRC-002-H086` — `### Required Environment Variables`
+- `MGP-SRC-002-H087` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H088` — `### Setup Steps`
+- `MGP-SRC-002-H089` — `### Verification Checklist`
+- `MGP-SRC-002-H090` — `### Failure Behavior`
+- `MGP-SRC-002-H091` — `### Security Requirements`
+- `MGP-SRC-002-H092` — `### Production Readiness`
+- `MGP-SRC-002-H093` — `### Pending Issues`
+- `MGP-SRC-002-H094` — `# 12. WhatsApp Providers`
+- `MGP-SRC-002-H095` — `## API-008 — WhatsApp Free \`wa.me\` Mode`
+- `MGP-SRC-002-H096` — `### Current Status`
+- `MGP-SRC-002-H097` — `### Purpose`
+- `MGP-SRC-002-H098` — `### Provider Options`
+- `MGP-SRC-002-H099` — `### Required Environment Variables`
+- `MGP-SRC-002-H100` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H101` — `### Verification Checklist`
+- `MGP-SRC-002-H102` — `### Failure Behavior`
+- `MGP-SRC-002-H103` — `### Security Requirements`
+- `MGP-SRC-002-H104` — `### Production Readiness`
+- `MGP-SRC-002-H105` — `## API-009 — WhatsApp Business Cloud API`
+- `MGP-SRC-002-H106` — `### Current Status`
+- `MGP-SRC-002-H107` — `### Purpose`
+- `MGP-SRC-002-H108` — `### Provider Options`
+- `MGP-SRC-002-H109` — `### Required Environment Variables`
+- `MGP-SRC-002-H110` — `### Verification Checklist`
+- `MGP-SRC-002-H111` — `### Failure Behavior`
+- `MGP-SRC-002-H112` — `### Security Requirements`
+- `MGP-SRC-002-H113` — `### Production Readiness`
+- `MGP-SRC-002-H114` — `# 13. Payment Provider`
+- `MGP-SRC-002-H115` — `## API-010 — Razorpay Payment Provider`
+- `MGP-SRC-002-H116` — `### Current Status`
+- `MGP-SRC-002-H117` — `### Purpose`
+- `MGP-SRC-002-H118` — `### Provider Options`
+- `MGP-SRC-002-H119` — `### Required Environment Variables`
+- `MGP-SRC-002-H120` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H121` — `### Setup Steps`
+- `MGP-SRC-002-H122` — `### Verification Checklist`
+- `MGP-SRC-002-H123` — `### Failure Behavior`
+- `MGP-SRC-002-H124` — `### Security Requirements`
+- `MGP-SRC-002-H125` — `### Production Readiness`
+- `MGP-SRC-002-H126` — `### Pending Issues`
+- `MGP-SRC-002-H127` — `## API-011 — Razorpay Webhooks`
+- `MGP-SRC-002-H128` — `### Current Status`
+- `MGP-SRC-002-H129` — `### Purpose`
+- `MGP-SRC-002-H130` — `### Required Environment Variables`
+- `MGP-SRC-002-H131` — `### Verification Checklist`
+- `MGP-SRC-002-H132` — `### Failure Behavior`
+- `MGP-SRC-002-H133` — `### Production Readiness`
+- `MGP-SRC-002-H134` — `# 14. Maps Providers`
+- `MGP-SRC-002-H135` — `## API-012 — Google Maps Embed Mode`
+- `MGP-SRC-002-H136` — `### Current Status`
+- `MGP-SRC-002-H137` — `### Purpose`
+- `MGP-SRC-002-H138` — `### Required Environment Variables`
+- `MGP-SRC-002-H139` — `### Verification Checklist`
+- `MGP-SRC-002-H140` — `### Failure Behavior`
+- `MGP-SRC-002-H141` — `### Security Requirements`
+- `MGP-SRC-002-H142` — `### Production Readiness`
+- `MGP-SRC-002-H143` — `## API-013 — Google Maps API / Places Mode`
+- `MGP-SRC-002-H144` — `### Current Status`
+- `MGP-SRC-002-H145` — `### Purpose`
+- `MGP-SRC-002-H146` — `### Required Environment Variables`
+- `MGP-SRC-002-H147` — `### Verification Checklist`
+- `MGP-SRC-002-H148` — `### Failure Behavior`
+- `MGP-SRC-002-H149` — `### Security Requirements`
+- `MGP-SRC-002-H150` — `### Production Readiness`
+- `MGP-SRC-002-H151` — `# 15. Cloudflare Storage, CDN And Bot Protection`
+- `MGP-SRC-002-H152` — `## API-014 — Cloudflare R2 Storage`
+- `MGP-SRC-002-H153` — `### Current Status`
+- `MGP-SRC-002-H154` — `### Purpose`
+- `MGP-SRC-002-H155` — `### Required Environment Variables`
+- `MGP-SRC-002-H156` — `### Public/Private Data Rules`
+- `MGP-SRC-002-H157` — `### Setup Steps`
+- `MGP-SRC-002-H158` — `### Verification Checklist`
+- `MGP-SRC-002-H159` — `### Failure Behavior`
+- `MGP-SRC-002-H160` — `### Security Requirements`
+- `MGP-SRC-002-H161` — `### Production Readiness`
+- `MGP-SRC-002-H162` — `## API-015 — Cloudflare CDN`
+- `MGP-SRC-002-H163` — `### Current Status`
+- `MGP-SRC-002-H164` — `### Purpose`
+- `MGP-SRC-002-H165` — `### Required Environment Variables`
+- `MGP-SRC-002-H166` — `### Verification Checklist`
+- `MGP-SRC-002-H167` — `### Failure Behavior`
+- `MGP-SRC-002-H168` — `### Security Requirements`
+- `MGP-SRC-002-H169` — `### Production Readiness`
+- `MGP-SRC-002-H170` — `## API-016 — Cloudflare Turnstile`
+- `MGP-SRC-002-H171` — `### Current Status`
+- `MGP-SRC-002-H172` — `### Purpose`
+- `MGP-SRC-002-H173` — `### Required Environment Variables`
+- `MGP-SRC-002-H174` — `### Verification Checklist`
+- `MGP-SRC-002-H175` — `### Failure Behavior`
+- `MGP-SRC-002-H176` — `### Security Requirements`
+- `MGP-SRC-002-H177` — `### Production Readiness`
+- `MGP-SRC-002-H178` — `# 16. Analytics, Error Tracking And Monitoring`
+- `MGP-SRC-002-H179` — `## API-017 — Analytics Provider`
+- `MGP-SRC-002-H180` — `### Current Status`
+- `MGP-SRC-002-H181` — `### Purpose`
+- `MGP-SRC-002-H182` — `### Provider Options`
+- `MGP-SRC-002-H183` — `### Required Environment Variables`
+- `MGP-SRC-002-H184` — `### Verification Checklist`
+- `MGP-SRC-002-H185` — `### Failure Behavior`
+- `MGP-SRC-002-H186` — `### Security Requirements`
+- `MGP-SRC-002-H187` — `### Production Readiness`
+- `MGP-SRC-002-H188` — `## API-018 — Error Tracking Provider`
+- `MGP-SRC-002-H189` — `### Current Status`
+- `MGP-SRC-002-H190` — `### Purpose`
+- `MGP-SRC-002-H191` — `### Provider Options`
+- `MGP-SRC-002-H192` — `### Required Environment Variables`
+- `MGP-SRC-002-H193` — `### Verification Checklist`
+- `MGP-SRC-002-H194` — `### Failure Behavior`
+- `MGP-SRC-002-H195` — `### Security Requirements`
+- `MGP-SRC-002-H196` — `### Production Readiness`
+- `MGP-SRC-002-H197` — `## API-019 — Monitoring / Uptime Provider`
+- `MGP-SRC-002-H198` — `### Current Status`
+- `MGP-SRC-002-H199` — `### Purpose`
+- `MGP-SRC-002-H200` — `### Provider Options`
+- `MGP-SRC-002-H201` — `### Required Environment Variables`
+- `MGP-SRC-002-H202` — `### Verification Checklist`
+- `MGP-SRC-002-H203` — `### Production Readiness`
+- `MGP-SRC-002-H204` — `# 17. Background Jobs, Cron And Processing Providers`
+- `MGP-SRC-002-H205` — `## API-020 — Cron / Background Job Provider`
+- `MGP-SRC-002-H206` — `### Current Status`
+- `MGP-SRC-002-H207` — `### Purpose`
+- `MGP-SRC-002-H208` — `### Provider Options`
+- `MGP-SRC-002-H209` — `### Required Environment Variables`
+- `MGP-SRC-002-H210` — `### Verification Checklist`
+- `MGP-SRC-002-H211` — `### Failure Behavior`
+- `MGP-SRC-002-H212` — `### Security Requirements`
+- `MGP-SRC-002-H213` — `### Production Readiness`
+- `MGP-SRC-002-H214` — `## API-021 — Image / Video / PDF Processing Provider`
+- `MGP-SRC-002-H215` — `### Current Status`
+- `MGP-SRC-002-H216` — `### Purpose`
+- `MGP-SRC-002-H217` — `### Provider Options`
+- `MGP-SRC-002-H218` — `### Required Environment Variables`
+- `MGP-SRC-002-H219` — `### Verification Checklist`
+- `MGP-SRC-002-H220` — `### Failure Behavior`
+- `MGP-SRC-002-H221` — `### Production Readiness`
+- `MGP-SRC-002-H222` — `## API-022 — Malware / File Scan Provider`
+- `MGP-SRC-002-H223` — `### Current Status`
+- `MGP-SRC-002-H224` — `### Purpose`
+- `MGP-SRC-002-H225` — `### Provider Options`
+- `MGP-SRC-002-H226` — `### Required Environment Variables`
+- `MGP-SRC-002-H227` — `### Verification Checklist`
+- `MGP-SRC-002-H228` — `### Failure Behavior`
+- `MGP-SRC-002-H229` — `### Production Readiness`
+- `MGP-SRC-002-H230` — `# 18. PDF, Invoice And Export Providers`
+- `MGP-SRC-002-H231` — `## API-023 — PDF Generation Provider / Library`
+- `MGP-SRC-002-H232` — `### Current Status`
+- `MGP-SRC-002-H233` — `### Purpose`
+- `MGP-SRC-002-H234` — `### Required Environment Variables`
+- `MGP-SRC-002-H235` — `### Verification Checklist`
+- `MGP-SRC-002-H236` — `### Failure Behavior`
+- `MGP-SRC-002-H237` — `### Production Readiness`
+- `MGP-SRC-002-H238` — `# 19. GeoIP, Search Console And Optional Providers`
+- `MGP-SRC-002-H239` — `## API-024 — GeoIP / City Detection Provider`
+- `MGP-SRC-002-H240` — `### Current Status`
+- `MGP-SRC-002-H241` — `### Purpose`
+- `MGP-SRC-002-H242` — `### Provider Options`
+- `MGP-SRC-002-H243` — `### Required Environment Variables`
+- `MGP-SRC-002-H244` — `### Verification Checklist`
+- `MGP-SRC-002-H245` — `### Failure Behavior`
+- `MGP-SRC-002-H246` — `### Production Readiness`
+- `MGP-SRC-002-H247` — `## API-025 — Google Search Console / SEO Provider`
+- `MGP-SRC-002-H248` — `### Current Status`
+- `MGP-SRC-002-H249` — `### Purpose`
+- `MGP-SRC-002-H250` — `### Required Environment Variables`
+- `MGP-SRC-002-H251` — `### Verification Checklist`
+- `MGP-SRC-002-H252` — `### Failure Behavior`
+- `MGP-SRC-002-H253` — `### Production Readiness`
+- `MGP-SRC-002-H254` — `## API-026 — Web Push Provider`
+- `MGP-SRC-002-H255` — `### Current Status`
+- `MGP-SRC-002-H256` — `### Purpose`
+- `MGP-SRC-002-H257` — `### Required Environment Variables`
+- `MGP-SRC-002-H258` — `### Verification Checklist`
+- `MGP-SRC-002-H259` — `### Production Readiness`
+- `MGP-SRC-002-H260` — `# 20. Provider Settings Database Tracking`
+- `MGP-SRC-002-H261` — `# 21. Provider Health Status UI Rules`
+- `MGP-SRC-002-H262` — `# 22. Provider Feature Fallback Matrix`
+- `MGP-SRC-002-H263` — `# 23. Provider Production Readiness Checklist`
+- `MGP-SRC-002-H264` — `## 23.1 General Provider Checklist`
+- `MGP-SRC-002-H265` — `## 23.2 Production Launch Blocking Provider Issues`
+- `MGP-SRC-002-H266` — `# 24. Provider Testing Templates`
+- `MGP-SRC-002-H267` — `## 24.1 Provider Test Entry Format`
+- `MGP-SRC-002-H268` — `## PROVIDER-TEST-YYYYMMDD-000 — Provider Name Test`
+- `MGP-SRC-002-H269` — `### Provider`
+- `MGP-SRC-002-H270` — `### Test Date`
+- `MGP-SRC-002-H271` — `### Test Scope`
+- `MGP-SRC-002-H272` — `### Commands / Actions`
+- `MGP-SRC-002-H273` — `### Result`
+- `MGP-SRC-002-H274` — `### Evidence`
+- `MGP-SRC-002-H275` — `### Security Check`
+- `MGP-SRC-002-H276` — `### Docs Updated`
+- `MGP-SRC-002-H277` — `### Pending Issues`
+- `MGP-SRC-002-H278` — `## 24.2 Provider Failure Entry Format`
+- `MGP-SRC-002-H279` — `## PROVIDER-FAIL-YYYYMMDD-000 — Provider Name Failure`
+- `MGP-SRC-002-H280` — `### Provider`
+- `MGP-SRC-002-H281` — `### Failure Summary`
+- `MGP-SRC-002-H282` — `### Current Status`
+- `MGP-SRC-002-H283` — `### Fallback`
+- `MGP-SRC-002-H284` — `### Bug Tracking`
+- `MGP-SRC-002-H285` — `### Required Fix`
+- `MGP-SRC-002-H286` — `### Docs Updated`
+- `MGP-SRC-002-H287` — `# 25. \`.env.example\` Rules`
+- `MGP-SRC-002-H288` — `# Supabase`
+- `MGP-SRC-002-H289` — `# OTP Provider`
+- `MGP-SRC-002-H290` — `# Razorpay`
+- `MGP-SRC-002-H291` — `# 26. Provider Logs And Redaction Rules`
+- `MGP-SRC-002-H292` — `# 27. Provider Audit Rules`
+- `MGP-SRC-002-H293` — `# 28. Provider Admin Permission Rules`
+- `MGP-SRC-002-H294` — `### Super Admin`
+- `MGP-SRC-002-H295` — `### System Manager`
+- `MGP-SRC-002-H296` — `### Notification Manager`
+- `MGP-SRC-002-H297` — `### Payment Manager`
+- `MGP-SRC-002-H298` — `### Billing Manager`
+- `MGP-SRC-002-H299` — `### Staff / Other Admin`
+- `MGP-SRC-002-H300` — `### Public Users`
+- `MGP-SRC-002-H301` — `# 29. Current Open Provider Issues`
+- `MGP-SRC-002-H302` — `## PROVIDER-ISSUE-20260629-001 — Real Providers Not Configured Yet`
+- `MGP-SRC-002-H303` — `### Status`
+- `MGP-SRC-002-H304` — `### Providers Affected`
+- `MGP-SRC-002-H305` — `### Impact`
+- `MGP-SRC-002-H306` — `### Required Action`
+- `MGP-SRC-002-H307` — `### Related Bug`
+- `MGP-SRC-002-H308` — `### Verification`
+- `MGP-SRC-002-H309` — `## PROVIDER-ISSUE-20260629-002 — \`.env.example\` Not Created/Updated Yet`
+- `MGP-SRC-002-H310` — `### Status`
+- `MGP-SRC-002-H311` — `### Impact`
+- `MGP-SRC-002-H312` — `### Required Action`
+- `MGP-SRC-002-H313` — `### Verification`
+- `MGP-SRC-002-H314` — `## PROVIDER-ISSUE-20260629-003 — Production Provider Modes Not Verified`
+- `MGP-SRC-002-H315` — `### Status`
+- `MGP-SRC-002-H316` — `### Impact`
+- `MGP-SRC-002-H317` — `### Required Action`
+- `MGP-SRC-002-H318` — `### Verification`
+- `MGP-SRC-002-H319` — `# 30. Provider Readiness By Phase`
+- `MGP-SRC-002-H320` — `# 31. Provider Final Response Rule`
+- `MGP-SRC-002-H321` — `## Provider / API Status`
+- `MGP-SRC-002-H322` — `## Changed Files`
+- `MGP-SRC-002-H323` — `## Env / Config`
+- `MGP-SRC-002-H324` — `## SQL / Migration Files`
+- `MGP-SRC-002-H325` — `## Tests Run`
+- `MGP-SRC-002-H326` — `## Provider Verification`
+- `MGP-SRC-002-H327` — `## Docs Updated`
+- `MGP-SRC-002-H328` — `## Pending Issues`
+- `MGP-SRC-002-H329` — `## Next Phase`
+- `MGP-SRC-002-H330` — `# 32. Provider Documentation Update Checklist`
+- `MGP-SRC-002-H331` — `# 33. Current Documentation Generation Progress`
+- `MGP-SRC-002-H332` — `# 34. Current Provider Status Summary For \`brain.md\``
+- `MGP-SRC-002-H333` — `## Current Provider Status`
+- `MGP-SRC-002-H334` — `# 35. Final Rule`
+
+### MGP-SRC-003 — `brain.md` — 63 headings
+
+- `MGP-SRC-003-H001` — `# brain.md`
+- `MGP-SRC-003-H002` — `# My Gujarat Property — Project Memory, Status And Resume Guide`
+- `MGP-SRC-003-H003` — `## 1. How Claude Must Use This File`
+- `MGP-SRC-003-H004` — `## 2. Current Project Snapshot`
+- `MGP-SRC-003-H005` — `## 3. Core Product Memory`
+- `MGP-SRC-003-H006` — `## 4. Absolute Master Decisions`
+- `MGP-SRC-003-H007` — `### 4.1 Tech Stack`
+- `MGP-SRC-003-H008` — `### 4.2 No-Fake Rules`
+- `MGP-SRC-003-H009` — `### 4.3 Security Decisions`
+- `MGP-SRC-003-H010` — `## 5. Role Memory`
+- `MGP-SRC-003-H011` — `### 5.1 Public Role: Guest`
+- `MGP-SRC-003-H012` — `### 5.2 Public Role: Owner`
+- `MGP-SRC-003-H013` — `### 5.3 Public Role: Broker / Agent`
+- `MGP-SRC-003-H014` — `### 5.4 Public Role: Builder / Developer`
+- `MGP-SRC-003-H015` — `### 5.5 Internal Role: Super Admin`
+- `MGP-SRC-003-H016` — `### 5.6 Internal Role: Admin`
+- `MGP-SRC-003-H017` — `### 5.7 Staff Roles`
+- `MGP-SRC-003-H018` — `## 6. Public Website Memory`
+- `MGP-SRC-003-H019` — `## 7. Auth Flow Memory`
+- `MGP-SRC-003-H020` — `## 8. Property System Memory`
+- `MGP-SRC-003-H021` — `## 9. Project System Memory`
+- `MGP-SRC-003-H022` — `## 10. Requirement System Memory`
+- `MGP-SRC-003-H023` — `## 11. Leads CRM Memory`
+- `MGP-SRC-003-H024` — `## 12. Site Visit Memory`
+- `MGP-SRC-003-H025` — `## 13. Messaging Memory`
+- `MGP-SRC-003-H026` — `## 14. Saved, Shortlist And Recently Viewed Memory`
+- `MGP-SRC-003-H027` — `## 15. Public Detail Pages Memory`
+- `MGP-SRC-003-H028` — `## 16. Profile And Microsite Memory`
+- `MGP-SRC-003-H029` — `## 17. Role Change Memory`
+- `MGP-SRC-003-H030` — `## 18. Verification Memory`
+- `MGP-SRC-003-H031` — `## 19. Banner Ads And Promotion Memory`
+- `MGP-SRC-003-H032` — `## 20. Subscription, Billing And Payment Memory`
+- `MGP-SRC-003-H033` — `## 21. Free Trial Memory`
+- `MGP-SRC-003-H034` — `## 22. Notifications Memory`
+- `MGP-SRC-003-H035` — `## 23. Location Memory`
+- `MGP-SRC-003-H036` — `## 24. Search Memory`
+- `MGP-SRC-003-H037` — `## 25. SEO, CMS, Blog And Legal Memory`
+- `MGP-SRC-003-H038` — `## 26. Legal And Consent Memory`
+- `MGP-SRC-003-H039` — `## 27. Media, Upload And Storage Memory`
+- `MGP-SRC-003-H040` — `## 28. UI / UX Design Memory`
+- `MGP-SRC-003-H041` — `## 29. Interaction Safety Memory`
+- `MGP-SRC-003-H042` — `## 30. Admin And Staff Memory`
+- `MGP-SRC-003-H043` — `## 31. Security And Fraud Memory`
+- `MGP-SRC-003-H044` — `## 32. Performance And Scalability Memory`
+- `MGP-SRC-003-H045` — `## 33. Deployment, Backup And Rollback Memory`
+- `MGP-SRC-003-H046` — `## 34. API Provider Status Memory`
+- `MGP-SRC-003-H047` — `## 35. Production Readiness Memory`
+- `MGP-SRC-003-H048` — `## 36. Claude Workflow Memory`
+- `MGP-SRC-003-H049` — `## 37. Current File Inventory`
+- `MGP-SRC-003-H050` — `## 38. Current Known Implementation Status`
+- `MGP-SRC-003-H051` — `## 39. Current SQL / Migration Memory`
+- `MGP-SRC-003-H052` — `## 40. Current Provider Memory`
+- `MGP-SRC-003-H053` — `## 41. Current UI Memory`
+- `MGP-SRC-003-H054` — `## 42. Current Security Memory`
+- `MGP-SRC-003-H055` — `## 43. Current Manual Verification Memory`
+- `MGP-SRC-003-H056` — `## 44. Current Conflict Notes`
+- `MGP-SRC-003-H057` — `### Conflict YYYY-MM-DD`
+- `MGP-SRC-003-H058` — `## 45. Current Temporary Workarounds`
+- `MGP-SRC-003-H059` — `### Workaround YYYY-MM-DD`
+- `MGP-SRC-003-H060` — `## 46. Current Pending Questions / Safe Defaults`
+- `MGP-SRC-003-H061` — `## 47. Phase Resume Guide`
+- `MGP-SRC-003-H062` — `## 48. Resume Summary For Another Claude Account`
+- `MGP-SRC-003-H063` — `## Mandatory Role-Based Home Design Clarification`
+
+### MGP-SRC-004 — `BUGS_AND_FIXES.md` — 214 headings
+
+- `MGP-SRC-004-H001` — `# BUGS_AND_FIXES.md`
+- `MGP-SRC-004-H002` — `# My Gujarat Property — Bugs, Fixes, Workarounds And Retest Log`
+- `MGP-SRC-004-H003` — `## 1. Purpose`
+- `MGP-SRC-004-H004` — `## 2. Mandatory Update Rule`
+- `MGP-SRC-004-H005` — `## 3. Absolute Bug Handling Rules`
+- `MGP-SRC-004-H006` — `## 4. Bug Status Values`
+- `MGP-SRC-004-H007` — `## 5. Severity Values`
+- `MGP-SRC-004-H008` — `## 6. Priority Values`
+- `MGP-SRC-004-H009` — `## 7. Verification Values`
+- `MGP-SRC-004-H010` — `## 8. Bug Categories`
+- `MGP-SRC-004-H011` — `### Documentation And Workflow`
+- `MGP-SRC-004-H012` — `### Core App`
+- `MGP-SRC-004-H013` — `### Auth And Roles`
+- `MGP-SRC-004-H014` — `### Public Website And UI`
+- `MGP-SRC-004-H015` — `### Dashboard And Admin`
+- `MGP-SRC-004-H016` — `### Listing Modules`
+- `MGP-SRC-004-H017` — `### CRM And Communication`
+- `MGP-SRC-004-H018` — `### Billing And Payment`
+- `MGP-SRC-004-H019` — `### Media And Providers`
+- `MGP-SRC-004-H020` — `### SEO, CMS, Legal And Privacy`
+- `MGP-SRC-004-H021` — `### Security, Data And Performance`
+- `MGP-SRC-004-H022` — `## 9. Required Bug Entry Format`
+- `MGP-SRC-004-H023` — `## BUG-YYYYMMDD-000 — Short Bug Title`
+- `MGP-SRC-004-H024` — `### Status`
+- `MGP-SRC-004-H025` — `### Severity`
+- `MGP-SRC-004-H026` — `### Priority`
+- `MGP-SRC-004-H027` — `### Category`
+- `MGP-SRC-004-H028` — `### Found In`
+- `MGP-SRC-004-H029` — `### Summary`
+- `MGP-SRC-004-H030` — `### Reproduction Steps`
+- `MGP-SRC-004-H031` — `### Evidence`
+- `MGP-SRC-004-H032` — `### Root Cause`
+- `MGP-SRC-004-H033` — `### Fix Plan`
+- `MGP-SRC-004-H034` — `### Fix Implementation`
+- `MGP-SRC-004-H035` — `### Retest Steps`
+- `MGP-SRC-004-H036` — `### Retest Result`
+- `MGP-SRC-004-H037` — `### Retest Notes`
+- `MGP-SRC-004-H038` — `### Docs Updated`
+- `MGP-SRC-004-H039` — `### Rollback / Workaround`
+- `MGP-SRC-004-H040` — `### Final Resolution`
+- `MGP-SRC-004-H041` — `## 10. Short Bug Entry Format`
+- `MGP-SRC-004-H042` — `## BUG-YYYYMMDD-000 — Short Bug Title`
+- `MGP-SRC-004-H043` — `### Status`
+- `MGP-SRC-004-H044` — `### Severity`
+- `MGP-SRC-004-H045` — `### Category`
+- `MGP-SRC-004-H046` — `### Summary`
+- `MGP-SRC-004-H047` — `### Fix`
+- `MGP-SRC-004-H048` — `### Retest`
+- `MGP-SRC-004-H049` — `### Docs Updated`
+- `MGP-SRC-004-H050` — `## 11. Workaround Entry Format`
+- `MGP-SRC-004-H051` — `## WORKAROUND-YYYYMMDD-000 — Short Workaround Title`
+- `MGP-SRC-004-H052` — `### Status`
+- `MGP-SRC-004-H053` — `### Related Bug`
+- `MGP-SRC-004-H054` — `### Reason`
+- `MGP-SRC-004-H055` — `### Temporary Behavior`
+- `MGP-SRC-004-H056` — `### Risk`
+- `MGP-SRC-004-H057` — `### Removal Condition`
+- `MGP-SRC-004-H058` — `### Files Changed`
+- `MGP-SRC-004-H059` — `### SQL / Migration Files`
+- `MGP-SRC-004-H060` — `### Docs Updated`
+- `MGP-SRC-004-H061` — `### Retest`
+- `MGP-SRC-004-H062` — `## 12. Regression Entry Format`
+- `MGP-SRC-004-H063` — `## REGRESSION-YYYYMMDD-000 — Short Regression Title`
+- `MGP-SRC-004-H064` — `### Related Original Bug`
+- `MGP-SRC-004-H065` — `### Status`
+- `MGP-SRC-004-H066` — `### Severity`
+- `MGP-SRC-004-H067` — `### What Regressed`
+- `MGP-SRC-004-H068` — `### Suspected Cause`
+- `MGP-SRC-004-H069` — `### Fix Plan`
+- `MGP-SRC-004-H070` — `### Retest`
+- `MGP-SRC-004-H071` — `## 13. Security Bug Rules`
+- `MGP-SRC-004-H072` — `## 14. Contact Privacy Bug Rules`
+- `MGP-SRC-004-H073` — `## 15. Payment Bug Rules`
+- `MGP-SRC-004-H074` — `## 16. Provider Bug Rules`
+- `MGP-SRC-004-H075` — `## 17. Media / Upload Bug Rules`
+- `MGP-SRC-004-H076` — `## 18. UI / Responsive Bug Rules`
+- `MGP-SRC-004-H077` — `## 19. Auth And Role Bug Rules`
+- `MGP-SRC-004-H078` — `## 20. Property / Project / Requirement Bug Rules`
+- `MGP-SRC-004-H079` — `## 21. Admin / Staff Bug Rules`
+- `MGP-SRC-004-H080` — `## 22. SEO / CMS / Legal Bug Rules`
+- `MGP-SRC-004-H081` — `## 23. Performance Bug Rules`
+- `MGP-SRC-004-H082` — `## 24. Deployment / Rollback Bug Rules`
+- `MGP-SRC-004-H083` — `## 25. Manual Verification Failure Rules`
+- `MGP-SRC-004-H084` — `## 26. Current Known Bugs`
+- `MGP-SRC-004-H085` — `## 27. Current Documentation Issues / Pending Risks`
+- `MGP-SRC-004-H086` — `## BUG-20260629-001 — Documentation Pack Not Fully Generated Yet`
+- `MGP-SRC-004-H087` — `### Status`
+- `MGP-SRC-004-H088` — `### Severity`
+- `MGP-SRC-004-H089` — `### Priority`
+- `MGP-SRC-004-H090` — `### Category`
+- `MGP-SRC-004-H091` — `### Found In`
+- `MGP-SRC-004-H092` — `### Summary`
+- `MGP-SRC-004-H093` — `### Reproduction Steps`
+- `MGP-SRC-004-H094` — `### Evidence`
+- `MGP-SRC-004-H095` — `### Root Cause`
+- `MGP-SRC-004-H096` — `### Fix Plan`
+- `MGP-SRC-004-H097` — `### Fix Implementation`
+- `MGP-SRC-004-H098` — `### Retest Steps`
+- `MGP-SRC-004-H099` — `### Retest Result`
+- `MGP-SRC-004-H100` — `### Retest Notes`
+- `MGP-SRC-004-H101` — `### Docs Updated`
+- `MGP-SRC-004-H102` — `### Rollback / Workaround`
+- `MGP-SRC-004-H103` — `### Final Resolution`
+- `MGP-SRC-004-H104` — `## BUG-20260629-002 — Website Implementation Not Started Yet`
+- `MGP-SRC-004-H105` — `### Status`
+- `MGP-SRC-004-H106` — `### Severity`
+- `MGP-SRC-004-H107` — `### Priority`
+- `MGP-SRC-004-H108` — `### Category`
+- `MGP-SRC-004-H109` — `### Found In`
+- `MGP-SRC-004-H110` — `### Summary`
+- `MGP-SRC-004-H111` — `### Reproduction Steps`
+- `MGP-SRC-004-H112` — `### Evidence`
+- `MGP-SRC-004-H113` — `### Root Cause`
+- `MGP-SRC-004-H114` — `### Fix Plan`
+- `MGP-SRC-004-H115` — `### Fix Implementation`
+- `MGP-SRC-004-H116` — `### Retest Steps`
+- `MGP-SRC-004-H117` — `### Retest Result`
+- `MGP-SRC-004-H118` — `### Retest Notes`
+- `MGP-SRC-004-H119` — `### Docs Updated`
+- `MGP-SRC-004-H120` — `### Rollback / Workaround`
+- `MGP-SRC-004-H121` — `### Final Resolution`
+- `MGP-SRC-004-H122` — `## BUG-20260629-003 — Real API Providers Not Configured Yet`
+- `MGP-SRC-004-H123` — `### Status`
+- `MGP-SRC-004-H124` — `### Severity`
+- `MGP-SRC-004-H125` — `### Priority`
+- `MGP-SRC-004-H126` — `### Category`
+- `MGP-SRC-004-H127` — `### Found In`
+- `MGP-SRC-004-H128` — `### Summary`
+- `MGP-SRC-004-H129` — `### Reproduction Steps`
+- `MGP-SRC-004-H130` — `### Evidence`
+- `MGP-SRC-004-H131` — `### Root Cause`
+- `MGP-SRC-004-H132` — `### Fix Plan`
+- `MGP-SRC-004-H133` — `### Fix Implementation`
+- `MGP-SRC-004-H134` — `### Retest Steps`
+- `MGP-SRC-004-H135` — `### Retest Result`
+- `MGP-SRC-004-H136` — `### Retest Notes`
+- `MGP-SRC-004-H137` — `### Docs Updated`
+- `MGP-SRC-004-H138` — `### Rollback / Workaround`
+- `MGP-SRC-004-H139` — `### Final Resolution`
+- `MGP-SRC-004-H140` — `## BUG-20260629-004 — Manual Verification Has Not Started Yet`
+- `MGP-SRC-004-H141` — `### Status`
+- `MGP-SRC-004-H142` — `### Severity`
+- `MGP-SRC-004-H143` — `### Priority`
+- `MGP-SRC-004-H144` — `### Category`
+- `MGP-SRC-004-H145` — `### Found In`
+- `MGP-SRC-004-H146` — `### Summary`
+- `MGP-SRC-004-H147` — `### Reproduction Steps`
+- `MGP-SRC-004-H148` — `### Evidence`
+- `MGP-SRC-004-H149` — `### Root Cause`
+- `MGP-SRC-004-H150` — `### Fix Plan`
+- `MGP-SRC-004-H151` — `### Fix Implementation`
+- `MGP-SRC-004-H152` — `### Retest Steps`
+- `MGP-SRC-004-H153` — `### Retest Result`
+- `MGP-SRC-004-H154` — `### Retest Notes`
+- `MGP-SRC-004-H155` — `### Docs Updated`
+- `MGP-SRC-004-H156` — `### Rollback / Workaround`
+- `MGP-SRC-004-H157` — `### Final Resolution`
+- `MGP-SRC-004-H158` — `## 28. Current Active Workarounds`
+- `MGP-SRC-004-H159` — `## WORKAROUND-20260629-001 — Provider-Backed Features Must Use SETUP_REQUIRED Until Real API Setup`
+- `MGP-SRC-004-H160` — `### Status`
+- `MGP-SRC-004-H161` — `### Related Bug`
+- `MGP-SRC-004-H162` — `### Reason`
+- `MGP-SRC-004-H163` — `### Temporary Behavior`
+- `MGP-SRC-004-H164` — `### Risk`
+- `MGP-SRC-004-H165` — `### Removal Condition`
+- `MGP-SRC-004-H166` — `### Files Changed`
+- `MGP-SRC-004-H167` — `### SQL / Migration Files`
+- `MGP-SRC-004-H168` — `### Docs Updated`
+- `MGP-SRC-004-H169` — `### Retest`
+- `MGP-SRC-004-H170` — `## WORKAROUND-20260629-002 — Documentation Generation File-by-File Until Complete`
+- `MGP-SRC-004-H171` — `### Status`
+- `MGP-SRC-004-H172` — `### Related Bug`
+- `MGP-SRC-004-H173` — `### Reason`
+- `MGP-SRC-004-H174` — `### Temporary Behavior`
+- `MGP-SRC-004-H175` — `### Risk`
+- `MGP-SRC-004-H176` — `### Removal Condition`
+- `MGP-SRC-004-H177` — `### Files Changed`
+- `MGP-SRC-004-H178` — `### SQL / Migration Files`
+- `MGP-SRC-004-H179` — `### Docs Updated`
+- `MGP-SRC-004-H180` — `### Retest`
+- `MGP-SRC-004-H181` — `## 29. Current Resolved Bugs`
+- `MGP-SRC-004-H182` — `## Resolved Bug Summary`
+- `MGP-SRC-004-H183` — `## 30. Current Blocked Bugs`
+- `MGP-SRC-004-H184` — `## 31. Retest Queue`
+- `MGP-SRC-004-H185` — `## 32. Fix Checklist`
+- `MGP-SRC-004-H186` — `## 33. Phase PASS Blocking Rules`
+- `MGP-SRC-004-H187` — `## 34. Production Launch Blocking Bugs`
+- `MGP-SRC-004-H188` — `### Security / Privacy`
+- `MGP-SRC-004-H189` — `### Payment / Billing`
+- `MGP-SRC-004-H190` — `### Auth / Roles`
+- `MGP-SRC-004-H191` — `### UI / UX`
+- `MGP-SRC-004-H192` — `### Providers / Deployment`
+- `MGP-SRC-004-H193` — `## 35. Bug ID Rules`
+- `MGP-SRC-004-H194` — `## 36. Bug Source Rules`
+- `MGP-SRC-004-H195` — `## 37. Exact Evidence Rules`
+- `MGP-SRC-004-H196` — `## 38. Bug Fix Final Response Rule`
+- `MGP-SRC-004-H197` — `## Fixed`
+- `MGP-SRC-004-H198` — `## Changed Files`
+- `MGP-SRC-004-H199` — `## SQL / Migration Files`
+- `MGP-SRC-004-H200` — `## Tests Run`
+- `MGP-SRC-004-H201` — `## Retest Result`
+- `MGP-SRC-004-H202` — `## Docs Updated`
+- `MGP-SRC-004-H203` — `## Pending Issues`
+- `MGP-SRC-004-H204` — `## 39. Bug Relationship To Other Docs`
+- `MGP-SRC-004-H205` — `### Always for bug/fix`
+- `MGP-SRC-004-H206` — `### If project memory/status changes`
+- `MGP-SRC-004-H207` — `### If provider/API bug`
+- `MGP-SRC-004-H208` — `### If security/RLS/privacy/contact/admin bug`
+- `MGP-SRC-004-H209` — `### If performance/query/cache/load bug`
+- `MGP-SRC-004-H210` — `### If deployment/migration/rollback bug`
+- `MGP-SRC-004-H211` — `### If code behavior contradicts docs`
+- `MGP-SRC-004-H212` — `## 40. Current Documentation Generation Progress`
+- `MGP-SRC-004-H213` — `## 41. Current Open Bug Summary`
+- `MGP-SRC-004-H214` — `## 42. Final Rule`
+
+### MGP-SRC-006 — `CHANGELOG.md` — 143 headings
+
+- `MGP-SRC-006-H001` — `# CHANGELOG.md`
+- `MGP-SRC-006-H002` — `# My Gujarat Property — Changelog`
+- `MGP-SRC-006-H003` — `## 1. Purpose`
+- `MGP-SRC-006-H004` — `## 2. Mandatory Update Rule`
+- `MGP-SRC-006-H005` — `## 3. Strict No-Fake-Done Rule`
+- `MGP-SRC-006-H006` — `## 4. Changelog Status Values`
+- `MGP-SRC-006-H007` — `## 5. Verification Result Values`
+- `MGP-SRC-006-H008` — `## 6. Required Changelog Entry Format`
+- `MGP-SRC-006-H009` — `## YYYY-MM-DD — Change Title`
+- `MGP-SRC-006-H010` — `### Status`
+- `MGP-SRC-006-H011` — `### Phase`
+- `MGP-SRC-006-H012` — `### Summary`
+- `MGP-SRC-006-H013` — `### Changed Files`
+- `MGP-SRC-006-H014` — `### SQL / Migration Files`
+- `MGP-SRC-006-H015` — `### Database / RLS Impact`
+- `MGP-SRC-006-H016` — `### Security / Privacy Impact`
+- `MGP-SRC-006-H017` — `### Provider / API Impact`
+- `MGP-SRC-006-H018` — `### UI / UX / Responsive Impact`
+- `MGP-SRC-006-H019` — `### Tests Run`
+- `MGP-SRC-006-H020` — `### Manual Verification`
+- `MGP-SRC-006-H021` — `### Docs Updated`
+- `MGP-SRC-006-H022` — `### Feature Registry Updates`
+- `MGP-SRC-006-H023` — `### Bugs / Fixes Updated`
+- `MGP-SRC-006-H024` — `### Rollback Notes`
+- `MGP-SRC-006-H025` — `### Pending Issues`
+- `MGP-SRC-006-H026` — `### Next Phase`
+- `MGP-SRC-006-H027` — `## 7. Short Entry Format For Documentation-Only Changes`
+- `MGP-SRC-006-H028` — `## YYYY-MM-DD — Documentation File Created: \`file-name.md\``
+- `MGP-SRC-006-H029` — `### Status`
+- `MGP-SRC-006-H030` — `### Summary`
+- `MGP-SRC-006-H031` — `### Changed Files`
+- `MGP-SRC-006-H032` — `### SQL / Migration Files`
+- `MGP-SRC-006-H033` — `### Tests Run`
+- `MGP-SRC-006-H034` — `### Manual Verification`
+- `MGP-SRC-006-H035` — `### Docs Updated`
+- `MGP-SRC-006-H036` — `### Pending Issues`
+- `MGP-SRC-006-H037` — `### Next`
+- `MGP-SRC-006-H038` — `## 8. Categories For Changelog Entries`
+- `MGP-SRC-006-H039` — `### Documentation`
+- `MGP-SRC-006-H040` — `### Core`
+- `MGP-SRC-006-H041` — `### Auth And Roles`
+- `MGP-SRC-006-H042` — `### Listings And CRM`
+- `MGP-SRC-006-H043` — `### Dashboard And Admin`
+- `MGP-SRC-006-H044` — `### Payments And Ads`
+- `MGP-SRC-006-H045` — `### Media And Providers`
+- `MGP-SRC-006-H046` — `### SEO, Legal And Privacy`
+- `MGP-SRC-006-H047` — `### Security And Performance`
+- `MGP-SRC-006-H048` — `### QA And Deployment`
+- `MGP-SRC-006-H049` — `## 9. Files That Must Be Mentioned In Changelog When Changed`
+- `MGP-SRC-006-H050` — `### Root Documentation`
+- `MGP-SRC-006-H051` — `### Detailed Documentation`
+- `MGP-SRC-006-H052` — `### Prompt Files`
+- `MGP-SRC-006-H053` — `### Application Areas`
+- `MGP-SRC-006-H054` — `## 10. SQL / Migration Changelog Rules`
+- `MGP-SRC-006-H055` — `### SQL / Migration Files`
+- `MGP-SRC-006-H056` — `### Database / RLS Impact`
+- `MGP-SRC-006-H057` — `## 11. RLS And Security Changelog Rules`
+- `MGP-SRC-006-H058` — `## 12. Provider / API Changelog Rules`
+- `MGP-SRC-006-H059` — `## 13. UI / UX Changelog Rules`
+- `MGP-SRC-006-H060` — `## 14. Billing / Payment Changelog Rules`
+- `MGP-SRC-006-H061` — `## 15. Media / Upload Changelog Rules`
+- `MGP-SRC-006-H062` — `## 16. SEO / CMS / Legal Changelog Rules`
+- `MGP-SRC-006-H063` — `## 17. Performance Changelog Rules`
+- `MGP-SRC-006-H064` — `## 18. Deployment And Rollback Changelog Rules`
+- `MGP-SRC-006-H065` — `## 19. Manual Verification Changelog Rules`
+- `MGP-SRC-006-H066` — `## 20. Current Changelog`
+- `MGP-SRC-006-H067` — `## 2026-06-29 — Documentation File Created: \`CLAUDE.md\``
+- `MGP-SRC-006-H068` — `### Status`
+- `MGP-SRC-006-H069` — `### Categories`
+- `MGP-SRC-006-H070` — `### Summary`
+- `MGP-SRC-006-H071` — `### Changed Files`
+- `MGP-SRC-006-H072` — `### SQL / Migration Files`
+- `MGP-SRC-006-H073` — `### Database / RLS Impact`
+- `MGP-SRC-006-H074` — `### Security / Privacy Impact`
+- `MGP-SRC-006-H075` — `### Provider / API Impact`
+- `MGP-SRC-006-H076` — `### UI / UX / Responsive Impact`
+- `MGP-SRC-006-H077` — `### Tests Run`
+- `MGP-SRC-006-H078` — `### Manual Verification`
+- `MGP-SRC-006-H079` — `### Docs Updated`
+- `MGP-SRC-006-H080` — `### Feature Registry Updates`
+- `MGP-SRC-006-H081` — `### Bugs / Fixes Updated`
+- `MGP-SRC-006-H082` — `### Rollback Notes`
+- `MGP-SRC-006-H083` — `### Pending Issues`
+- `MGP-SRC-006-H084` — `### Next`
+- `MGP-SRC-006-H085` — `## 2026-06-29 — Documentation File Created: \`brain.md\``
+- `MGP-SRC-006-H086` — `### Status`
+- `MGP-SRC-006-H087` — `### Categories`
+- `MGP-SRC-006-H088` — `### Summary`
+- `MGP-SRC-006-H089` — `### Changed Files`
+- `MGP-SRC-006-H090` — `### SQL / Migration Files`
+- `MGP-SRC-006-H091` — `### Database / RLS Impact`
+- `MGP-SRC-006-H092` — `### Security / Privacy Impact`
+- `MGP-SRC-006-H093` — `### Provider / API Impact`
+- `MGP-SRC-006-H094` — `### UI / UX / Responsive Impact`
+- `MGP-SRC-006-H095` — `### Tests Run`
+- `MGP-SRC-006-H096` — `### Manual Verification`
+- `MGP-SRC-006-H097` — `### Docs Updated`
+- `MGP-SRC-006-H098` — `### Feature Registry Updates`
+- `MGP-SRC-006-H099` — `### Bugs / Fixes Updated`
+- `MGP-SRC-006-H100` — `### Rollback Notes`
+- `MGP-SRC-006-H101` — `### Pending Issues`
+- `MGP-SRC-006-H102` — `### Next`
+- `MGP-SRC-006-H103` — `## 2026-06-29 — Documentation File Created: \`FEATURE_REGISTRY.md\``
+- `MGP-SRC-006-H104` — `### Status`
+- `MGP-SRC-006-H105` — `### Categories`
+- `MGP-SRC-006-H106` — `### Summary`
+- `MGP-SRC-006-H107` — `### Changed Files`
+- `MGP-SRC-006-H108` — `### SQL / Migration Files`
+- `MGP-SRC-006-H109` — `### Database / RLS Impact`
+- `MGP-SRC-006-H110` — `### Security / Privacy Impact`
+- `MGP-SRC-006-H111` — `### Provider / API Impact`
+- `MGP-SRC-006-H112` — `### UI / UX / Responsive Impact`
+- `MGP-SRC-006-H113` — `### Tests Run`
+- `MGP-SRC-006-H114` — `### Manual Verification`
+- `MGP-SRC-006-H115` — `### Docs Updated`
+- `MGP-SRC-006-H116` — `### Feature Registry Updates`
+- `MGP-SRC-006-H117` — `### Bugs / Fixes Updated`
+- `MGP-SRC-006-H118` — `### Rollback Notes`
+- `MGP-SRC-006-H119` — `### Pending Issues`
+- `MGP-SRC-006-H120` — `### Next`
+- `MGP-SRC-006-H121` — `## 2026-06-29 — Documentation File Created: \`CHANGELOG.md\``
+- `MGP-SRC-006-H122` — `### Status`
+- `MGP-SRC-006-H123` — `### Categories`
+- `MGP-SRC-006-H124` — `### Summary`
+- `MGP-SRC-006-H125` — `### Changed Files`
+- `MGP-SRC-006-H126` — `### SQL / Migration Files`
+- `MGP-SRC-006-H127` — `### Database / RLS Impact`
+- `MGP-SRC-006-H128` — `### Security / Privacy Impact`
+- `MGP-SRC-006-H129` — `### Provider / API Impact`
+- `MGP-SRC-006-H130` — `### UI / UX / Responsive Impact`
+- `MGP-SRC-006-H131` — `### Tests Run`
+- `MGP-SRC-006-H132` — `### Manual Verification`
+- `MGP-SRC-006-H133` — `### Docs Updated`
+- `MGP-SRC-006-H134` — `### Feature Registry Updates`
+- `MGP-SRC-006-H135` — `### Bugs / Fixes Updated`
+- `MGP-SRC-006-H136` — `### Rollback Notes`
+- `MGP-SRC-006-H137` — `### Pending Issues`
+- `MGP-SRC-006-H138` — `### Next`
+- `MGP-SRC-006-H139` — `## 21. Current Documentation Generation Progress`
+- `MGP-SRC-006-H140` — `## 22. Prompt Pack Generation Progress`
+- `MGP-SRC-006-H141` — `## 23. Current Website Implementation Status`
+- `MGP-SRC-006-H142` — `## 24. Changelog Maintenance Checklist`
+- `MGP-SRC-006-H143` — `## 25. Final Rule`
+
+### MGP-SRC-007 — `CLAUDE.md` — 48 headings
+
+- `MGP-SRC-007-H001` — `# CLAUDE.md`
+- `MGP-SRC-007-H002` — `# My Gujarat Property — Claude Code Master Rules`
+- `MGP-SRC-007-H003` — `## 1. Project Identity`
+- `MGP-SRC-007-H004` — `## 2. Absolute Non-Negotiable Rules`
+- `MGP-SRC-007-H005` — `## 3. Required Tech Stack`
+- `MGP-SRC-007-H006` — `## 4. Main Documentation Files`
+- `MGP-SRC-007-H007` — `## 5. Token-Light Workflow Rules`
+- `MGP-SRC-007-H008` — `## 6. Phase Workflow`
+- `MGP-SRC-007-H009` — `## 7. Required Final Response Format For Claude`
+- `MGP-SRC-007-H010` — `## Changed Files`
+- `MGP-SRC-007-H011` — `## SQL / Migration Files`
+- `MGP-SRC-007-H012` — `## Tests Run`
+- `MGP-SRC-007-H013` — `## Verification Result`
+- `MGP-SRC-007-H014` — `## Pending Issues`
+- `MGP-SRC-007-H015` — `## Docs Updated`
+- `MGP-SRC-007-H016` — `## Next Phase`
+- `MGP-SRC-007-H017` — `## 8. Documentation Update Rules`
+- `MGP-SRC-007-H018` — `## 9. Feature Registry Rules`
+- `MGP-SRC-007-H019` — `## 10. Brain Memory Rules`
+- `MGP-SRC-007-H020` — `## 11. SQL, Database And Migration Rules`
+- `MGP-SRC-007-H021` — `## 12. Supabase And RLS Rules`
+- `MGP-SRC-007-H022` — `## 13. Auth Rules`
+- `MGP-SRC-007-H023` — `## 14. Role Rules`
+- `MGP-SRC-007-H024` — `## 15. UI And Responsive Rules`
+- `MGP-SRC-007-H025` — `## 16. Interaction Safety Rules`
+- `MGP-SRC-007-H026` — `## 17. Property, Project And Requirement Rules`
+- `MGP-SRC-007-H027` — `## 18. Admin Rules`
+- `MGP-SRC-007-H028` — `## 19. Billing And Payment Rules`
+- `MGP-SRC-007-H029` — `## 20. Provider Rules`
+- `MGP-SRC-007-H030` — `## 21. Media And Upload Rules`
+- `MGP-SRC-007-H031` — `## 22. Notifications Rules`
+- `MGP-SRC-007-H032` — `## 23. SEO Rules`
+- `MGP-SRC-007-H033` — `## 24. Legal And Consent Rules`
+- `MGP-SRC-007-H034` — `## 25. Performance Rules`
+- `MGP-SRC-007-H035` — `## 26. Next.js 15 And React Rules`
+- `MGP-SRC-007-H036` — `## 27. Security, Abuse And Rate Limit Rules`
+- `MGP-SRC-007-H037` — `## 28. Soft Delete And Audit Rules`
+- `MGP-SRC-007-H038` — `## 29. Deployment And Rollback Rules`
+- `MGP-SRC-007-H039` — `## 30. Production Readiness Rules`
+- `MGP-SRC-007-H040` — `## 31. Manual Verification Rules`
+- `MGP-SRC-007-H041` — `## 32. Existing Work Preservation`
+- `MGP-SRC-007-H042` — `## 33. Error Handling Rules`
+- `MGP-SRC-007-H043` — `## 34. Accessibility Rules`
+- `MGP-SRC-007-H044` — `## 35. Localization Rules`
+- `MGP-SRC-007-H045` — `## 36. Development Data Rules`
+- `MGP-SRC-007-H046` — `## 37. Claude Self-Check Before Final Response`
+- `MGP-SRC-007-H047` — `## 38. Human Approval Required For High-Risk Changes`
+- `MGP-SRC-007-H048` — `## 39. Master Rule`
+
+### MGP-SRC-008 — `DEPLOYMENT_ROLLBACK.md` — 191 headings
+
+- `MGP-SRC-008-H001` — `# DEPLOYMENT_ROLLBACK.md`
+- `MGP-SRC-008-H002` — `# My Gujarat Property — Deployment, Backup, Migration And Rollback Rules`
+- `MGP-SRC-008-H003` — `## 1. Purpose`
+- `MGP-SRC-008-H004` — `## 2. Absolute Deployment Rules`
+- `MGP-SRC-008-H005` — `## 3. Deployment Status Values`
+- `MGP-SRC-008-H006` — `## 4. Rollback Status Values`
+- `MGP-SRC-008-H007` — `## 5. Environment Types`
+- `MGP-SRC-008-H008` — `## 6. Required Deployment Entry Format`
+- `MGP-SRC-008-H009` — `## DEPLOY-YYYYMMDD-000 — Deployment Title`
+- `MGP-SRC-008-H010` — `### Status`
+- `MGP-SRC-008-H011` — `### Environment`
+- `MGP-SRC-008-H012` — `### Deployment Date`
+- `MGP-SRC-008-H013` — `### Scope`
+- `MGP-SRC-008-H014` — `### Changed Files`
+- `MGP-SRC-008-H015` — `### SQL / Migration Files`
+- `MGP-SRC-008-H016` — `### Database Impact`
+- `MGP-SRC-008-H017` — `### Storage / Media Impact`
+- `MGP-SRC-008-H018` — `### Provider / API Impact`
+- `MGP-SRC-008-H019` — `### Security / RLS Impact`
+- `MGP-SRC-008-H020` — `### Backup`
+- `MGP-SRC-008-H021` — `### Pre-Deployment Checks`
+- `MGP-SRC-008-H022` — `### Deployment Steps`
+- `MGP-SRC-008-H023` — `### Post-Deployment Smoke Test`
+- `MGP-SRC-008-H024` — `### Rollback Plan`
+- `MGP-SRC-008-H025` — `### Final Result`
+- `MGP-SRC-008-H026` — `### Pending Issues`
+- `MGP-SRC-008-H027` — `### Next Action`
+- `MGP-SRC-008-H028` — `## 7. Required Rollback Entry Format`
+- `MGP-SRC-008-H029` — `## ROLLBACK-YYYYMMDD-000 — Rollback Title`
+- `MGP-SRC-008-H030` — `### Status`
+- `MGP-SRC-008-H031` — `### Rollback Date`
+- `MGP-SRC-008-H032` — `### Reason`
+- `MGP-SRC-008-H033` — `### Scope`
+- `MGP-SRC-008-H034` — `### Files Reverted`
+- `MGP-SRC-008-H035` — `### SQL / Migration Rollback`
+- `MGP-SRC-008-H036` — `### Storage Rollback`
+- `MGP-SRC-008-H037` — `### Provider Rollback`
+- `MGP-SRC-008-H038` — `### Steps Performed`
+- `MGP-SRC-008-H039` — `### Verification After Rollback`
+- `MGP-SRC-008-H040` — `### Docs Updated`
+- `MGP-SRC-008-H041` — `### Final Result`
+- `MGP-SRC-008-H042` — `### Follow-Up Required`
+- `MGP-SRC-008-H043` — `## 8. Backup Rules`
+- `MGP-SRC-008-H044` — `### 8.1 Code Backup`
+- `MGP-SRC-008-H045` — `### Code Backup`
+- `MGP-SRC-008-H046` — `### 8.2 Database Backup`
+- `MGP-SRC-008-H047` — `### Database Backup`
+- `MGP-SRC-008-H048` — `### 8.3 Storage Backup`
+- `MGP-SRC-008-H049` — `### Storage Backup`
+- `MGP-SRC-008-H050` — `### 8.4 Config / Environment Backup`
+- `MGP-SRC-008-H051` — `### Config / Env Backup`
+- `MGP-SRC-008-H052` — `## 9. SQL Migration Safety Rules`
+- `MGP-SRC-008-H053` — `### 9.1 Migration File Naming`
+- `MGP-SRC-008-H054` — `### 9.2 Migration Must Include`
+- `MGP-SRC-008-H055` — `### 9.3 Migration Header Template`
+- `MGP-SRC-008-H056` — `### 9.4 Destructive Migration Rules`
+- `MGP-SRC-008-H057` — `## 10. Database Rollback Rules`
+- `MGP-SRC-008-H058` — `### 10.1 Safe Additive Changes`
+- `MGP-SRC-008-H059` — `### 10.2 Data-Modifying Changes`
+- `MGP-SRC-008-H060` — `### 10.3 Destructive Changes`
+- `MGP-SRC-008-H061` — `### 10.4 RLS Rollback`
+- `MGP-SRC-008-H062` — `## 11. Storage / Cloudflare R2 Rollback Rules`
+- `MGP-SRC-008-H063` — `### 11.1 Public Media Rollback`
+- `MGP-SRC-008-H064` — `### 11.2 Private Media Rollback`
+- `MGP-SRC-008-H065` — `### 11.3 CDN Rollback`
+- `MGP-SRC-008-H066` — `## 12. Feature Flag Rollback Rules`
+- `MGP-SRC-008-H067` — `### 12.1 Feature Flag Rollback Steps`
+- `MGP-SRC-008-H068` — `### 12.2 Feature Flag Entry Format`
+- `MGP-SRC-008-H069` — `## FEATURE-FLAG-YYYYMMDD-000 — Flag Name`
+- `MGP-SRC-008-H070` — `### Flag`
+- `MGP-SRC-008-H071` — `### Enabled Scope`
+- `MGP-SRC-008-H072` — `### Rollback`
+- `MGP-SRC-008-H073` — `### Verification`
+- `MGP-SRC-008-H074` — `## 13. Provider Rollback Rules`
+- `MGP-SRC-008-H075` — `### 13.1 General Provider Rollback Steps`
+- `MGP-SRC-008-H076` — `### 13.2 Payment Provider Rollback`
+- `MGP-SRC-008-H077` — `### 13.3 OTP Provider Rollback`
+- `MGP-SRC-008-H078` — `### 13.4 Storage Provider Rollback`
+- `MGP-SRC-008-H079` — `## 14. Caching And Revalidation Rollback Rules`
+- `MGP-SRC-008-H080` — `### 14.1 Revalidation Rules`
+- `MGP-SRC-008-H081` — `### 14.2 Cache Rollback Steps`
+- `MGP-SRC-008-H082` — `## 15. Deployment Gates`
+- `MGP-SRC-008-H083` — `### 15.1 Development Gate`
+- `MGP-SRC-008-H084` — `### 15.2 Staging Gate`
+- `MGP-SRC-008-H085` — `### 15.3 Production Gate`
+- `MGP-SRC-008-H086` — `## 16. Smoke Test Checklist`
+- `MGP-SRC-008-H087` — `### 16.1 Public Smoke Test`
+- `MGP-SRC-008-H088` — `### 16.2 Auth Smoke Test`
+- `MGP-SRC-008-H089` — `### 16.3 Role Smoke Test`
+- `MGP-SRC-008-H090` — `### 16.4 Security Smoke Test`
+- `MGP-SRC-008-H091` — `### 16.5 Payment Smoke Test`
+- `MGP-SRC-008-H092` — `### 16.6 Provider Smoke Test`
+- `MGP-SRC-008-H093` — `## 17. Production Launch Freeze Rules`
+- `MGP-SRC-008-H094` — `## 18. Production Launch Checklist`
+- `MGP-SRC-008-H095` — `### 18.1 Documentation`
+- `MGP-SRC-008-H096` — `### 18.2 Code`
+- `MGP-SRC-008-H097` — `### 18.3 Database`
+- `MGP-SRC-008-H098` — `### 18.4 Auth / Roles`
+- `MGP-SRC-008-H099` — `### 18.5 Security / Privacy`
+- `MGP-SRC-008-H100` — `### 18.6 Providers`
+- `MGP-SRC-008-H101` — `### 18.7 UI / Responsive`
+- `MGP-SRC-008-H102` — `### 18.8 SEO / Legal`
+- `MGP-SRC-008-H103` — `### 18.9 Backup / Rollback`
+- `MGP-SRC-008-H104` — `## 19. Hotfix Rules`
+- `MGP-SRC-008-H105` — `### Hotfix Entry Format`
+- `MGP-SRC-008-H106` — `## HOTFIX-YYYYMMDD-000 — Hotfix Title`
+- `MGP-SRC-008-H107` — `### Related Bug / Incident`
+- `MGP-SRC-008-H108` — `### Severity`
+- `MGP-SRC-008-H109` — `### Scope`
+- `MGP-SRC-008-H110` — `### Changed Files`
+- `MGP-SRC-008-H111` — `### SQL / Migration Files`
+- `MGP-SRC-008-H112` — `### Backup`
+- `MGP-SRC-008-H113` — `### Tests / Verification`
+- `MGP-SRC-008-H114` — `### Rollback`
+- `MGP-SRC-008-H115` — `### Final Status`
+- `MGP-SRC-008-H116` — `## 20. Incident Handling Rules`
+- `MGP-SRC-008-H117` — `### 20.1 Incident Severity`
+- `MGP-SRC-008-H118` — `### 20.2 Incident Entry Format`
+- `MGP-SRC-008-H119` — `## INCIDENT-YYYYMMDD-000 — Incident Title`
+- `MGP-SRC-008-H120` — `### Severity`
+- `MGP-SRC-008-H121` — `### Status`
+- `MGP-SRC-008-H122` — `### Timeline`
+- `MGP-SRC-008-H123` — `### Impact`
+- `MGP-SRC-008-H124` — `### Root Cause`
+- `MGP-SRC-008-H125` — `### Immediate Action`
+- `MGP-SRC-008-H126` — `### Rollback / Mitigation`
+- `MGP-SRC-008-H127` — `### Verification`
+- `MGP-SRC-008-H128` — `### Follow-Up`
+- `MGP-SRC-008-H129` — `### Docs Updated`
+- `MGP-SRC-008-H130` — `### 20.3 Incident Response Steps`
+- `MGP-SRC-008-H131` — `## 21. Seed / Demo / Test Data Deployment Rules`
+- `MGP-SRC-008-H132` — `### Seed Data Entry Format`
+- `MGP-SRC-008-H133` — `## SEED-DATA-YYYYMMDD-000 — Seed Data Batch`
+- `MGP-SRC-008-H134` — `### Environment`
+- `MGP-SRC-008-H135` — `### Purpose`
+- `MGP-SRC-008-H136` — `### Data Types`
+- `MGP-SRC-008-H137` — `### Production Visibility`
+- `MGP-SRC-008-H138` — `### Rollback`
+- `MGP-SRC-008-H139` — `## 22. Maintenance Mode Rules`
+- `MGP-SRC-008-H140` — `## 23. Versioning Rules`
+- `MGP-SRC-008-H141` — `## VERSION — MGP-YYYY.MM.DD.N`
+- `MGP-SRC-008-H142` — `### Environment`
+- `MGP-SRC-008-H143` — `### Commit`
+- `MGP-SRC-008-H144` — `### Migration Batch`
+- `MGP-SRC-008-H145` — `### Feature Flags`
+- `MGP-SRC-008-H146` — `### Provider Modes`
+- `MGP-SRC-008-H147` — `### Deployment Status`
+- `MGP-SRC-008-H148` — `### Rollback Version`
+- `MGP-SRC-008-H149` — `## 24. Deployment Documentation Update Rules`
+- `MGP-SRC-008-H150` — `## 25. Deployment Final Response Rule`
+- `MGP-SRC-008-H151` — `## Deployment / Rollback Result`
+- `MGP-SRC-008-H152` — `## Environment`
+- `MGP-SRC-008-H153` — `## Changed Files`
+- `MGP-SRC-008-H154` — `## SQL / Migration Files`
+- `MGP-SRC-008-H155` — `## Backup`
+- `MGP-SRC-008-H156` — `## Tests Run`
+- `MGP-SRC-008-H157` — `## Verification`
+- `MGP-SRC-008-H158` — `## Rollback`
+- `MGP-SRC-008-H159` — `## Docs Updated`
+- `MGP-SRC-008-H160` — `## Pending Issues`
+- `MGP-SRC-008-H161` — `## Next Phase`
+- `MGP-SRC-008-H162` — `## 26. Current Deployment Status`
+- `MGP-SRC-008-H163` — `## 27. Current Open Deployment Risks`
+- `MGP-SRC-008-H164` — `## DEPLOY-RISK-20260629-001 — Website Implementation Not Started`
+- `MGP-SRC-008-H165` — `### Status`
+- `MGP-SRC-008-H166` — `### Risk`
+- `MGP-SRC-008-H167` — `### Required Action`
+- `MGP-SRC-008-H168` — `### Related Docs`
+- `MGP-SRC-008-H169` — `## DEPLOY-RISK-20260629-002 — Providers Not Configured`
+- `MGP-SRC-008-H170` — `### Status`
+- `MGP-SRC-008-H171` — `### Risk`
+- `MGP-SRC-008-H172` — `### Required Action`
+- `MGP-SRC-008-H173` — `## DEPLOY-RISK-20260629-003 — SQL/Migration System Not Created Yet`
+- `MGP-SRC-008-H174` — `### Status`
+- `MGP-SRC-008-H175` — `### Risk`
+- `MGP-SRC-008-H176` — `### Required Action`
+- `MGP-SRC-008-H177` — `## DEPLOY-RISK-20260629-004 — Production Backup Not Tested Yet`
+- `MGP-SRC-008-H178` — `### Status`
+- `MGP-SRC-008-H179` — `### Risk`
+- `MGP-SRC-008-H180` — `### Required Action`
+- `MGP-SRC-008-H181` — `## DEPLOY-RISK-20260629-005 — RLS Final Pass Not Done`
+- `MGP-SRC-008-H182` — `### Status`
+- `MGP-SRC-008-H183` — `### Risk`
+- `MGP-SRC-008-H184` — `### Required Action`
+- `MGP-SRC-008-H185` — `## DEPLOY-RISK-20260629-006 — Manual Verification Not Fully Run`
+- `MGP-SRC-008-H186` — `### Status`
+- `MGP-SRC-008-H187` — `### Risk`
+- `MGP-SRC-008-H188` — `### Required Action`
+- `MGP-SRC-008-H189` — `## 28. Current Documentation Generation Progress`
+- `MGP-SRC-008-H190` — `## 29. Resume Guide For Future Claude`
+- `MGP-SRC-008-H191` — `## 30. Final Rule`
+
+### MGP-SRC-009 — `docs/01_PROJECT_MASTER_AND_SCOPE.md` — 92 headings
+
+- `MGP-SRC-009-H001` — `# docs/01_PROJECT_MASTER_AND_SCOPE.md`
+- `MGP-SRC-009-H002` — `# My Gujarat Property — Project Master, Scope, Roles, Modules And Non-Negotiable Rules`
+- `MGP-SRC-009-H003` — `## 1. Project Name`
+- `MGP-SRC-009-H004` — `## 2. Project Type`
+- `MGP-SRC-009-H005` — `## 3. Project Vision`
+- `MGP-SRC-009-H006` — `## 4. Core Product Principles`
+- `MGP-SRC-009-H007` — `### 4.1 Real Data Only`
+- `MGP-SRC-009-H008` — `### 4.2 No Hidden Contact Leak`
+- `MGP-SRC-009-H009` — `### 4.3 No Frontend-Only Security`
+- `MGP-SRC-009-H010` — `### 4.4 Mobile First`
+- `MGP-SRC-009-H011` — `### 4.5 Role-Aware Experience`
+- `MGP-SRC-009-H012` — `### 4.6 Approval-First Marketplace`
+- `MGP-SRC-009-H013` — `### 4.7 Provider Safe Mode`
+- `MGP-SRC-009-H014` — `### 4.8 Documentation Is Source Of Truth`
+- `MGP-SRC-009-H015` — `## 5. Primary Users And Roles`
+- `MGP-SRC-009-H016` — `## 5.1 Guest`
+- `MGP-SRC-009-H017` — `## 5.2 Owner`
+- `MGP-SRC-009-H018` — `## 5.3 Broker / Agent`
+- `MGP-SRC-009-H019` — `## 5.4 Builder / Developer`
+- `MGP-SRC-009-H020` — `## 5.5 Super Admin`
+- `MGP-SRC-009-H021` — `## 5.6 Admin`
+- `MGP-SRC-009-H022` — `## 5.7 Staff Roles`
+- `MGP-SRC-009-H023` — `## 6. Main Marketplace Entities`
+- `MGP-SRC-009-H024` — `## 6.1 Property`
+- `MGP-SRC-009-H025` — `## 6.2 Project`
+- `MGP-SRC-009-H026` — `## 6.3 Requirement`
+- `MGP-SRC-009-H027` — `## 6.4 Lead`
+- `MGP-SRC-009-H028` — `## 6.5 Proposal`
+- `MGP-SRC-009-H029` — `## 6.6 Message / Thread`
+- `MGP-SRC-009-H030` — `## 6.7 Site Visit`
+- `MGP-SRC-009-H031` — `## 6.8 Ad / Promotion`
+- `MGP-SRC-009-H032` — `## 7. Core Website Areas`
+- `MGP-SRC-009-H033` — `## 7.1 Public Website`
+- `MGP-SRC-009-H034` — `## 7.2 Homepage`
+- `MGP-SRC-009-H035` — `## 7.3 Search`
+- `MGP-SRC-009-H036` — `## 7.4 Detail Pages`
+- `MGP-SRC-009-H037` — `## 7.5 Public Profiles`
+- `MGP-SRC-009-H038` — `## 7.6 Dashboards`
+- `MGP-SRC-009-H039` — `## 7.7 Admin / Staff Panel`
+- `MGP-SRC-009-H040` — `## 8. Auth And Registration Scope`
+- `MGP-SRC-009-H041` — `## 8.1 Public Login/Register`
+- `MGP-SRC-009-H042` — `## 8.2 Admin/Staff Login`
+- `MGP-SRC-009-H043` — `## 9. Property Scope`
+- `MGP-SRC-009-H044` — `## 10. Project Scope`
+- `MGP-SRC-009-H045` — `## 11. Requirement Scope`
+- `MGP-SRC-009-H046` — `## 12. Leads, CRM, Proposals And Messages Scope`
+- `MGP-SRC-009-H047` — `## 12.1 Leads`
+- `MGP-SRC-009-H048` — `## 12.2 CRM`
+- `MGP-SRC-009-H049` — `## 12.3 Proposals`
+- `MGP-SRC-009-H050` — `## 12.4 Messaging`
+- `MGP-SRC-009-H051` — `## 13. Billing, Subscription, Payment, GST And Trial Scope`
+- `MGP-SRC-009-H052` — `## 14. Ads, Promotion And Notification Scope`
+- `MGP-SRC-009-H053` — `## 14.1 Ads/Promotions`
+- `MGP-SRC-009-H054` — `## 14.2 Notifications`
+- `MGP-SRC-009-H055` — `## 15. Location, Search, SEO, CMS, Blog And Legal Scope`
+- `MGP-SRC-009-H056` — `## 15.1 Location`
+- `MGP-SRC-009-H057` — `## 15.2 Search And SEO`
+- `MGP-SRC-009-H058` — `## 15.3 CMS And Legal`
+- `MGP-SRC-009-H059` — `## 16. Media, Upload, Storage And CDN Scope`
+- `MGP-SRC-009-H060` — `## 17. UI / UX / Design System Scope`
+- `MGP-SRC-009-H061` — `## 18. Security, Privacy, Consent And Fraud Scope`
+- `MGP-SRC-009-H062` — `## 19. Performance And Scalability Scope`
+- `MGP-SRC-009-H063` — `## 20. Deployment, Rollback And Production Scope`
+- `MGP-SRC-009-H064` — `## 21. Non-Goals And Explicitly Disallowed Items`
+- `MGP-SRC-009-H065` — `## 22. Feature Status System`
+- `MGP-SRC-009-H066` — `## 23. Development Phase Map`
+- `MGP-SRC-009-H067` — `### Phase 00 — Prompt Usage Rules`
+- `MGP-SRC-009-H068` — `### Phase 01 — Project Setup Baseline`
+- `MGP-SRC-009-H069` — `### Phase 02 — Auth Roles RLS Foundation`
+- `MGP-SRC-009-H070` — `### Phase 03 — Public UI Home Header Footer Hero`
+- `MGP-SRC-009-H071` — `### Phase 04 — Property Project Requirement System`
+- `MGP-SRC-009-H072` — `### Phase 05 — Public Search Detail Profile SEO`
+- `MGP-SRC-009-H073` — `### Phase 06 — Owner Broker Builder Dashboards`
+- `MGP-SRC-009-H074` — `### Phase 07 — Admin Staff Super Admin System`
+- `MGP-SRC-009-H075` — `### Phase 08 — Leads CRM Requirements Proposals Messages`
+- `MGP-SRC-009-H076` — `### Phase 09 — Billing Payment Subscription Trial GST`
+- `MGP-SRC-009-H077` — `### Phase 10 — Media Storage Uploads R2 CDN`
+- `MGP-SRC-009-H078` — `### Phase 11 — Location Search SEO CMS Legal`
+- `MGP-SRC-009-H079` — `### Phase 12 — Ads Promotion Notifications Providers`
+- `MGP-SRC-009-H080` — `### Phase 13 — Security Privacy Fraud Rate Limits`
+- `MGP-SRC-009-H081` — `### Phase 14 — Performance Caching Deployment Launch`
+- `MGP-SRC-009-H082` — `### Phase 15 — Final Production API Testing And Signoff`
+- `MGP-SRC-009-H083` — `## 24. Documentation Pack Scope`
+- `MGP-SRC-009-H084` — `### Root Docs`
+- `MGP-SRC-009-H085` — `### Detailed Docs`
+- `MGP-SRC-009-H086` — `### Prompt Files`
+- `MGP-SRC-009-H087` — `## 25. Acceptance Rules`
+- `MGP-SRC-009-H088` — `## 26. Phase PASS Rules`
+- `MGP-SRC-009-H089` — `## 27. Current Implementation Status`
+- `MGP-SRC-009-H090` — `## 28. Current Documentation Generation Progress`
+- `MGP-SRC-009-H091` — `## 29. Related Documents`
+- `MGP-SRC-009-H092` — `## 30. Final Master Rule`
+
+### MGP-SRC-010 — `docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md` — 103 headings
+
+- `MGP-SRC-010-H001` — `# docs/02_CLAUDE_WORKFLOW_AND_TOKEN_LIGHT_RULES.md`
+- `MGP-SRC-010-H002` — `# My Gujarat Property — Claude Workflow, Token-Light Rules, Context Discipline And Phase Execution Guide`
+- `MGP-SRC-010-H003` — `## 1. Purpose`
+- `MGP-SRC-010-H004` — `## 2. Main Workflow Principle`
+- `MGP-SRC-010-H005` — `## 3. Token-Light Rule`
+- `MGP-SRC-010-H006` — `## 4. Quality Must Not Be Reduced To Save Tokens`
+- `MGP-SRC-010-H007` — `## 5. Files Claude Must Know`
+- `MGP-SRC-010-H008` — `### 5.1 Root Memory And Control Files`
+- `MGP-SRC-010-H009` — `### 5.2 Detailed Docs`
+- `MGP-SRC-010-H010` — `### 5.3 Prompt Files`
+- `MGP-SRC-010-H011` — `### 5.4 Manual Verification Prompt Files`
+- `MGP-SRC-010-H012` — `## 6. Recommended Claude Code Session Start`
+- `MGP-SRC-010-H013` — `## 7. Claude Must Inspect Existing Project Before Changing`
+- `MGP-SRC-010-H014` — `## 8. No Duplicate Implementation Rule`
+- `MGP-SRC-010-H015` — `## 9. Do Not Remove Working Features Without Approval`
+- `MGP-SRC-010-H016` — `## 10. Ask User Approval Before High-Risk Changes`
+- `MGP-SRC-010-H017` — `## 11. When To Use \`/clear\``
+- `MGP-SRC-010-H018` — `## 12. When To Use \`/compact\``
+- `MGP-SRC-010-H019` — `## 13. When To Use \`/context\``
+- `MGP-SRC-010-H020` — `## 14. When To Use \`/cost\``
+- `MGP-SRC-010-H021` — `## 15. Model Selection Guidance For Claude Code`
+- `MGP-SRC-010-H022` — `### 15.1 Sonnet`
+- `MGP-SRC-010-H023` — `### 15.2 Opus`
+- `MGP-SRC-010-H024` — `### 15.3 Haiku`
+- `MGP-SRC-010-H025` — `## 16. Phase-Based Workflow`
+- `MGP-SRC-010-H026` — `### Step 1 — Read Required Docs`
+- `MGP-SRC-010-H027` — `### Step 2 — Inspect Existing Implementation`
+- `MGP-SRC-010-H028` — `### Step 3 — Plan`
+- `MGP-SRC-010-H029` — `### Step 4 — Implement`
+- `MGP-SRC-010-H030` — `### Step 5 — Run Checks`
+- `MGP-SRC-010-H031` — `### Step 6 — Fix Bugs`
+- `MGP-SRC-010-H032` — `### Step 7 — Update Docs`
+- `MGP-SRC-010-H033` — `### Step 8 — Final Response`
+- `MGP-SRC-010-H034` — `## 17. Required Phase Final Response Format`
+- `MGP-SRC-010-H035` — `## Phase Result`
+- `MGP-SRC-010-H036` — `## Summary`
+- `MGP-SRC-010-H037` — `## Changed Files`
+- `MGP-SRC-010-H038` — `## SQL / Migration Files`
+- `MGP-SRC-010-H039` — `## RLS / Security`
+- `MGP-SRC-010-H040` — `## Provider / API Status`
+- `MGP-SRC-010-H041` — `## Tests Run`
+- `MGP-SRC-010-H042` — `## Manual Verification`
+- `MGP-SRC-010-H043` — `## Bugs / Fixes`
+- `MGP-SRC-010-H044` — `## Docs Updated`
+- `MGP-SRC-010-H045` — `## Pending Issues`
+- `MGP-SRC-010-H046` — `## Next Phase`
+- `MGP-SRC-010-H047` — `## 18. Required Quick Final Response Format For Small Docs-Only Work`
+- `MGP-SRC-010-H048` — `## Result`
+- `MGP-SRC-010-H049` — `## File Updated`
+- `MGP-SRC-010-H050` — `## Summary`
+- `MGP-SRC-010-H051` — `## Docs Updated`
+- `MGP-SRC-010-H052` — `## Pending`
+- `MGP-SRC-010-H053` — `## Next`
+- `MGP-SRC-010-H054` — `## 19. Feature Registry Update Rules`
+- `MGP-SRC-010-H055` — `## 20. Changelog Update Rules`
+- `MGP-SRC-010-H056` — `## 21. Bugs And Fixes Update Rules`
+- `MGP-SRC-010-H057` — `## 22. Manual Verification Update Rules`
+- `MGP-SRC-010-H058` — `## 23. brain.md Update Rules`
+- `MGP-SRC-010-H059` — `## 24. SQL / Migration Workflow Rules`
+- `MGP-SRC-010-H060` — `## 25. SQL Migration Header Template`
+- `MGP-SRC-010-H061` — `## 26. Destructive Migration Rules`
+- `MGP-SRC-010-H062` — `## 27. RLS / Security Workflow Rules`
+- `MGP-SRC-010-H063` — `## 28. Provider Workflow Rules`
+- `MGP-SRC-010-H064` — `## 29. Payment Workflow Rules`
+- `MGP-SRC-010-H065` — `## 30. Media / Upload Workflow Rules`
+- `MGP-SRC-010-H066` — `## 31. UI Workflow Rules`
+- `MGP-SRC-010-H067` — `## 32. Performance Workflow Rules`
+- `MGP-SRC-010-H068` — `## 33. Deployment Workflow Rules`
+- `MGP-SRC-010-H069` — `## 34. Testing Rules`
+- `MGP-SRC-010-H070` — `## 35. Logs Rule`
+- `MGP-SRC-010-H071` — `## 36. Error Handling Rule`
+- `MGP-SRC-010-H072` — `## 37. Setup-Required Rule`
+- `MGP-SRC-010-H073` — `## 38. Incomplete Feature Rule`
+- `MGP-SRC-010-H074` — `## 39. Workaround Rule`
+- `MGP-SRC-010-H075` — `## 40. Feature Flag Rule`
+- `MGP-SRC-010-H076` — `## 41. Conflict Resolution Rule`
+- `MGP-SRC-010-H077` — `## 42. “No AI” Rule`
+- `MGP-SRC-010-H078` — `## 43. “No Fake Data” Rule`
+- `MGP-SRC-010-H079` — `## 44. Two-Claude-Account Continuity Rules`
+- `MGP-SRC-010-H080` — `## 45. Resume Guide Format For brain.md`
+- `MGP-SRC-010-H081` — `## Resume Guide — After Phase XX`
+- `MGP-SRC-010-H082` — `### Current Phase`
+- `MGP-SRC-010-H083` — `### Completed`
+- `MGP-SRC-010-H084` — `### Changed Files`
+- `MGP-SRC-010-H085` — `### SQL / Migration Files`
+- `MGP-SRC-010-H086` — `### Provider Status`
+- `MGP-SRC-010-H087` — `### Verification Result`
+- `MGP-SRC-010-H088` — `### Bugs / Workarounds`
+- `MGP-SRC-010-H089` — `### Pending`
+- `MGP-SRC-010-H090` — `### Next Step`
+- `MGP-SRC-010-H091` — `### Important Notes For Next Claude`
+- `MGP-SRC-010-H092` — `## 46. Phase Prompt Creation Rules`
+- `MGP-SRC-010-H093` — `## 47. Manual Verification Prompt Creation Rules`
+- `MGP-SRC-010-H094` — `## 48. Required Phase Order`
+- `MGP-SRC-010-H095` — `## 49. Development Should Not Start Before Docs And Prompts Are Ready`
+- `MGP-SRC-010-H096` — `## 50. Current Documentation Generation Status`
+- `MGP-SRC-010-H097` — `## 51. Current Implementation Status`
+- `MGP-SRC-010-H098` — `## 52. Prompt To Continue Documentation Generation`
+- `MGP-SRC-010-H099` — `## 53. Prompt To Start A Future Implementation Phase`
+- `MGP-SRC-010-H100` — `## 54. Final Claude Self-Check Before Every Response`
+- `MGP-SRC-010-H101` — `## 55. Common Bad Claude Behaviors To Avoid`
+- `MGP-SRC-010-H102` — `## 56. Good Claude Behavior Checklist`
+- `MGP-SRC-010-H103` — `## 57. Final Rule`
+
+### MGP-SRC-011 — `docs/03_ARCHITECTURE_TECH_STACK_DATABASE_RLS.md` — 164 headings
+
+- `MGP-SRC-011-H001` — `# docs/03_ARCHITECTURE_TECH_STACK_DATABASE_RLS.md`
+- `MGP-SRC-011-H002` — `# My Gujarat Property — Architecture, Tech Stack, Database, Supabase, RLS And System Design`
+- `MGP-SRC-011-H003` — `## 1. Purpose`
+- `MGP-SRC-011-H004` — `## 2. Architecture Goals`
+- `MGP-SRC-011-H005` — `## 3. Recommended Tech Stack`
+- `MGP-SRC-011-H006` — `## 3.1 Frontend Framework`
+- `MGP-SRC-011-H007` — `## 3.2 Styling And UI`
+- `MGP-SRC-011-H008` — `## 3.3 Backend / Server Layer`
+- `MGP-SRC-011-H009` — `## 3.4 Database`
+- `MGP-SRC-011-H010` — `## 3.5 Authentication`
+- `MGP-SRC-011-H011` — `## 3.6 Storage`
+- `MGP-SRC-011-H012` — `## 3.7 Payments`
+- `MGP-SRC-011-H013` — `## 3.8 External Providers`
+- `MGP-SRC-011-H014` — `## 4. High-Level System Architecture`
+- `MGP-SRC-011-H015` — `## 5. App Folder Architecture`
+- `MGP-SRC-011-H016` — `## 6. Route Architecture`
+- `MGP-SRC-011-H017` — `## 6.1 Public Routes`
+- `MGP-SRC-011-H018` — `## 6.2 Public Auth Routes / Components`
+- `MGP-SRC-011-H019` — `## 6.3 Dashboard Routes`
+- `MGP-SRC-011-H020` — `## 6.4 Admin / Staff Routes`
+- `MGP-SRC-011-H021` — `## 7. Server / Client Boundary`
+- `MGP-SRC-011-H022` — `## 7.1 Server-Only Code`
+- `MGP-SRC-011-H023` — `## 7.2 Client-Safe Code`
+- `MGP-SRC-011-H024` — `## 8. Data Access Pattern`
+- `MGP-SRC-011-H025` — `## 9. Validation Architecture`
+- `MGP-SRC-011-H026` — `## 10. Error Architecture`
+- `MGP-SRC-011-H027` — `## 11. Database Design Principles`
+- `MGP-SRC-011-H028` — `## 12. Core Database Domains`
+- `MGP-SRC-011-H029` — `## 13. Suggested Database Table Groups`
+- `MGP-SRC-011-H030` — `# 13A. Auth, Profiles And Roles`
+- `MGP-SRC-011-H031` — `## 13A.1 \`profiles\``
+- `MGP-SRC-011-H032` — `## 13A.2 \`owner_profiles\``
+- `MGP-SRC-011-H033` — `## 13A.3 \`broker_profiles\``
+- `MGP-SRC-011-H034` — `## 13A.4 \`builder_profiles\``
+- `MGP-SRC-011-H035` — `## 13A.5 \`role_change_requests\``
+- `MGP-SRC-011-H036` — `# 13B. Staff, Admin And Permissions`
+- `MGP-SRC-011-H037` — `## 13B.1 \`staff_profiles\``
+- `MGP-SRC-011-H038` — `## 13B.2 \`staff_permissions\``
+- `MGP-SRC-011-H039` — `## 13B.3 \`staff_invites\``
+- `MGP-SRC-011-H040` — `# 13C. Location System`
+- `MGP-SRC-011-H041` — `## 13C.1 \`countries\``
+- `MGP-SRC-011-H042` — `## 13C.2 \`states\``
+- `MGP-SRC-011-H043` — `## 13C.3 \`districts\``
+- `MGP-SRC-011-H044` — `## 13C.4 \`talukas\``
+- `MGP-SRC-011-H045` — `## 13C.5 \`cities_villages\``
+- `MGP-SRC-011-H046` — `## 13C.6 \`areas\``
+- `MGP-SRC-011-H047` — `## 13C.7 \`localities\``
+- `MGP-SRC-011-H048` — `## 13C.8 \`societies_buildings\``
+- `MGP-SRC-011-H049` — `## 13C.9 \`missing_location_requests\``
+- `MGP-SRC-011-H050` — `# 13D. Properties`
+- `MGP-SRC-011-H051` — `## 13D.1 \`properties\``
+- `MGP-SRC-011-H052` — `## 13D.2 \`property_type_details\``
+- `MGP-SRC-011-H053` — `## 13D.3 \`property_approval_events\``
+- `MGP-SRC-011-H054` — `# 13E. Projects`
+- `MGP-SRC-011-H055` — `## 13E.1 \`projects\``
+- `MGP-SRC-011-H056` — `## 13E.2 \`project_wings\``
+- `MGP-SRC-011-H057` — `## 13E.3 \`project_units\``
+- `MGP-SRC-011-H058` — `## 13E.4 \`project_phases\``
+- `MGP-SRC-011-H059` — `## 13E.5 \`project_progress_updates\``
+- `MGP-SRC-011-H060` — `# 13F. Requirements And Matching`
+- `MGP-SRC-011-H061` — `## 13F.1 \`requirements\``
+- `MGP-SRC-011-H062` — `## 13F.2 \`requirement_matches\``
+- `MGP-SRC-011-H063` — `## 13F.3 \`proposals\``
+- `MGP-SRC-011-H064` — `# 13G. Leads, CRM, Messages And Site Visits`
+- `MGP-SRC-011-H065` — `## 13G.1 \`leads\``
+- `MGP-SRC-011-H066` — `## 13G.2 \`lead_events\``
+- `MGP-SRC-011-H067` — `## 13G.3 \`lead_notes\``
+- `MGP-SRC-011-H068` — `## 13G.4 \`message_threads\``
+- `MGP-SRC-011-H069` — `## 13G.5 \`message_participants\``
+- `MGP-SRC-011-H070` — `## 13G.6 \`messages\``
+- `MGP-SRC-011-H071` — `## 13G.7 \`message_attachments\``
+- `MGP-SRC-011-H072` — `## 13G.8 \`site_visits\``
+- `MGP-SRC-011-H073` — `# 13H. Media And Storage`
+- `MGP-SRC-011-H074` — `## 13H.1 \`media_assets\``
+- `MGP-SRC-011-H075` — `## 13H.2 \`media_variants\``
+- `MGP-SRC-011-H076` — `## 13H.3 \`media_processing_jobs\``
+- `MGP-SRC-011-H077` — `## 13H.4 \`media_access_logs\``
+- `MGP-SRC-011-H078` — `# 13I. Verification And Trust`
+- `MGP-SRC-011-H079` — `## 13I.1 \`verification_requests\``
+- `MGP-SRC-011-H080` — `## 13I.2 \`verification_documents\``
+- `MGP-SRC-011-H081` — `# 13J. Billing, Payments, Plans And Invoices`
+- `MGP-SRC-011-H082` — `## 13J.1 \`plans\``
+- `MGP-SRC-011-H083` — `## 13J.2 \`subscriptions\``
+- `MGP-SRC-011-H084` — `## 13J.3 \`payments\``
+- `MGP-SRC-011-H085` — `## 13J.4 \`payment_webhook_events\``
+- `MGP-SRC-011-H086` — `## 13J.5 \`invoices\``
+- `MGP-SRC-011-H087` — `## 13J.6 \`coupons\``
+- `MGP-SRC-011-H088` — `## 13J.7 \`trial_grants\``
+- `MGP-SRC-011-H089` — `# 13K. Ads And Promotions`
+- `MGP-SRC-011-H090` — `## 13K.1 \`ads\``
+- `MGP-SRC-011-H091` — `## 13K.2 \`ad_media\``
+- `MGP-SRC-011-H092` — `## 13K.3 \`ad_events\``
+- `MGP-SRC-011-H093` — `# 13L. Notifications`
+- `MGP-SRC-011-H094` — `## 13L.1 \`notifications\``
+- `MGP-SRC-011-H095` — `## 13L.2 \`notification_preferences\``
+- `MGP-SRC-011-H096` — `## 13L.3 \`notification_delivery_logs\``
+- `MGP-SRC-011-H097` — `# 13M. CMS, Blog, SEO And Legal`
+- `MGP-SRC-011-H098` — `## 13M.1 \`cms_pages\``
+- `MGP-SRC-011-H099` — `## 13M.2 \`blog_posts\``
+- `MGP-SRC-011-H100` — `## 13M.3 \`seo_pages\``
+- `MGP-SRC-011-H101` — `## 13M.4 \`redirects\``
+- `MGP-SRC-011-H102` — `# 13N. Support, Reports And Fraud`
+- `MGP-SRC-011-H103` — `## 13N.1 \`support_tickets\``
+- `MGP-SRC-011-H104` — `## 13N.2 \`support_messages\``
+- `MGP-SRC-011-H105` — `## 13N.3 \`reports\``
+- `MGP-SRC-011-H106` — `## 13N.4 \`fraud_events\``
+- `MGP-SRC-011-H107` — `# 13O. Provider Settings And System`
+- `MGP-SRC-011-H108` — `## 13O.1 \`provider_settings\``
+- `MGP-SRC-011-H109` — `## 13O.2 \`provider_health_checks\``
+- `MGP-SRC-011-H110` — `## 13O.3 \`feature_flags\``
+- `MGP-SRC-011-H111` — `## 13O.4 \`system_settings\``
+- `MGP-SRC-011-H112` — `# 13P. Audit, Security And Privacy`
+- `MGP-SRC-011-H113` — `## 13P.1 \`audit_logs\``
+- `MGP-SRC-011-H114` — `## 13P.2 \`security_events\``
+- `MGP-SRC-011-H115` — `## 13P.3 \`rate_limit_events\``
+- `MGP-SRC-011-H116` — `## 13P.4 \`legal_consents\``
+- `MGP-SRC-011-H117` — `## 13P.5 \`data_export_requests\``
+- `MGP-SRC-011-H118` — `## 13P.6 \`data_delete_requests\``
+- `MGP-SRC-011-H119` — `# 13Q. Jobs, Cron And Dead Letters`
+- `MGP-SRC-011-H120` — `## 13Q.1 \`background_jobs\``
+- `MGP-SRC-011-H121` — `## 13Q.2 \`dead_letters\``
+- `MGP-SRC-011-H122` — `## 14. Enum / Status Architecture`
+- `MGP-SRC-011-H123` — `## 14.1 Content Status`
+- `MGP-SRC-011-H124` — `## 14.2 Verification Status`
+- `MGP-SRC-011-H125` — `## 14.3 Payment Status`
+- `MGP-SRC-011-H126` — `## 14.4 Subscription Status`
+- `MGP-SRC-011-H127` — `## 14.5 Provider Status`
+- `MGP-SRC-011-H128` — `## 14.6 User Status`
+- `MGP-SRC-011-H129` — `## 14.7 Admin Review Status`
+- `MGP-SRC-011-H130` — `## 15. RLS Strategy`
+- `MGP-SRC-011-H131` — `## 15.1 RLS Principles`
+- `MGP-SRC-011-H132` — `## 15.2 Public RLS Pattern`
+- `MGP-SRC-011-H133` — `## 15.3 Authenticated User RLS Pattern`
+- `MGP-SRC-011-H134` — `## 15.4 Staff/Admin RLS Pattern`
+- `MGP-SRC-011-H135` — `## 15.5 Service Role Pattern`
+- `MGP-SRC-011-H136` — `## 16. Public-Safe Views`
+- `MGP-SRC-011-H137` — `## 17. RLS Test Requirements`
+- `MGP-SRC-011-H138` — `## 18. Migration Architecture`
+- `MGP-SRC-011-H139` — `## 19. Indexing Strategy`
+- `MGP-SRC-011-H140` — `## 20. Caching Architecture`
+- `MGP-SRC-011-H141` — `## 20.1 Cache Public Data Safely`
+- `MGP-SRC-011-H142` — `## 20.2 Revalidation Strategy`
+- `MGP-SRC-011-H143` — `## 21. Storage Architecture`
+- `MGP-SRC-011-H144` — `## 22. Provider Adapter Architecture`
+- `MGP-SRC-011-H145` — `## 23. Payment Architecture`
+- `MGP-SRC-011-H146` — `## 24. Notification Architecture`
+- `MGP-SRC-011-H147` — `## 25. Audit Architecture`
+- `MGP-SRC-011-H148` — `## 26. Rate Limit Architecture`
+- `MGP-SRC-011-H149` — `## 27. Background Job Architecture`
+- `MGP-SRC-011-H150` — `## 28. SEO Architecture`
+- `MGP-SRC-011-H151` — `## 29. Internationalization / Localization Architecture`
+- `MGP-SRC-011-H152` — `## 30. Security Architecture Summary`
+- `MGP-SRC-011-H153` — `## 31. Performance Architecture Summary`
+- `MGP-SRC-011-H154` — `## 32. Deployment Architecture`
+- `MGP-SRC-011-H155` — `## 33. Logging Architecture`
+- `MGP-SRC-011-H156` — `## 34. Testing Architecture`
+- `MGP-SRC-011-H157` — `## 35. Architecture Decision Rules`
+- `MGP-SRC-011-H158` — `## 36. Architecture Anti-Patterns To Avoid`
+- `MGP-SRC-011-H159` — `## 37. Current Architecture Status`
+- `MGP-SRC-011-H160` — `## 38. Implementation Phase Mapping`
+- `MGP-SRC-011-H161` — `## 39. Architecture Verification Checklist`
+- `MGP-SRC-011-H162` — `## 40. Current Documentation Generation Progress`
+- `MGP-SRC-011-H163` — `## 41. Related Documents`
+- `MGP-SRC-011-H164` — `## 42. Final Architecture Rule`
+
+### MGP-SRC-012 — `docs/04_AUTH_LOGIN_REGISTER_ROLES_PERMISSIONS.md` — 100 headings
+
+- `MGP-SRC-012-H001` — `# docs/04_AUTH_LOGIN_REGISTER_ROLES_PERMISSIONS.md`
+- `MGP-SRC-012-H002` — `# My Gujarat Property — Auth, Login, Register, Roles, Permissions And Access Control`
+- `MGP-SRC-012-H003` — `## 1. Purpose`
+- `MGP-SRC-012-H004` — `## 2. Core Auth Principles`
+- `MGP-SRC-012-H005` — `## 3. User Types`
+- `MGP-SRC-012-H006` — `## 3.1 Public Users`
+- `MGP-SRC-012-H007` — `## 3.2 Internal Users`
+- `MGP-SRC-012-H008` — `## 4. Guest User Rules`
+- `MGP-SRC-012-H009` — `## 5. Public User Roles`
+- `MGP-SRC-012-H010` — `## 5.1 Owner`
+- `MGP-SRC-012-H011` — `## 5.2 Broker / Agent`
+- `MGP-SRC-012-H012` — `## 5.3 Builder / Developer`
+- `MGP-SRC-012-H013` — `## 6. Public Login/Register Flow`
+- `MGP-SRC-012-H014` — `## 6.1 Login/Register Entry Points`
+- `MGP-SRC-012-H015` — `## 6.2 Mobile Number Step`
+- `MGP-SRC-012-H016` — `## 6.3 Existing Mobile Login Flow`
+- `MGP-SRC-012-H017` — `## 6.4 Unregistered Mobile Registration Flow`
+- `MGP-SRC-012-H018` — `## 6.5 Role Selection UI Requirements`
+- `MGP-SRC-012-H019` — `### Owner`
+- `MGP-SRC-012-H020` — `### Broker / Agent`
+- `MGP-SRC-012-H021` — `### Builder / Developer`
+- `MGP-SRC-012-H022` — `## 6.6 Registration Fields`
+- `MGP-SRC-012-H023` — `## 6.7 OTP Verification Step`
+- `MGP-SRC-012-H024` — `## 6.8 Redirect After Login/Register`
+- `MGP-SRC-012-H025` — `## 7. Logged-In User Header Behavior`
+- `MGP-SRC-012-H026` — `## 8. Session Rules`
+- `MGP-SRC-012-H027` — `## 9. Public Role Permissions Matrix`
+- `MGP-SRC-012-H028` — `## 9.1 Main Permission Matrix`
+- `MGP-SRC-012-H029` — `## 9.2 Property Permissions`
+- `MGP-SRC-012-H030` — `## 9.3 Project Permissions`
+- `MGP-SRC-012-H031` — `## 9.4 Requirement Permissions`
+- `MGP-SRC-012-H032` — `## 10. Admin / Staff Login System`
+- `MGP-SRC-012-H033` — `## 10.1 Internal Login Principles`
+- `MGP-SRC-012-H034` — `## 10.2 Internal Login Route`
+- `MGP-SRC-012-H035` — `## 10.3 Staff Invite Flow`
+- `MGP-SRC-012-H036` — `## 10.4 Super Admin Creation`
+- `MGP-SRC-012-H037` — `## 11. Internal Role Permissions`
+- `MGP-SRC-012-H038` — `## 11.1 Super Admin`
+- `MGP-SRC-012-H039` — `## 11.2 Admin`
+- `MGP-SRC-012-H040` — `## 11.3 Staff Roles`
+- `MGP-SRC-012-H041` — `### Verification Manager`
+- `MGP-SRC-012-H042` — `### Support Manager`
+- `MGP-SRC-012-H043` — `### Content Manager`
+- `MGP-SRC-012-H044` — `### SEO Manager`
+- `MGP-SRC-012-H045` — `### Ads Manager`
+- `MGP-SRC-012-H046` — `### Billing Manager`
+- `MGP-SRC-012-H047` — `### Payment Manager`
+- `MGP-SRC-012-H048` — `### City Manager`
+- `MGP-SRC-012-H049` — `### User Manager`
+- `MGP-SRC-012-H050` — `### Notification Manager`
+- `MGP-SRC-012-H051` — `### System Manager`
+- `MGP-SRC-012-H052` — `### Security Manager`
+- `MGP-SRC-012-H053` — `### Reports Manager`
+- `MGP-SRC-012-H054` — `### Audit Manager`
+- `MGP-SRC-012-H055` — `## 12. Permission Model`
+- `MGP-SRC-012-H056` — `## 13. Protected Route Rules`
+- `MGP-SRC-012-H057` — `## 13.1 Public Protected Routes`
+- `MGP-SRC-012-H058` — `## 13.2 Admin Protected Routes`
+- `MGP-SRC-012-H059` — `## 14. Direct URL Bypass Rules`
+- `MGP-SRC-012-H060` — `## 15. RLS Expectations For Auth And Roles`
+- `MGP-SRC-012-H061` — `## 16. Auth-Related Database Tables`
+- `MGP-SRC-012-H062` — `## 17. Profile Creation Rules`
+- `MGP-SRC-012-H063` — `## 18. Account Status Rules`
+- `MGP-SRC-012-H064` — `## 19. Role Change Request Rules`
+- `MGP-SRC-012-H065` — `## 20. Plan, Subscription And Auth Gates`
+- `MGP-SRC-012-H066` — `## 21. Verification Gates`
+- `MGP-SRC-012-H067` — `## 22. Auth UI State Requirements`
+- `MGP-SRC-012-H068` — `## 23. Auth Modal / Popup UX Rules`
+- `MGP-SRC-012-H069` — `## 24. Consent And Legal Rules In Auth`
+- `MGP-SRC-012-H070` — `## 25. OTP Provider Setup-Required Rules`
+- `MGP-SRC-012-H071` — `## 26. Admin/Staff Security Enhancements`
+- `MGP-SRC-012-H072` — `## 27. Notifications Related To Auth`
+- `MGP-SRC-012-H073` — `## 28. Auth And SEO Rules`
+- `MGP-SRC-012-H074` — `## 29. Auth And Caching Rules`
+- `MGP-SRC-012-H075` — `## 30. Auth And Logging Rules`
+- `MGP-SRC-012-H076` — `## 31. Auth Rate Limits`
+- `MGP-SRC-012-H077` — `## 32. Auth Testing Checklist`
+- `MGP-SRC-012-H078` — `### Public Auth`
+- `MGP-SRC-012-H079` — `### Role Access`
+- `MGP-SRC-012-H080` — `### Admin/Staff`
+- `MGP-SRC-012-H081` — `### RLS`
+- `MGP-SRC-012-H082` — `### Security`
+- `MGP-SRC-012-H083` — `## 33. Auth Manual Verification Result Template`
+- `MGP-SRC-012-H084` — `## AUTH-VERIFY-YYYYMMDD-000 — Auth Roles RLS Verification`
+- `MGP-SRC-012-H085` — `### Scope`
+- `MGP-SRC-012-H086` — `### Roles Tested`
+- `MGP-SRC-012-H087` — `### Routes Tested`
+- `MGP-SRC-012-H088` — `### Provider Status`
+- `MGP-SRC-012-H089` — `### Results`
+- `MGP-SRC-012-H090` — `### Bugs Found`
+- `MGP-SRC-012-H091` — `### Final Result`
+- `MGP-SRC-012-H092` — `## 34. Auth Feature Registry Items`
+- `MGP-SRC-012-H093` — `## 35. Auth Bug Examples`
+- `MGP-SRC-012-H094` — `## 36. Implementation Order For Auth Phase`
+- `MGP-SRC-012-H095` — `## 37. Migration Expectations For Auth Phase`
+- `MGP-SRC-012-H096` — `## 38. Auth Security PASS Requirements`
+- `MGP-SRC-012-H097` — `## 39. Current Auth Status`
+- `MGP-SRC-012-H098` — `## 40. Documentation Generation Progress`
+- `MGP-SRC-012-H099` — `## 41. Related Documents`
+- `MGP-SRC-012-H100` — `## 42. Final Auth Rule`
+
+### MGP-SRC-013 — `docs/05_PUBLIC_ROLES_HOME_PROFILE_DASHBOARD.md` — 90 headings
+
+- `MGP-SRC-013-H001` — `# docs/05_PUBLIC_ROLES_HOME_PROFILE_DASHBOARD.md`
+- `MGP-SRC-013-H002` — `# My Gujarat Property — Public Website, Roles, Homepage, Profiles And Dashboards`
+- `MGP-SRC-013-H003` — `## 1. Purpose`
+- `MGP-SRC-013-H004` — `## 2. Core Public UX Principles`
+- `MGP-SRC-013-H005` — `## 3. Public Website Areas`
+- `MGP-SRC-013-H006` — `## 4. Public Website Route Scope`
+- `MGP-SRC-013-H007` — `## 5. Homepage Scope`
+- `MGP-SRC-013-H008` — `## 6. Existing Homepage Design Preservation Rule`
+- `MGP-SRC-013-H009` — `## 7. Homepage Hero / Search Section`
+- `MGP-SRC-013-H010` — `## 8. City Selector Scope`
+- `MGP-SRC-013-H011` — `## 9. Public Header Scope`
+- `MGP-SRC-013-H012` — `## 10. Header Behavior By Role`
+- `MGP-SRC-013-H013` — `## 10.1 Guest Header`
+- `MGP-SRC-013-H014` — `## 10.2 Owner Header`
+- `MGP-SRC-013-H015` — `## 10.3 Broker Header`
+- `MGP-SRC-013-H016` — `## 10.4 Builder Header`
+- `MGP-SRC-013-H017` — `## 10.5 Admin/Staff Public Header Rule`
+- `MGP-SRC-013-H018` — `## 11. Mobile Header Rules`
+- `MGP-SRC-013-H019` — `## 12. Public Footer Scope`
+- `MGP-SRC-013-H020` — `## 13. Footer Hidden Rules`
+- `MGP-SRC-013-H021` — `## 14. Public Search Entry Points`
+- `MGP-SRC-013-H022` — `## 15. Public Protected Actions`
+- `MGP-SRC-013-H023` — `## 16. Public Profile Types`
+- `MGP-SRC-013-H024` — `## 17. Owner Public Profile Rules`
+- `MGP-SRC-013-H025` — `## 18. Broker Public Profile Rules`
+- `MGP-SRC-013-H026` — `## 19. Builder Public Profile / Microsite Rules`
+- `MGP-SRC-013-H027` — `## 20. Profile Image Rules`
+- `MGP-SRC-013-H028` — `## 21. Profile Management Rules`
+- `MGP-SRC-013-H029` — `## 22. Role Change Request From Profile`
+- `MGP-SRC-013-H030` — `## 23. Dashboard Shell Principles`
+- `MGP-SRC-013-H031` — `## 24. Dashboard Global Rules`
+- `MGP-SRC-013-H032` — `## 25. Dashboard Responsive Rules`
+- `MGP-SRC-013-H033` — `## 26. Dashboard UI State Requirements`
+- `MGP-SRC-013-H034` — `### Loading State`
+- `MGP-SRC-013-H035` — `### Empty State`
+- `MGP-SRC-013-H036` — `### Error State`
+- `MGP-SRC-013-H037` — `### Unauthorized State`
+- `MGP-SRC-013-H038` — `### Setup-Required State`
+- `MGP-SRC-013-H039` — `### Disabled State`
+- `MGP-SRC-013-H040` — `## 27. Owner Dashboard Scope`
+- `MGP-SRC-013-H041` — `## 28. Owner Dashboard Overview`
+- `MGP-SRC-013-H042` — `## 29. Owner My Properties`
+- `MGP-SRC-013-H043` — `## 30. Owner Requirements`
+- `MGP-SRC-013-H044` — `## 31. Owner Leads And CRM`
+- `MGP-SRC-013-H045` — `## 32. Broker Dashboard Scope`
+- `MGP-SRC-013-H046` — `## 33. Broker Dashboard Overview`
+- `MGP-SRC-013-H047` — `## 34. Broker My Properties`
+- `MGP-SRC-013-H048` — `## 35. Broker Requirement Feed`
+- `MGP-SRC-013-H049` — `## 36. Broker Proposals`
+- `MGP-SRC-013-H050` — `## 37. Broker Leads / CRM`
+- `MGP-SRC-013-H051` — `## 38. Builder Dashboard Scope`
+- `MGP-SRC-013-H052` — `## 39. Builder Dashboard Overview`
+- `MGP-SRC-013-H053` — `## 40. Builder My Projects`
+- `MGP-SRC-013-H054` — `## 41. Builder Unit Inventory`
+- `MGP-SRC-013-H055` — `## 42. Builder Matching Requirements`
+- `MGP-SRC-013-H056` — `## 43. Builder Agents / Team`
+- `MGP-SRC-013-H057` — `## 44. Builder Ads / Promotions`
+- `MGP-SRC-013-H058` — `## 45. Dashboard Notifications`
+- `MGP-SRC-013-H059` — `## 46. Dashboard Analytics Rules`
+- `MGP-SRC-013-H060` — `## 47. Dashboard Billing Rules`
+- `MGP-SRC-013-H061` — `## 48. Dashboard Verification Rules`
+- `MGP-SRC-013-H062` — `## 49. Dashboard Support / Help`
+- `MGP-SRC-013-H063` — `## 50. Dashboard Settings`
+- `MGP-SRC-013-H064` — `## 51. Dashboard List Actions`
+- `MGP-SRC-013-H065` — `## 52. Dashboard Search And Filters`
+- `MGP-SRC-013-H066` — `## 53. Profile Menu`
+- `MGP-SRC-013-H067` — `## 54. Logout Rules`
+- `MGP-SRC-013-H068` — `## 55. Saved Items, Saved Searches And Recently Viewed`
+- `MGP-SRC-013-H069` — `## 56. Public Ads In Home/Profile/Dashboard Context`
+- `MGP-SRC-013-H070` — `## 57. SEO Rules For Public And Dashboard Pages`
+- `MGP-SRC-013-H071` — `## 58. Accessibility Rules`
+- `MGP-SRC-013-H072` — `## 59. Performance Rules For Public And Dashboards`
+- `MGP-SRC-013-H073` — `## 60. Security Rules For Public And Dashboards`
+- `MGP-SRC-013-H074` — `## 61. Public And Dashboard Manual Verification Checklist`
+- `MGP-SRC-013-H075` — `### Public`
+- `MGP-SRC-013-H076` — `### Guest`
+- `MGP-SRC-013-H077` — `### Owner`
+- `MGP-SRC-013-H078` — `### Broker`
+- `MGP-SRC-013-H079` — `### Builder`
+- `MGP-SRC-013-H080` — `### Dashboard`
+- `MGP-SRC-013-H081` — `### Public Profiles`
+- `MGP-SRC-013-H082` — `## 62. Required Dashboard Feature Registry Items`
+- `MGP-SRC-013-H083` — `## 63. Common Bugs To Track`
+- `MGP-SRC-013-H084` — `## 64. Implementation Order For Public/Profile/Dashboard Phase`
+- `MGP-SRC-013-H085` — `## 65. Data And RLS Expectations`
+- `MGP-SRC-013-H086` — `## 66. Provider Setup-Required Expectations`
+- `MGP-SRC-013-H087` — `## 67. Current Public/Profile/Dashboard Status`
+- `MGP-SRC-013-H088` — `## 68. Documentation Generation Progress`
+- `MGP-SRC-013-H089` — `## 69. Related Documents`
+- `MGP-SRC-013-H090` — `## 70. Final Public/Profile/Dashboard Rule`
+
+### MGP-SRC-014 — `docs/06_PROPERTY_PROJECT_REQUIREMENT_FULL_MATRIX.md` — 101 headings
+
+- `MGP-SRC-014-H001` — `# docs/06_PROPERTY_PROJECT_REQUIREMENT_FULL_MATRIX.md`
+- `MGP-SRC-014-H002` — `# My Gujarat Property — Property, Project And Requirement Full Matrix`
+- `MGP-SRC-014-H003` — `## 1. Purpose`
+- `MGP-SRC-014-H004` — `## 2. Main Entity Types`
+- `MGP-SRC-014-H005` — `## 3. Role Permission Matrix`
+- `MGP-SRC-014-H006` — `## 3.1 Create Permissions`
+- `MGP-SRC-014-H007` — `## 3.2 Public Viewing Permissions`
+- `MGP-SRC-014-H008` — `## 3.3 Forbidden Role Actions`
+- `MGP-SRC-014-H009` — `## 4. Entity Status Values`
+- `MGP-SRC-014-H010` — `## 4.1 Content Lifecycle Status`
+- `MGP-SRC-014-H011` — `## 4.2 Approval Status`
+- `MGP-SRC-014-H012` — `## 4.3 Visibility Status`
+- `MGP-SRC-014-H013` — `## 5. Property System Overview`
+- `MGP-SRC-014-H014` — `## 6. Property Purpose Matrix`
+- `MGP-SRC-014-H015` — `## 7. Property Category Matrix`
+- `MGP-SRC-014-H016` — `## 7.1 Top-Level Property Categories`
+- `MGP-SRC-014-H017` — `## 7.2 Residential Property Types`
+- `MGP-SRC-014-H018` — `## 7.3 Commercial Property Types`
+- `MGP-SRC-014-H019` — `## 7.4 Industrial Property Types`
+- `MGP-SRC-014-H020` — `## 7.5 Land / Plot Types`
+- `MGP-SRC-014-H021` — `## 7.6 PG / Hostel / Room Types`
+- `MGP-SRC-014-H022` — `## 7.7 Business Property / Business Listing`
+- `MGP-SRC-014-H023` — `## 8. Property Form Common Fields`
+- `MGP-SRC-014-H024` — `## 8.1 Basic Fields`
+- `MGP-SRC-014-H025` — `## 8.2 Price And Money Fields`
+- `MGP-SRC-014-H026` — `## 8.3 Area Fields`
+- `MGP-SRC-014-H027` — `## 8.4 Building / Floor Fields`
+- `MGP-SRC-014-H028` — `## 8.5 Amenities Fields`
+- `MGP-SRC-014-H029` — `## 9. Project System Overview`
+- `MGP-SRC-014-H030` — `## 10. Project Purpose Matrix`
+- `MGP-SRC-014-H031` — `## 11. Project Category Matrix`
+- `MGP-SRC-014-H032` — `## 12. Project Form Common Fields`
+- `MGP-SRC-014-H033` — `## 12.1 Basic Project Fields`
+- `MGP-SRC-014-H034` — `## 12.2 Wings / Towers / Floors`
+- `MGP-SRC-014-H035` — `## 12.3 Unit Inventory Fields`
+- `MGP-SRC-014-H036` — `## 12.4 Project Amenities`
+- `MGP-SRC-014-H037` — `## 12.5 RERA Fields`
+- `MGP-SRC-014-H038` — `## 13. Requirement System Overview`
+- `MGP-SRC-014-H039` — `## 14. Requirement Purpose Matrix`
+- `MGP-SRC-014-H040` — `## 15. Requirement Category Matrix`
+- `MGP-SRC-014-H041` — `## 16. Requirement Form Common Fields`
+- `MGP-SRC-014-H042` — `## 17. Dynamic Form Rule`
+- `MGP-SRC-014-H043` — `## 18. Location Hierarchy Rule`
+- `MGP-SRC-014-H044` — `## 19. Map And Geolocation Rules`
+- `MGP-SRC-014-H045` — `## 20. Media Upload Common Rules`
+- `MGP-SRC-014-H046` — `## 21. Property Media Rules`
+- `MGP-SRC-014-H047` — `## 22. Project Media Rules`
+- `MGP-SRC-014-H048` — `## 23. Requirement Media Rules`
+- `MGP-SRC-014-H049` — `## 24. Brochure PDF Rules`
+- `MGP-SRC-014-H050` — `## 25. Floor Plan Rules`
+- `MGP-SRC-014-H051` — `## 26. Video Rules`
+- `MGP-SRC-014-H052` — `## 27. 360 / Virtual Tour Rules`
+- `MGP-SRC-014-H053` — `## 28. Contact Visibility Rules`
+- `MGP-SRC-014-H054` — `## 29. Contact Reveal Rules`
+- `MGP-SRC-014-H055` — `## 30. Inquiry Rules`
+- `MGP-SRC-014-H056` — `## 31. Lead Creation Rules From Listings`
+- `MGP-SRC-014-H057` — `## 32. Property Public Detail Page Rules`
+- `MGP-SRC-014-H058` — `## 33. Project Public Detail Page Rules`
+- `MGP-SRC-014-H059` — `## 34. Requirement Detail / Feed Rules`
+- `MGP-SRC-014-H060` — `## 35. Search Card Rules`
+- `MGP-SRC-014-H061` — `## 36. Approval Workflow`
+- `MGP-SRC-014-H062` — `## 37. Edit / Update Rules`
+- `MGP-SRC-014-H063` — `## 38. Pause / Resume Rules`
+- `MGP-SRC-014-H064` — `## 39. Delete / Soft Delete Rules`
+- `MGP-SRC-014-H065` — `## 40. Expiry / Renewal Rules`
+- `MGP-SRC-014-H066` — `## 41. Subscription / Plan Gates`
+- `MGP-SRC-014-H067` — `## 42. Verification Gates`
+- `MGP-SRC-014-H068` — `## 43. RERA And Project Promotion Gate`
+- `MGP-SRC-014-H069` — `## 44. Admin Moderation Scope`
+- `MGP-SRC-014-H070` — `## 45. Admin Moderation Rules`
+- `MGP-SRC-014-H071` — `## 46. Duplicate Detection Rules`
+- `MGP-SRC-014-H072` — `## 47. Report / Abuse Rules`
+- `MGP-SRC-014-H073` — `## 48. Validation Rules`
+- `MGP-SRC-014-H074` — `## 49. RLS And Security Rules`
+- `MGP-SRC-014-H075` — `## 50. Public-Safe Data Rules`
+- `MGP-SRC-014-H076` — `## 51. SEO Rules`
+- `MGP-SRC-014-H077` — `## 52. Slug Rules`
+- `MGP-SRC-014-H078` — `## 53. Search And Filter Rules`
+- `MGP-SRC-014-H079` — `## 54. Performance Rules`
+- `MGP-SRC-014-H080` — `## 55. UI / UX Form Rules`
+- `MGP-SRC-014-H081` — `## 56. Step-Based Form Recommendation`
+- `MGP-SRC-014-H082` — `## 57. Preview Rules`
+- `MGP-SRC-014-H083` — `## 58. Draft Rules`
+- `MGP-SRC-014-H084` — `## 59. Notifications For Entity Lifecycle`
+- `MGP-SRC-014-H085` — `## 60. Billing Usage Limit Examples`
+- `MGP-SRC-014-H086` — `## 61. Recommended Database Tables For This Matrix`
+- `MGP-SRC-014-H087` — `## 62. Migration Expectations`
+- `MGP-SRC-014-H088` — `## 63. Index Expectations`
+- `MGP-SRC-014-H089` — `## 64. Manual Verification Matrix`
+- `MGP-SRC-014-H090` — `### Property`
+- `MGP-SRC-014-H091` — `### Project`
+- `MGP-SRC-014-H092` — `### Requirement`
+- `MGP-SRC-014-H093` — `### Admin`
+- `MGP-SRC-014-H094` — `### Security`
+- `MGP-SRC-014-H095` — `### Responsive`
+- `MGP-SRC-014-H096` — `## 65. Feature Registry Items Required`
+- `MGP-SRC-014-H097` — `## 66. Common Bugs To Track`
+- `MGP-SRC-014-H098` — `## 67. Current Property/Project/Requirement Status`
+- `MGP-SRC-014-H099` — `## 68. Documentation Generation Progress`
+- `MGP-SRC-014-H100` — `## 69. Related Documents`
+- `MGP-SRC-014-H101` — `## 70. Final Property/Project/Requirement Rule`
+
+### MGP-SRC-015 — `docs/07_LEADS_CRM_PROPOSALS_SITE_VISITS_MESSAGES.md` — 102 headings
+
+- `MGP-SRC-015-H001` — `# docs/07_LEADS_CRM_PROPOSALS_SITE_VISITS_MESSAGES.md`
+- `MGP-SRC-015-H002` — `# My Gujarat Property — Leads, CRM, Proposals, Site Visits, Messages And Communication System`
+- `MGP-SRC-015-H003` — `## 1. Purpose`
+- `MGP-SRC-015-H004` — `## 2. Core Principles`
+- `MGP-SRC-015-H005` — `## 3. Main Communication Entities`
+- `MGP-SRC-015-H006` — `## 4. Lead Sources`
+- `MGP-SRC-015-H007` — `## 5. Lead Source Values`
+- `MGP-SRC-015-H008` — `## 6. Lead Ownership And Participants`
+- `MGP-SRC-015-H009` — `## 7. Lead Status Values`
+- `MGP-SRC-015-H010` — `## 8. CRM Stage Values`
+- `MGP-SRC-015-H011` — `## 9. Lead Creation Flow`
+- `MGP-SRC-015-H012` — `## 10. Inquiry Flow`
+- `MGP-SRC-015-H013` — `## 11. Contact Reveal Flow`
+- `MGP-SRC-015-H014` — `## 12. Contact Reveal Status Values`
+- `MGP-SRC-015-H015` — `## 13. Duplicate Lead Prevention`
+- `MGP-SRC-015-H016` — `## 14. Lead Event Timeline`
+- `MGP-SRC-015-H017` — `## 15. Lead Notes`
+- `MGP-SRC-015-H018` — `## 16. Follow-Up System`
+- `MGP-SRC-015-H019` — `## 17. Lead Assignment`
+- `MGP-SRC-015-H020` — `## 18. CRM Dashboard Views`
+- `MGP-SRC-015-H021` — `## 19. CRM Filters`
+- `MGP-SRC-015-H022` — `## 20. Proposal System Overview`
+- `MGP-SRC-015-H023` — `## 21. Proposal Permissions`
+- `MGP-SRC-015-H024` — `## 22. Proposal Status Values`
+- `MGP-SRC-015-H025` — `## 23. Proposal Fields`
+- `MGP-SRC-015-H026` — `## 24. Proposal Flow`
+- `MGP-SRC-015-H027` — `## 25. Proposal Matching Rules`
+- `MGP-SRC-015-H028` — `## 26. Messaging System Overview`
+- `MGP-SRC-015-H029` — `## 27. Message Thread Types`
+- `MGP-SRC-015-H030` — `## 28. Message Status Values`
+- `MGP-SRC-015-H031` — `## 29. Messaging Rules`
+- `MGP-SRC-015-H032` — `## 30. Message Attachments`
+- `MGP-SRC-015-H033` — `## 31. Unread Count Rules`
+- `MGP-SRC-015-H034` — `## 32. Block And Report In Messaging`
+- `MGP-SRC-015-H035` — `## 33. Site Visit System Overview`
+- `MGP-SRC-015-H036` — `## 34. Site Visit Status Values`
+- `MGP-SRC-015-H037` — `## 35. Site Visit Fields`
+- `MGP-SRC-015-H038` — `## 36. Site Visit Flow`
+- `MGP-SRC-015-H039` — `## 37. Site Visit Safe Meeting Notice`
+- `MGP-SRC-015-H040` — `## 38. Calendar And Reminder Rules`
+- `MGP-SRC-015-H041` — `## 39. Saved Items`
+- `MGP-SRC-015-H042` — `## 40. Saved Searches`
+- `MGP-SRC-015-H043` — `## 41. Recently Viewed`
+- `MGP-SRC-015-H044` — `## 42. Notification Triggers`
+- `MGP-SRC-015-H045` — `### Lead Notifications`
+- `MGP-SRC-015-H046` — `### Proposal Notifications`
+- `MGP-SRC-015-H047` — `### Message Notifications`
+- `MGP-SRC-015-H048` — `### Site Visit Notifications`
+- `MGP-SRC-015-H049` — `### Saved Search Notifications`
+- `MGP-SRC-015-H050` — `## 43. Role-Specific Lead/CRM Behavior`
+- `MGP-SRC-015-H051` — `## 43.1 Owner`
+- `MGP-SRC-015-H052` — `## 43.2 Broker`
+- `MGP-SRC-015-H053` — `## 43.3 Builder`
+- `MGP-SRC-015-H054` — `## 43.4 Builder Agent`
+- `MGP-SRC-015-H055` — `## 44. Admin / Staff Lead Oversight`
+- `MGP-SRC-015-H056` — `## 45. Admin Actions`
+- `MGP-SRC-015-H057` — `## 46. Privacy Rules`
+- `MGP-SRC-015-H058` — `## 47. RLS Rules`
+- `MGP-SRC-015-H059` — `## 48. Direct URL Bypass Tests`
+- `MGP-SRC-015-H060` — `## 49. Database Table Expectations`
+- `MGP-SRC-015-H061` — `## 50. Suggested Table Fields`
+- `MGP-SRC-015-H062` — `## 50.1 \`leads\``
+- `MGP-SRC-015-H063` — `## 50.2 \`lead_events\``
+- `MGP-SRC-015-H064` — `## 50.3 \`lead_notes\``
+- `MGP-SRC-015-H065` — `## 50.4 \`lead_follow_ups\``
+- `MGP-SRC-015-H066` — `## 50.5 \`contact_reveals\``
+- `MGP-SRC-015-H067` — `## 50.6 \`proposals\``
+- `MGP-SRC-015-H068` — `## 50.7 \`proposal_events\``
+- `MGP-SRC-015-H069` — `## 50.8 \`message_threads\``
+- `MGP-SRC-015-H070` — `## 50.9 \`message_participants\``
+- `MGP-SRC-015-H071` — `## 50.10 \`messages\``
+- `MGP-SRC-015-H072` — `## 50.11 \`message_attachments\``
+- `MGP-SRC-015-H073` — `## 50.12 \`site_visits\``
+- `MGP-SRC-015-H074` — `## 50.13 \`saved_items\``
+- `MGP-SRC-015-H075` — `## 50.14 \`saved_searches\``
+- `MGP-SRC-015-H076` — `## 50.15 \`recently_viewed\``
+- `MGP-SRC-015-H077` — `## 51. Index Expectations`
+- `MGP-SRC-015-H078` — `## 52. Migration Expectations`
+- `MGP-SRC-015-H079` — `## 53. Security And Abuse Protection`
+- `MGP-SRC-015-H080` — `## 54. Rate Limit Areas`
+- `MGP-SRC-015-H081` — `## 55. Dashboard UI Requirements`
+- `MGP-SRC-015-H082` — `## 56. Mobile UX Requirements`
+- `MGP-SRC-015-H083` — `## 57. Performance Rules`
+- `MGP-SRC-015-H084` — `## 58. Notification Provider Rules`
+- `MGP-SRC-015-H085` — `## 59. Admin Manual Review Rules`
+- `MGP-SRC-015-H086` — `## 60. SEO Rules`
+- `MGP-SRC-015-H087` — `## 61. Feature Registry Items Required`
+- `MGP-SRC-015-H088` — `## 62. Common Bugs To Track`
+- `MGP-SRC-015-H089` — `## 63. Manual Verification Checklist`
+- `MGP-SRC-015-H090` — `### Leads`
+- `MGP-SRC-015-H091` — `### Contact Reveal`
+- `MGP-SRC-015-H092` — `### Proposals`
+- `MGP-SRC-015-H093` — `### Messages`
+- `MGP-SRC-015-H094` — `### Site Visits`
+- `MGP-SRC-015-H095` — `### Saved Items/Searches`
+- `MGP-SRC-015-H096` — `### Admin`
+- `MGP-SRC-015-H097` — `### Responsive`
+- `MGP-SRC-015-H098` — `### Security/RLS`
+- `MGP-SRC-015-H099` — `## 64. Current Leads/CRM/Communication Status`
+- `MGP-SRC-015-H100` — `## 65. Documentation Generation Progress`
+- `MGP-SRC-015-H101` — `## 66. Related Documents`
+- `MGP-SRC-015-H102` — `## 67. Final Leads/CRM/Communication Rule`
+
+### MGP-SRC-016 — `docs/08_ADMIN_SUPER_ADMIN_STAFF_MODULES.md` — 118 headings
+
+- `MGP-SRC-016-H001` — `# docs/08_ADMIN_SUPER_ADMIN_STAFF_MODULES.md`
+- `MGP-SRC-016-H002` — `# My Gujarat Property — Admin, Super Admin, Staff Modules, Permissions And Operations System`
+- `MGP-SRC-016-H003` — `## 1. Purpose`
+- `MGP-SRC-016-H004` — `## 2. Core Internal Admin Principles`
+- `MGP-SRC-016-H005` — `## 3. Internal User Types`
+- `MGP-SRC-016-H006` — `## 4. Internal Login Rules`
+- `MGP-SRC-016-H007` — `## 5. Staff Invite-Only System`
+- `MGP-SRC-016-H008` — `## 6. Super Admin Scope`
+- `MGP-SRC-016-H009` — `## 7. Admin Scope`
+- `MGP-SRC-016-H010` — `## 8. Staff Role Types`
+- `MGP-SRC-016-H011` — `## 9. Permission Model`
+- `MGP-SRC-016-H012` — `## 10. Module Permission Matrix`
+- `MGP-SRC-016-H013` — `## 10.1 User Management Module`
+- `MGP-SRC-016-H014` — `## 10.2 Property Moderation Module`
+- `MGP-SRC-016-H015` — `## 10.3 Project Moderation Module`
+- `MGP-SRC-016-H016` — `## 10.4 Requirement Moderation Module`
+- `MGP-SRC-016-H017` — `## 10.5 Verification Module`
+- `MGP-SRC-016-H018` — `## 10.6 Support Module`
+- `MGP-SRC-016-H019` — `## 10.7 Reports / Fraud Module`
+- `MGP-SRC-016-H020` — `## 10.8 Billing Module`
+- `MGP-SRC-016-H021` — `## 10.9 Payment Module`
+- `MGP-SRC-016-H022` — `## 10.10 Plans / Trials / Coupons Module`
+- `MGP-SRC-016-H023` — `## 10.11 Ads / Promotions Module`
+- `MGP-SRC-016-H024` — `## 10.12 Notification Module`
+- `MGP-SRC-016-H025` — `## 10.13 Provider Module`
+- `MGP-SRC-016-H026` — `## 10.14 CMS / Blog / Legal Module`
+- `MGP-SRC-016-H027` — `## 10.15 SEO / Redirects Module`
+- `MGP-SRC-016-H028` — `## 10.16 Location Module`
+- `MGP-SRC-016-H029` — `## 10.17 Audit Module`
+- `MGP-SRC-016-H030` — `## 10.18 Security Module`
+- `MGP-SRC-016-H031` — `## 10.19 Feature Flags Module`
+- `MGP-SRC-016-H032` — `## 10.20 System Health / Maintenance Module`
+- `MGP-SRC-016-H033` — `## 11. Staff Role Recommended Defaults`
+- `MGP-SRC-016-H034` — `## 11.1 Verification Manager`
+- `MGP-SRC-016-H035` — `## 11.2 Support Manager`
+- `MGP-SRC-016-H036` — `## 11.3 Content Manager`
+- `MGP-SRC-016-H037` — `## 11.4 SEO Manager`
+- `MGP-SRC-016-H038` — `## 11.5 Ads Manager`
+- `MGP-SRC-016-H039` — `## 11.6 Billing Manager`
+- `MGP-SRC-016-H040` — `## 11.7 Payment Manager`
+- `MGP-SRC-016-H041` — `## 11.8 City Manager`
+- `MGP-SRC-016-H042` — `## 11.9 User Manager`
+- `MGP-SRC-016-H043` — `## 11.10 Notification Manager`
+- `MGP-SRC-016-H044` — `## 11.11 System Manager`
+- `MGP-SRC-016-H045` — `## 11.12 Security Manager`
+- `MGP-SRC-016-H046` — `## 11.13 Reports Manager`
+- `MGP-SRC-016-H047` — `## 11.14 Audit Manager`
+- `MGP-SRC-016-H048` — `## 12. Internal Dashboard Shell`
+- `MGP-SRC-016-H049` — `## 13. Admin Mobile UX Rules`
+- `MGP-SRC-016-H050` — `## 14. Admin Dashboard Overview`
+- `MGP-SRC-016-H051` — `## 15. Admin Tables And Queues`
+- `MGP-SRC-016-H052` — `## 16. Moderation Queue Common Pattern`
+- `MGP-SRC-016-H053` — `## 17. Approval Action Rules`
+- `MGP-SRC-016-H054` — `## 18. Property Moderation Module`
+- `MGP-SRC-016-H055` — `## 19. Project Moderation Module`
+- `MGP-SRC-016-H056` — `## 20. Requirement Moderation Module`
+- `MGP-SRC-016-H057` — `## 21. User Management Module`
+- `MGP-SRC-016-H058` — `## 22. Role Change Review Module`
+- `MGP-SRC-016-H059` — `## 23. Staff Management Module`
+- `MGP-SRC-016-H060` — `## 24. Verification Module`
+- `MGP-SRC-016-H061` — `## 25. Support Ticket Module`
+- `MGP-SRC-016-H062` — `## 26. Reports And Fraud Module`
+- `MGP-SRC-016-H063` — `## 27. Leads / CRM Admin Module`
+- `MGP-SRC-016-H064` — `## 28. Billing Admin Module`
+- `MGP-SRC-016-H065` — `## 29. Payment Admin Module`
+- `MGP-SRC-016-H066` — `## 30. Plans / Trials / Coupons Admin Module`
+- `MGP-SRC-016-H067` — `## 31. Invoice / GST Admin Module`
+- `MGP-SRC-016-H068` — `## 32. Ads / Promotions Admin Module`
+- `MGP-SRC-016-H069` — `## 33. Notification Admin Module`
+- `MGP-SRC-016-H070` — `## 34. Provider Settings Module`
+- `MGP-SRC-016-H071` — `## 35. Feature Flags Module`
+- `MGP-SRC-016-H072` — `## 36. Maintenance Mode Module`
+- `MGP-SRC-016-H073` — `## 37. CMS Admin Module`
+- `MGP-SRC-016-H074` — `## 38. Blog Admin Module`
+- `MGP-SRC-016-H075` — `## 39. SEO Admin Module`
+- `MGP-SRC-016-H076` — `## 40. Location Admin Module`
+- `MGP-SRC-016-H077` — `## 41. Audit Logs Module`
+- `MGP-SRC-016-H078` — `## 42. Security Events Module`
+- `MGP-SRC-016-H079` — `## 43. Reports Dashboard Module`
+- `MGP-SRC-016-H080` — `## 44. System Health Module`
+- `MGP-SRC-016-H081` — `## 45. Exports`
+- `MGP-SRC-016-H082` — `## 46. Bulk Actions`
+- `MGP-SRC-016-H083` — `## 47. Maker-Checker System`
+- `MGP-SRC-016-H084` — `## 48. Internal Notes And Timelines`
+- `MGP-SRC-016-H085` — `## 49. SLA And Workload Management`
+- `MGP-SRC-016-H086` — `## 50. Admin Notifications`
+- `MGP-SRC-016-H087` — `## 51. Admin Search`
+- `MGP-SRC-016-H088` — `## 52. Admin Detail Drawer / Detail Page Pattern`
+- `MGP-SRC-016-H089` — `## 53. Private Document Access In Admin`
+- `MGP-SRC-016-H090` — `## 54. Provider Secret Display Rule`
+- `MGP-SRC-016-H091` — `## 55. Admin RLS And Security Rules`
+- `MGP-SRC-016-H092` — `## 56. Direct URL Bypass Tests`
+- `MGP-SRC-016-H093` — `## 57. Admin Noindex Rules`
+- `MGP-SRC-016-H094` — `## 58. Admin Caching Rules`
+- `MGP-SRC-016-H095` — `## 59. Admin Performance Rules`
+- `MGP-SRC-016-H096` — `## 60. Admin Error Handling`
+- `MGP-SRC-016-H097` — `## 61. Admin Audit Requirements By Action`
+- `MGP-SRC-016-H098` — `## 62. Recommended Database Tables`
+- `MGP-SRC-016-H099` — `## 63. Index Expectations`
+- `MGP-SRC-016-H100` — `## 64. Migration Expectations`
+- `MGP-SRC-016-H101` — `## 65. Admin Manual Verification Checklist`
+- `MGP-SRC-016-H102` — `### Login / Route Protection`
+- `MGP-SRC-016-H103` — `### Staff Permissions`
+- `MGP-SRC-016-H104` — `### Super Admin`
+- `MGP-SRC-016-H105` — `### Moderation`
+- `MGP-SRC-016-H106` — `### Verification`
+- `MGP-SRC-016-H107` — `### Payment/Billing`
+- `MGP-SRC-016-H108` — `### Ads`
+- `MGP-SRC-016-H109` — `### Provider/Feature/System`
+- `MGP-SRC-016-H110` — `### CMS/SEO/Location`
+- `MGP-SRC-016-H111` — `### Audit/Security`
+- `MGP-SRC-016-H112` — `### Responsive`
+- `MGP-SRC-016-H113` — `## 66. Feature Registry Items Required`
+- `MGP-SRC-016-H114` — `## 67. Common Bugs To Track`
+- `MGP-SRC-016-H115` — `## 68. Current Admin/Internal Status`
+- `MGP-SRC-016-H116` — `## 69. Documentation Generation Progress`
+- `MGP-SRC-016-H117` — `## 70. Related Documents`
+- `MGP-SRC-016-H118` — `## 71. Final Admin/Internal Rule`
+
+### MGP-SRC-017 — `docs/09_BILLING_SUBSCRIPTION_PAYMENT_GST_TRIAL.md` — 101 headings
+
+- `MGP-SRC-017-H001` — `# docs/09_BILLING_SUBSCRIPTION_PAYMENT_GST_TRIAL.md`
+- `MGP-SRC-017-H002` — `# My Gujarat Property — Billing, Subscription, Payment, GST, Trial, Coupon And Invoice System`
+- `MGP-SRC-017-H003` — `## 1. Purpose`
+- `MGP-SRC-017-H004` — `## 2. Core Billing Principles`
+- `MGP-SRC-017-H005` — `## 3. Billing Status Values`
+- `MGP-SRC-017-H006` — `## 3.1 Plan Status`
+- `MGP-SRC-017-H007` — `## 3.2 Subscription Status`
+- `MGP-SRC-017-H008` — `## 3.3 Payment Status`
+- `MGP-SRC-017-H009` — `## 3.4 Webhook Processing Status`
+- `MGP-SRC-017-H010` — `## 3.5 Invoice Status`
+- `MGP-SRC-017-H011` — `## 4. User Roles And Billing Needs`
+- `MGP-SRC-017-H012` — `## 4.1 Owner Billing Needs`
+- `MGP-SRC-017-H013` — `## 4.2 Broker / Agent Billing Needs`
+- `MGP-SRC-017-H014` — `## 4.3 Builder / Developer Billing Needs`
+- `MGP-SRC-017-H015` — `## 5. Plan Types`
+- `MGP-SRC-017-H016` — `## 6. Role-Specific Plan Matrix`
+- `MGP-SRC-017-H017` — `## 6.1 Owner Plan Matrix`
+- `MGP-SRC-017-H018` — `## 6.2 Broker Plan Matrix`
+- `MGP-SRC-017-H019` — `## 6.3 Builder Plan Matrix`
+- `MGP-SRC-017-H020` — `## 7. Plan Limit Types`
+- `MGP-SRC-017-H021` — `## 8. Posting Gate Rules`
+- `MGP-SRC-017-H022` — `## 9. Subscription-Required UI`
+- `MGP-SRC-017-H023` — `## 10. Trial System`
+- `MGP-SRC-017-H024` — `## 11. Coupon System`
+- `MGP-SRC-017-H025` — `## 12. Add-On System`
+- `MGP-SRC-017-H026` — `## 13. Pricing Page Rules`
+- `MGP-SRC-017-H027` — `## 14. Checkout Flow Overview`
+- `MGP-SRC-017-H028` — `## 15. Server-Side Payment Order Rules`
+- `MGP-SRC-017-H029` — `## 16. Razorpay Integration Rules`
+- `MGP-SRC-017-H030` — `## 17. Webhook Verification Rules`
+- `MGP-SRC-017-H031` — `## 18. Client Checkout Callback Rules`
+- `MGP-SRC-017-H032` — `## 19. Payment Idempotency`
+- `MGP-SRC-017-H033` — `## 20. Payment Reconciliation`
+- `MGP-SRC-017-H034` — `## 21. Invoice Numbering Rules`
+- `MGP-SRC-017-H035` — `## 22. Financial Year Rules`
+- `MGP-SRC-017-H036` — `## 23. Invoice Fields`
+- `MGP-SRC-017-H037` — `## 24. GST Rules`
+- `MGP-SRC-017-H038` — `## 25. B2B / B2C Billing`
+- `MGP-SRC-017-H039` — `## 26. Billing Details UI`
+- `MGP-SRC-017-H040` — `## 27. Invoice PDF Rules`
+- `MGP-SRC-017-H041` — `## 28. Billing Dashboard`
+- `MGP-SRC-017-H042` — `## 29. Usage Tracking`
+- `MGP-SRC-017-H043` — `## 30. Grace Period`
+- `MGP-SRC-017-H044` — `## 31. Expiry And Downgrade`
+- `MGP-SRC-017-H045` — `## 32. Cancellation`
+- `MGP-SRC-017-H046` — `## 33. Refunds`
+- `MGP-SRC-017-H047` — `## 34. Credit Notes`
+- `MGP-SRC-017-H048` — `## 35. Manual Activation`
+- `MGP-SRC-017-H049` — `## 36. Offline Payment`
+- `MGP-SRC-017-H050` — `## 37. Ads And Promotion Billing`
+- `MGP-SRC-017-H051` — `## 38. Featured / Boost Billing`
+- `MGP-SRC-017-H052` — `## 39. Admin Billing Module`
+- `MGP-SRC-017-H053` — `## 40. Payment Admin Module`
+- `MGP-SRC-017-H054` — `## 41. Plan Admin Module`
+- `MGP-SRC-017-H055` — `## 42. Coupon Admin Module`
+- `MGP-SRC-017-H056` — `## 43. Trial Admin Module`
+- `MGP-SRC-017-H057` — `## 44. Billing Notifications`
+- `MGP-SRC-017-H058` — `## 45. Email/SMS/WhatsApp Billing Messages`
+- `MGP-SRC-017-H059` — `## 46. Billing Security Rules`
+- `MGP-SRC-017-H060` — `## 47. Billing RLS Rules`
+- `MGP-SRC-017-H061` — `## 48. Billing Direct URL Bypass Tests`
+- `MGP-SRC-017-H062` — `## 49. Billing Error Handling`
+- `MGP-SRC-017-H063` — `## 50. Rate Limits`
+- `MGP-SRC-017-H064` — `## 51. Logging Rules`
+- `MGP-SRC-017-H065` — `## 52. Refund / Cancellation Policy Pages`
+- `MGP-SRC-017-H066` — `## 53. Database Tables`
+- `MGP-SRC-017-H067` — `## 54. Suggested Table Fields`
+- `MGP-SRC-017-H068` — `## 54.1 \`plans\``
+- `MGP-SRC-017-H069` — `## 54.2 \`subscriptions\``
+- `MGP-SRC-017-H070` — `## 54.3 \`payments\``
+- `MGP-SRC-017-H071` — `## 54.4 \`payment_webhook_events\``
+- `MGP-SRC-017-H072` — `## 54.5 \`invoices\``
+- `MGP-SRC-017-H073` — `## 54.6 \`invoice_sequences\``
+- `MGP-SRC-017-H074` — `## 54.7 \`billing_profiles\``
+- `MGP-SRC-017-H075` — `## 54.8 \`coupons\``
+- `MGP-SRC-017-H076` — `## 54.9 \`coupon_redemptions\``
+- `MGP-SRC-017-H077` — `## 54.10 \`refunds\``
+- `MGP-SRC-017-H078` — `## 54.11 \`credit_notes\``
+- `MGP-SRC-017-H079` — `## 54.12 \`usage_counters\``
+- `MGP-SRC-017-H080` — `## 55. Index Expectations`
+- `MGP-SRC-017-H081` — `## 56. Migration Expectations`
+- `MGP-SRC-017-H082` — `## 57. Payment Webhook Route Requirements`
+- `MGP-SRC-017-H083` — `## 58. Caching Rules`
+- `MGP-SRC-017-H084` — `## 59. Performance Rules`
+- `MGP-SRC-017-H085` — `## 60. Provider Status Rules`
+- `MGP-SRC-017-H086` — `## 61. Manual Verification Checklist`
+- `MGP-SRC-017-H087` — `### Plans`
+- `MGP-SRC-017-H088` — `### Posting Gates`
+- `MGP-SRC-017-H089` — `### Coupons`
+- `MGP-SRC-017-H090` — `### Payment`
+- `MGP-SRC-017-H091` — `### Invoice / GST`
+- `MGP-SRC-017-H092` — `### Billing Dashboard`
+- `MGP-SRC-017-H093` — `### Admin`
+- `MGP-SRC-017-H094` — `### Security/RLS`
+- `MGP-SRC-017-H095` — `### Responsive`
+- `MGP-SRC-017-H096` — `## 62. Feature Registry Items Required`
+- `MGP-SRC-017-H097` — `## 63. Common Bugs To Track`
+- `MGP-SRC-017-H098` — `## 64. Current Billing/Payment Status`
+- `MGP-SRC-017-H099` — `## 65. Documentation Generation Progress`
+- `MGP-SRC-017-H100` — `## 66. Related Documents`
+- `MGP-SRC-017-H101` — `## 67. Final Billing Rule`
+
+### MGP-SRC-018 — `docs/10_ADS_PROMOTION_NOTIFICATION_PROVIDER_MODES.md` — 103 headings
+
+- `MGP-SRC-018-H001` — `# docs/10_ADS_PROMOTION_NOTIFICATION_PROVIDER_MODES.md`
+- `MGP-SRC-018-H002` — `# My Gujarat Property — Ads, Promotions, Notifications And Provider Modes`
+- `MGP-SRC-018-H003` — `## 1. Purpose`
+- `MGP-SRC-018-H004` — `## 2. Core Principles`
+- `MGP-SRC-018-H005` — `## 3. Ads And Promotions Overview`
+- `MGP-SRC-018-H006` — `## 4. Ad Eligibility Rules`
+- `MGP-SRC-018-H007` — `## 5. Ad Status Values`
+- `MGP-SRC-018-H008` — `## 6. Ad Approval Status Values`
+- `MGP-SRC-018-H009` — `## 7. Ad Payment Status Values`
+- `MGP-SRC-018-H010` — `## 8. Builder Ad Creation Flow`
+- `MGP-SRC-018-H011` — `## 9. Ad Placement Types`
+- `MGP-SRC-018-H012` — `## 10. Ad Media Rules`
+- `MGP-SRC-018-H013` — `## 11. Suggested Ad Banner Sizes`
+- `MGP-SRC-018-H014` — `## 12. Ad Targeting Rules`
+- `MGP-SRC-018-H015` — `## 13. Homepage Ad Selection Logic`
+- `MGP-SRC-018-H016` — `## 14. Search Sponsored Placement Rules`
+- `MGP-SRC-018-H017` — `## 15. Ad Rotation Rules`
+- `MGP-SRC-018-H018` — `## 16. Ad Impression Tracking`
+- `MGP-SRC-018-H019` — `## 17. Ad Click Tracking`
+- `MGP-SRC-018-H020` — `## 18. Ad Fraud Protection`
+- `MGP-SRC-018-H021` — `## 19. Ad Admin Review`
+- `MGP-SRC-018-H022` — `## 20. Ad Compliance Rules`
+- `MGP-SRC-018-H023` — `## 21. Ad RERA Rules`
+- `MGP-SRC-018-H024` — `## 22. Ad Billing Linkage`
+- `MGP-SRC-018-H025` — `## 23. Ad Expiry And Renewal`
+- `MGP-SRC-018-H026` — `## 24. Ad Pause / Resume`
+- `MGP-SRC-018-H027` — `## 25. Ad Deletion / Cancellation`
+- `MGP-SRC-018-H028` — `## 26. Notification System Overview`
+- `MGP-SRC-018-H029` — `## 27. Notification Types`
+- `MGP-SRC-018-H030` — `### Auth / Account`
+- `MGP-SRC-018-H031` — `### Listing / Project / Requirement`
+- `MGP-SRC-018-H032` — `### Leads / CRM`
+- `MGP-SRC-018-H033` — `### Billing`
+- `MGP-SRC-018-H034` — `### Ads`
+- `MGP-SRC-018-H035` — `### Admin / Staff`
+- `MGP-SRC-018-H036` — `### System`
+- `MGP-SRC-018-H037` — `## 28. Notification Status Values`
+- `MGP-SRC-018-H038` — `## 29. Notification Bell Rules`
+- `MGP-SRC-018-H039` — `## 30. Notification Center Rules`
+- `MGP-SRC-018-H040` — `## 31. Notification Template Rules`
+- `MGP-SRC-018-H041` — `## 32. Notification Preferences`
+- `MGP-SRC-018-H042` — `## 33. Notification Deep Link Rules`
+- `MGP-SRC-018-H043` — `## 34. In-App Notification Flow`
+- `MGP-SRC-018-H044` — `## 35. External Notification Flow`
+- `MGP-SRC-018-H045` — `## 36. Provider Mode System`
+- `MGP-SRC-018-H046` — `## 37. Provider Status Values`
+- `MGP-SRC-018-H047` — `## 38. Provider Areas`
+- `MGP-SRC-018-H048` — `## 39. Provider Setup-Required Rule`
+- `MGP-SRC-018-H049` — `## 40. Provider Fallback Rules`
+- `MGP-SRC-018-H050` — `## 41. Provider Admin Module`
+- `MGP-SRC-018-H051` — `## 42. Provider Secret Safety`
+- `MGP-SRC-018-H052` — `## 43. Provider Health Checks`
+- `MGP-SRC-018-H053` — `## 44. Provider Webhook Rules`
+- `MGP-SRC-018-H054` — `## 45. Provider Retry Rules`
+- `MGP-SRC-018-H055` — `## 46. Dead Letter Queue`
+- `MGP-SRC-018-H056` — `## 47. OTP Provider Modes`
+- `MGP-SRC-018-H057` — `## 48. SMS Provider Modes`
+- `MGP-SRC-018-H058` — `## 49. Email Provider Modes`
+- `MGP-SRC-018-H059` — `## 50. WhatsApp Provider Modes`
+- `MGP-SRC-018-H060` — `## 51. Razorpay Provider Modes`
+- `MGP-SRC-018-H061` — `## 52. Maps Provider Modes`
+- `MGP-SRC-018-H062` — `## 53. Cloudflare R2 / Storage Provider Modes`
+- `MGP-SRC-018-H063` — `## 54. Cloudflare CDN Provider Modes`
+- `MGP-SRC-018-H064` — `## 55. Turnstile Provider Modes`
+- `MGP-SRC-018-H065` — `## 56. Analytics Provider Modes`
+- `MGP-SRC-018-H066` — `## 57. Error Tracking Provider Modes`
+- `MGP-SRC-018-H067` — `## 58. Cron / Background Job Provider Modes`
+- `MGP-SRC-018-H068` — `## 59. Push Notification Provider Modes`
+- `MGP-SRC-018-H069` — `## 60. Provider Feature Flags`
+- `MGP-SRC-018-H070` — `## 61. Notification And Provider Database Tables`
+- `MGP-SRC-018-H071` — `## 62. Suggested Ad Table Fields`
+- `MGP-SRC-018-H072` — `## 62.1 \`ads\``
+- `MGP-SRC-018-H073` — `## 62.2 \`ad_media\``
+- `MGP-SRC-018-H074` — `## 62.3 \`ad_targets\``
+- `MGP-SRC-018-H075` — `## 62.4 \`ad_events\``
+- `MGP-SRC-018-H076` — `## 62.5 \`ad_approval_events\``
+- `MGP-SRC-018-H077` — `## 62.6 \`ad_fraud_events\``
+- `MGP-SRC-018-H078` — `## 63. Suggested Notification Table Fields`
+- `MGP-SRC-018-H079` — `## 63.1 \`notifications\``
+- `MGP-SRC-018-H080` — `## 63.2 \`notification_templates\``
+- `MGP-SRC-018-H081` — `## 63.3 \`notification_preferences\``
+- `MGP-SRC-018-H082` — `## 63.4 \`notification_delivery_logs\``
+- `MGP-SRC-018-H083` — `## 64. Suggested Provider Table Fields`
+- `MGP-SRC-018-H084` — `## 64.1 \`provider_settings\``
+- `MGP-SRC-018-H085` — `## 64.2 \`provider_health_checks\``
+- `MGP-SRC-018-H086` — `## 64.3 \`provider_webhook_events\``
+- `MGP-SRC-018-H087` — `## 65. Index Expectations`
+- `MGP-SRC-018-H088` — `## 66. RLS And Security Rules`
+- `MGP-SRC-018-H089` — `## 67. Direct URL Bypass Tests`
+- `MGP-SRC-018-H090` — `## 68. Provider And Notification Logging Rules`
+- `MGP-SRC-018-H091` — `## 69. Rate Limit Rules`
+- `MGP-SRC-018-H092` — `## 70. Admin Manual Verification Checklist`
+- `MGP-SRC-018-H093` — `### Ads`
+- `MGP-SRC-018-H094` — `### Notifications`
+- `MGP-SRC-018-H095` — `### Providers`
+- `MGP-SRC-018-H096` — `### Security`
+- `MGP-SRC-018-H097` — `### Responsive`
+- `MGP-SRC-018-H098` — `## 71. Feature Registry Items Required`
+- `MGP-SRC-018-H099` — `## 72. Common Bugs To Track`
+- `MGP-SRC-018-H100` — `## 73. Current Ads/Notifications/Provider Status`
+- `MGP-SRC-018-H101` — `## 74. Documentation Generation Progress`
+- `MGP-SRC-018-H102` — `## 75. Related Documents`
+- `MGP-SRC-018-H103` — `## 76. Final Ads/Notifications/Provider Rule`
+
+### MGP-SRC-019 — `docs/11_LOCATION_SEARCH_SEO_CMS_BLOG_LEGAL.md` — 112 headings
+
+- `MGP-SRC-019-H001` — `# docs/11_LOCATION_SEARCH_SEO_CMS_BLOG_LEGAL.md`
+- `MGP-SRC-019-H002` — `# My Gujarat Property — Location, Search, SEO, CMS, Blog, Legal And Support System`
+- `MGP-SRC-019-H003` — `## 1. Purpose`
+- `MGP-SRC-019-H004` — `## 2. Core Principles`
+- `MGP-SRC-019-H005` — `## 3. Location Hierarchy`
+- `MGP-SRC-019-H006` — `## 4. Location Entity Rules`
+- `MGP-SRC-019-H007` — `## 4.1 Country`
+- `MGP-SRC-019-H008` — `## 4.2 State`
+- `MGP-SRC-019-H009` — `## 4.3 District`
+- `MGP-SRC-019-H010` — `## 4.4 Taluka`
+- `MGP-SRC-019-H011` — `## 4.5 City / Village`
+- `MGP-SRC-019-H012` — `## 4.6 Area`
+- `MGP-SRC-019-H013` — `## 4.7 Locality`
+- `MGP-SRC-019-H014` — `## 4.8 Society / Building`
+- `MGP-SRC-019-H015` — `## 4.9 Landmark`
+- `MGP-SRC-019-H016` — `## 4.10 Address`
+- `MGP-SRC-019-H017` — `## 4.11 Pin Code`
+- `MGP-SRC-019-H018` — `## 4.12 Map Pin / Coordinates`
+- `MGP-SRC-019-H019` — `## 5. Missing Location Request System`
+- `MGP-SRC-019-H020` — `## 6. Location Admin Rules`
+- `MGP-SRC-019-H021` — `## 7. City Selector`
+- `MGP-SRC-019-H022` — `## 8. Search System Overview`
+- `MGP-SRC-019-H023` — `## 9. Public Search Page`
+- `MGP-SRC-019-H024` — `## 10. Search Query Params`
+- `MGP-SRC-019-H025` — `## 11. Search Filters`
+- `MGP-SRC-019-H026` — `## 11.1 Common Filters`
+- `MGP-SRC-019-H027` — `## 11.2 Residential Filters`
+- `MGP-SRC-019-H028` — `## 11.3 Commercial Filters`
+- `MGP-SRC-019-H029` — `## 11.4 Industrial Filters`
+- `MGP-SRC-019-H030` — `## 11.5 Land/Plot Filters`
+- `MGP-SRC-019-H031` — `## 11.6 Project Filters`
+- `MGP-SRC-019-H032` — `## 12. Search Sort Options`
+- `MGP-SRC-019-H033` — `## 13. Search Result Cards`
+- `MGP-SRC-019-H034` — `## 14. Search Pagination And Infinite Scroll`
+- `MGP-SRC-019-H035` — `## 15. Search Empty State`
+- `MGP-SRC-019-H036` — `## 16. Search Map Toggle`
+- `MGP-SRC-019-H037` — `## 17. Public SEO Page Types`
+- `MGP-SRC-019-H038` — `## 18. SEO Page Eligibility Rules`
+- `MGP-SRC-019-H039` — `## 19. Title, Meta And H1 Rules`
+- `MGP-SRC-019-H040` — `## 20. Canonical Rules`
+- `MGP-SRC-019-H041` — `## 21. Noindex Rules`
+- `MGP-SRC-019-H042` — `## 22. Sitemap Rules`
+- `MGP-SRC-019-H043` — `## 23. Robots Rules`
+- `MGP-SRC-019-H044` — `## 24. Schema Markup Rules`
+- `MGP-SRC-019-H045` — `## 25. SEO For Sold / Rented / Expired / Deleted Listings`
+- `MGP-SRC-019-H046` — `## 26. Redirect Manager`
+- `MGP-SRC-019-H047` — `## 27. CMS System Overview`
+- `MGP-SRC-019-H048` — `## 28. CMS Content Rules`
+- `MGP-SRC-019-H049` — `## 29. Legal Pages Required`
+- `MGP-SRC-019-H050` — `## 30. Legal Disclaimer Rules`
+- `MGP-SRC-019-H051` — `## 31. Privacy Policy Scope`
+- `MGP-SRC-019-H052` — `## 32. Terms And Conditions Scope`
+- `MGP-SRC-019-H053` — `## 33. Listing Policy Scope`
+- `MGP-SRC-019-H054` — `## 34. Advertising Policy Scope`
+- `MGP-SRC-019-H055` — `## 35. Verification Policy Scope`
+- `MGP-SRC-019-H056` — `## 36. Payment / Refund / Cancellation Policy Scope`
+- `MGP-SRC-019-H057` — `## 37. Cookie Policy And Preferences`
+- `MGP-SRC-019-H058` — `## 38. Grievance / Support Legal Page`
+- `MGP-SRC-019-H059` — `## 39. Blog System`
+- `MGP-SRC-019-H060` — `## 40. Blog Content Rules`
+- `MGP-SRC-019-H061` — `## 41. Blog SEO Rules`
+- `MGP-SRC-019-H062` — `## 42. Help / FAQ System`
+- `MGP-SRC-019-H063` — `## 43. Support Page Scope`
+- `MGP-SRC-019-H064` — `## 44. CMS/Admin Permissions`
+- `MGP-SRC-019-H065` — `## 45. SEO Admin Controls`
+- `MGP-SRC-019-H066` — `## 46. Location SEO Pages`
+- `MGP-SRC-019-H067` — `## 47. Public Search SEO Vs App Search`
+- `MGP-SRC-019-H068` — `## 47.1 SEO-Friendly Location Pages`
+- `MGP-SRC-019-H069` — `## 47.2 App Search With Query Params`
+- `MGP-SRC-019-H070` — `## 48. Multilingual And Transliteration Support`
+- `MGP-SRC-019-H071` — `## 49. Gujarati Font And Formatting Rules`
+- `MGP-SRC-019-H072` — `## 50. Currency, Date And Unit Formatting`
+- `MGP-SRC-019-H073` — `## 51. Search And SEO Public-Safe Data`
+- `MGP-SRC-019-H074` — `## 52. RLS And Security Rules`
+- `MGP-SRC-019-H075` — `## 53. Direct URL Bypass Tests`
+- `MGP-SRC-019-H076` — `## 54. Search Performance Rules`
+- `MGP-SRC-019-H077` — `## 55. Search Index Expectations`
+- `MGP-SRC-019-H078` — `## 56. Recommended Tables`
+- `MGP-SRC-019-H079` — `## 57. Suggested Table Fields`
+- `MGP-SRC-019-H080` — `## 57.1 \`cities_villages\``
+- `MGP-SRC-019-H081` — `## 57.2 \`location_aliases\``
+- `MGP-SRC-019-H082` — `## 57.3 \`missing_location_requests\``
+- `MGP-SRC-019-H083` — `## 57.4 \`seo_pages\``
+- `MGP-SRC-019-H084` — `## 57.5 \`redirects\``
+- `MGP-SRC-019-H085` — `## 57.6 \`cms_pages\``
+- `MGP-SRC-019-H086` — `## 57.7 \`blog_posts\``
+- `MGP-SRC-019-H087` — `## 57.8 \`help_articles\``
+- `MGP-SRC-019-H088` — `## 57.9 \`support_tickets\``
+- `MGP-SRC-019-H089` — `## 57.10 \`legal_consents\``
+- `MGP-SRC-019-H090` — `## 58. Migration Expectations`
+- `MGP-SRC-019-H091` — `## 59. CMS / SEO / Legal Status Values`
+- `MGP-SRC-019-H092` — `## 60. Caching And Revalidation`
+- `MGP-SRC-019-H093` — `## 61. Search Analytics`
+- `MGP-SRC-019-H094` — `## 62. Saved Search Alerts`
+- `MGP-SRC-019-H095` — `## 63. Support And Grievance Workflow`
+- `MGP-SRC-019-H096` — `## 64. Support Categories`
+- `MGP-SRC-019-H097` — `## 65. Content Sanitization Rules`
+- `MGP-SRC-019-H098` — `## 66. Public Links And Dead Link Rules`
+- `MGP-SRC-019-H099` — `## 67. Admin Manual Verification Checklist`
+- `MGP-SRC-019-H100` — `### Location`
+- `MGP-SRC-019-H101` — `### Search`
+- `MGP-SRC-019-H102` — `### SEO`
+- `MGP-SRC-019-H103` — `### CMS / Blog / Legal`
+- `MGP-SRC-019-H104` — `### Support`
+- `MGP-SRC-019-H105` — `### Security/RLS`
+- `MGP-SRC-019-H106` — `### Responsive`
+- `MGP-SRC-019-H107` — `## 68. Feature Registry Items Required`
+- `MGP-SRC-019-H108` — `## 69. Common Bugs To Track`
+- `MGP-SRC-019-H109` — `## 70. Current Location/Search/SEO/CMS/Legal Status`
+- `MGP-SRC-019-H110` — `## 71. Documentation Generation Progress`
+- `MGP-SRC-019-H111` — `## 72. Related Documents`
+- `MGP-SRC-019-H112` — `## 73. Final Location/Search/SEO/CMS/Legal Rule`
+
+### MGP-SRC-020 — `docs/12_MEDIA_UPLOAD_STORAGE_IMAGE_VIDEO_PDF.md` — 107 headings
+
+- `MGP-SRC-020-H001` — `# docs/12_MEDIA_UPLOAD_STORAGE_IMAGE_VIDEO_PDF.md`
+- `MGP-SRC-020-H002` — `# My Gujarat Property — Media Upload, Storage, Image, Video, PDF, Private Documents, R2 And CDN Rules`
+- `MGP-SRC-020-H003` — `## 1. Purpose`
+- `MGP-SRC-020-H004` — `## 2. Core Media Principles`
+- `MGP-SRC-020-H005` — `## 3. Media Entity Types`
+- `MGP-SRC-020-H006` — `## 4. Public Vs Private Media`
+- `MGP-SRC-020-H007` — `## 4.1 Public Media`
+- `MGP-SRC-020-H008` — `## 4.2 Private Media`
+- `MGP-SRC-020-H009` — `## 5. Recommended Storage Provider`
+- `MGP-SRC-020-H010` — `## 6. Storage Modes`
+- `MGP-SRC-020-H011` — `## 7. Bucket Strategy`
+- `MGP-SRC-020-H012` — `## 8. Public Bucket Rules`
+- `MGP-SRC-020-H013` — `## 9. Private Bucket Rules`
+- `MGP-SRC-020-H014` — `## 10. Temporary Upload Rules`
+- `MGP-SRC-020-H015` — `## 11. Quarantine Rules`
+- `MGP-SRC-020-H016` — `## 12. Supported File Types`
+- `MGP-SRC-020-H017` — `## 12.1 Images`
+- `MGP-SRC-020-H018` — `## 12.2 Videos`
+- `MGP-SRC-020-H019` — `## 12.3 PDFs`
+- `MGP-SRC-020-H020` — `## 12.4 Documents / Attachments`
+- `MGP-SRC-020-H021` — `## 13. Disallowed File Types`
+- `MGP-SRC-020-H022` — `## 14. Upload Validation Rules`
+- `MGP-SRC-020-H023` — `## 15. File Size And Count Rules`
+- `MGP-SRC-020-H024` — `## 16. Upload UX Rules`
+- `MGP-SRC-020-H025` — `## 17. Drag And Interaction Rules`
+- `MGP-SRC-020-H026` — `## 18. Image Processing Rules`
+- `MGP-SRC-020-H027` — `## 19. Image Variant Rules`
+- `MGP-SRC-020-H028` — `## 20. EXIF And Metadata Privacy`
+- `MGP-SRC-020-H029` — `## 21. SVG Safety Rules`
+- `MGP-SRC-020-H030` — `## 22. HEIC / HEIF Rules`
+- `MGP-SRC-020-H031` — `## 23. GIF Rules`
+- `MGP-SRC-020-H032` — `## 24. Watermark Rules`
+- `MGP-SRC-020-H033` — `## 25. Property Image Rules`
+- `MGP-SRC-020-H034` — `## 26. Property Brochure Rules`
+- `MGP-SRC-020-H035` — `## 27. Project Image Rules`
+- `MGP-SRC-020-H036` — `## 28. Project Video Rules`
+- `MGP-SRC-020-H037` — `## 29. Project Brochure PDF Rules`
+- `MGP-SRC-020-H038` — `## 30. Project Floor Plan Rules`
+- `MGP-SRC-020-H039` — `## 31. Project Progress Media Rules`
+- `MGP-SRC-020-H040` — `## 32. 360 / Virtual Tour Rules`
+- `MGP-SRC-020-H041` — `## 33. Profile Image And Logo Rules`
+- `MGP-SRC-020-H042` — `## 34. Verification Document Rules`
+- `MGP-SRC-020-H043` — `## 35. RERA Proof Rules`
+- `MGP-SRC-020-H044` — `## 36. Support Attachment Rules`
+- `MGP-SRC-020-H045` — `## 37. Report / Fraud Evidence Rules`
+- `MGP-SRC-020-H046` — `## 38. Message Attachment Rules`
+- `MGP-SRC-020-H047` — `## 39. Invoice PDF Rules`
+- `MGP-SRC-020-H048` — `## 40. CMS And Blog Media Rules`
+- `MGP-SRC-020-H049` — `## 41. Ad Banner Media Rules`
+- `MGP-SRC-020-H050` — `## 42. Media Metadata Rules`
+- `MGP-SRC-020-H051` — `## 43. Media Status Values`
+- `MGP-SRC-020-H052` — `## 44. Processing Status Values`
+- `MGP-SRC-020-H053` — `## 45. Scan Status Values`
+- `MGP-SRC-020-H054` — `## 46. Media Database Tables`
+- `MGP-SRC-020-H055` — `## 47. Suggested Table Fields`
+- `MGP-SRC-020-H056` — `## 47.1 \`media_assets\``
+- `MGP-SRC-020-H057` — `## 47.2 \`media_variants\``
+- `MGP-SRC-020-H058` — `## 47.3 \`media_links\``
+- `MGP-SRC-020-H059` — `## 47.4 \`media_processing_jobs\``
+- `MGP-SRC-020-H060` — `## 47.5 \`media_access_logs\``
+- `MGP-SRC-020-H061` — `## 47.6 \`upload_sessions\``
+- `MGP-SRC-020-H062` — `## 48. Storage Key Rules`
+- `MGP-SRC-020-H063` — `## 49. Signed URL Rules`
+- `MGP-SRC-020-H064` — `## 50. CDN Rules`
+- `MGP-SRC-020-H065` — `## 51. Media Approval Workflow`
+- `MGP-SRC-020-H066` — `## 52. Media Replacement Rules`
+- `MGP-SRC-020-H067` — `## 53. Media Delete Rules`
+- `MGP-SRC-020-H068` — `## 54. Orphan Media Cleanup`
+- `MGP-SRC-020-H069` — `## 55. Storage Lifecycle Rules`
+- `MGP-SRC-020-H070` — `## 56. Upload Rate Limits`
+- `MGP-SRC-020-H071` — `## 57. Plan / Subscription Media Limits`
+- `MGP-SRC-020-H072` — `## 58. Role-Based Media Permissions`
+- `MGP-SRC-020-H073` — `## 58.1 Guest`
+- `MGP-SRC-020-H074` — `## 58.2 Owner`
+- `MGP-SRC-020-H075` — `## 58.3 Broker`
+- `MGP-SRC-020-H076` — `## 58.4 Builder`
+- `MGP-SRC-020-H077` — `## 58.5 Staff/Admin`
+- `MGP-SRC-020-H078` — `## 59. RLS Rules For Media`
+- `MGP-SRC-020-H079` — `## 60. Public-Safe Media Views`
+- `MGP-SRC-020-H080` — `## 61. Direct URL Bypass Tests`
+- `MGP-SRC-020-H081` — `## 62. Media API / Server Action Rules`
+- `MGP-SRC-020-H082` — `## 63. Media Error Handling`
+- `MGP-SRC-020-H083` — `## 64. Logging Rules`
+- `MGP-SRC-020-H084` — `## 65. Performance Rules`
+- `MGP-SRC-020-H085` — `## 66. SEO Rules For Media`
+- `MGP-SRC-020-H086` — `## 67. Accessibility Rules For Media`
+- `MGP-SRC-020-H087` — `## 68. Admin Media Moderation`
+- `MGP-SRC-020-H088` — `## 69. Media Security Bugs`
+- `MGP-SRC-020-H089` — `## 70. Provider Setup-Required Rules`
+- `MGP-SRC-020-H090` — `## 71. Cloudflare R2 Environment Expectations`
+- `MGP-SRC-020-H091` — `## 72. CDN Environment Expectations`
+- `MGP-SRC-020-H092` — `## 73. Media Manual Verification Checklist`
+- `MGP-SRC-020-H093` — `### Storage Provider`
+- `MGP-SRC-020-H094` — `### Property Images`
+- `MGP-SRC-020-H095` — `### Project Media`
+- `MGP-SRC-020-H096` — `### Profile Media`
+- `MGP-SRC-020-H097` — `### Ad Banners`
+- `MGP-SRC-020-H098` — `### Private Documents`
+- `MGP-SRC-020-H099` — `### File Security`
+- `MGP-SRC-020-H100` — `### Admin`
+- `MGP-SRC-020-H101` — `### Responsive`
+- `MGP-SRC-020-H102` — `## 74. Feature Registry Items Required`
+- `MGP-SRC-020-H103` — `## 75. Common Bugs To Track`
+- `MGP-SRC-020-H104` — `## 76. Current Media/Storage Status`
+- `MGP-SRC-020-H105` — `## 77. Documentation Generation Progress`
+- `MGP-SRC-020-H106` — `## 78. Related Documents`
+- `MGP-SRC-020-H107` — `## 79. Final Media Rule`
+
+### MGP-SRC-021 — `docs/13_UI_UX_DESIGN_SYSTEM_RESPONSIVE_RULES.md` — 96 headings
+
+- `MGP-SRC-021-H001` — `# docs/13_UI_UX_DESIGN_SYSTEM_RESPONSIVE_RULES.md`
+- `MGP-SRC-021-H002` — `# My Gujarat Property — UI, UX, Design System, Responsive And Interaction Rules`
+- `MGP-SRC-021-H003` — `## 1. Purpose`
+- `MGP-SRC-021-H004` — `## 2. Core Design Principles`
+- `MGP-SRC-021-H005` — `## 3. Visual Direction`
+- `MGP-SRC-021-H006` — `## 4. Brand Rules`
+- `MGP-SRC-021-H007` — `## 5. Layout System`
+- `MGP-SRC-021-H008` — `## 6. Responsive Breakpoints`
+- `MGP-SRC-021-H009` — `## 7. Mobile-First Rules`
+- `MGP-SRC-021-H010` — `## 8. No Horizontal Scroll Rule`
+- `MGP-SRC-021-H011` — `## 9. Spacing System`
+- `MGP-SRC-021-H012` — `## 10. Typography Rules`
+- `MGP-SRC-021-H013` — `## 11. Language And Script Rules`
+- `MGP-SRC-021-H014` — `## 12. Color System`
+- `MGP-SRC-021-H015` — `## 13. Theme Rules`
+- `MGP-SRC-021-H016` — `## 14. Border, Radius And Shadow Rules`
+- `MGP-SRC-021-H017` — `## 15. Icon Rules`
+- `MGP-SRC-021-H018` — `## 16. Button Rules`
+- `MGP-SRC-021-H019` — `## 17. Link Rules`
+- `MGP-SRC-021-H020` — `## 18. Card Rules`
+- `MGP-SRC-021-H021` — `## 19. Property Card Rules`
+- `MGP-SRC-021-H022` — `## 20. Project Card Rules`
+- `MGP-SRC-021-H023` — `## 21. Dashboard Stat Card Rules`
+- `MGP-SRC-021-H024` — `## 22. Table Rules`
+- `MGP-SRC-021-H025` — `## 23. Form Rules`
+- `MGP-SRC-021-H026` — `## 24. Dynamic Form Rules`
+- `MGP-SRC-021-H027` — `## 25. Multi-Step Form Rules`
+- `MGP-SRC-021-H028` — `## 26. Modal Rules`
+- `MGP-SRC-021-H029` — `## 27. Bottom Sheet Rules`
+- `MGP-SRC-021-H030` — `## 28. Drawer Rules`
+- `MGP-SRC-021-H031` — `## 29. Dropdown Rules`
+- `MGP-SRC-021-H032` — `## 30. Tabs Rules`
+- `MGP-SRC-021-H033` — `## 31. Filter UI Rules`
+- `MGP-SRC-021-H034` — `## 32. Search UI Rules`
+- `MGP-SRC-021-H035` — `## 33. Auth Popup UX Rules`
+- `MGP-SRC-021-H036` — `## 34. Contact / Inquiry UX Rules`
+- `MGP-SRC-021-H037` — `## 35. Gallery UX Rules`
+- `MGP-SRC-021-H038` — `## 36. Video UX Rules`
+- `MGP-SRC-021-H039` — `## 37. PDF UX Rules`
+- `MGP-SRC-021-H040` — `## 38. Upload UX Rules`
+- `MGP-SRC-021-H041` — `## 39. Notification UI Rules`
+- `MGP-SRC-021-H042` — `## 40. Dashboard Shell Rules`
+- `MGP-SRC-021-H043` — `## 41. Owner Dashboard UI Rules`
+- `MGP-SRC-021-H044` — `## 42. Broker Dashboard UI Rules`
+- `MGP-SRC-021-H045` — `## 43. Builder Dashboard UI Rules`
+- `MGP-SRC-021-H046` — `## 44. Admin UI Rules`
+- `MGP-SRC-021-H047` — `## 45. Pricing And Billing UI Rules`
+- `MGP-SRC-021-H048` — `## 46. Verification UI Rules`
+- `MGP-SRC-021-H049` — `## 47. Ads UI Rules`
+- `MGP-SRC-021-H050` — `## 48. Support UI Rules`
+- `MGP-SRC-021-H051` — `## 49. CMS / Blog / Legal UI Rules`
+- `MGP-SRC-021-H052` — `## 50. State Design Rules`
+- `MGP-SRC-021-H053` — `## 51. Loading State Rules`
+- `MGP-SRC-021-H054` — `## 52. Empty State Rules`
+- `MGP-SRC-021-H055` — `## 53. Error State Rules`
+- `MGP-SRC-021-H056` — `## 54. Unauthorized / Forbidden State Rules`
+- `MGP-SRC-021-H057` — `## 55. Setup-Required State Rules`
+- `MGP-SRC-021-H058` — `## 56. Disabled State Rules`
+- `MGP-SRC-021-H059` — `## 57. Status Badge Rules`
+- `MGP-SRC-021-H060` — `## 58. Accessibility Rules`
+- `MGP-SRC-021-H061` — `## 59. Tap Target Rules`
+- `MGP-SRC-021-H062` — `## 60. Keyboard And Focus Rules`
+- `MGP-SRC-021-H063` — `## 61. Scroll Behavior Rules`
+- `MGP-SRC-021-H064` — `## 62. Back Button Behavior`
+- `MGP-SRC-021-H065` — `## 63. Confirmation Rules`
+- `MGP-SRC-021-H066` — `## 64. Toast / Alert Rules`
+- `MGP-SRC-021-H067` — `## 65. Animation Rules`
+- `MGP-SRC-021-H068` — `## 66. Performance UI Rules`
+- `MGP-SRC-021-H069` — `## 67. Public Page UI Rules`
+- `MGP-SRC-021-H070` — `## 68. Detail Page UI Rules`
+- `MGP-SRC-021-H071` — `## 69. Header Rules`
+- `MGP-SRC-021-H072` — `## 70. Footer Rules`
+- `MGP-SRC-021-H073` — `## 71. Dashboard No-Footer Rule`
+- `MGP-SRC-021-H074` — `## 72. Responsive Images Rules`
+- `MGP-SRC-021-H075` — `## 73. Map UI Rules`
+- `MGP-SRC-021-H076` — `## 74. Data Honesty UI Rules`
+- `MGP-SRC-021-H077` — `## 75. Privacy UI Rules`
+- `MGP-SRC-021-H078` — `## 76. RLS/Permission UI Alignment`
+- `MGP-SRC-021-H079` — `## 77. Design Tokens Recommendation`
+- `MGP-SRC-021-H080` — `## 78. Component Library Structure`
+- `MGP-SRC-021-H081` — `## 79. Page-Level Quality Checklist`
+- `MGP-SRC-021-H082` — `## 80. Manual Responsive Verification Checklist`
+- `MGP-SRC-021-H083` — `### Widths`
+- `MGP-SRC-021-H084` — `### Public UI`
+- `MGP-SRC-021-H085` — `### Auth UI`
+- `MGP-SRC-021-H086` — `### Dashboards`
+- `MGP-SRC-021-H087` — `### Admin`
+- `MGP-SRC-021-H088` — `### Forms`
+- `MGP-SRC-021-H089` — `### Interaction`
+- `MGP-SRC-021-H090` — `### Bugs To Check`
+- `MGP-SRC-021-H091` — `## 81. Feature Registry Items Required`
+- `MGP-SRC-021-H092` — `## 82. Common Bugs To Track`
+- `MGP-SRC-021-H093` — `## 83. Current UI/UX Status`
+- `MGP-SRC-021-H094` — `## 84. Documentation Generation Progress`
+- `MGP-SRC-021-H095` — `## 85. Related Documents`
+- `MGP-SRC-021-H096` — `## 86. Final UI/UX Rule`
+
+### MGP-SRC-022 — `docs/14_SECURITY_PRIVACY_CONSENT_FRAUD_LEGAL.md` — 95 headings
+
+- `MGP-SRC-022-H001` — `# docs/14_SECURITY_PRIVACY_CONSENT_FRAUD_LEGAL.md`
+- `MGP-SRC-022-H002` — `# My Gujarat Property — Security, Privacy, Consent, Fraud, Legal And Compliance System`
+- `MGP-SRC-022-H003` — `## 1. Purpose`
+- `MGP-SRC-022-H004` — `## 2. Core Security Principles`
+- `MGP-SRC-022-H005` — `## 3. Core Privacy Principles`
+- `MGP-SRC-022-H006` — `## 4. Data Classification`
+- `MGP-SRC-022-H007` — `## 4.1 Public Data`
+- `MGP-SRC-022-H008` — `## 4.2 Private User Data`
+- `MGP-SRC-022-H009` — `## 4.3 Sensitive Data`
+- `MGP-SRC-022-H010` — `## 4.4 Secret Data`
+- `MGP-SRC-022-H011` — `## 5. Data Handling Matrix`
+- `MGP-SRC-022-H012` — `## 6. Hidden Contact Protection`
+- `MGP-SRC-022-H013` — `## 7. Contact Reveal Security`
+- `MGP-SRC-022-H014` — `## 8. Inquiry Contact Sharing Consent`
+- `MGP-SRC-022-H015` — `## 9. RLS Requirements`
+- `MGP-SRC-022-H016` — `## 10. RLS Principles`
+- `MGP-SRC-022-H017` — `## 11. Public-Safe Views`
+- `MGP-SRC-022-H018` — `## 12. Server-Side Authorization`
+- `MGP-SRC-022-H019` — `## 13. Direct URL Bypass Protection`
+- `MGP-SRC-022-H020` — `## 14. Authentication Security`
+- `MGP-SRC-022-H021` — `## 15. Admin / Staff Security`
+- `MGP-SRC-022-H022` — `## 16. Service Role Safety`
+- `MGP-SRC-022-H023` — `## 17. Provider Secret Safety`
+- `MGP-SRC-022-H024` — `## 18. Upload Security`
+- `MGP-SRC-022-H025` — `## 19. Media Metadata Privacy`
+- `MGP-SRC-022-H026` — `## 20. Logging And Redaction`
+- `MGP-SRC-022-H027` — `## 21. Audit Logs`
+- `MGP-SRC-022-H028` — `## 22. Actions Requiring Audit`
+- `MGP-SRC-022-H029` — `## 23. Security Events`
+- `MGP-SRC-022-H030` — `## 24. Rate Limiting`
+- `MGP-SRC-022-H031` — `## 25. Abuse Prevention`
+- `MGP-SRC-022-H032` — `## 26. Fraud Detection Signals`
+- `MGP-SRC-022-H033` — `## 27. Report / Abuse Workflow`
+- `MGP-SRC-022-H034` — `## 28. Report Categories`
+- `MGP-SRC-022-H035` — `## 29. Fraud / Report Admin Review`
+- `MGP-SRC-022-H036` — `## 30. User Blocking / Suspension / Ban`
+- `MGP-SRC-022-H037` — `## 31. Content Moderation Safety`
+- `MGP-SRC-022-H038` — `## 32. Legal Consent Types`
+- `MGP-SRC-022-H039` — `## 33. Consent Capture Rules`
+- `MGP-SRC-022-H040` — `## 34. Cookie Consent`
+- `MGP-SRC-022-H041` — `## 35. Marketing Consent`
+- `MGP-SRC-022-H042` — `## 36. Transactional Communication`
+- `MGP-SRC-022-H043` — `## 37. Data Export Requests`
+- `MGP-SRC-022-H044` — `## 38. Data Deletion Requests`
+- `MGP-SRC-022-H045` — `## 39. Data Retention`
+- `MGP-SRC-022-H046` — `## 40. Legal Holds`
+- `MGP-SRC-022-H047` — `## 41. Platform Legal Disclaimer`
+- `MGP-SRC-022-H048` — `## 42. Verification Disclaimer`
+- `MGP-SRC-022-H049` — `## 43. RERA Disclaimer`
+- `MGP-SRC-022-H050` — `## 44. Payment Legal Rules`
+- `MGP-SRC-022-H051` — `## 45. Ads Legal Rules`
+- `MGP-SRC-022-H052` — `## 46. Site Visit Safety Rules`
+- `MGP-SRC-022-H053` — `## 47. Messaging Safety Rules`
+- `MGP-SRC-022-H054` — `## 48. Support / Grievance Legal Rules`
+- `MGP-SRC-022-H055` — `## 49. Takedown / Copyright / Legal Requests`
+- `MGP-SRC-022-H056` — `## 50. DPDP-Ready Privacy Practices`
+- `MGP-SRC-022-H057` — `## 51. Children / Minor Use Policy`
+- `MGP-SRC-022-H058` — `## 52. Data Processor / Provider Sharing`
+- `MGP-SRC-022-H059` — `## 53. Payment Security`
+- `MGP-SRC-022-H060` — `## 54. Invoice / GST Privacy`
+- `MGP-SRC-022-H061` — `## 55. SEO Privacy`
+- `MGP-SRC-022-H062` — `## 56. Notification Privacy`
+- `MGP-SRC-022-H063` — `## 57. Admin Export Security`
+- `MGP-SRC-022-H064` — `## 58. Bulk Action Security`
+- `MGP-SRC-022-H065` — `## 59. Maker-Checker Security`
+- `MGP-SRC-022-H066` — `## 60. Incident Response`
+- `MGP-SRC-022-H067` — `## 61. Emergency Kill Switches`
+- `MGP-SRC-022-H068` — `## 62. Security Headers`
+- `MGP-SRC-022-H069` — `## 63. CSP Rules`
+- `MGP-SRC-022-H070` — `## 64. XSS Protection`
+- `MGP-SRC-022-H071` — `## 65. CSRF Protection`
+- `MGP-SRC-022-H072` — `## 66. SSRF Protection`
+- `MGP-SRC-022-H073` — `## 67. Open Redirect Protection`
+- `MGP-SRC-022-H074` — `## 68. Bot / Scraping Protection`
+- `MGP-SRC-022-H075` — `## 69. DND / Communication Compliance`
+- `MGP-SRC-022-H076` — `## 70. Legal Policy Pages Required`
+- `MGP-SRC-022-H077` — `## 71. Legal Copy Review`
+- `MGP-SRC-022-H078` — `## 72. Privacy By Feature Matrix`
+- `MGP-SRC-022-H079` — `## 73. Security Testing Checklist`
+- `MGP-SRC-022-H080` — `## 74. Manual Verification Checklist`
+- `MGP-SRC-022-H081` — `### Hidden Contact`
+- `MGP-SRC-022-H082` — `### RLS / Authorization`
+- `MGP-SRC-022-H083` — `### Private Documents`
+- `MGP-SRC-022-H084` — `### Payment Security`
+- `MGP-SRC-022-H085` — `### Admin Security`
+- `MGP-SRC-022-H086` — `### Consent / Legal`
+- `MGP-SRC-022-H087` — `### Fraud / Abuse`
+- `MGP-SRC-022-H088` — `### SEO Privacy`
+- `MGP-SRC-022-H089` — `### Responsive`
+- `MGP-SRC-022-H090` — `## 75. Feature Registry Items Required`
+- `MGP-SRC-022-H091` — `## 76. Common Bugs To Track`
+- `MGP-SRC-022-H092` — `## 77. Current Security/Privacy/Legal Status`
+- `MGP-SRC-022-H093` — `## 78. Documentation Generation Progress`
+- `MGP-SRC-022-H094` — `## 79. Related Documents`
+- `MGP-SRC-022-H095` — `## 80. Final Security/Privacy/Legal Rule`
+
+### MGP-SRC-023 — `docs/15_PERFORMANCE_DEPLOYMENT_ROLLBACK_QA.md` — 116 headings
+
+- `MGP-SRC-023-H001` — `# docs/15_PERFORMANCE_DEPLOYMENT_ROLLBACK_QA.md`
+- `MGP-SRC-023-H002` — `# My Gujarat Property — Performance, Deployment, Rollback, QA And Production Launch System`
+- `MGP-SRC-023-H003` — `## 1. Purpose`
+- `MGP-SRC-023-H004` — `## 2. Core Production Principles`
+- `MGP-SRC-023-H005` — `## 3. Scalability Target`
+- `MGP-SRC-023-H006` — `## 4. Performance Status Values`
+- `MGP-SRC-023-H007` — `## 5. Core Web Vitals Targets`
+- `MGP-SRC-023-H008` — `## 6. Page Performance Priority`
+- `MGP-SRC-023-H009` — `## 7. Database Performance Principles`
+- `MGP-SRC-023-H010` — `## 8. Mandatory Pagination`
+- `MGP-SRC-023-H011` — `## 9. Query Safety Rules`
+- `MGP-SRC-023-H012` — `## 10. Index Strategy`
+- `MGP-SRC-023-H013` — `## 10.1 Property Indexes`
+- `MGP-SRC-023-H014` — `## 10.2 Project Indexes`
+- `MGP-SRC-023-H015` — `## 10.3 Requirement Indexes`
+- `MGP-SRC-023-H016` — `## 10.4 Lead / CRM Indexes`
+- `MGP-SRC-023-H017` — `## 10.5 Message Indexes`
+- `MGP-SRC-023-H018` — `## 10.6 Billing / Payment Indexes`
+- `MGP-SRC-023-H019` — `## 10.7 Admin / Audit Indexes`
+- `MGP-SRC-023-H020` — `## 11. Search Performance Rules`
+- `MGP-SRC-023-H021` — `## 12. Location Performance Rules`
+- `MGP-SRC-023-H022` — `## 13. Media Performance Rules`
+- `MGP-SRC-023-H023` — `## 14. Frontend Bundle Performance`
+- `MGP-SRC-023-H024` — `## 15. Caching Strategy`
+- `MGP-SRC-023-H025` — `## 16. Public Cache Rules`
+- `MGP-SRC-023-H026` — `## 17. Private No-Store Rules`
+- `MGP-SRC-023-H027` — `## 18. Cache Invalidation Rules`
+- `MGP-SRC-023-H028` — `## 19. Provider Timeout Rules`
+- `MGP-SRC-023-H029` — `## 20. Background Job Rules`
+- `MGP-SRC-023-H030` — `## 21. Rate Limit Performance And Abuse Protection`
+- `MGP-SRC-023-H031` — `## 22. Realtime / Polling Rules`
+- `MGP-SRC-023-H032` — `## 23. Analytics Performance Rules`
+- `MGP-SRC-023-H033` — `## 24. Monitoring Requirements`
+- `MGP-SRC-023-H034` — `## 25. Alerting Rules`
+- `MGP-SRC-023-H035` — `## 26. Logging Rules For Performance`
+- `MGP-SRC-023-H036` — `## 27. Error Tracking Rules`
+- `MGP-SRC-023-H037` — `## 28. Environment Strategy`
+- `MGP-SRC-023-H038` — `## 29. Environment Status Rules`
+- `MGP-SRC-023-H039` — `## 30. Deployment Principles`
+- `MGP-SRC-023-H040` — `## 31. Pre-Deployment Checklist`
+- `MGP-SRC-023-H041` — `## 32. Build Gates`
+- `MGP-SRC-023-H042` — `## 33. Database Migration Rules`
+- `MGP-SRC-023-H043` — `## 34. Migration Naming Rule`
+- `MGP-SRC-023-H044` — `## 35. Destructive Migration Rules`
+- `MGP-SRC-023-H045` — `## 36. Zero-Downtime Migration Strategy`
+- `MGP-SRC-023-H046` — `## 37. Backup Rules`
+- `MGP-SRC-023-H047` — `## 38. Restore Test Rules`
+- `MGP-SRC-023-H048` — `## 39. RPO / RTO Targets`
+- `MGP-SRC-023-H049` — `## 40. Rollback Strategy`
+- `MGP-SRC-023-H050` — `## 41. Code Rollback`
+- `MGP-SRC-023-H051` — `## 42. Feature Flag Rollback`
+- `MGP-SRC-023-H052` — `## 43. Database Rollback`
+- `MGP-SRC-023-H053` — `## 44. Provider Rollback`
+- `MGP-SRC-023-H054` — `## 45. Cache / CDN Rollback`
+- `MGP-SRC-023-H055` — `## 46. Maintenance Mode`
+- `MGP-SRC-023-H056` — `## 47. QA Strategy`
+- `MGP-SRC-023-H057` — `## 48. Test Types`
+- `MGP-SRC-023-H058` — `## 48.1 Unit Tests`
+- `MGP-SRC-023-H059` — `## 48.2 Integration Tests`
+- `MGP-SRC-023-H060` — `## 48.3 E2E Tests`
+- `MGP-SRC-023-H061` — `## 48.4 Manual Tests`
+- `MGP-SRC-023-H062` — `## 49. Manual Verification Status Values`
+- `MGP-SRC-023-H063` — `## 50. Manual Verification Format`
+- `MGP-SRC-023-H064` — `## 51. Smoke Test Checklist`
+- `MGP-SRC-023-H065` — `### Public`
+- `MGP-SRC-023-H066` — `### Auth`
+- `MGP-SRC-023-H067` — `### Roles`
+- `MGP-SRC-023-H068` — `### Admin`
+- `MGP-SRC-023-H069` — `### Core Marketplace`
+- `MGP-SRC-023-H070` — `### Billing`
+- `MGP-SRC-023-H071` — `### Providers`
+- `MGP-SRC-023-H072` — `### Security`
+- `MGP-SRC-023-H073` — `## 52. Regression Test Areas`
+- `MGP-SRC-023-H074` — `## 53. RLS Test Matrix`
+- `MGP-SRC-023-H075` — `## 54. Hidden Contact Test Matrix`
+- `MGP-SRC-023-H076` — `## 55. Payment Test Matrix`
+- `MGP-SRC-023-H077` — `## 56. Provider Test Matrix`
+- `MGP-SRC-023-H078` — `## 57. Media Test Matrix`
+- `MGP-SRC-023-H079` — `## 58. SEO QA Checklist`
+- `MGP-SRC-023-H080` — `## 59. Responsive QA Checklist`
+- `MGP-SRC-023-H081` — `## 60. Accessibility QA Checklist`
+- `MGP-SRC-023-H082` — `## 61. Load Testing Strategy`
+- `MGP-SRC-023-H083` — `## 62. Load Test Metrics`
+- `MGP-SRC-023-H084` — `## 63. Staging Deployment Checklist`
+- `MGP-SRC-023-H085` — `## 64. Production Deployment Checklist`
+- `MGP-SRC-023-H086` — `## 65. Production Launch Freeze`
+- `MGP-SRC-023-H087` — `## 66. Launch Readiness Checklist`
+- `MGP-SRC-023-H088` — `### Product`
+- `MGP-SRC-023-H089` — `### Security`
+- `MGP-SRC-023-H090` — `### Performance`
+- `MGP-SRC-023-H091` — `### Legal`
+- `MGP-SRC-023-H092` — `### Operations`
+- `MGP-SRC-023-H093` — `## 67. Post-Deploy Verification`
+- `MGP-SRC-023-H094` — `## 68. Post-Launch Monitoring`
+- `MGP-SRC-023-H095` — `## 69. Incident Severity Levels`
+- `MGP-SRC-023-H096` — `## 70. Incident Response Process`
+- `MGP-SRC-023-H097` — `## 71. Incident Report Format`
+- `MGP-SRC-023-H098` — `## 72. Hotfix Rules`
+- `MGP-SRC-023-H099` — `## 73. Dependency Management`
+- `MGP-SRC-023-H100` — `## 74. Security Scanning`
+- `MGP-SRC-023-H101` — `## 75. Seed / Demo Data Rules`
+- `MGP-SRC-023-H102` — `## 76. Data Cleanup Rules`
+- `MGP-SRC-023-H103` — `## 77. Export Performance And Safety`
+- `MGP-SRC-023-H104` — `## 78. Admin Performance Rules`
+- `MGP-SRC-023-H105` — `## 79. Dashboard Performance Rules`
+- `MGP-SRC-023-H106` — `## 80. Public UI Performance Rules`
+- `MGP-SRC-023-H107` — `## 81. QA Documentation Updates`
+- `MGP-SRC-023-H108` — `## 82. Release Notes Format`
+- `MGP-SRC-023-H109` — `## 83. Rollback Notes Format`
+- `MGP-SRC-023-H110` — `## 84. Production Signoff Format`
+- `MGP-SRC-023-H111` — `## 85. Feature Registry Items Required`
+- `MGP-SRC-023-H112` — `## 86. Common Bugs To Track`
+- `MGP-SRC-023-H113` — `## 87. Current Performance/Deployment/QA Status`
+- `MGP-SRC-023-H114` — `## 88. Documentation Generation Progress`
+- `MGP-SRC-023-H115` — `## 89. Related Documents`
+- `MGP-SRC-023-H116` — `## 90. Final Performance/Deployment/QA Rule`
+
+### MGP-SRC-024 — `docs/16_ADVANCED_FEATURES_PWA_LOCALIZATION_ANALYTICS.md` — 116 headings
+
+- `MGP-SRC-024-H001` — `# docs/16_ADVANCED_FEATURES_PWA_LOCALIZATION_ANALYTICS.md`
+- `MGP-SRC-024-H002` — `# My Gujarat Property — Advanced Features, PWA, Localization, Analytics And Future Roadmap System`
+- `MGP-SRC-024-H003` — `## 1. Purpose`
+- `MGP-SRC-024-H004` — `## 2. Core Advanced Feature Principles`
+- `MGP-SRC-024-H005` — `## 3. Advanced Feature Status Values`
+- `MGP-SRC-024-H006` — `## 4. PWA Overview`
+- `MGP-SRC-024-H007` — `## 5. PWA Scope`
+- `MGP-SRC-024-H008` — `## 6. PWA Manifest Rules`
+- `MGP-SRC-024-H009` — `## 7. Service Worker Rules`
+- `MGP-SRC-024-H010` — `## 8. Offline UX Rules`
+- `MGP-SRC-024-H011` — `## 9. Slow Network UX Rules`
+- `MGP-SRC-024-H012` — `## 10. Install Prompt Rules`
+- `MGP-SRC-024-H013` — `## 11. PWA Update Prompt`
+- `MGP-SRC-024-H014` — `## 12. Push Notification Overview`
+- `MGP-SRC-024-H015` — `## 13. Push Notification Rules`
+- `MGP-SRC-024-H016` — `## 14. Notification Permission UX`
+- `MGP-SRC-024-H017` — `## 15. Offline Drafts`
+- `MGP-SRC-024-H018` — `## 16. Localization Overview`
+- `MGP-SRC-024-H019` — `## 17. Localization Scope`
+- `MGP-SRC-024-H020` — `## 18. Language Modes`
+- `MGP-SRC-024-H021` — `## 19. Language Selector Rules`
+- `MGP-SRC-024-H022` — `## 20. Translation Key Rules`
+- `MGP-SRC-024-H023` — `## 21. Gujarati Support Rules`
+- `MGP-SRC-024-H024` — `## 22. Hindi Support Rules`
+- `MGP-SRC-024-H025` — `## 23. Transliteration Rules`
+- `MGP-SRC-024-H026` — `## 24. Indian Formatting Rules`
+- `MGP-SRC-024-H027` — `## 25. Unit Conversion Rules`
+- `MGP-SRC-024-H028` — `## 26. Analytics Overview`
+- `MGP-SRC-024-H029` — `## 27. Analytics Principles`
+- `MGP-SRC-024-H030` — `## 28. Analytics Event Types`
+- `MGP-SRC-024-H031` — `### Public Events`
+- `MGP-SRC-024-H032` — `### Lead Events`
+- `MGP-SRC-024-H033` — `### Ad Events`
+- `MGP-SRC-024-H034` — `### Billing Events`
+- `MGP-SRC-024-H035` — `### Admin Events`
+- `MGP-SRC-024-H036` — `## 29. Analytics Privacy Rules`
+- `MGP-SRC-024-H037` — `## 30. Public Page View Analytics`
+- `MGP-SRC-024-H038` — `## 31. Property Analytics`
+- `MGP-SRC-024-H039` — `## 32. Project Analytics`
+- `MGP-SRC-024-H040` — `## 33. Lead / CRM Analytics`
+- `MGP-SRC-024-H041` — `## 34. Ad Analytics`
+- `MGP-SRC-024-H042` — `## 35. Billing Analytics`
+- `MGP-SRC-024-H043` — `## 36. SEO Analytics`
+- `MGP-SRC-024-H044` — `## 37. Admin Operations Analytics`
+- `MGP-SRC-024-H045` — `## 38. Analytics Dashboard UI Rules`
+- `MGP-SRC-024-H046` — `## 39. Analytics Storage Strategy`
+- `MGP-SRC-024-H047` — `## 40. Analytics Event Table Fields`
+- `MGP-SRC-024-H048` — `## 41. Saved Search Alerts`
+- `MGP-SRC-024-H049` — `## 42. Price Alerts`
+- `MGP-SRC-024-H050` — `## 43. Availability Alerts`
+- `MGP-SRC-024-H051` — `## 44. Construction Progress Alerts`
+- `MGP-SRC-024-H052` — `## 45. Advanced Real Estate Features Overview`
+- `MGP-SRC-024-H053` — `## 46. Floor Plan Advanced Rules`
+- `MGP-SRC-024-H054` — `## 47. Unit Inventory Advanced Rules`
+- `MGP-SRC-024-H055` — `## 48. Construction Progress Rules`
+- `MGP-SRC-024-H056` — `## 49. 360 / Virtual Tour Advanced Rules`
+- `MGP-SRC-024-H057` — `## 50. Locality Guide Rules`
+- `MGP-SRC-024-H058` — `## 51. Society / Building Directory Rules`
+- `MGP-SRC-024-H059` — `## 52. Price History Rules`
+- `MGP-SRC-024-H060` — `## 53. Price Comparison Rules`
+- `MGP-SRC-024-H061` — `## 54. EMI Calculator Rules`
+- `MGP-SRC-024-H062` — `## 55. Stamp Duty / Registration Calculator Rules`
+- `MGP-SRC-024-H063` — `## 56. Loan Availability Rules`
+- `MGP-SRC-024-H064` — `## 57. Nearby Places Rules`
+- `MGP-SRC-024-H065` — `## 58. NRI Support Rules`
+- `MGP-SRC-024-H066` — `## 59. Claim Profile / Claim Listing Rules`
+- `MGP-SRC-024-H067` — `## 60. Duplicate Merge Rules`
+- `MGP-SRC-024-H068` — `## 61. Requirement Matching Advanced Rules`
+- `MGP-SRC-024-H069` — `## 62. AI / Recommendation No-Rule`
+- `MGP-SRC-024-H070` — `## 63. Advanced Search Features`
+- `MGP-SRC-024-H071` — `## 64. Recently Viewed Advanced Rules`
+- `MGP-SRC-024-H072` — `## 65. Saved Items Advanced Rules`
+- `MGP-SRC-024-H073` — `## 66. PWA Push And Saved Search Alerts Combined`
+- `MGP-SRC-024-H074` — `## 67. Advanced Dashboard Widgets`
+- `MGP-SRC-024-H075` — `## 68. Admin Advanced Operations`
+- `MGP-SRC-024-H076` — `## 69. Localization Admin Rules`
+- `MGP-SRC-024-H077` — `## 70. Analytics Admin Rules`
+- `MGP-SRC-024-H078` — `## 71. PWA Admin Rules`
+- `MGP-SRC-024-H079` — `## 72. Feature Flag Strategy For Advanced Features`
+- `MGP-SRC-024-H080` — `## 73. Advanced Provider Dependencies`
+- `MGP-SRC-024-H081` — `## 74. Advanced Database Tables`
+- `MGP-SRC-024-H082` — `## 75. Suggested Table Fields`
+- `MGP-SRC-024-H083` — `## 75.1 \`pwa_push_subscriptions\``
+- `MGP-SRC-024-H084` — `## 75.2 \`language_preferences\``
+- `MGP-SRC-024-H085` — `## 75.3 \`translations\``
+- `MGP-SRC-024-H086` — `## 75.4 \`analytics_events\``
+- `MGP-SRC-024-H087` — `## 75.5 \`saved_search_alert_runs\``
+- `MGP-SRC-024-H088` — `## 75.6 \`price_history\``
+- `MGP-SRC-024-H089` — `## 75.7 \`price_alerts\``
+- `MGP-SRC-024-H090` — `## 75.8 \`availability_alerts\``
+- `MGP-SRC-024-H091` — `## 75.9 \`claim_requests\``
+- `MGP-SRC-024-H092` — `## 75.10 \`duplicate_merge_events\``
+- `MGP-SRC-024-H093` — `## 76. Index Expectations`
+- `MGP-SRC-024-H094` — `## 77. Migration Expectations`
+- `MGP-SRC-024-H095` — `## 78. RLS And Security Rules`
+- `MGP-SRC-024-H096` — `## 79. Privacy Rules For Advanced Features`
+- `MGP-SRC-024-H097` — `## 80. Performance Rules`
+- `MGP-SRC-024-H098` — `## 81. Caching Rules`
+- `MGP-SRC-024-H099` — `## 82. Advanced Error Handling`
+- `MGP-SRC-024-H100` — `## 83. Manual Verification Checklist`
+- `MGP-SRC-024-H101` — `### PWA`
+- `MGP-SRC-024-H102` — `### Offline / Slow Network`
+- `MGP-SRC-024-H103` — `### Push`
+- `MGP-SRC-024-H104` — `### Localization`
+- `MGP-SRC-024-H105` — `### Analytics`
+- `MGP-SRC-024-H106` — `### Alerts`
+- `MGP-SRC-024-H107` — `### Advanced Real Estate Features`
+- `MGP-SRC-024-H108` — `### Security / RLS`
+- `MGP-SRC-024-H109` — `### Responsive`
+- `MGP-SRC-024-H110` — `## 84. Feature Registry Items Required`
+- `MGP-SRC-024-H111` — `## 85. Common Bugs To Track`
+- `MGP-SRC-024-H112` — `## 86. Current Advanced/PWA/Localization/Analytics Status`
+- `MGP-SRC-024-H113` — `## 87. Documentation Generation Progress`
+- `MGP-SRC-024-H114` — `## 88. Related Documents`
+- `MGP-SRC-024-H115` — `## 89. Detailed Documentation Pack Completion Note`
+- `MGP-SRC-024-H116` — `## 90. Final Advanced/PWA/Localization/Analytics Rule`
+
+### MGP-SRC-025 — `FEATURE_REGISTRY.md` — 44 headings
+
+- `MGP-SRC-025-H001` — `# FEATURE_REGISTRY.md`
+- `MGP-SRC-025-H002` — `# My Gujarat Property — Feature Registry`
+- `MGP-SRC-025-H003` — `## 1. Registry Rules`
+- `MGP-SRC-025-H004` — `## 2. Allowed Status Values`
+- `MGP-SRC-025-H005` — `## 3. QA Status Values`
+- `MGP-SRC-025-H006` — `## 4. Global Feature Registry Format`
+- `MGP-SRC-025-H007` — `## 5. Current Overall Status`
+- `MGP-SRC-025-H008` — `# 6. Core Platform And Project Setup Registry`
+- `MGP-SRC-025-H009` — `# 7. Documentation And Claude Workflow Registry`
+- `MGP-SRC-025-H010` — `# 8. Authentication And Session Registry`
+- `MGP-SRC-025-H011` — `# 9. Roles, Permissions And Access Registry`
+- `MGP-SRC-025-H012` — `# 10. Public Website, Homepage, Header And Footer Registry`
+- `MGP-SRC-025-H013` — `# 11. Dashboard Registry`
+- `MGP-SRC-025-H014` — `# 12. Property Registry`
+- `MGP-SRC-025-H015` — `# 13. Project Registry`
+- `MGP-SRC-025-H016` — `# 14. Requirement And Proposal Registry`
+- `MGP-SRC-025-H017` — `# 15. Leads CRM, Inquiry, Contact Reveal And Site Visit Registry`
+- `MGP-SRC-025-H018` — `# 16. Messaging Registry`
+- `MGP-SRC-025-H019` — `# 17. Profiles, Public Directory, Agents And Teams Registry`
+- `MGP-SRC-025-H020` — `# 18. Verification And Trust Registry`
+- `MGP-SRC-025-H021` — `# 19. Admin, Staff And Operations Registry`
+- `MGP-SRC-025-H022` — `# 20. Billing, Subscription, Payment, GST And Trial Registry`
+- `MGP-SRC-025-H023` — `# 21. Ads And Promotion Registry`
+- `MGP-SRC-025-H024` — `# 22. Notifications Registry`
+- `MGP-SRC-025-H025` — `# 23. Search, Location And Discovery Registry`
+- `MGP-SRC-025-H026` — `# 24. SEO, CMS, Blog, Legal Pages And Content Registry`
+- `MGP-SRC-025-H027` — `# 25. Media, Upload, Storage, CDN And File Processing Registry`
+- `MGP-SRC-025-H028` — `# 26. UI, UX, Design System, Responsive And Interaction Registry`
+- `MGP-SRC-025-H029` — `# 27. Security, Privacy, Consent, Legal, Fraud And Compliance Registry`
+- `MGP-SRC-025-H030` — `# 28. Audit, Logs, Activity Timeline And Soft Delete Registry`
+- `MGP-SRC-025-H031` — `# 29. Provider, API, Communication And External Services Registry`
+- `MGP-SRC-025-H032` — `# 30. Performance, Caching, Background Jobs And Scaling Registry`
+- `MGP-SRC-025-H033` — `# 31. Database, RLS, Migration, Deployment And Rollback Registry`
+- `MGP-SRC-025-H034` — `# 32. Analytics, Reports And Business Intelligence Registry`
+- `MGP-SRC-025-H035` — `# 33. Support, Help, Feedback, Roadmap And Bug Reporting Registry`
+- `MGP-SRC-025-H036` — `# 34. Advanced Features, PWA, Localization, Reviews And UGC Registry`
+- `MGP-SRC-025-H037` — `# 35. Production Readiness And Final QA Registry`
+- `MGP-SRC-025-H038` — `# 36. Current Registry Summary`
+- `MGP-SRC-025-H039` — `# 37. Update Log`
+- `MGP-SRC-025-H040` — `## Documentation Phase`
+- `MGP-SRC-025-H041` — `### Created`
+- `MGP-SRC-025-H042` — `### Next Required File`
+- `MGP-SRC-025-H043` — `# 38. Final Registry Rule`
+- `MGP-SRC-025-H044` — `## Mandatory Role-Based Home Design Clarification`
+
+### MGP-SRC-026 — `MANUAL_VERIFICATION.md` — 195 headings
+
+- `MGP-SRC-026-H001` — `# MANUAL_VERIFICATION.md`
+- `MGP-SRC-026-H002` — `# My Gujarat Property — Manual Verification, QA And Phase PASS Checklist`
+- `MGP-SRC-026-H003` — `## 1. Purpose`
+- `MGP-SRC-026-H004` — `## 2. Mandatory Verification Rule`
+- `MGP-SRC-026-H005` — `## 3. Verification Result Definitions`
+- `MGP-SRC-026-H006` — `## 4. No Fake PASS Rule`
+- `MGP-SRC-026-H007` — `## 5. Manual Verification Update Rule`
+- `MGP-SRC-026-H008` — `## 6. Relationship To Other Docs`
+- `MGP-SRC-026-H009` — `### Always`
+- `MGP-SRC-026-H010` — `### If bugs or failed checks exist`
+- `MGP-SRC-026-H011` — `### If provider/API status changed`
+- `MGP-SRC-026-H012` — `### If deployment/rollback/migration/backup changed`
+- `MGP-SRC-026-H013` — `### If RLS/security/privacy/contact/admin access changed`
+- `MGP-SRC-026-H014` — `### If performance/caching/query/image/load changed`
+- `MGP-SRC-026-H015` — `### If detailed requirement changed`
+- `MGP-SRC-026-H016` — `## 7. Required Verification Entry Format`
+- `MGP-SRC-026-H017` — `## PHASE-XX — Phase Name Verification`
+- `MGP-SRC-026-H018` — `### Verification Date`
+- `MGP-SRC-026-H019` — `### Related Files`
+- `MGP-SRC-026-H020` — `### Phase Scope`
+- `MGP-SRC-026-H021` — `### Automated Checks`
+- `MGP-SRC-026-H022` — `### Manual Role Checks`
+- `MGP-SRC-026-H023` — `### Security / RLS Checks`
+- `MGP-SRC-026-H024` — `### UI / UX / Responsive Checks`
+- `MGP-SRC-026-H025` — `### UI State Checks`
+- `MGP-SRC-026-H026` — `### Provider Checks`
+- `MGP-SRC-026-H027` — `### Data / Database Checks`
+- `MGP-SRC-026-H028` — `### SEO / Legal Checks`
+- `MGP-SRC-026-H029` — `### Bugs Found`
+- `MGP-SRC-026-H030` — `### Fixes Done During Verification`
+- `MGP-SRC-026-H031` — `### Docs Updated`
+- `MGP-SRC-026-H032` — `### Final Verification Result`
+- `MGP-SRC-026-H033` — `### Final Notes`
+- `MGP-SRC-026-H034` — `### Next Phase`
+- `MGP-SRC-026-H035` — `## 8. Short Verification Entry Format`
+- `MGP-SRC-026-H036` — `## DOC-XX — File Name Verification`
+- `MGP-SRC-026-H037` — `### File`
+- `MGP-SRC-026-H038` — `### Verification Date`
+- `MGP-SRC-026-H039` — `### Checks`
+- `MGP-SRC-026-H040` — `### Final Result`
+- `MGP-SRC-026-H041` — `### Notes`
+- `MGP-SRC-026-H042` — `## 9. Required Automated Checks`
+- `MGP-SRC-026-H043` — `### 9.1 Dependency / Install Check`
+- `MGP-SRC-026-H044` — `### 9.2 Lint`
+- `MGP-SRC-026-H045` — `### 9.3 Typecheck`
+- `MGP-SRC-026-H046` — `### 9.4 Build`
+- `MGP-SRC-026-H047` — `### 9.5 Unit Tests`
+- `MGP-SRC-026-H048` — `### 9.6 E2E Tests`
+- `MGP-SRC-026-H049` — `### 9.7 SQL / Migration Validation`
+- `MGP-SRC-026-H050` — `### 9.8 RLS Tests`
+- `MGP-SRC-026-H051` — `## 10. If Automated Tests Cannot Run`
+- `MGP-SRC-026-H052` — `### Test Not Run`
+- `MGP-SRC-026-H053` — `## 11. Required Responsive Verification`
+- `MGP-SRC-026-H054` — `## 12. Required Browser Verification`
+- `MGP-SRC-026-H055` — `## 13. Required Accessibility Verification`
+- `MGP-SRC-026-H056` — `## 14. Required UI State Verification`
+- `MGP-SRC-026-H057` — `### Loading State`
+- `MGP-SRC-026-H058` — `### Empty State`
+- `MGP-SRC-026-H059` — `### Error State`
+- `MGP-SRC-026-H060` — `### Success State`
+- `MGP-SRC-026-H061` — `### Disabled State`
+- `MGP-SRC-026-H062` — `### Unauthorized State`
+- `MGP-SRC-026-H063` — `### Setup-Required State`
+- `MGP-SRC-026-H064` — `## 15. Required Interaction Verification`
+- `MGP-SRC-026-H065` — `## 16. Role-Based Manual Verification Matrix`
+- `MGP-SRC-026-H066` — `### 16.1 Guest`
+- `MGP-SRC-026-H067` — `### 16.2 Owner`
+- `MGP-SRC-026-H068` — `### 16.3 Broker / Agent`
+- `MGP-SRC-026-H069` — `### 16.4 Builder / Developer`
+- `MGP-SRC-026-H070` — `### 16.5 Super Admin`
+- `MGP-SRC-026-H071` — `### 16.6 Admin`
+- `MGP-SRC-026-H072` — `### 16.7 Staff Roles`
+- `MGP-SRC-026-H073` — `## 17. Direct URL Bypass Verification`
+- `MGP-SRC-026-H074` — `## 18. RLS Manual Verification`
+- `MGP-SRC-026-H075` — `### 18.1 Required RLS Cases`
+- `MGP-SRC-026-H076` — `### 18.2 RLS Verification Evidence`
+- `MGP-SRC-026-H077` — `## 19. Contact Privacy Verification`
+- `MGP-SRC-026-H078` — `### 19.1 Hidden Contact Checks`
+- `MGP-SRC-026-H079` — `### 19.2 Contact Reveal Checks`
+- `MGP-SRC-026-H080` — `## 20. Auth Manual Verification`
+- `MGP-SRC-026-H081` — `### Public Login/Register`
+- `MGP-SRC-026-H082` — `### Admin/Staff Login`
+- `MGP-SRC-026-H083` — `## 21. Property Manual Verification`
+- `MGP-SRC-026-H084` — `## 22. Project Manual Verification`
+- `MGP-SRC-026-H085` — `## 23. Requirement And Proposal Manual Verification`
+- `MGP-SRC-026-H086` — `## 24. Leads CRM Manual Verification`
+- `MGP-SRC-026-H087` — `## 25. Site Visit Manual Verification`
+- `MGP-SRC-026-H088` — `## 26. Messaging Manual Verification`
+- `MGP-SRC-026-H089` — `## 27. Profile And Agent Manual Verification`
+- `MGP-SRC-026-H090` — `## 28. Verification And Trust Manual Verification`
+- `MGP-SRC-026-H091` — `## 29. Admin / Staff Manual Verification`
+- `MGP-SRC-026-H092` — `## 30. Billing / Payment / GST / Trial Manual Verification`
+- `MGP-SRC-026-H093` — `### Plan And Subscription`
+- `MGP-SRC-026-H094` — `### Razorpay Payment`
+- `MGP-SRC-026-H095` — `### Invoice / GST`
+- `MGP-SRC-026-H096` — `### Free Trial`
+- `MGP-SRC-026-H097` — `## 31. Ads / Promotion Manual Verification`
+- `MGP-SRC-026-H098` — `## 32. Notifications Manual Verification`
+- `MGP-SRC-026-H099` — `## 33. Search / Location Manual Verification`
+- `MGP-SRC-026-H100` — `## 34. SEO / CMS / Blog / Legal Manual Verification`
+- `MGP-SRC-026-H101` — `## 35. Media / Upload / Storage Manual Verification`
+- `MGP-SRC-026-H102` — `## 36. Security / Privacy / Fraud Manual Verification`
+- `MGP-SRC-026-H103` — `## 37. Audit / Soft Delete Manual Verification`
+- `MGP-SRC-026-H104` — `## 38. Performance Manual Verification`
+- `MGP-SRC-026-H105` — `## 39. Deployment / Rollback Manual Verification`
+- `MGP-SRC-026-H106` — `## 40. Production Launch Verification`
+- `MGP-SRC-026-H107` — `### 40.1 Production Security Checks`
+- `MGP-SRC-026-H108` — `### 40.2 Production Payment Checks`
+- `MGP-SRC-026-H109` — `### 40.3 Production Provider Checks`
+- `MGP-SRC-026-H110` — `### 40.4 Production UI Checks`
+- `MGP-SRC-026-H111` — `### 40.5 Production SEO/Legal Checks`
+- `MGP-SRC-026-H112` — `### 40.6 Production Data Checks`
+- `MGP-SRC-026-H113` — `## 41. Phase-Specific Verification Index`
+- `MGP-SRC-026-H114` — `### Phase 01 — Project Setup Baseline`
+- `MGP-SRC-026-H115` — `### Phase 02 — Auth Roles RLS Foundation`
+- `MGP-SRC-026-H116` — `### Phase 03 — Public UI Home Header Footer Hero`
+- `MGP-SRC-026-H117` — `### Phase 04 — Property Project Requirement System`
+- `MGP-SRC-026-H118` — `### Phase 05 — Public Search Detail Profile SEO`
+- `MGP-SRC-026-H119` — `### Phase 06 — Owner Broker Builder Dashboards`
+- `MGP-SRC-026-H120` — `### Phase 07 — Admin Staff Super Admin System`
+- `MGP-SRC-026-H121` — `### Phase 08 — Leads CRM Requirements Proposals Messages`
+- `MGP-SRC-026-H122` — `### Phase 09 — Billing Payment Subscription Trial GST`
+- `MGP-SRC-026-H123` — `### Phase 10 — Media Storage Uploads R2 CDN`
+- `MGP-SRC-026-H124` — `### Phase 11 — Location Search SEO CMS Legal`
+- `MGP-SRC-026-H125` — `### Phase 12 — Ads Promotion Notifications Providers`
+- `MGP-SRC-026-H126` — `### Phase 13 — Security Privacy Fraud Rate Limits`
+- `MGP-SRC-026-H127` — `### Phase 14 — Performance Caching Deployment Launch`
+- `MGP-SRC-026-H128` — `### Phase 15 — Final Production API Testing And Signoff`
+- `MGP-SRC-026-H129` — `## 42. Current Manual Verification Status`
+- `MGP-SRC-026-H130` — `## 43. Current Documentation File Verification`
+- `MGP-SRC-026-H131` — `## DOC-01 — \`CLAUDE.md\` Verification`
+- `MGP-SRC-026-H132` — `### File`
+- `MGP-SRC-026-H133` — `### Verification Date`
+- `MGP-SRC-026-H134` — `### Checks`
+- `MGP-SRC-026-H135` — `### Final Result`
+- `MGP-SRC-026-H136` — `### Notes`
+- `MGP-SRC-026-H137` — `## DOC-02 — \`brain.md\` Verification`
+- `MGP-SRC-026-H138` — `### File`
+- `MGP-SRC-026-H139` — `### Verification Date`
+- `MGP-SRC-026-H140` — `### Checks`
+- `MGP-SRC-026-H141` — `### Final Result`
+- `MGP-SRC-026-H142` — `### Notes`
+- `MGP-SRC-026-H143` — `## DOC-03 — \`FEATURE_REGISTRY.md\` Verification`
+- `MGP-SRC-026-H144` — `### File`
+- `MGP-SRC-026-H145` — `### Verification Date`
+- `MGP-SRC-026-H146` — `### Checks`
+- `MGP-SRC-026-H147` — `### Final Result`
+- `MGP-SRC-026-H148` — `### Notes`
+- `MGP-SRC-026-H149` — `## DOC-04 — \`CHANGELOG.md\` Verification`
+- `MGP-SRC-026-H150` — `### File`
+- `MGP-SRC-026-H151` — `### Verification Date`
+- `MGP-SRC-026-H152` — `### Checks`
+- `MGP-SRC-026-H153` — `### Final Result`
+- `MGP-SRC-026-H154` — `### Notes`
+- `MGP-SRC-026-H155` — `## DOC-05 — \`BUGS_AND_FIXES.md\` Verification`
+- `MGP-SRC-026-H156` — `### File`
+- `MGP-SRC-026-H157` — `### Verification Date`
+- `MGP-SRC-026-H158` — `### Checks`
+- `MGP-SRC-026-H159` — `### Final Result`
+- `MGP-SRC-026-H160` — `### Notes`
+- `MGP-SRC-026-H161` — `## DOC-06 — \`MANUAL_VERIFICATION.md\` Verification`
+- `MGP-SRC-026-H162` — `### File`
+- `MGP-SRC-026-H163` — `### Verification Date`
+- `MGP-SRC-026-H164` — `### Checks`
+- `MGP-SRC-026-H165` — `### Final Result`
+- `MGP-SRC-026-H166` — `### Notes`
+- `MGP-SRC-026-H167` — `## 44. Current Open Verification Blockers`
+- `MGP-SRC-026-H168` — `## 45. Bug Creation Rule During Verification`
+- `MGP-SRC-026-H169` — `## 46. Verification Final Response Format`
+- `MGP-SRC-026-H170` — `## Verification Result`
+- `MGP-SRC-026-H171` — `## Scope Checked`
+- `MGP-SRC-026-H172` — `## Checks Run`
+- `MGP-SRC-026-H173` — `## Role Checks`
+- `MGP-SRC-026-H174` — `## Security / RLS`
+- `MGP-SRC-026-H175` — `## Responsive`
+- `MGP-SRC-026-H176` — `## Bugs Found`
+- `MGP-SRC-026-H177` — `## Fixes Done`
+- `MGP-SRC-026-H178` — `## Docs Updated`
+- `MGP-SRC-026-H179` — `## Pending Issues`
+- `MGP-SRC-026-H180` — `## Next Phase`
+- `MGP-SRC-026-H181` — `## 47. Human Manual Verification Notes Format`
+- `MGP-SRC-026-H182` — `## HUMAN-CHECK-YYYYMMDD-000 — Short Title`
+- `MGP-SRC-026-H183` — `### Tester`
+- `MGP-SRC-026-H184` — `### Environment`
+- `MGP-SRC-026-H185` — `### Checked Flow`
+- `MGP-SRC-026-H186` — `### Expected`
+- `MGP-SRC-026-H187` — `### Actual`
+- `MGP-SRC-026-H188` — `### Screenshots / Evidence`
+- `MGP-SRC-026-H189` — `### Result`
+- `MGP-SRC-026-H190` — `### Bug Created`
+- `MGP-SRC-026-H191` — `### Notes`
+- `MGP-SRC-026-H192` — `## 48. Evidence Rules`
+- `MGP-SRC-026-H193` — `## 49. Required Docs Update Verification`
+- `MGP-SRC-026-H194` — `## 50. Final Phase PASS Checklist`
+- `MGP-SRC-026-H195` — `## 51. Final Rule`
+
+### MGP-SRC-027 — `PERFORMANCE_CHECKLIST.md` — 182 headings
+
+- `MGP-SRC-027-H001` — `# PERFORMANCE_CHECKLIST.md`
+- `MGP-SRC-027-H002` — `# My Gujarat Property — Performance, Scalability, Caching And Load Readiness Checklist`
+- `MGP-SRC-027-H003` — `## 1. Purpose`
+- `MGP-SRC-027-H004` — `## 2. Absolute Performance Rules`
+- `MGP-SRC-027-H005` — `## 3. Performance Status Values`
+- `MGP-SRC-027-H006` — `## 4. Performance Severity Values`
+- `MGP-SRC-027-H007` — `## 5. Performance Verification Values`
+- `MGP-SRC-027-H008` — `## 6. Target Performance Metrics`
+- `MGP-SRC-027-H009` — `### 6.1 Core Web Vitals Targets`
+- `MGP-SRC-027-H010` — `### 6.2 Backend Targets`
+- `MGP-SRC-027-H011` — `### 6.3 Scalability Target`
+- `MGP-SRC-027-H012` — `## 7. Required Performance Entry Format`
+- `MGP-SRC-027-H013` — `## PERF-CHECK-YYYYMMDD-000 — Check Title`
+- `MGP-SRC-027-H014` — `### Status`
+- `MGP-SRC-027-H015` — `### Severity`
+- `MGP-SRC-027-H016` — `### Area`
+- `MGP-SRC-027-H017` — `### Scope`
+- `MGP-SRC-027-H018` — `### Expected Performance Behavior`
+- `MGP-SRC-027-H019` — `### Actual Performance Behavior`
+- `MGP-SRC-027-H020` — `### Optimization / Check Performed`
+- `MGP-SRC-027-H021` — `### Verification Steps`
+- `MGP-SRC-027-H022` — `### Verification Result`
+- `MGP-SRC-027-H023` — `### Evidence`
+- `MGP-SRC-027-H024` — `### Bugs Created`
+- `MGP-SRC-027-H025` — `### Rollback Notes`
+- `MGP-SRC-027-H026` — `### Docs Updated`
+- `MGP-SRC-027-H027` — `### Final Status`
+- `MGP-SRC-027-H028` — `## 8. Database Performance Rules`
+- `MGP-SRC-027-H029` — `### 8.1 Database Query Rules`
+- `MGP-SRC-027-H030` — `### 8.2 Unbounded Read Ban`
+- `MGP-SRC-027-H031` — `### 8.3 N+1 Query Ban`
+- `MGP-SRC-027-H032` — `### 8.4 Query Field Selection`
+- `MGP-SRC-027-H033` — `## 9. Database Index Checklist`
+- `MGP-SRC-027-H034` — `### 9.1 Core Index Areas`
+- `MGP-SRC-027-H035` — `### 9.2 Location/Search Index Areas`
+- `MGP-SRC-027-H036` — `### 9.3 Text Search Index Areas`
+- `MGP-SRC-027-H037` — `## 10. RLS Performance Rules`
+- `MGP-SRC-027-H038` — `## 11. Search Performance Checklist`
+- `MGP-SRC-027-H039` — `### 11.1 Public Search Rules`
+- `MGP-SRC-027-H040` — `### 11.2 Search Filters To Optimize`
+- `MGP-SRC-027-H041` — `### 11.3 Search Verification Checklist`
+- `MGP-SRC-027-H042` — `## 12. Location Performance Checklist`
+- `MGP-SRC-027-H043` — `## 13. Public Page Performance Checklist`
+- `MGP-SRC-027-H044` — `### 13.1 Homepage`
+- `MGP-SRC-027-H045` — `### 13.2 Listing Detail Pages`
+- `MGP-SRC-027-H046` — `### 13.3 Public Profiles`
+- `MGP-SRC-027-H047` — `## 14. Dashboard Performance Checklist`
+- `MGP-SRC-027-H048` — `### 14.1 Owner Dashboard`
+- `MGP-SRC-027-H049` — `### 14.2 Broker Dashboard`
+- `MGP-SRC-027-H050` — `### 14.3 Builder Dashboard`
+- `MGP-SRC-027-H051` — `## 15. Admin Performance Checklist`
+- `MGP-SRC-027-H052` — `## 16. Leads, CRM, Messaging And Notifications Performance`
+- `MGP-SRC-027-H053` — `### 16.1 Leads CRM`
+- `MGP-SRC-027-H054` — `### 16.2 Messaging`
+- `MGP-SRC-027-H055` — `### 16.3 Notifications`
+- `MGP-SRC-027-H056` — `## 17. Billing And Payment Performance Checklist`
+- `MGP-SRC-027-H057` — `## 18. Ads And Promotion Performance Checklist`
+- `MGP-SRC-027-H058` — `## 19. Media, Upload, Image, Video And PDF Performance`
+- `MGP-SRC-027-H059` — `### 19.1 Image Rules`
+- `MGP-SRC-027-H060` — `### 19.2 Video Rules`
+- `MGP-SRC-027-H061` — `### 19.3 PDF Rules`
+- `MGP-SRC-027-H062` — `## 20. Cloudflare R2 / CDN Performance Checklist`
+- `MGP-SRC-027-H063` — `## 21. Next.js / React Performance Rules`
+- `MGP-SRC-027-H064` — `## 22. Caching And Revalidation Checklist`
+- `MGP-SRC-027-H065` — `### 22.1 Safe To Cache Public Data`
+- `MGP-SRC-027-H066` — `### 22.2 Do Not Publicly Cache Private Data`
+- `MGP-SRC-027-H067` — `### 22.3 Revalidation Rules`
+- `MGP-SRC-027-H068` — `## 23. Provider/API Performance Checklist`
+- `MGP-SRC-027-H069` — `## 24. Background Jobs And Cron Performance`
+- `MGP-SRC-027-H070` — `## 25. Frontend UI Performance Checklist`
+- `MGP-SRC-027-H071` — `## 26. Responsive Performance Checklist`
+- `MGP-SRC-027-H072` — `## 27. Bundle And Dependency Checklist`
+- `MGP-SRC-027-H073` — `## 28. Font And CSS Performance Checklist`
+- `MGP-SRC-027-H074` — `## 29. SEO Page Performance Checklist`
+- `MGP-SRC-027-H075` — `## 30. Analytics And Reports Performance`
+- `MGP-SRC-027-H076` — `## 31. Monitoring Checklist`
+- `MGP-SRC-027-H077` — `## 32. Load And Stress Testing Checklist`
+- `MGP-SRC-027-H078` — `### 32.1 Required Load Test Areas`
+- `MGP-SRC-027-H079` — `### 32.2 Load Test Data`
+- `MGP-SRC-027-H080` — `### 32.3 Load Test Entry Format`
+- `MGP-SRC-027-H081` — `## LOAD-TEST-YYYYMMDD-000 — Test Title`
+- `MGP-SRC-027-H082` — `### Environment`
+- `MGP-SRC-027-H083` — `### Scope`
+- `MGP-SRC-027-H084` — `### Test Tool`
+- `MGP-SRC-027-H085` — `### Target`
+- `MGP-SRC-027-H086` — `### Result`
+- `MGP-SRC-027-H087` — `### Findings`
+- `MGP-SRC-027-H088` — `### Fixes Required`
+- `MGP-SRC-027-H089` — `### Docs Updated`
+- `MGP-SRC-027-H090` — `### 32.4 Current Load Test Status`
+- `MGP-SRC-027-H091` — `## 33. Performance Regression Rules`
+- `MGP-SRC-027-H092` — `## 34. Performance Bug Entry Format`
+- `MGP-SRC-027-H093` — `## PERF-BUG-YYYYMMDD-000 — Performance Bug Title`
+- `MGP-SRC-027-H094` — `### Status`
+- `MGP-SRC-027-H095` — `### Severity`
+- `MGP-SRC-027-H096` — `### Area`
+- `MGP-SRC-027-H097` — `### Summary`
+- `MGP-SRC-027-H098` — `### Evidence`
+- `MGP-SRC-027-H099` — `### Suspected Cause`
+- `MGP-SRC-027-H100` — `### Fix Plan`
+- `MGP-SRC-027-H101` — `### Fix Implementation`
+- `MGP-SRC-027-H102` — `### Retest`
+- `MGP-SRC-027-H103` — `### Docs Updated`
+- `MGP-SRC-027-H104` — `## 35. Rollback Rules For Performance Changes`
+- `MGP-SRC-027-H105` — `## 36. Phase Performance Gates`
+- `MGP-SRC-027-H106` — `### Phase 01 — Project Setup Baseline`
+- `MGP-SRC-027-H107` — `### Phase 02 — Auth Roles RLS Foundation`
+- `MGP-SRC-027-H108` — `### Phase 03 — Public UI Home Header Footer Hero`
+- `MGP-SRC-027-H109` — `### Phase 04 — Property Project Requirement System`
+- `MGP-SRC-027-H110` — `### Phase 05 — Public Search Detail Profile SEO`
+- `MGP-SRC-027-H111` — `### Phase 06 — Owner Broker Builder Dashboards`
+- `MGP-SRC-027-H112` — `### Phase 07 — Admin Staff Super Admin System`
+- `MGP-SRC-027-H113` — `### Phase 08 — Leads CRM Requirements Proposals Messages`
+- `MGP-SRC-027-H114` — `### Phase 09 — Billing Payment Subscription Trial GST`
+- `MGP-SRC-027-H115` — `### Phase 10 — Media Storage Uploads R2 CDN`
+- `MGP-SRC-027-H116` — `### Phase 11 — Location Search SEO CMS Legal`
+- `MGP-SRC-027-H117` — `### Phase 12 — Ads Promotion Notifications Providers`
+- `MGP-SRC-027-H118` — `### Phase 13 — Security Privacy Fraud Rate Limits`
+- `MGP-SRC-027-H119` — `### Phase 14 — Performance Caching Deployment Launch`
+- `MGP-SRC-027-H120` — `### Phase 15 — Final Production API Testing And Signoff`
+- `MGP-SRC-027-H121` — `## 37. Production Performance Launch Checklist`
+- `MGP-SRC-027-H122` — `### Public`
+- `MGP-SRC-027-H123` — `### Auth / Roles`
+- `MGP-SRC-027-H124` — `### Database`
+- `MGP-SRC-027-H125` — `### Media`
+- `MGP-SRC-027-H126` — `### Providers`
+- `MGP-SRC-027-H127` — `### UI / Responsive`
+- `MGP-SRC-027-H128` — `### Build / Bundle`
+- `MGP-SRC-027-H129` — `### Monitoring`
+- `MGP-SRC-027-H130` — `### Load`
+- `MGP-SRC-027-H131` — `## 38. Current Performance Status`
+- `MGP-SRC-027-H132` — `## 39. Current Open Performance Risks`
+- `MGP-SRC-027-H133` — `## PERFORMANCE-RISK-20260629-001 — No Implementation Performance Baseline Yet`
+- `MGP-SRC-027-H134` — `### Status`
+- `MGP-SRC-027-H135` — `### Severity`
+- `MGP-SRC-027-H136` — `### Risk`
+- `MGP-SRC-027-H137` — `### Required Action`
+- `MGP-SRC-027-H138` — `### Launch Impact`
+- `MGP-SRC-027-H139` — `## PERFORMANCE-RISK-20260629-002 — Database Indexes Not Created Yet`
+- `MGP-SRC-027-H140` — `### Status`
+- `MGP-SRC-027-H141` — `### Severity`
+- `MGP-SRC-027-H142` — `### Risk`
+- `MGP-SRC-027-H143` — `### Required Action`
+- `MGP-SRC-027-H144` — `### Launch Impact`
+- `MGP-SRC-027-H145` — `## PERFORMANCE-RISK-20260629-003 — Media Optimization Provider Not Configured Yet`
+- `MGP-SRC-027-H146` — `### Status`
+- `MGP-SRC-027-H147` — `### Severity`
+- `MGP-SRC-027-H148` — `### Risk`
+- `MGP-SRC-027-H149` — `### Required Action`
+- `MGP-SRC-027-H150` — `### Launch Impact`
+- `MGP-SRC-027-H151` — `## PERFORMANCE-RISK-20260629-004 — Provider Timeout/Fallback Not Implemented Yet`
+- `MGP-SRC-027-H152` — `### Status`
+- `MGP-SRC-027-H153` — `### Severity`
+- `MGP-SRC-027-H154` — `### Risk`
+- `MGP-SRC-027-H155` — `### Required Action`
+- `MGP-SRC-027-H156` — `### Launch Impact`
+- `MGP-SRC-027-H157` — `## PERFORMANCE-RISK-20260629-005 — Load Testing Not Started`
+- `MGP-SRC-027-H158` — `### Status`
+- `MGP-SRC-027-H159` — `### Severity`
+- `MGP-SRC-027-H160` — `### Risk`
+- `MGP-SRC-027-H161` — `### Required Action`
+- `MGP-SRC-027-H162` — `### Launch Impact`
+- `MGP-SRC-027-H163` — `## 40. Documentation Generation Progress`
+- `MGP-SRC-027-H164` — `## 41. Performance Final Response Rule`
+- `MGP-SRC-027-H165` — `## Performance Result`
+- `MGP-SRC-027-H166` — `## Scope`
+- `MGP-SRC-027-H167` — `## Changed Files`
+- `MGP-SRC-027-H168` — `## SQL / Migration Files`
+- `MGP-SRC-027-H169` — `## Database / Query Impact`
+- `MGP-SRC-027-H170` — `## Cache / Revalidation Impact`
+- `MGP-SRC-027-H171` — `## Media Impact`
+- `MGP-SRC-027-H172` — `## Provider Impact`
+- `MGP-SRC-027-H173` — `## Tests Run`
+- `MGP-SRC-027-H174` — `## Metrics`
+- `MGP-SRC-027-H175` — `## Security Safety`
+- `MGP-SRC-027-H176` — `## Manual Verification`
+- `MGP-SRC-027-H177` — `## Bugs Found`
+- `MGP-SRC-027-H178` — `## Docs Updated`
+- `MGP-SRC-027-H179` — `## Pending Issues`
+- `MGP-SRC-027-H180` — `## 42. Performance Update Checklist`
+- `MGP-SRC-027-H181` — `## 43. Resume Guide For Future Claude`
+- `MGP-SRC-027-H182` — `## 44. Final Rule`
+
+### MGP-SRC-028 — `prompts/00_PROMPT_USAGE_RULES.md` — 58 headings
+
+- `MGP-SRC-028-H001` — `# prompts/00_PROMPT_USAGE_RULES.md`
+- `MGP-SRC-028-H002` — `# My Gujarat Property — Prompt Usage Rules For Claude Code`
+- `MGP-SRC-028-H003` — `## 1. Purpose`
+- `MGP-SRC-028-H004` — `## 2. Prompt Pack Structure`
+- `MGP-SRC-028-H005` — `## 3. Full Prompt Pack Order`
+- `MGP-SRC-028-H006` — `## 4. Mandatory Pairing Rule`
+- `MGP-SRC-028-H007` — `## 5. Required Root Docs`
+- `MGP-SRC-028-H008` — `## 6. Required Detailed Docs`
+- `MGP-SRC-028-H009` — `## 7. Token-Light Rule`
+- `MGP-SRC-028-H010` — `## 8. Claude Code Session Start Rule`
+- `MGP-SRC-028-H011` — `## 9. Existing Code Preservation Rule`
+- `MGP-SRC-028-H012` — `## 10. User-Specified Preservation Rule`
+- `MGP-SRC-028-H013` — `## 11. Implementation Prompt Rule`
+- `MGP-SRC-028-H014` — `## 12. Manual Verification Prompt Rule`
+- `MGP-SRC-028-H015` — `## 13. Phase Status Rule`
+- `MGP-SRC-028-H016` — `## 14. PASS Rule`
+- `MGP-SRC-028-H017` — `## 15. No Fake Completion Rule`
+- `MGP-SRC-028-H018` — `## 16. Setup-Required Rule`
+- `MGP-SRC-028-H019` — `## 17. SQL Migration Rule`
+- `MGP-SRC-028-H020` — `## 18. RLS Rule`
+- `MGP-SRC-028-H021` — `## 19. Public-Safe View Rule`
+- `MGP-SRC-028-H022` — `## 20. Hidden Contact Rule`
+- `MGP-SRC-028-H023` — `## 21. Provider Rule`
+- `MGP-SRC-028-H024` — `## 22. Payment Rule`
+- `MGP-SRC-028-H025` — `## 23. Media Rule`
+- `MGP-SRC-028-H026` — `## 24. Admin Rule`
+- `MGP-SRC-028-H027` — `## 25. UI Rule`
+- `MGP-SRC-028-H028` — `## 26. Legal And Consent Rule`
+- `MGP-SRC-028-H029` — `## 27. Feature Registry Update Rule`
+- `MGP-SRC-028-H030` — `## 28. Changelog Update Rule`
+- `MGP-SRC-028-H031` — `## 29. Bugs And Fixes Update Rule`
+- `MGP-SRC-028-H032` — `## 30. Manual Verification Update Rule`
+- `MGP-SRC-028-H033` — `## 31. API Provider Status Update Rule`
+- `MGP-SRC-028-H034` — `## 32. Security Checklist Update Rule`
+- `MGP-SRC-028-H035` — `## 33. Performance Checklist Update Rule`
+- `MGP-SRC-028-H036` — `## 34. Deployment Rollback Update Rule`
+- `MGP-SRC-028-H037` — `## 35. Brain Update Rule`
+- `MGP-SRC-028-H038` — `## 36. Final Response Format After Implementation`
+- `MGP-SRC-028-H039` — `## 37. Final Response Format After Manual Verification`
+- `MGP-SRC-028-H040` — `## 38. Prompt Execution Command Format`
+- `MGP-SRC-028-H041` — `## 39. Phase Progression Rule`
+- `MGP-SRC-028-H042` — `## 40. Incomplete Feature Rule`
+- `MGP-SRC-028-H043` — `## 41. Feature Flag Rule`
+- `MGP-SRC-028-H044` — `## 42. Environment Rule`
+- `MGP-SRC-028-H045` — `## 43. Testing Command Rule`
+- `MGP-SRC-028-H046` — `## 44. Responsive Verification Rule`
+- `MGP-SRC-028-H047` — `## 45. Security Verification Rule`
+- `MGP-SRC-028-H048` — `## 46. Payment Verification Rule`
+- `MGP-SRC-028-H049` — `## 47. Media Verification Rule`
+- `MGP-SRC-028-H050` — `## 48. Admin Verification Rule`
+- `MGP-SRC-028-H051` — `## 49. SEO Verification Rule`
+- `MGP-SRC-028-H052` — `## 50. Performance Verification Rule`
+- `MGP-SRC-028-H053` — `## 51. Production Signoff Rule`
+- `MGP-SRC-028-H054` — `## 52. Common Mistakes To Avoid`
+- `MGP-SRC-028-H055` — `## 53. Prompt Pack Completion Tracking`
+- `MGP-SRC-028-H056` — `## 54. Related Documentation`
+- `MGP-SRC-028-H057` — `## 55. Final Prompt Usage Rule`
+- `MGP-SRC-028-H058` — `## Mandatory Role-Based Home Design Clarification`
+
+### MGP-SRC-029 — `prompts/01_PROJECT_SETUP_BASELINE.md` — 74 headings
+
+- `MGP-SRC-029-H001` — `# prompts/01_PROJECT_SETUP_BASELINE.md`
+- `MGP-SRC-029-H002` — `# My Gujarat Property — Prompt 01: Project Setup Baseline`
+- `MGP-SRC-029-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-029-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-029-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-029-H006` — `## 4. Current Project Inspection Required`
+- `MGP-SRC-029-H007` — `## 5. Approved Technical Direction`
+- `MGP-SRC-029-H008` — `## 6. Baseline Implementation Scope`
+- `MGP-SRC-029-H009` — `### 6.1 Project Structure`
+- `MGP-SRC-029-H010` — `### 6.2 Package Scripts`
+- `MGP-SRC-029-H011` — `### 6.3 Environment Baseline`
+- `MGP-SRC-029-H012` — `### 6.4 Supabase Baseline`
+- `MGP-SRC-029-H013` — `### 6.5 Docs Baseline`
+- `MGP-SRC-029-H014` — `### 6.6 Build/Quality Baseline`
+- `MGP-SRC-029-H015` — `## 7. Out Of Scope For This Phase`
+- `MGP-SRC-029-H016` — `## 8. Preservation Rules`
+- `MGP-SRC-029-H017` — `## 9. Recommended Folder Conventions`
+- `MGP-SRC-029-H018` — `## 10. Environment Variables Baseline`
+- `MGP-SRC-029-H019` — `# App`
+- `MGP-SRC-029-H020` — `# Supabase`
+- `MGP-SRC-029-H021` — `# OTP / SMS`
+- `MGP-SRC-029-H022` — `# Email`
+- `MGP-SRC-029-H023` — `# WhatsApp`
+- `MGP-SRC-029-H024` — `# Payments`
+- `MGP-SRC-029-H025` — `# Maps`
+- `MGP-SRC-029-H026` — `# Storage / CDN`
+- `MGP-SRC-029-H027` — `# Security`
+- `MGP-SRC-029-H028` — `# Analytics / Monitoring`
+- `MGP-SRC-029-H029` — `# Jobs / Cron`
+- `MGP-SRC-029-H030` — `# Push`
+- `MGP-SRC-029-H031` — `## 11. Provider Status Baseline`
+- `MGP-SRC-029-H032` — `## 12. Baseline Feature Registry Updates`
+- `MGP-SRC-029-H033` — `## 13. Changelog Entry Required`
+- `MGP-SRC-029-H034` — `## 14. Bugs And Fixes Rule`
+- `MGP-SRC-029-H035` — `## 15. Manual Verification Baseline Entry`
+- `MGP-SRC-029-H036` — `## 16. Security Checklist Baseline`
+- `MGP-SRC-029-H037` — `## 17. Performance Checklist Baseline`
+- `MGP-SRC-029-H038` — `## 18. Deployment Rollback Baseline`
+- `MGP-SRC-029-H039` — `## 19. Brain Update Required`
+- `MGP-SRC-029-H040` — `## 20. SQL Migration Rule For This Phase`
+- `MGP-SRC-029-H041` — `## 21. Dependency Rule`
+- `MGP-SRC-029-H042` — `## 22. Package Manager Rule`
+- `MGP-SRC-029-H043` — `## 23. README Baseline`
+- `MGP-SRC-029-H044` — `## 24. No Fake Data Baseline`
+- `MGP-SRC-029-H045` — `## 25. Secret Exposure Baseline`
+- `MGP-SRC-029-H046` — `## 26. Existing UI Baseline Check`
+- `MGP-SRC-029-H047` — `## 27. Baseline Routes`
+- `MGP-SRC-029-H048` — `## 28. Baseline Supabase Client Rule`
+- `MGP-SRC-029-H049` — `## 29. Baseline Middleware Rule`
+- `MGP-SRC-029-H050` — `## 30. Baseline Type System Rule`
+- `MGP-SRC-029-H051` — `## 31. Baseline Constants Rule`
+- `MGP-SRC-029-H052` — `## 32. Baseline Feature Flag Rule`
+- `MGP-SRC-029-H053` — `## 33. Baseline Error Handling Rule`
+- `MGP-SRC-029-H054` — `## 34. Baseline Security Headers Rule`
+- `MGP-SRC-029-H055` — `## 35. Baseline SEO Rule`
+- `MGP-SRC-029-H056` — `## 36. Baseline Accessibility Rule`
+- `MGP-SRC-029-H057` — `## 37. Baseline Tests To Run`
+- `MGP-SRC-029-H058` — `## 38. Baseline Build Failure Handling`
+- `MGP-SRC-029-H059` — `## 39. Baseline Lint Failure Handling`
+- `MGP-SRC-029-H060` — `## 40. Baseline Typecheck Failure Handling`
+- `MGP-SRC-029-H061` — `## 41. Baseline Final Implementation Checklist`
+- `MGP-SRC-029-H062` — `## 42. Expected Changed Files`
+- `MGP-SRC-029-H063` — `## 43. Expected Output Files From This Phase`
+- `MGP-SRC-029-H064` — `## 44. Forbidden In This Phase`
+- `MGP-SRC-029-H065` — `## 45. Phase Completion Status Rules`
+- `MGP-SRC-029-H066` — `### \`PASS\``
+- `MGP-SRC-029-H067` — `### \`PARTIAL\``
+- `MGP-SRC-029-H068` — `### \`BLOCKED\``
+- `MGP-SRC-029-H069` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-029-H070` — `## 46. Final Response Required Format`
+- `MGP-SRC-029-H071` — `## 47. Manual Verification Reminder`
+- `MGP-SRC-029-H072` — `## 48. Common Baseline Bugs To Watch For`
+- `MGP-SRC-029-H073` — `## 49. Quality Bar`
+- `MGP-SRC-029-H074` — `## 50. Final Rule For Prompt 01`
+
+### MGP-SRC-030 — `prompts/02_AUTH_ROLES_RLS_FOUNDATION.md` — 105 headings
+
+- `MGP-SRC-030-H001` — `# prompts/02_AUTH_ROLES_RLS_FOUNDATION.md`
+- `MGP-SRC-030-H002` — `# My Gujarat Property — Prompt 02: Auth, Roles And RLS Foundation`
+- `MGP-SRC-030-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-030-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-030-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-030-H006` — `## 4. Required Current Code Inspection`
+- `MGP-SRC-030-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-030-H008` — `### 5.1 Public User Auth Foundation`
+- `MGP-SRC-030-H009` — `### 5.2 Public Roles`
+- `MGP-SRC-030-H010` — `### 5.3 Admin/Staff Auth Foundation`
+- `MGP-SRC-030-H011` — `### 5.4 RLS Foundation`
+- `MGP-SRC-030-H012` — `### 5.5 Docs And Verification Foundation`
+- `MGP-SRC-030-H013` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-030-H014` — `## 7. Hard Security Rules`
+- `MGP-SRC-030-H015` — `## 8. Public Auth UX Rules`
+- `MGP-SRC-030-H016` — `## 9. Registration Fields`
+- `MGP-SRC-030-H017` — `## 10. Role Rules`
+- `MGP-SRC-030-H018` — `## 10.1 Owner`
+- `MGP-SRC-030-H019` — `## 10.2 Broker / Agent`
+- `MGP-SRC-030-H020` — `## 10.3 Builder / Developer`
+- `MGP-SRC-030-H021` — `## 11. Role Change Foundation`
+- `MGP-SRC-030-H022` — `## 12. Account Status Rules`
+- `MGP-SRC-030-H023` — `## 13. Verification Status Placeholder`
+- `MGP-SRC-030-H024` — `## 14. Public Profile Privacy Foundation`
+- `MGP-SRC-030-H025` — `## 15. Admin / Staff Login Rules`
+- `MGP-SRC-030-H026` — `## 16. Internal Role Types`
+- `MGP-SRC-030-H027` — `## 17. Staff Permission Model Foundation`
+- `MGP-SRC-030-H028` — `## 18. Suggested Database Tables`
+- `MGP-SRC-030-H029` — `## 19. Suggested Enums / Check Values`
+- `MGP-SRC-030-H030` — `## 20. Suggested \`profiles\` Fields`
+- `MGP-SRC-030-H031` — `## 21. Suggested \`owner_profiles\` Fields`
+- `MGP-SRC-030-H032` — `## 22. Suggested \`broker_profiles\` Fields`
+- `MGP-SRC-030-H033` — `## 23. Suggested \`builder_profiles\` Fields`
+- `MGP-SRC-030-H034` — `## 24. Suggested \`staff_profiles\` Fields`
+- `MGP-SRC-030-H035` — `## 25. Suggested \`staff_permissions\` Fields`
+- `MGP-SRC-030-H036` — `## 26. Suggested \`staff_invites\` Fields`
+- `MGP-SRC-030-H037` — `## 27. Suggested \`user_consents\` Fields`
+- `MGP-SRC-030-H038` — `## 28. Suggested \`auth_audit_events\` Fields`
+- `MGP-SRC-030-H039` — `## 29. Migration Requirements`
+- `MGP-SRC-030-H040` — `## 30. RLS Policy Requirements`
+- `MGP-SRC-030-H041` — `### \`profiles\``
+- `MGP-SRC-030-H042` — `### \`owner_profiles\``
+- `MGP-SRC-030-H043` — `### \`broker_profiles\``
+- `MGP-SRC-030-H044` — `### \`builder_profiles\``
+- `MGP-SRC-030-H045` — `### \`staff_profiles\``
+- `MGP-SRC-030-H046` — `### \`staff_permissions\``
+- `MGP-SRC-030-H047` — `### \`staff_invites\``
+- `MGP-SRC-030-H048` — `### \`user_consents\``
+- `MGP-SRC-030-H049` — `### \`auth_audit_events\``
+- `MGP-SRC-030-H050` — `## 31. Index Requirements`
+- `MGP-SRC-030-H051` — `## 32. Public-Safe Views`
+- `MGP-SRC-030-H052` — `## 33. Auth Provider Handling`
+- `MGP-SRC-030-H053` — `## 34. Admin Auth Provider Handling`
+- `MGP-SRC-030-H054` — `## 35. Route Guard Requirements`
+- `MGP-SRC-030-H055` — `### Public routes`
+- `MGP-SRC-030-H056` — `### Auth required routes`
+- `MGP-SRC-030-H057` — `### Role-specific routes`
+- `MGP-SRC-030-H058` — `### Internal routes`
+- `MGP-SRC-030-H059` — `## 36. Suggested Route Structure`
+- `MGP-SRC-030-H060` — `## 37. Auth Components`
+- `MGP-SRC-030-H061` — `## 38. Session Helpers`
+- `MGP-SRC-030-H062` — `## 39. Permission Helpers`
+- `MGP-SRC-030-H063` — `## 40. Middleware Rules`
+- `MGP-SRC-030-H064` — `## 41. Account Creation Flow`
+- `MGP-SRC-030-H065` — `## 42. Existing User Login Flow`
+- `MGP-SRC-030-H066` — `## 43. Logout Flow`
+- `MGP-SRC-030-H067` — `## 44. Unauthorized UX`
+- `MGP-SRC-030-H068` — `## 45. UI Requirements For This Phase`
+- `MGP-SRC-030-H069` — `## 46. Legal/Consent Requirements`
+- `MGP-SRC-030-H070` — `## 47. Audit Requirements`
+- `MGP-SRC-030-H071` — `## 48. Rate Limit Requirements`
+- `MGP-SRC-030-H072` — `## 49. Provider Setup-Required UX`
+- `MGP-SRC-030-H073` — `## 50. API / Server Action Rules`
+- `MGP-SRC-030-H074` — `## 51. Input Validation Rules`
+- `MGP-SRC-030-H075` — `## 52. Redirect Safety Rules`
+- `MGP-SRC-030-H076` — `## 53. Dashboard Placeholder Rules`
+- `MGP-SRC-030-H077` — `## 54. Admin Placeholder Rules`
+- `MGP-SRC-030-H078` — `## 55. \`.env.example\` Updates`
+- `MGP-SRC-030-H079` — `## 56. API Provider Status Updates`
+- `MGP-SRC-030-H080` — `## 57. Feature Registry Updates`
+- `MGP-SRC-030-H081` — `## 58. Changelog Update`
+- `MGP-SRC-030-H082` — `## 59. Bugs And Fixes Update`
+- `MGP-SRC-030-H083` — `## 60. Manual Verification Update`
+- `MGP-SRC-030-H084` — `## 61. Security Checklist Update`
+- `MGP-SRC-030-H085` — `## 62. Performance Checklist Update`
+- `MGP-SRC-030-H086` — `## 63. Deployment Rollback Update`
+- `MGP-SRC-030-H087` — `## 64. Brain Update`
+- `MGP-SRC-030-H088` — `## 65. Required Tests / Checks`
+- `MGP-SRC-030-H089` — `## 66. Auth Manual Smoke Checks To Perform If Possible`
+- `MGP-SRC-030-H090` — `## 67. RLS Manual Smoke Checks To Perform If Possible`
+- `MGP-SRC-030-H091` — `## 68. Rollback Guidance`
+- `MGP-SRC-030-H092` — `## 69. Expected Changed Files`
+- `MGP-SRC-030-H093` — `## 70. Expected Output From This Phase`
+- `MGP-SRC-030-H094` — `## 71. Forbidden Outcomes`
+- `MGP-SRC-030-H095` — `## 72. Phase Completion Status Rules`
+- `MGP-SRC-030-H096` — `### \`DONE\``
+- `MGP-SRC-030-H097` — `### \`PASS\``
+- `MGP-SRC-030-H098` — `### \`PARTIAL\``
+- `MGP-SRC-030-H099` — `### \`BLOCKED\``
+- `MGP-SRC-030-H100` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-030-H101` — `## 73. Final Response Required Format`
+- `MGP-SRC-030-H102` — `## 74. Matching Manual Verification Reminder`
+- `MGP-SRC-030-H103` — `## 75. Common Auth/RLS Bugs To Watch For`
+- `MGP-SRC-030-H104` — `## 76. Quality Bar`
+- `MGP-SRC-030-H105` — `## 77. Final Rule For Prompt 02`
+
+### MGP-SRC-031 — `prompts/02_MANUAL_VERIFICATION_AUTH_ROLES_RLS_FOUNDATION.md` — 79 headings
+
+- `MGP-SRC-031-H001` — `# prompts/02_MANUAL_VERIFICATION_AUTH_ROLES_RLS_FOUNDATION.md`
+- `MGP-SRC-031-H002` — `# My Gujarat Property — Prompt 02 Manual Verification: Auth, Roles And RLS Foundation`
+- `MGP-SRC-031-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-031-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-031-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-031-H006` — `## 4. Verification Scope`
+- `MGP-SRC-031-H007` — `## 5. Verification Method`
+- `MGP-SRC-031-H008` — `## 6. Required File And Route Inspection`
+- `MGP-SRC-031-H009` — `## 7. Migration Verification`
+- `MGP-SRC-031-H010` — `## 8. Database Table Verification`
+- `MGP-SRC-031-H011` — `## 9. Profiles Table Verification`
+- `MGP-SRC-031-H012` — `## 10. Public Role Profile Verification`
+- `MGP-SRC-031-H013` — `### Owner`
+- `MGP-SRC-031-H014` — `### Broker`
+- `MGP-SRC-031-H015` — `### Builder`
+- `MGP-SRC-031-H016` — `## 11. Account Status Verification`
+- `MGP-SRC-031-H017` — `## 12. Verification Status Placeholder Check`
+- `MGP-SRC-031-H018` — `## 13. Public Auth UI Verification`
+- `MGP-SRC-031-H019` — `## 14. OTP Provider Verification`
+- `MGP-SRC-031-H020` — `## 15. Existing User Login Flow Verification`
+- `MGP-SRC-031-H021` — `## 16. Registration Flow Verification`
+- `MGP-SRC-031-H022` — `## 17. Logout Verification`
+- `MGP-SRC-031-H023` — `## 18. Route Guard Verification`
+- `MGP-SRC-031-H024` — `## 19. Direct URL Bypass Verification`
+- `MGP-SRC-031-H025` — `## 20. Admin / Staff Auth Separation Verification`
+- `MGP-SRC-031-H026` — `## 21. Staff Invite Foundation Verification`
+- `MGP-SRC-031-H027` — `## 22. Staff Permission Verification`
+- `MGP-SRC-031-H028` — `## 23. Public-Safe View Verification`
+- `MGP-SRC-031-H029` — `## 24. RLS Enabled Verification`
+- `MGP-SRC-031-H030` — `## 25. RLS Policy Verification`
+- `MGP-SRC-031-H031` — `### Profiles`
+- `MGP-SRC-031-H032` — `### Role Profiles`
+- `MGP-SRC-031-H033` — `### Staff Profiles`
+- `MGP-SRC-031-H034` — `### Staff Permissions`
+- `MGP-SRC-031-H035` — `### Consents`
+- `MGP-SRC-031-H036` — `### Audit Events`
+- `MGP-SRC-031-H037` — `## 26. RLS SQL Test Suggestions`
+- `MGP-SRC-031-H038` — `## 27. Service Role Safety Verification`
+- `MGP-SRC-031-H039` — `## 28. Provider Secret Safety Verification`
+- `MGP-SRC-031-H040` — `## 29. \`.env.example\` Verification`
+- `MGP-SRC-031-H041` — `## 30. API Provider Status Verification`
+- `MGP-SRC-031-H042` — `## 31. Input Validation Verification`
+- `MGP-SRC-031-H043` — `## 32. Redirect Safety Verification`
+- `MGP-SRC-031-H044` — `## 33. Consent Baseline Verification`
+- `MGP-SRC-031-H045` — `## 34. Audit Event Verification`
+- `MGP-SRC-031-H046` — `## 35. Rate Limit Verification`
+- `MGP-SRC-031-H047` — `## 36. Hidden Contact Baseline Verification`
+- `MGP-SRC-031-H048` — `## 37. Dashboard Placeholder Verification`
+- `MGP-SRC-031-H049` — `## 38. Admin Placeholder Verification`
+- `MGP-SRC-031-H050` — `## 39. UI Responsive Verification`
+- `MGP-SRC-031-H051` — `## 40. Accessibility Verification`
+- `MGP-SRC-031-H052` — `## 41. Build / Lint / Typecheck Verification`
+- `MGP-SRC-031-H053` — `## 42. Migration Apply/Test Verification`
+- `MGP-SRC-031-H054` — `## 43. Documentation Update Verification`
+- `MGP-SRC-031-H055` — `## 44. Feature Registry Verification`
+- `MGP-SRC-031-H056` — `## 45. Changelog Verification`
+- `MGP-SRC-031-H057` — `## 46. Bugs And Fixes Verification`
+- `MGP-SRC-031-H058` — `## 47. Manual Verification Doc Update`
+- `MGP-SRC-031-H059` — `## 48. Security Checklist Verification`
+- `MGP-SRC-031-H060` — `## 49. Performance Checklist Verification`
+- `MGP-SRC-031-H061` — `## 50. Deployment Rollback Verification`
+- `MGP-SRC-031-H062` — `## 51. API Provider Status Verification`
+- `MGP-SRC-031-H063` — `## 52. Brain Update Verification`
+- `MGP-SRC-031-H064` — `## 53. Verification Result Decision`
+- `MGP-SRC-031-H065` — `### PASS`
+- `MGP-SRC-031-H066` — `### PARTIAL`
+- `MGP-SRC-031-H067` — `### FAIL`
+- `MGP-SRC-031-H068` — `### BLOCKED`
+- `MGP-SRC-031-H069` — `### SETUP_REQUIRED`
+- `MGP-SRC-031-H070` — `## 54. Prompt 03 Readiness Checklist`
+- `MGP-SRC-031-H071` — `## 55. Required Manual Verification Entry Format`
+- `MGP-SRC-031-H072` — `## Prompt 02 Verification — Auth, Roles And RLS Foundation`
+- `MGP-SRC-031-H073` — `## 56. Required Final Response Format`
+- `MGP-SRC-031-H074` — `## 57. If Verification Fails`
+- `MGP-SRC-031-H075` — `## 58. If Verification Is Partial`
+- `MGP-SRC-031-H076` — `## 59. If Verification Passes`
+- `MGP-SRC-031-H077` — `## 60. What Not To Do In This Verification`
+- `MGP-SRC-031-H078` — `## 61. Quality Bar`
+- `MGP-SRC-031-H079` — `## 62. Final Rule For Prompt 02 Verification`
+
+### MGP-SRC-032 — `prompts/03_MANUAL_VERIFICATION_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md` — 67 headings
+
+- `MGP-SRC-032-H001` — `# prompts/03_MANUAL_VERIFICATION_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`
+- `MGP-SRC-032-H002` — `# My Gujarat Property — Prompt 03 Manual Verification: Public UI, Home, Header, Footer And Hero Search`
+- `MGP-SRC-032-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-032-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-032-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-032-H006` — `## 4. Verification Scope`
+- `MGP-SRC-032-H007` — `## 5. Verification Method`
+- `MGP-SRC-032-H008` — `## 6. Required File And Route Inspection`
+- `MGP-SRC-032-H009` — `## 7. Homepage Load Verification`
+- `MGP-SRC-032-H010` — `## 8. Existing Header Preservation Verification`
+- `MGP-SRC-032-H011` — `## 9. City Selector Preservation Verification`
+- `MGP-SRC-032-H012` — `## 10. Hero Search Section Verification`
+- `MGP-SRC-032-H013` — `## 11. Search Route Verification`
+- `MGP-SRC-032-H014` — `## 12. Guest Header Verification`
+- `MGP-SRC-032-H015` — `## 13. Logged-In Header Verification`
+- `MGP-SRC-032-H016` — `### Owner`
+- `MGP-SRC-032-H017` — `### Broker`
+- `MGP-SRC-032-H018` — `### Builder`
+- `MGP-SRC-032-H019` — `## 14. Admin Link Absence Verification`
+- `MGP-SRC-032-H020` — `## 15. Footer Verification`
+- `MGP-SRC-032-H021` — `## 16. Dashboard/Footer Separation Verification`
+- `MGP-SRC-032-H022` — `## 17. Dead Link Verification`
+- `MGP-SRC-032-H023` — `## 18. Fake Data Verification`
+- `MGP-SRC-032-H024` — `## 19. Hidden Contact Leak Verification`
+- `MGP-SRC-032-H025` — `## 20. Auth Trigger Verification`
+- `MGP-SRC-032-H026` — `## 21. Notification Bell Verification`
+- `MGP-SRC-032-H027` — `## 22. Profile Menu Verification`
+- `MGP-SRC-032-H028` — `## 23. Mobile Menu Verification`
+- `MGP-SRC-032-H029` — `## 24. Responsive Verification`
+- `MGP-SRC-032-H030` — `## 25. Browser Verification`
+- `MGP-SRC-032-H031` — `## 26. Accessibility Verification`
+- `MGP-SRC-032-H032` — `## 27. SEO Baseline Verification`
+- `MGP-SRC-032-H033` — `## 28. Performance Baseline Verification`
+- `MGP-SRC-032-H034` — `## 29. Security/Privacy Verification`
+- `MGP-SRC-032-H035` — `## 30. Build / Lint / Typecheck Verification`
+- `MGP-SRC-032-H036` — `## 31. Manual Route Smoke Test`
+- `MGP-SRC-032-H037` — `## 32. Search Form Manual Test`
+- `MGP-SRC-032-H038` — `## 33. City Selector Manual Test`
+- `MGP-SRC-032-H039` — `## 34. Header State Manual Test Matrix`
+- `MGP-SRC-032-H040` — `## 35. Public Footer Link Matrix`
+- `MGP-SRC-032-H041` — `## 36. Existing UI Regression Check`
+- `MGP-SRC-032-H042` — `## 37. Documentation Update Verification`
+- `MGP-SRC-032-H043` — `## 38. Feature Registry Verification`
+- `MGP-SRC-032-H044` — `## 39. Changelog Verification`
+- `MGP-SRC-032-H045` — `## 40. Bugs And Fixes Verification`
+- `MGP-SRC-032-H046` — `## 41. Manual Verification Doc Update`
+- `MGP-SRC-032-H047` — `## 42. Security Checklist Verification`
+- `MGP-SRC-032-H048` — `## 43. Performance Checklist Verification`
+- `MGP-SRC-032-H049` — `## 44. Deployment Rollback Verification`
+- `MGP-SRC-032-H050` — `## 45. API Provider Status Verification`
+- `MGP-SRC-032-H051` — `## 46. Brain Update Verification`
+- `MGP-SRC-032-H052` — `## 47. Verification Result Decision`
+- `MGP-SRC-032-H053` — `### PASS`
+- `MGP-SRC-032-H054` — `### PARTIAL`
+- `MGP-SRC-032-H055` — `### FAIL`
+- `MGP-SRC-032-H056` — `### BLOCKED`
+- `MGP-SRC-032-H057` — `### SETUP_REQUIRED`
+- `MGP-SRC-032-H058` — `## 48. Prompt 04 Readiness Checklist`
+- `MGP-SRC-032-H059` — `## 49. Required Manual Verification Entry Format`
+- `MGP-SRC-032-H060` — `## Prompt 03 Verification — Public UI, Home, Header, Footer And Hero Search`
+- `MGP-SRC-032-H061` — `## 50. Required Final Response Format`
+- `MGP-SRC-032-H062` — `## 51. If Verification Fails`
+- `MGP-SRC-032-H063` — `## 52. If Verification Is Partial`
+- `MGP-SRC-032-H064` — `## 53. If Verification Passes`
+- `MGP-SRC-032-H065` — `## 54. What Not To Do In This Verification`
+- `MGP-SRC-032-H066` — `## 55. Quality Bar`
+- `MGP-SRC-032-H067` — `## 56. Final Rule For Prompt 03 Verification`
+
+### MGP-SRC-033 — `prompts/03_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md` — 85 headings
+
+- `MGP-SRC-033-H001` — `# prompts/03_PUBLIC_UI_HOME_HEADER_FOOTER_HERO.md`
+- `MGP-SRC-033-H002` — `# My Gujarat Property — Prompt 03: Public UI, Home, Header, Footer And Hero Search`
+- `MGP-SRC-033-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-033-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-033-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-033-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-033-H007` — `## 5. Critical Preservation Rule`
+- `MGP-SRC-033-H008` — `## 6. Implementation Scope`
+- `MGP-SRC-033-H009` — `### 6.1 Public Layout`
+- `MGP-SRC-033-H010` — `### 6.2 Header`
+- `MGP-SRC-033-H011` — `### 6.3 Footer`
+- `MGP-SRC-033-H012` — `### 6.4 Homepage`
+- `MGP-SRC-033-H013` — `### 6.5 Auth Integration`
+- `MGP-SRC-033-H014` — `### 6.6 Responsive UI`
+- `MGP-SRC-033-H015` — `### 6.7 Docs And Verification`
+- `MGP-SRC-033-H016` — `## 7. Out Of Scope For This Phase`
+- `MGP-SRC-033-H017` — `## 8. Design Direction`
+- `MGP-SRC-033-H018` — `## 9. Brand Rules`
+- `MGP-SRC-033-H019` — `## 10. Header Requirements`
+- `MGP-SRC-033-H020` — `### 10.1 Guest Header`
+- `MGP-SRC-033-H021` — `### 10.2 Logged-In Owner Header`
+- `MGP-SRC-033-H022` — `### 10.3 Logged-In Broker Header`
+- `MGP-SRC-033-H023` — `### 10.4 Logged-In Builder Header`
+- `MGP-SRC-033-H024` — `### 10.5 Admin/Staff`
+- `MGP-SRC-033-H025` — `## 11. Header Mobile Rules`
+- `MGP-SRC-033-H026` — `## 12. City Selector Rules`
+- `MGP-SRC-033-H027` — `## 13. Hero Search Section Requirements`
+- `MGP-SRC-033-H028` — `## 14. Old Homepage Hero Merge Rule`
+- `MGP-SRC-033-H029` — `## 15. Search Route Placeholder Rules`
+- `MGP-SRC-033-H030` — `## 16. Protected CTA Rules`
+- `MGP-SRC-033-H031` — `## 17. Footer Requirements`
+- `MGP-SRC-033-H032` — `## 18. Dashboard/Footer Separation Rule`
+- `MGP-SRC-033-H033` — `## 19. Public Navigation Rules`
+- `MGP-SRC-033-H034` — `## 20. Auth Integration Rules`
+- `MGP-SRC-033-H035` — `## 21. Notification Bell Rules`
+- `MGP-SRC-033-H036` — `## 22. Profile Menu Rules`
+- `MGP-SRC-033-H037` — `## 23. Theme Toggle Rules`
+- `MGP-SRC-033-H038` — `## 24. Homepage Content Sections`
+- `MGP-SRC-033-H039` — `## 25. Homepage Copy Rules`
+- `MGP-SRC-033-H040` — `## 26. Public Legal/Disclaimer Baseline`
+- `MGP-SRC-033-H041` — `## 27. No AI Rule For This Phase`
+- `MGP-SRC-033-H042` — `## 28. No Provider Integration Rule For This Phase`
+- `MGP-SRC-033-H043` — `## 29. No Fake Data Rule`
+- `MGP-SRC-033-H044` — `## 30. SEO Baseline For Public UI`
+- `MGP-SRC-033-H045` — `## 31. Accessibility Requirements`
+- `MGP-SRC-033-H046` — `## 32. Responsive Requirements`
+- `MGP-SRC-033-H047` — `## 33. Interaction Rules`
+- `MGP-SRC-033-H048` — `## 34. Search Form Behavior`
+- `MGP-SRC-033-H049` — `## 35. Location / City Handling In This Phase`
+- `MGP-SRC-033-H050` — `## 36. Public Search Placeholder Route`
+- `MGP-SRC-033-H051` — `## 37. Header Route Safety`
+- `MGP-SRC-033-H052` — `## 38. Footer Route Safety`
+- `MGP-SRC-033-H053` — `## 39. Public Header No Admin Rule`
+- `MGP-SRC-033-H054` — `## 40. Existing Design Preservation Test`
+- `MGP-SRC-033-H055` — `## 41. Component Structure Recommendation`
+- `MGP-SRC-033-H056` — `## 42. State Handling Requirements`
+- `MGP-SRC-033-H057` — `## 43. Performance Requirements`
+- `MGP-SRC-033-H058` — `## 44. Image Rules`
+- `MGP-SRC-033-H059` — `## 45. Error Handling`
+- `MGP-SRC-033-H060` — `## 46. Build/Lint/Typecheck Requirements`
+- `MGP-SRC-033-H061` — `## 47. Manual Smoke Checks`
+- `MGP-SRC-033-H062` — `## 48. SQL Migration Rule`
+- `MGP-SRC-033-H063` — `## 49. API Provider Status Updates`
+- `MGP-SRC-033-H064` — `## 50. Feature Registry Updates`
+- `MGP-SRC-033-H065` — `## 51. Changelog Update`
+- `MGP-SRC-033-H066` — `## 52. Bugs And Fixes Update`
+- `MGP-SRC-033-H067` — `## 53. Manual Verification Update`
+- `MGP-SRC-033-H068` — `## 54. Security Checklist Update`
+- `MGP-SRC-033-H069` — `## 55. Performance Checklist Update`
+- `MGP-SRC-033-H070` — `## 56. Deployment Rollback Update`
+- `MGP-SRC-033-H071` — `## 57. Brain Update`
+- `MGP-SRC-033-H072` — `## 58. Expected Changed Files`
+- `MGP-SRC-033-H073` — `## 59. Expected Output From This Phase`
+- `MGP-SRC-033-H074` — `## 60. Forbidden Outcomes`
+- `MGP-SRC-033-H075` — `## 61. Phase Completion Status Rules`
+- `MGP-SRC-033-H076` — `### \`DONE\``
+- `MGP-SRC-033-H077` — `### \`PASS\``
+- `MGP-SRC-033-H078` — `### \`PARTIAL\``
+- `MGP-SRC-033-H079` — `### \`FAIL\``
+- `MGP-SRC-033-H080` — `### \`BLOCKED\``
+- `MGP-SRC-033-H081` — `## 62. Final Response Required Format`
+- `MGP-SRC-033-H082` — `## 63. Matching Manual Verification Reminder`
+- `MGP-SRC-033-H083` — `## 64. Common Public UI Bugs To Watch For`
+- `MGP-SRC-033-H084` — `## 65. Quality Bar`
+- `MGP-SRC-033-H085` — `## 66. Final Rule For Prompt 03`
+
+### MGP-SRC-034 — `prompts/04_MANUAL_VERIFICATION_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md` — 76 headings
+
+- `MGP-SRC-034-H001` — `# prompts/04_MANUAL_VERIFICATION_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`
+- `MGP-SRC-034-H002` — `# My Gujarat Property — Prompt 04 Manual Verification: Property, Project And Requirement System`
+- `MGP-SRC-034-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-034-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-034-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-034-H006` — `## 4. Verification Scope`
+- `MGP-SRC-034-H007` — `## 5. Verification Method`
+- `MGP-SRC-034-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-034-H009` — `## 7. Migration Verification`
+- `MGP-SRC-034-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-034-H011` — `## 9. Property Schema Verification`
+- `MGP-SRC-034-H012` — `## 10. Property Role Gate Verification`
+- `MGP-SRC-034-H013` — `## 11. Property Form Verification`
+- `MGP-SRC-034-H014` — `## 12. Project Schema Verification`
+- `MGP-SRC-034-H015` — `## 13. Project Role Gate Verification`
+- `MGP-SRC-034-H016` — `## 14. Project Form Verification`
+- `MGP-SRC-034-H017` — `## 15. Project Unit Inventory Verification`
+- `MGP-SRC-034-H018` — `## 16. Requirement Schema Verification`
+- `MGP-SRC-034-H019` — `## 17. Requirement Role Gate Verification`
+- `MGP-SRC-034-H020` — `## 18. Requirement Form Verification`
+- `MGP-SRC-034-H021` — `## 19. Dynamic Field Verification`
+- `MGP-SRC-034-H022` — `## 20. Validation Verification`
+- `MGP-SRC-034-H023` — `## 21. Status Workflow Verification`
+- `MGP-SRC-034-H024` — `## 22. Approval Workflow Verification`
+- `MGP-SRC-034-H025` — `## 23. Pause / Resume Verification`
+- `MGP-SRC-034-H026` — `## 24. Soft Delete Verification`
+- `MGP-SRC-034-H027` — `## 25. Dashboard Management Verification`
+- `MGP-SRC-034-H028` — `## 26. Public-Safe View Verification`
+- `MGP-SRC-034-H029` — `## 27. RLS Enabled Verification`
+- `MGP-SRC-034-H030` — `## 28. RLS Policy Verification`
+- `MGP-SRC-034-H031` — `### Properties`
+- `MGP-SRC-034-H032` — `### Projects`
+- `MGP-SRC-034-H033` — `### Requirements`
+- `MGP-SRC-034-H034` — `## 29. RLS SQL Test Suggestions`
+- `MGP-SRC-034-H035` — `## 30. Direct URL Bypass Verification`
+- `MGP-SRC-034-H036` — `## 31. Hidden Contact Verification`
+- `MGP-SRC-034-H037` — `## 32. Fake Data Verification`
+- `MGP-SRC-034-H038` — `## 33. Media Placeholder Verification`
+- `MGP-SRC-034-H039` — `## 34. Location Foundation Verification`
+- `MGP-SRC-034-H040` — `## 35. RERA Foundation Verification`
+- `MGP-SRC-034-H041` — `## 36. Subscription/Billing Gate Placeholder Verification`
+- `MGP-SRC-034-H042` — `## 37. Audit / Status Event Verification`
+- `MGP-SRC-034-H043` — `## 38. Error Handling Verification`
+- `MGP-SRC-034-H044` — `## 39. Responsive Verification`
+- `MGP-SRC-034-H045` — `## 40. Accessibility Verification`
+- `MGP-SRC-034-H046` — `## 41. Build / Lint / Typecheck Verification`
+- `MGP-SRC-034-H047` — `## 42. Migration Apply/Test Verification`
+- `MGP-SRC-034-H048` — `## 43. Server Action / API Verification`
+- `MGP-SRC-034-H049` — `## 44. Slug Verification`
+- `MGP-SRC-034-H050` — `## 45. Public Search/Detail Deferral Check`
+- `MGP-SRC-034-H051` — `## 46. Documentation Update Verification`
+- `MGP-SRC-034-H052` — `## 47. Feature Registry Verification`
+- `MGP-SRC-034-H053` — `## 48. Changelog Verification`
+- `MGP-SRC-034-H054` — `## 49. Bugs And Fixes Verification`
+- `MGP-SRC-034-H055` — `## 50. Manual Verification Doc Update`
+- `MGP-SRC-034-H056` — `## 51. Security Checklist Verification`
+- `MGP-SRC-034-H057` — `## 52. Performance Checklist Verification`
+- `MGP-SRC-034-H058` — `## 53. Deployment Rollback Verification`
+- `MGP-SRC-034-H059` — `## 54. API Provider Status Verification`
+- `MGP-SRC-034-H060` — `## 55. Brain Update Verification`
+- `MGP-SRC-034-H061` — `## 56. Verification Result Decision`
+- `MGP-SRC-034-H062` — `### PASS`
+- `MGP-SRC-034-H063` — `### PARTIAL`
+- `MGP-SRC-034-H064` — `### FAIL`
+- `MGP-SRC-034-H065` — `### BLOCKED`
+- `MGP-SRC-034-H066` — `### SETUP_REQUIRED`
+- `MGP-SRC-034-H067` — `## 57. Prompt 05 Readiness Checklist`
+- `MGP-SRC-034-H068` — `## 58. Required Manual Verification Entry Format`
+- `MGP-SRC-034-H069` — `## Prompt 04 Verification — Property, Project And Requirement System`
+- `MGP-SRC-034-H070` — `## 59. Required Final Response Format`
+- `MGP-SRC-034-H071` — `## 60. If Verification Fails`
+- `MGP-SRC-034-H072` — `## 61. If Verification Is Partial`
+- `MGP-SRC-034-H073` — `## 62. If Verification Passes`
+- `MGP-SRC-034-H074` — `## 63. What Not To Do In This Verification`
+- `MGP-SRC-034-H075` — `## 64. Quality Bar`
+- `MGP-SRC-034-H076` — `## 65. Final Rule For Prompt 04 Verification`
+
+### MGP-SRC-035 — `prompts/04_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md` — 110 headings
+
+- `MGP-SRC-035-H001` — `# prompts/04_PROPERTY_PROJECT_REQUIREMENT_SYSTEM.md`
+- `MGP-SRC-035-H002` — `# My Gujarat Property — Prompt 04: Property, Project And Requirement System`
+- `MGP-SRC-035-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-035-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-035-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-035-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-035-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-035-H008` — `### 5.1 Property System Foundation`
+- `MGP-SRC-035-H009` — `### 5.2 Project System Foundation`
+- `MGP-SRC-035-H010` — `### 5.3 Requirement System Foundation`
+- `MGP-SRC-035-H011` — `### 5.4 Dynamic Forms`
+- `MGP-SRC-035-H012` — `### 5.5 Moderation/Approval Foundation`
+- `MGP-SRC-035-H013` — `### 5.6 Docs Updates`
+- `MGP-SRC-035-H014` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-035-H015` — `## 7. Hard Role Rules`
+- `MGP-SRC-035-H016` — `## 8. Core Entity Statuses`
+- `MGP-SRC-035-H017` — `### 8.1 Draft/Publishing Status`
+- `MGP-SRC-035-H018` — `### 8.2 Approval Status`
+- `MGP-SRC-035-H019` — `### 8.3 Visibility Status`
+- `MGP-SRC-035-H020` — `## 9. Property Categories And Types`
+- `MGP-SRC-035-H021` — `### Residential`
+- `MGP-SRC-035-H022` — `### Commercial`
+- `MGP-SRC-035-H023` — `### Industrial`
+- `MGP-SRC-035-H024` — `### Land / Plot`
+- `MGP-SRC-035-H025` — `### PG / Hostel / Room`
+- `MGP-SRC-035-H026` — `### Business`
+- `MGP-SRC-035-H027` — `## 10. Property Purposes`
+- `MGP-SRC-035-H028` — `## 11. Property Common Fields`
+- `MGP-SRC-035-H029` — `## 12. Property Dynamic Field Rules`
+- `MGP-SRC-035-H030` — `### Flat / Apartment`
+- `MGP-SRC-035-H031` — `### Bungalow / Villa / Row House`
+- `MGP-SRC-035-H032` — `### Plot / Land`
+- `MGP-SRC-035-H033` — `### Shop / Office / Showroom`
+- `MGP-SRC-035-H034` — `### Industrial Shed / Warehouse`
+- `MGP-SRC-035-H035` — `### PG / Hostel / Room`
+- `MGP-SRC-035-H036` — `### Business`
+- `MGP-SRC-035-H037` — `## 13. Project Categories And Types`
+- `MGP-SRC-035-H038` — `## 14. Project Purposes`
+- `MGP-SRC-035-H039` — `## 15. Project Common Fields`
+- `MGP-SRC-035-H040` — `## 16. Project Unit Inventory Foundation`
+- `MGP-SRC-035-H041` — `## 17. Project Media Foundation Rules`
+- `MGP-SRC-035-H042` — `## 18. Requirement Categories`
+- `MGP-SRC-035-H043` — `## 19. Requirement Common Fields`
+- `MGP-SRC-035-H044` — `## 20. Location Hierarchy Foundation`
+- `MGP-SRC-035-H045` — `## 21. Contact Privacy Fields`
+- `MGP-SRC-035-H046` — `## 22. Form UX Requirements`
+- `MGP-SRC-035-H047` — `## 23. Form Steps Recommendation`
+- `MGP-SRC-035-H048` — `## 24. Validation Requirements`
+- `MGP-SRC-035-H049` — `## 25. Status Transition Rules`
+- `MGP-SRC-035-H050` — `## 26. Approval Workflow Foundation`
+- `MGP-SRC-035-H051` — `## 27. Slug Rules`
+- `MGP-SRC-035-H052` — `## 28. Public-Safe Views`
+- `MGP-SRC-035-H053` — `## 29. RLS Requirements`
+- `MGP-SRC-035-H054` — `### Properties`
+- `MGP-SRC-035-H055` — `### Projects`
+- `MGP-SRC-035-H056` — `### Requirements`
+- `MGP-SRC-035-H057` — `### Supporting Tables`
+- `MGP-SRC-035-H058` — `## 30. Permission Helper Requirements`
+- `MGP-SRC-035-H059` — `## 31. Routes To Implement Or Prepare`
+- `MGP-SRC-035-H060` — `## 32. Server Actions / API Routes`
+- `MGP-SRC-035-H061` — `## 33. Subscription/Billing Gate Placeholder`
+- `MGP-SRC-035-H062` — `## 34. Verification Gate Placeholder`
+- `MGP-SRC-035-H063` — `## 35. RERA Foundation Rules`
+- `MGP-SRC-035-H064` — `## 36. Media Placeholder Rules`
+- `MGP-SRC-035-H065` — `## 37. Location Placeholder Rules`
+- `MGP-SRC-035-H066` — `## 38. Dashboard Management Foundation`
+- `MGP-SRC-035-H067` — `## 39. Public Detail/Search Dependency`
+- `MGP-SRC-035-H068` — `## 40. Admin Moderation Dependency`
+- `MGP-SRC-035-H069` — `## 41. Audit Event Requirements`
+- `MGP-SRC-035-H070` — `## 42. Security And Privacy Rules`
+- `MGP-SRC-035-H071` — `## 43. Input Sanitization`
+- `MGP-SRC-035-H072` — `## 44. Error Handling`
+- `MGP-SRC-035-H073` — `## 45. UI States Required`
+- `MGP-SRC-035-H074` — `## 46. Responsive Requirements`
+- `MGP-SRC-035-H075` — `## 47. Accessibility Requirements`
+- `MGP-SRC-035-H076` — `## 48. Performance Requirements`
+- `MGP-SRC-035-H077` — `## 49. Migration Requirements`
+- `MGP-SRC-035-H078` — `## 50. Suggested Tables`
+- `MGP-SRC-035-H079` — `## 51. Suggested Indexes`
+- `MGP-SRC-035-H080` — `### Properties`
+- `MGP-SRC-035-H081` — `### Projects`
+- `MGP-SRC-035-H082` — `### Requirements`
+- `MGP-SRC-035-H083` — `### Project Units`
+- `MGP-SRC-035-H084` — `## 52. RLS Test Expectations`
+- `MGP-SRC-035-H085` — `## 53. Tests / Checks To Run`
+- `MGP-SRC-035-H086` — `## 54. Manual Smoke Checks If App Runs`
+- `MGP-SRC-035-H087` — `## 55. API Provider Status Updates`
+- `MGP-SRC-035-H088` — `## 56. Feature Registry Updates`
+- `MGP-SRC-035-H089` — `## 57. Changelog Update`
+- `MGP-SRC-035-H090` — `## 58. Bugs And Fixes Update`
+- `MGP-SRC-035-H091` — `## 59. Manual Verification Update`
+- `MGP-SRC-035-H092` — `## 60. Security Checklist Update`
+- `MGP-SRC-035-H093` — `## 61. Performance Checklist Update`
+- `MGP-SRC-035-H094` — `## 62. Deployment Rollback Update`
+- `MGP-SRC-035-H095` — `## 63. Brain Update`
+- `MGP-SRC-035-H096` — `## 64. Expected Changed Files`
+- `MGP-SRC-035-H097` — `## 65. Expected Output From This Phase`
+- `MGP-SRC-035-H098` — `## 66. Forbidden Outcomes`
+- `MGP-SRC-035-H099` — `## 67. Phase Completion Status Rules`
+- `MGP-SRC-035-H100` — `### \`DONE\``
+- `MGP-SRC-035-H101` — `### \`PASS\``
+- `MGP-SRC-035-H102` — `### \`PARTIAL\``
+- `MGP-SRC-035-H103` — `### \`FAIL\``
+- `MGP-SRC-035-H104` — `### \`BLOCKED\``
+- `MGP-SRC-035-H105` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-035-H106` — `## 68. Final Response Required Format`
+- `MGP-SRC-035-H107` — `## 69. Matching Manual Verification Reminder`
+- `MGP-SRC-035-H108` — `## 70. Common Bugs To Watch For`
+- `MGP-SRC-035-H109` — `## 71. Quality Bar`
+- `MGP-SRC-035-H110` — `## 72. Final Rule For Prompt 04`
+
+### MGP-SRC-036 — `prompts/05_MANUAL_VERIFICATION_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md` — 79 headings
+
+- `MGP-SRC-036-H001` — `# prompts/05_MANUAL_VERIFICATION_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`
+- `MGP-SRC-036-H002` — `# My Gujarat Property — Prompt 05 Manual Verification: Public Search, Detail Pages, Profiles And SEO`
+- `MGP-SRC-036-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-036-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-036-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-036-H006` — `## 4. Verification Scope`
+- `MGP-SRC-036-H007` — `## 5. Verification Method`
+- `MGP-SRC-036-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-036-H009` — `## 7. Route Verification`
+- `MGP-SRC-036-H010` — `## 8. Public Search Page Verification`
+- `MGP-SRC-036-H011` — `## 9. Search Query Param Verification`
+- `MGP-SRC-036-H012` — `## 10. Search Filter Verification`
+- `MGP-SRC-036-H013` — `## 11. Sort Verification`
+- `MGP-SRC-036-H014` — `## 12. Pagination Verification`
+- `MGP-SRC-036-H015` — `## 13. Search Card Verification`
+- `MGP-SRC-036-H016` — `### Property Cards`
+- `MGP-SRC-036-H017` — `### Project Cards`
+- `MGP-SRC-036-H018` — `### Requirement Cards`
+- `MGP-SRC-036-H019` — `## 14. Empty Search State Verification`
+- `MGP-SRC-036-H020` — `## 15. Public Data Source Verification`
+- `MGP-SRC-036-H021` — `## 16. Public-Safe View Verification`
+- `MGP-SRC-036-H022` — `## 17. Property Detail Page Verification`
+- `MGP-SRC-036-H023` — `## 18. Project Detail Page Verification`
+- `MGP-SRC-036-H024` — `## 19. Requirement Detail Behavior Verification`
+- `MGP-SRC-036-H025` — `## 20. Broker Public Profile Verification`
+- `MGP-SRC-036-H026` — `## 21. Builder Public Profile Verification`
+- `MGP-SRC-036-H027` — `## 22. Owner Public Profile Privacy Verification`
+- `MGP-SRC-036-H028` — `## 23. Contact / Inquiry CTA Verification`
+- `MGP-SRC-036-H029` — `## 24. Media Display Verification`
+- `MGP-SRC-036-H030` — `## 25. SEO Metadata Verification`
+- `MGP-SRC-036-H031` — `## 26. Canonical Verification`
+- `MGP-SRC-036-H032` — `## 27. Noindex Verification`
+- `MGP-SRC-036-H033` — `## 28. Structured Data / Schema Verification`
+- `MGP-SRC-036-H034` — `## 29. Breadcrumb Verification`
+- `MGP-SRC-036-H035` — `## 30. Sitemap Verification`
+- `MGP-SRC-036-H036` — `## 31. Robots Verification`
+- `MGP-SRC-036-H037` — `## 32. Slug Verification`
+- `MGP-SRC-036-H038` — `## 33. Public Unavailable State Verification`
+- `MGP-SRC-036-H039` — `## 34. Fake Data Verification`
+- `MGP-SRC-036-H040` — `## 35. Hidden Contact Deep Check`
+- `MGP-SRC-036-H041` — `## 36. Search Security Verification`
+- `MGP-SRC-036-H042` — `## 37. Direct URL Private Entity Verification`
+- `MGP-SRC-036-H043` — `## 38. Public Profile Private Data Verification`
+- `MGP-SRC-036-H044` — `## 39. Responsive Verification`
+- `MGP-SRC-036-H045` — `## 40. Mobile Filter Verification`
+- `MGP-SRC-036-H046` — `## 41. Detail Mobile CTA Verification`
+- `MGP-SRC-036-H047` — `## 42. Accessibility Verification`
+- `MGP-SRC-036-H048` — `## 43. Performance Verification`
+- `MGP-SRC-036-H049` — `## 44. Caching Verification`
+- `MGP-SRC-036-H050` — `## 45. Build / Lint / Typecheck Verification`
+- `MGP-SRC-036-H051` — `## 46. Migration Apply/Test Verification`
+- `MGP-SRC-036-H052` — `## 47. Route Smoke Test Matrix`
+- `MGP-SRC-036-H053` — `## 48. SEO Smoke Test Matrix`
+- `MGP-SRC-036-H054` — `## 49. Documentation Update Verification`
+- `MGP-SRC-036-H055` — `## 50. Feature Registry Verification`
+- `MGP-SRC-036-H056` — `## 51. Changelog Verification`
+- `MGP-SRC-036-H057` — `## 52. Bugs And Fixes Verification`
+- `MGP-SRC-036-H058` — `## 53. Manual Verification Doc Update`
+- `MGP-SRC-036-H059` — `## 54. Security Checklist Verification`
+- `MGP-SRC-036-H060` — `## 55. Performance Checklist Verification`
+- `MGP-SRC-036-H061` — `## 56. Deployment Rollback Verification`
+- `MGP-SRC-036-H062` — `## 57. API Provider Status Verification`
+- `MGP-SRC-036-H063` — `## 58. Brain Update Verification`
+- `MGP-SRC-036-H064` — `## 59. Verification Result Decision`
+- `MGP-SRC-036-H065` — `### PASS`
+- `MGP-SRC-036-H066` — `### PARTIAL`
+- `MGP-SRC-036-H067` — `### FAIL`
+- `MGP-SRC-036-H068` — `### BLOCKED`
+- `MGP-SRC-036-H069` — `### SETUP_REQUIRED`
+- `MGP-SRC-036-H070` — `## 60. Prompt 06 Readiness Checklist`
+- `MGP-SRC-036-H071` — `## 61. Required Manual Verification Entry Format`
+- `MGP-SRC-036-H072` — `## Prompt 05 Verification — Public Search, Detail Pages, Profiles And SEO`
+- `MGP-SRC-036-H073` — `## 62. Required Final Response Format`
+- `MGP-SRC-036-H074` — `## 63. If Verification Fails`
+- `MGP-SRC-036-H075` — `## 64. If Verification Is Partial`
+- `MGP-SRC-036-H076` — `## 65. If Verification Passes`
+- `MGP-SRC-036-H077` — `## 66. What Not To Do In This Verification`
+- `MGP-SRC-036-H078` — `## 67. Quality Bar`
+- `MGP-SRC-036-H079` — `## 68. Final Rule For Prompt 05 Verification`
+
+### MGP-SRC-037 — `prompts/05_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md` — 98 headings
+
+- `MGP-SRC-037-H001` — `# prompts/05_PUBLIC_SEARCH_DETAIL_PROFILE_SEO.md`
+- `MGP-SRC-037-H002` — `# My Gujarat Property — Prompt 05: Public Search, Detail Pages, Profiles And SEO`
+- `MGP-SRC-037-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-037-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-037-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-037-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-037-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-037-H008` — `### 5.1 Public Search`
+- `MGP-SRC-037-H009` — `### 5.2 Detail Pages`
+- `MGP-SRC-037-H010` — `### 5.3 Public Profiles`
+- `MGP-SRC-037-H011` — `### 5.4 SEO`
+- `MGP-SRC-037-H012` — `### 5.5 Docs`
+- `MGP-SRC-037-H013` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-037-H014` — `## 7. Hard Public-Safe Data Rules`
+- `MGP-SRC-037-H015` — `## 8. No Hidden Contact Rule`
+- `MGP-SRC-037-H016` — `## 9. Public Search Route Requirements`
+- `MGP-SRC-037-H017` — `## 10. Search Result Types`
+- `MGP-SRC-037-H018` — `## 11. Search Card Requirements`
+- `MGP-SRC-037-H019` — `### Property Card`
+- `MGP-SRC-037-H020` — `### Project Card`
+- `MGP-SRC-037-H021` — `### Requirement Card`
+- `MGP-SRC-037-H022` — `## 12. Search Empty State`
+- `MGP-SRC-037-H023` — `## 13. Search Pagination Requirements`
+- `MGP-SRC-037-H024` — `## 14. Search Sort Requirements`
+- `MGP-SRC-037-H025` — `## 15. Search Filter UX`
+- `MGP-SRC-037-H026` — `## 16. Property Detail Page Requirements`
+- `MGP-SRC-037-H027` — `## 17. Project Detail Page Requirements`
+- `MGP-SRC-037-H028` — `## 18. Requirement Detail Page Rules`
+- `MGP-SRC-037-H029` — `## 19. Published Entity Visibility Rules`
+- `MGP-SRC-037-H030` — `## 20. Broker Public Profile Requirements`
+- `MGP-SRC-037-H031` — `## 21. Builder Public Profile Requirements`
+- `MGP-SRC-037-H032` — `## 22. Owner Public Profile Rule`
+- `MGP-SRC-037-H033` — `## 23. Contact / Inquiry CTA Foundation`
+- `MGP-SRC-037-H034` — `## 24. Save / Share / Report CTA Foundation`
+- `MGP-SRC-037-H035` — `## 25. Media Display Rules`
+- `MGP-SRC-037-H036` — `## 26. SEO Metadata Requirements`
+- `MGP-SRC-037-H037` — `## 27. Title / Meta Rules`
+- `MGP-SRC-037-H038` — `## 28. Canonical URL Rules`
+- `MGP-SRC-037-H039` — `## 29. Robots / Noindex Rules`
+- `MGP-SRC-037-H040` — `## 30. Structured Data / Schema Rules`
+- `MGP-SRC-037-H041` — `## 31. Breadcrumb Requirements`
+- `MGP-SRC-037-H042` — `## 32. Sitemap Foundation`
+- `MGP-SRC-037-H043` — `## 33. Robots Foundation`
+- `MGP-SRC-037-H044` — `## 34. Slug Handling Requirements`
+- `MGP-SRC-037-H045` — `## 35. Search Query Security`
+- `MGP-SRC-037-H046` — `## 36. Public Search Data Source`
+- `MGP-SRC-037-H047` — `## 37. Filters To Implement`
+- `MGP-SRC-037-H048` — `## 38. Search Card Actions`
+- `MGP-SRC-037-H049` — `## 39. Detail Page Actions`
+- `MGP-SRC-037-H050` — `## 40. Detail Page Mobile UX`
+- `MGP-SRC-037-H051` — `## 41. Gallery Placeholder UX`
+- `MGP-SRC-037-H052` — `## 42. Public Profile Listing Sections`
+- `MGP-SRC-037-H053` — `## 43. Empty / Unavailable Detail States`
+- `MGP-SRC-037-H054` — `## 44. Legal/Safety Disclaimer`
+- `MGP-SRC-037-H055` — `## 45. Report Listing Placeholder`
+- `MGP-SRC-037-H056` — `## 46. Public Profile Claim Placeholder`
+- `MGP-SRC-037-H057` — `## 47. SEO Thin Content Rules`
+- `MGP-SRC-037-H058` — `## 48. Future Location SEO Page Boundary`
+- `MGP-SRC-037-H059` — `## 49. Multi-Language Boundary`
+- `MGP-SRC-037-H060` — `## 50. Performance Requirements`
+- `MGP-SRC-037-H061` — `## 51. Caching Requirements`
+- `MGP-SRC-037-H062` — `## 52. RLS / Security Requirements`
+- `MGP-SRC-037-H063` — `## 53. SQL Migration Rule`
+- `MGP-SRC-037-H064` — `## 54. Suggested Indexes`
+- `MGP-SRC-037-H065` — `### Properties`
+- `MGP-SRC-037-H066` — `### Projects`
+- `MGP-SRC-037-H067` — `### Requirements`
+- `MGP-SRC-037-H068` — `### Public Profiles`
+- `MGP-SRC-037-H069` — `## 55. Components To Implement Or Update`
+- `MGP-SRC-037-H070` — `## 56. Routes To Implement Or Update`
+- `MGP-SRC-037-H071` — `## 57. Redirect Rules`
+- `MGP-SRC-037-H072` — `## 58. Testing Requirements`
+- `MGP-SRC-037-H073` — `## 59. Manual Smoke Checks If App Runs`
+- `MGP-SRC-037-H074` — `## 60. SEO Smoke Checks`
+- `MGP-SRC-037-H075` — `## 61. API Provider Status Updates`
+- `MGP-SRC-037-H076` — `## 62. Feature Registry Updates`
+- `MGP-SRC-037-H077` — `## 63. Changelog Update`
+- `MGP-SRC-037-H078` — `## 64. Bugs And Fixes Update`
+- `MGP-SRC-037-H079` — `## 65. Manual Verification Update`
+- `MGP-SRC-037-H080` — `## 66. Security Checklist Update`
+- `MGP-SRC-037-H081` — `## 67. Performance Checklist Update`
+- `MGP-SRC-037-H082` — `## 68. Deployment Rollback Update`
+- `MGP-SRC-037-H083` — `## 69. Brain Update`
+- `MGP-SRC-037-H084` — `## 70. Expected Changed Files`
+- `MGP-SRC-037-H085` — `## 71. Expected Output From This Phase`
+- `MGP-SRC-037-H086` — `## 72. Forbidden Outcomes`
+- `MGP-SRC-037-H087` — `## 73. Phase Completion Status Rules`
+- `MGP-SRC-037-H088` — `### \`DONE\``
+- `MGP-SRC-037-H089` — `### \`PASS\``
+- `MGP-SRC-037-H090` — `### \`PARTIAL\``
+- `MGP-SRC-037-H091` — `### \`FAIL\``
+- `MGP-SRC-037-H092` — `### \`BLOCKED\``
+- `MGP-SRC-037-H093` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-037-H094` — `## 74. Final Response Required Format`
+- `MGP-SRC-037-H095` — `## 75. Matching Manual Verification Reminder`
+- `MGP-SRC-037-H096` — `## 76. Common Bugs To Watch For`
+- `MGP-SRC-037-H097` — `## 77. Quality Bar`
+- `MGP-SRC-037-H098` — `## 78. Final Rule For Prompt 05`
+
+### MGP-SRC-038 — `prompts/06_MANUAL_VERIFICATION_OWNER_BROKER_BUILDER_DASHBOARDS.md` — 80 headings
+
+- `MGP-SRC-038-H001` — `# prompts/06_MANUAL_VERIFICATION_OWNER_BROKER_BUILDER_DASHBOARDS.md`
+- `MGP-SRC-038-H002` — `# My Gujarat Property — Prompt 06 Manual Verification: Owner, Broker And Builder Dashboards`
+- `MGP-SRC-038-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-038-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-038-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-038-H006` — `## 4. Verification Scope`
+- `MGP-SRC-038-H007` — `## 5. Verification Method`
+- `MGP-SRC-038-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-038-H009` — `## 7. Dashboard Route Verification`
+- `MGP-SRC-038-H010` — `## 8. \`/dashboard\` Redirect Verification`
+- `MGP-SRC-038-H011` — `## 9. Guest Access Verification`
+- `MGP-SRC-038-H012` — `## 10. Owner Dashboard Access Verification`
+- `MGP-SRC-038-H013` — `## 11. Broker Dashboard Access Verification`
+- `MGP-SRC-038-H014` — `## 12. Builder Dashboard Access Verification`
+- `MGP-SRC-038-H015` — `## 13. Admin / Staff Separation Verification`
+- `MGP-SRC-038-H016` — `## 14. Direct URL Bypass Verification`
+- `MGP-SRC-038-H017` — `## 15. Shared Dashboard Shell Verification`
+- `MGP-SRC-038-H018` — `## 16. Owner Dashboard Content Verification`
+- `MGP-SRC-038-H019` — `## 17. Broker Dashboard Content Verification`
+- `MGP-SRC-038-H020` — `## 18. Builder Dashboard Content Verification`
+- `MGP-SRC-038-H021` — `## 19. Entity Management Verification`
+- `MGP-SRC-038-H022` — `### Owner`
+- `MGP-SRC-038-H023` — `### Broker`
+- `MGP-SRC-038-H024` — `### Builder`
+- `MGP-SRC-038-H025` — `## 20. Own-Data-Only Query Verification`
+- `MGP-SRC-038-H026` — `## 21. Overview Cards Verification`
+- `MGP-SRC-038-H027` — `## 22. Fake Dashboard Data Verification`
+- `MGP-SRC-038-H028` — `## 23. Leads / CRM Placeholder Verification`
+- `MGP-SRC-038-H029` — `## 24. Billing Placeholder Verification`
+- `MGP-SRC-038-H030` — `## 25. Verification Placeholder Verification`
+- `MGP-SRC-038-H031` — `## 26. Notification Placeholder Verification`
+- `MGP-SRC-038-H032` — `## 27. Support / Help Verification`
+- `MGP-SRC-038-H033` — `## 28. Saved Items / Recently Viewed Verification`
+- `MGP-SRC-038-H034` — `## 29. Profile / Settings Verification`
+- `MGP-SRC-038-H035` — `## 30. Role Change Request Verification`
+- `MGP-SRC-038-H036` — `## 31. Builder Agents / Team Placeholder Verification`
+- `MGP-SRC-038-H037` — `## 32. Ads / Promotions Placeholder Verification`
+- `MGP-SRC-038-H038` — `## 33. Public Profile Link Verification`
+- `MGP-SRC-038-H039` — `## 34. Navigation Verification`
+- `MGP-SRC-038-H040` — `## 35. Dashboard Footer Separation Verification`
+- `MGP-SRC-038-H041` — `## 36. Hidden Contact Verification`
+- `MGP-SRC-038-H042` — `## 37. Private Cache Verification`
+- `MGP-SRC-038-H043` — `## 38. Service Role / Secret Verification`
+- `MGP-SRC-038-H044` — `## 39. RLS Verification For New Tables`
+- `MGP-SRC-038-H045` — `## 40. Migration Verification`
+- `MGP-SRC-038-H046` — `## 41. Dashboard Query Performance Verification`
+- `MGP-SRC-038-H047` — `## 42. Responsive Verification`
+- `MGP-SRC-038-H048` — `## 43. Mobile Navigation Verification`
+- `MGP-SRC-038-H049` — `## 44. Accessibility Verification`
+- `MGP-SRC-038-H050` — `## 45. Build / Lint / Typecheck Verification`
+- `MGP-SRC-038-H051` — `## 46. Manual Smoke Test Matrix`
+- `MGP-SRC-038-H052` — `## 47. Dashboard Module Clickability Test`
+- `MGP-SRC-038-H053` — `## 48. Entity Action Test`
+- `MGP-SRC-038-H054` — `## 49. Error And Empty State Verification`
+- `MGP-SRC-038-H055` — `## 50. Documentation Update Verification`
+- `MGP-SRC-038-H056` — `## 51. Feature Registry Verification`
+- `MGP-SRC-038-H057` — `## 52. Changelog Verification`
+- `MGP-SRC-038-H058` — `## 53. Bugs And Fixes Verification`
+- `MGP-SRC-038-H059` — `## 54. Manual Verification Doc Update`
+- `MGP-SRC-038-H060` — `## 55. Security Checklist Verification`
+- `MGP-SRC-038-H061` — `## 56. Performance Checklist Verification`
+- `MGP-SRC-038-H062` — `## 57. Deployment Rollback Verification`
+- `MGP-SRC-038-H063` — `## 58. API Provider Status Verification`
+- `MGP-SRC-038-H064` — `## 59. Brain Update Verification`
+- `MGP-SRC-038-H065` — `## 60. Verification Result Decision`
+- `MGP-SRC-038-H066` — `### PASS`
+- `MGP-SRC-038-H067` — `### PARTIAL`
+- `MGP-SRC-038-H068` — `### FAIL`
+- `MGP-SRC-038-H069` — `### BLOCKED`
+- `MGP-SRC-038-H070` — `### SETUP_REQUIRED`
+- `MGP-SRC-038-H071` — `## 61. Prompt 07 Readiness Checklist`
+- `MGP-SRC-038-H072` — `## 62. Required Manual Verification Entry Format`
+- `MGP-SRC-038-H073` — `## Prompt 06 Verification — Owner, Broker And Builder Dashboards`
+- `MGP-SRC-038-H074` — `## 63. Required Final Response Format`
+- `MGP-SRC-038-H075` — `## 64. If Verification Fails`
+- `MGP-SRC-038-H076` — `## 65. If Verification Is Partial`
+- `MGP-SRC-038-H077` — `## 66. If Verification Passes`
+- `MGP-SRC-038-H078` — `## 67. What Not To Do In This Verification`
+- `MGP-SRC-038-H079` — `## 68. Quality Bar`
+- `MGP-SRC-038-H080` — `## 69. Final Rule For Prompt 06 Verification`
+
+### MGP-SRC-039 — `prompts/06_OWNER_BROKER_BUILDER_DASHBOARDS.md` — 93 headings
+
+- `MGP-SRC-039-H001` — `# prompts/06_OWNER_BROKER_BUILDER_DASHBOARDS.md`
+- `MGP-SRC-039-H002` — `# My Gujarat Property — Prompt 06: Owner, Broker And Builder Dashboards`
+- `MGP-SRC-039-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-039-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-039-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-039-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-039-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-039-H008` — `### 5.1 Shared Dashboard Shell`
+- `MGP-SRC-039-H009` — `### 5.2 Owner Dashboard`
+- `MGP-SRC-039-H010` — `### 5.3 Broker Dashboard`
+- `MGP-SRC-039-H011` — `### 5.4 Builder Dashboard`
+- `MGP-SRC-039-H012` — `### 5.5 Dashboard Data`
+- `MGP-SRC-039-H013` — `### 5.6 Docs`
+- `MGP-SRC-039-H014` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-039-H015` — `## 7. Hard Role Access Rules`
+- `MGP-SRC-039-H016` — `## 8. Dashboard Route Structure`
+- `MGP-SRC-039-H017` — `## 9. Dashboard Redirect Rules`
+- `MGP-SRC-039-H018` — `## 10. Shared Dashboard Shell Requirements`
+- `MGP-SRC-039-H019` — `## 11. Mobile Dashboard Navigation`
+- `MGP-SRC-039-H020` — `## 12. Owner Dashboard Requirements`
+- `MGP-SRC-039-H021` — `## 13. Broker Dashboard Requirements`
+- `MGP-SRC-039-H022` — `## 14. Builder Dashboard Requirements`
+- `MGP-SRC-039-H023` — `## 15. Entity Management Requirements`
+- `MGP-SRC-039-H024` — `### Owner`
+- `MGP-SRC-039-H025` — `### Broker`
+- `MGP-SRC-039-H026` — `### Builder`
+- `MGP-SRC-039-H027` — `## 16. Dashboard Overview Cards`
+- `MGP-SRC-039-H028` — `## 17. Analytics Widget Rules`
+- `MGP-SRC-039-H029` — `## 18. Leads/CRM Placeholder Rules`
+- `MGP-SRC-039-H030` — `## 19. Billing/Plan Placeholder Rules`
+- `MGP-SRC-039-H031` — `## 20. Verification Placeholder Rules`
+- `MGP-SRC-039-H032` — `## 21. Notification Foundation Rules`
+- `MGP-SRC-039-H033` — `## 22. Support / Help Foundation`
+- `MGP-SRC-039-H034` — `## 23. Saved Items / Recently Viewed Placeholder`
+- `MGP-SRC-039-H035` — `## 24. Profile And Settings Requirements`
+- `MGP-SRC-039-H036` — `## 25. Role Change Request Foundation`
+- `MGP-SRC-039-H037` — `## 26. Builder Agents / Team Placeholder`
+- `MGP-SRC-039-H038` — `## 27. Ads / Promotions Placeholder`
+- `MGP-SRC-039-H039` — `## 28. Public Profile Link Rules`
+- `MGP-SRC-039-H040` — `## 29. Dashboard Data Loading Rules`
+- `MGP-SRC-039-H041` — `## 30. RLS / Security Requirements`
+- `MGP-SRC-039-H042` — `## 31. Direct URL Bypass Protection`
+- `MGP-SRC-039-H043` — `## 32. Dashboard UI Requirements`
+- `MGP-SRC-039-H044` — `## 33. Dashboard Layout Rules`
+- `MGP-SRC-039-H045` — `## 34. Navigation Item Requirements`
+- `MGP-SRC-039-H046` — `## 35. Owner Navigation Items`
+- `MGP-SRC-039-H047` — `## 36. Broker Navigation Items`
+- `MGP-SRC-039-H048` — `## 37. Builder Navigation Items`
+- `MGP-SRC-039-H049` — `## 38. Form Entry Rules From Dashboard`
+- `MGP-SRC-039-H050` — `## 39. Listing Management Table/Card Rules`
+- `MGP-SRC-039-H051` — `## 40. Private Preview Rules`
+- `MGP-SRC-039-H052` — `## 41. Dashboard Search/Filter Rules`
+- `MGP-SRC-039-H053` — `## 42. Error Handling`
+- `MGP-SRC-039-H054` — `## 43. Loading / Empty / Setup States`
+- `MGP-SRC-039-H055` — `## 44. Notification Center Page Foundation`
+- `MGP-SRC-039-H056` — `## 45. Billing Page Foundation`
+- `MGP-SRC-039-H057` — `## 46. Verification Page Foundation`
+- `MGP-SRC-039-H058` — `## 47. Support Page Foundation`
+- `MGP-SRC-039-H059` — `## 48. Settings Page Foundation`
+- `MGP-SRC-039-H060` — `## 49. Profile Completeness`
+- `MGP-SRC-039-H061` — `## 50. Security / Privacy Deep Rules`
+- `MGP-SRC-039-H062` — `## 51. Performance Requirements`
+- `MGP-SRC-039-H063` — `## 52. Accessibility Requirements`
+- `MGP-SRC-039-H064` — `## 53. Responsive Requirements`
+- `MGP-SRC-039-H065` — `## 54. SQL Migration Rule`
+- `MGP-SRC-039-H066` — `## 55. Possible Dashboard-Support Tables`
+- `MGP-SRC-039-H067` — `## 56. RLS Requirements For New Tables`
+- `MGP-SRC-039-H068` — `## 57. Tests / Checks To Run`
+- `MGP-SRC-039-H069` — `## 58. Manual Smoke Checks If App Runs`
+- `MGP-SRC-039-H070` — `## 59. API Provider Status Updates`
+- `MGP-SRC-039-H071` — `## 60. Feature Registry Updates`
+- `MGP-SRC-039-H072` — `## 61. Changelog Update`
+- `MGP-SRC-039-H073` — `## 62. Bugs And Fixes Update`
+- `MGP-SRC-039-H074` — `## 63. Manual Verification Update`
+- `MGP-SRC-039-H075` — `## 64. Security Checklist Update`
+- `MGP-SRC-039-H076` — `## 65. Performance Checklist Update`
+- `MGP-SRC-039-H077` — `## 66. Deployment Rollback Update`
+- `MGP-SRC-039-H078` — `## 67. Brain Update`
+- `MGP-SRC-039-H079` — `## 68. Expected Changed Files`
+- `MGP-SRC-039-H080` — `## 69. Expected Output From This Phase`
+- `MGP-SRC-039-H081` — `## 70. Forbidden Outcomes`
+- `MGP-SRC-039-H082` — `## 71. Phase Completion Status Rules`
+- `MGP-SRC-039-H083` — `### \`DONE\``
+- `MGP-SRC-039-H084` — `### \`PASS\``
+- `MGP-SRC-039-H085` — `### \`PARTIAL\``
+- `MGP-SRC-039-H086` — `### \`FAIL\``
+- `MGP-SRC-039-H087` — `### \`BLOCKED\``
+- `MGP-SRC-039-H088` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-039-H089` — `## 72. Final Response Required Format`
+- `MGP-SRC-039-H090` — `## 73. Matching Manual Verification Reminder`
+- `MGP-SRC-039-H091` — `## 74. Common Bugs To Watch For`
+- `MGP-SRC-039-H092` — `## 75. Quality Bar`
+- `MGP-SRC-039-H093` — `## 76. Final Rule For Prompt 06`
+
+### MGP-SRC-040 — `prompts/07_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md` — 96 headings
+
+- `MGP-SRC-040-H001` — `# prompts/07_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`
+- `MGP-SRC-040-H002` — `# My Gujarat Property — Prompt 07: Admin, Staff And Super Admin System`
+- `MGP-SRC-040-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-040-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-040-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-040-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-040-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-040-H008` — `### 5.1 Admin Auth And Shell`
+- `MGP-SRC-040-H009` — `### 5.2 Internal Roles`
+- `MGP-SRC-040-H010` — `### 5.3 Staff Management Foundation`
+- `MGP-SRC-040-H011` — `### 5.4 Moderation System`
+- `MGP-SRC-040-H012` — `### 5.5 User Management Foundation`
+- `MGP-SRC-040-H013` — `### 5.6 Verification / Support / Reports / Fraud Foundation`
+- `MGP-SRC-040-H014` — `### 5.7 Billing / Provider / Settings Placeholders`
+- `MGP-SRC-040-H015` — `### 5.8 Audit / Maker-Checker`
+- `MGP-SRC-040-H016` — `### 5.9 Docs Updates`
+- `MGP-SRC-040-H017` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-040-H018` — `## 7. Hard Admin Separation Rules`
+- `MGP-SRC-040-H019` — `## 8. Internal User Types`
+- `MGP-SRC-040-H020` — `## 9. Permission Model Requirements`
+- `MGP-SRC-040-H021` — `## 10. Suggested Database Tables`
+- `MGP-SRC-040-H022` — `## 11. Staff Profiles Fields`
+- `MGP-SRC-040-H023` — `## 12. Staff Permissions Fields`
+- `MGP-SRC-040-H024` — `## 13. Staff Invite Fields`
+- `MGP-SRC-040-H025` — `## 14. Admin Audit Logs Fields`
+- `MGP-SRC-040-H026` — `## 15. Maker-Checker Foundation`
+- `MGP-SRC-040-H027` — `## 16. Admin Shell Requirements`
+- `MGP-SRC-040-H028` — `## 17. Admin Route Structure`
+- `MGP-SRC-040-H029` — `## 18. Admin Login Requirements`
+- `MGP-SRC-040-H030` — `## 19. Admin Dashboard Overview`
+- `MGP-SRC-040-H031` — `## 20. Moderation Queue Requirements`
+- `MGP-SRC-040-H032` — `## 21. Property Moderation Rules`
+- `MGP-SRC-040-H033` — `## 22. Project Moderation Rules`
+- `MGP-SRC-040-H034` — `## 23. Requirement Moderation Rules`
+- `MGP-SRC-040-H035` — `## 24. User Management Requirements`
+- `MGP-SRC-040-H036` — `## 25. Staff Management Requirements`
+- `MGP-SRC-040-H037` — `## 26. Verification Review Foundation`
+- `MGP-SRC-040-H038` — `## 27. Support Module Foundation`
+- `MGP-SRC-040-H039` — `## 28. Reports / Fraud Module Foundation`
+- `MGP-SRC-040-H040` — `## 29. Billing / Payment Admin Placeholder`
+- `MGP-SRC-040-H041` — `## 30. Provider Settings Placeholder`
+- `MGP-SRC-040-H042` — `## 31. Feature Flags / Settings Placeholder`
+- `MGP-SRC-040-H043` — `## 32. CMS / Blog / Legal / SEO / Location Placeholders`
+- `MGP-SRC-040-H044` — `## 33. Audit Log Requirements`
+- `MGP-SRC-040-H045` — `## 34. Internal Notes / Timeline`
+- `MGP-SRC-040-H046` — `## 35. Sensitive Data Rules`
+- `MGP-SRC-040-H047` — `## 36. Export Rules`
+- `MGP-SRC-040-H048` — `## 37. Bulk Action Rules`
+- `MGP-SRC-040-H049` — `## 38. Admin Search / Filters`
+- `MGP-SRC-040-H050` — `## 39. Admin Table / Detail UI`
+- `MGP-SRC-040-H051` — `## 40. Public Preview Rules`
+- `MGP-SRC-040-H052` — `## 41. Approval Action Requirements`
+- `MGP-SRC-040-H053` — `## 42. User Status Action Requirements`
+- `MGP-SRC-040-H054` — `## 43. Staff Action Requirements`
+- `MGP-SRC-040-H055` — `## 44. RLS / Security Requirements`
+- `MGP-SRC-040-H056` — `## 45. Direct URL Bypass Requirements`
+- `MGP-SRC-040-H057` — `## 46. Admin Noindex Rules`
+- `MGP-SRC-040-H058` — `## 47. Private Cache Rules`
+- `MGP-SRC-040-H059` — `## 48. Error Handling Rules`
+- `MGP-SRC-040-H060` — `## 49. Admin UI States Required`
+- `MGP-SRC-040-H061` — `## 50. Responsive Admin UI Requirements`
+- `MGP-SRC-040-H062` — `## 51. Accessibility Requirements`
+- `MGP-SRC-040-H063` — `## 52. Performance Requirements`
+- `MGP-SRC-040-H064` — `## 53. SQL Migration Rule`
+- `MGP-SRC-040-H065` — `## 54. Suggested Indexes`
+- `MGP-SRC-040-H066` — `### Staff`
+- `MGP-SRC-040-H067` — `### Permissions`
+- `MGP-SRC-040-H068` — `### Invites`
+- `MGP-SRC-040-H069` — `### Audit`
+- `MGP-SRC-040-H070` — `### Moderation`
+- `MGP-SRC-040-H071` — `## 55. Tests / Checks To Run`
+- `MGP-SRC-040-H072` — `## 56. Manual Smoke Checks If App Runs`
+- `MGP-SRC-040-H073` — `## 57. API Provider Status Updates`
+- `MGP-SRC-040-H074` — `## 58. Feature Registry Updates`
+- `MGP-SRC-040-H075` — `## 59. Changelog Update`
+- `MGP-SRC-040-H076` — `## 60. Bugs And Fixes Update`
+- `MGP-SRC-040-H077` — `## 61. Manual Verification Update`
+- `MGP-SRC-040-H078` — `## 62. Security Checklist Update`
+- `MGP-SRC-040-H079` — `## 63. Performance Checklist Update`
+- `MGP-SRC-040-H080` — `## 64. Deployment Rollback Update`
+- `MGP-SRC-040-H081` — `## 65. Brain Update`
+- `MGP-SRC-040-H082` — `## 66. Expected Changed Files`
+- `MGP-SRC-040-H083` — `## 67. Expected Output From This Phase`
+- `MGP-SRC-040-H084` — `## 68. Forbidden Outcomes`
+- `MGP-SRC-040-H085` — `## 69. Phase Completion Status Rules`
+- `MGP-SRC-040-H086` — `### \`DONE\``
+- `MGP-SRC-040-H087` — `### \`PASS\``
+- `MGP-SRC-040-H088` — `### \`PARTIAL\``
+- `MGP-SRC-040-H089` — `### \`FAIL\``
+- `MGP-SRC-040-H090` — `### \`BLOCKED\``
+- `MGP-SRC-040-H091` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-040-H092` — `## 70. Final Response Required Format`
+- `MGP-SRC-040-H093` — `## 71. Matching Manual Verification Reminder`
+- `MGP-SRC-040-H094` — `## 72. Common Bugs To Watch For`
+- `MGP-SRC-040-H095` — `## 73. Quality Bar`
+- `MGP-SRC-040-H096` — `## 74. Final Rule For Prompt 07`
+
+### MGP-SRC-041 — `prompts/07_MANUAL_VERIFICATION_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md` — 79 headings
+
+- `MGP-SRC-041-H001` — `# prompts/07_MANUAL_VERIFICATION_ADMIN_STAFF_SUPER_ADMIN_SYSTEM.md`
+- `MGP-SRC-041-H002` — `# My Gujarat Property — Prompt 07 Manual Verification: Admin, Staff And Super Admin System`
+- `MGP-SRC-041-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-041-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-041-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-041-H006` — `## 4. Verification Scope`
+- `MGP-SRC-041-H007` — `## 5. Verification Method`
+- `MGP-SRC-041-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-041-H009` — `## 7. Admin Route Verification`
+- `MGP-SRC-041-H010` — `## 8. Admin Login Verification`
+- `MGP-SRC-041-H011` — `## 9. Public Admin Link Verification`
+- `MGP-SRC-041-H012` — `## 10. Public User Admin Access Verification`
+- `MGP-SRC-041-H013` — `## 11. Internal Staff Status Verification`
+- `MGP-SRC-041-H014` — `## 12. Super Admin Verification`
+- `MGP-SRC-041-H015` — `## 13. Admin Verification`
+- `MGP-SRC-041-H016` — `## 14. Staff Permission Verification`
+- `MGP-SRC-041-H017` — `## 15. Permission-Aware Navigation Verification`
+- `MGP-SRC-041-H018` — `## 16. Staff Invite Verification`
+- `MGP-SRC-041-H019` — `## 17. Staff Management Verification`
+- `MGP-SRC-041-H020` — `## 18. Admin Shell Verification`
+- `MGP-SRC-041-H021` — `## 19. Admin Dashboard Overview Verification`
+- `MGP-SRC-041-H022` — `## 20. Moderation Queue Verification`
+- `MGP-SRC-041-H023` — `## 21. Property Moderation Action Verification`
+- `MGP-SRC-041-H024` — `## 22. Project Moderation Action Verification`
+- `MGP-SRC-041-H025` — `## 23. Requirement Moderation Action Verification`
+- `MGP-SRC-041-H026` — `## 24. Approval Workflow Security Verification`
+- `MGP-SRC-041-H027` — `## 25. User Management Verification`
+- `MGP-SRC-041-H028` — `## 26. User Status Action Verification`
+- `MGP-SRC-041-H029` — `## 27. Verification Review Module Verification`
+- `MGP-SRC-041-H030` — `## 28. Support Module Verification`
+- `MGP-SRC-041-H031` — `## 29. Reports / Fraud Module Verification`
+- `MGP-SRC-041-H032` — `## 30. Billing / Payment Admin Placeholder Verification`
+- `MGP-SRC-041-H033` — `## 31. Provider Settings Verification`
+- `MGP-SRC-041-H034` — `## 32. Feature Flags / Settings Verification`
+- `MGP-SRC-041-H035` — `## 33. CMS / Blog / Legal / SEO / Location Placeholder Verification`
+- `MGP-SRC-041-H036` — `## 34. Audit Log Verification`
+- `MGP-SRC-041-H037` — `## 35. Maker-Checker Verification`
+- `MGP-SRC-041-H038` — `## 36. Internal Notes / Timeline Verification`
+- `MGP-SRC-041-H039` — `## 37. Sensitive Data Access Verification`
+- `MGP-SRC-041-H040` — `## 38. Export / Bulk Action Verification`
+- `MGP-SRC-041-H041` — `## 39. Admin Search / Filter Verification`
+- `MGP-SRC-041-H042` — `## 40. Admin Noindex Verification`
+- `MGP-SRC-041-H043` — `## 41. Private Cache Verification`
+- `MGP-SRC-041-H044` — `## 42. Service Role / Secret Verification`
+- `MGP-SRC-041-H045` — `## 43. RLS Verification For Admin Tables`
+- `MGP-SRC-041-H046` — `## 44. RLS Test Suggestions`
+- `MGP-SRC-041-H047` — `## 45. Migration Verification`
+- `MGP-SRC-041-H048` — `## 46. Responsive Admin UI Verification`
+- `MGP-SRC-041-H049` — `## 47. Accessibility Verification`
+- `MGP-SRC-041-H050` — `## 48. Performance Verification`
+- `MGP-SRC-041-H051` — `## 49. Build / Lint / Typecheck Verification`
+- `MGP-SRC-041-H052` — `## 50. Manual Smoke Test Matrix`
+- `MGP-SRC-041-H053` — `## 51. Moderation Action Smoke Test`
+- `MGP-SRC-041-H054` — `## 52. Documentation Update Verification`
+- `MGP-SRC-041-H055` — `## 53. Feature Registry Verification`
+- `MGP-SRC-041-H056` — `## 54. Changelog Verification`
+- `MGP-SRC-041-H057` — `## 55. Bugs And Fixes Verification`
+- `MGP-SRC-041-H058` — `## 56. Manual Verification Doc Update`
+- `MGP-SRC-041-H059` — `## 57. Security Checklist Verification`
+- `MGP-SRC-041-H060` — `## 58. Performance Checklist Verification`
+- `MGP-SRC-041-H061` — `## 59. Deployment Rollback Verification`
+- `MGP-SRC-041-H062` — `## 60. API Provider Status Verification`
+- `MGP-SRC-041-H063` — `## 61. Brain Update Verification`
+- `MGP-SRC-041-H064` — `## 62. Verification Result Decision`
+- `MGP-SRC-041-H065` — `### PASS`
+- `MGP-SRC-041-H066` — `### PARTIAL`
+- `MGP-SRC-041-H067` — `### FAIL`
+- `MGP-SRC-041-H068` — `### BLOCKED`
+- `MGP-SRC-041-H069` — `### SETUP_REQUIRED`
+- `MGP-SRC-041-H070` — `## 63. Prompt 08 Readiness Checklist`
+- `MGP-SRC-041-H071` — `## 64. Required Manual Verification Entry Format`
+- `MGP-SRC-041-H072` — `## Prompt 07 Verification — Admin, Staff And Super Admin System`
+- `MGP-SRC-041-H073` — `## 65. Required Final Response Format`
+- `MGP-SRC-041-H074` — `## 66. If Verification Fails`
+- `MGP-SRC-041-H075` — `## 67. If Verification Is Partial`
+- `MGP-SRC-041-H076` — `## 68. If Verification Passes`
+- `MGP-SRC-041-H077` — `## 69. What Not To Do In This Verification`
+- `MGP-SRC-041-H078` — `## 70. Quality Bar`
+- `MGP-SRC-041-H079` — `## 71. Final Rule For Prompt 07 Verification`
+
+### MGP-SRC-042 — `prompts/08_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md` — 115 headings
+
+- `MGP-SRC-042-H001` — `# prompts/08_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`
+- `MGP-SRC-042-H002` — `# My Gujarat Property — Prompt 08: Leads, CRM, Requirements, Proposals And Messages`
+- `MGP-SRC-042-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-042-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-042-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-042-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-042-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-042-H008` — `### 5.1 Inquiry And Lead Foundation`
+- `MGP-SRC-042-H009` — `### 5.2 Contact Reveal Foundation`
+- `MGP-SRC-042-H010` — `### 5.3 Proposals And Requirement Matching`
+- `MGP-SRC-042-H011` — `### 5.4 Messaging Foundation`
+- `MGP-SRC-042-H012` — `### 5.5 Site Visits`
+- `MGP-SRC-042-H013` — `### 5.6 Saved Items / Saved Searches / Recently Viewed`
+- `MGP-SRC-042-H014` — `### 5.7 Notifications Foundation`
+- `MGP-SRC-042-H015` — `### 5.8 Docs`
+- `MGP-SRC-042-H016` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-042-H017` — `## 7. Hard Privacy Rules`
+- `MGP-SRC-042-H018` — `## 8. Main Entities To Implement Or Reuse`
+- `MGP-SRC-042-H019` — `## 9. Lead Sources`
+- `MGP-SRC-042-H020` — `## 10. Lead Status Values`
+- `MGP-SRC-042-H021` — `## 11. Lead Ownership Rules`
+- `MGP-SRC-042-H022` — `### Property Lead`
+- `MGP-SRC-042-H023` — `### Project Lead`
+- `MGP-SRC-042-H024` — `### Requirement Proposal Lead`
+- `MGP-SRC-042-H025` — `### Admin`
+- `MGP-SRC-042-H026` — `## 12. Duplicate Lead Prevention`
+- `MGP-SRC-042-H027` — `## 13. Inquiry Flow Requirements`
+- `MGP-SRC-042-H028` — `## 14. Contact Request And Reveal Requirements`
+- `MGP-SRC-042-H029` — `## 15. Consent Requirements`
+- `MGP-SRC-042-H030` — `## 16. Lead Timeline / Events`
+- `MGP-SRC-042-H031` — `## 17. Lead Notes`
+- `MGP-SRC-042-H032` — `## 18. Follow-Up Foundation`
+- `MGP-SRC-042-H033` — `## 19. CRM Kanban Foundation`
+- `MGP-SRC-042-H034` — `## 20. Proposal System Requirements`
+- `MGP-SRC-042-H035` — `## 21. Requirement Matching Foundation`
+- `MGP-SRC-042-H036` — `## 22. Builder Requirement Access Rules`
+- `MGP-SRC-042-H037` — `## 23. Messaging System Requirements`
+- `MGP-SRC-042-H038` — `## 24. Message Attachments Placeholder`
+- `MGP-SRC-042-H039` — `## 25. Message Privacy Rules`
+- `MGP-SRC-042-H040` — `## 26. Blocking And Reporting Foundation`
+- `MGP-SRC-042-H041` — `## 27. Site Visit Foundation`
+- `MGP-SRC-042-H042` — `## 28. Site Visit Safety Notice`
+- `MGP-SRC-042-H043` — `## 29. Saved Items Requirements`
+- `MGP-SRC-042-H044` — `## 30. Saved Searches Requirements`
+- `MGP-SRC-042-H045` — `## 31. Recently Viewed Requirements`
+- `MGP-SRC-042-H046` — `## 32. Notification Event Foundation`
+- `MGP-SRC-042-H047` — `## 33. Dashboard Integration Requirements`
+- `MGP-SRC-042-H048` — `### Owner Dashboard`
+- `MGP-SRC-042-H049` — `### Broker Dashboard`
+- `MGP-SRC-042-H050` — `### Builder Dashboard`
+- `MGP-SRC-042-H051` — `## 34. Admin Oversight Requirements`
+- `MGP-SRC-042-H052` — `## 35. RLS Requirements`
+- `MGP-SRC-042-H053` — `## 36. RLS Table Expectations`
+- `MGP-SRC-042-H054` — `## 37. SQL Migration Rule`
+- `MGP-SRC-042-H055` — `## 38. Suggested Indexes`
+- `MGP-SRC-042-H056` — `### Leads`
+- `MGP-SRC-042-H057` — `### Lead Participants`
+- `MGP-SRC-042-H058` — `### Contact Requests / Reveals`
+- `MGP-SRC-042-H059` — `### Proposals`
+- `MGP-SRC-042-H060` — `### Messages`
+- `MGP-SRC-042-H061` — `### Message Participants`
+- `MGP-SRC-042-H062` — `### Site Visits`
+- `MGP-SRC-042-H063` — `### Saved/Recent`
+- `MGP-SRC-042-H064` — `### Notifications`
+- `MGP-SRC-042-H065` — `## 39. Server Action / API Requirements`
+- `MGP-SRC-042-H066` — `## 40. Error Handling Rules`
+- `MGP-SRC-042-H067` — `## 41. Input Validation Rules`
+- `MGP-SRC-042-H068` — `## 42. Status Transition Rules`
+- `MGP-SRC-042-H069` — `## 43. Rate Limit / Abuse Rules`
+- `MGP-SRC-042-H070` — `## 44. Notification Provider Boundary`
+- `MGP-SRC-042-H071` — `## 45. Message Delivery Boundary`
+- `MGP-SRC-042-H072` — `## 46. Contact Reveal And Billing Boundary`
+- `MGP-SRC-042-H073` — `## 47. UI Requirements`
+- `MGP-SRC-042-H074` — `## 48. Lead List UI`
+- `MGP-SRC-042-H075` — `## 49. Lead Detail UI`
+- `MGP-SRC-042-H076` — `## 50. CRM Board/List UI`
+- `MGP-SRC-042-H077` — `## 51. Proposal UI`
+- `MGP-SRC-042-H078` — `## 52. Messaging UI`
+- `MGP-SRC-042-H079` — `## 53. Site Visit UI`
+- `MGP-SRC-042-H080` — `## 54. Saved Items UI`
+- `MGP-SRC-042-H081` — `## 55. Saved Search UI`
+- `MGP-SRC-042-H082` — `## 56. Recently Viewed UI`
+- `MGP-SRC-042-H083` — `## 57. Admin UI Integration`
+- `MGP-SRC-042-H084` — `## 58. Responsive Requirements`
+- `MGP-SRC-042-H085` — `## 59. Accessibility Requirements`
+- `MGP-SRC-042-H086` — `## 60. Performance Requirements`
+- `MGP-SRC-042-H087` — `## 61. Security / Privacy Deep Requirements`
+- `MGP-SRC-042-H088` — `## 62. Public SEO Boundary`
+- `MGP-SRC-042-H089` — `## 63. SQL / RLS Testing Expectations`
+- `MGP-SRC-042-H090` — `## 64. Tests / Checks To Run`
+- `MGP-SRC-042-H091` — `## 65. Manual Smoke Checks If App Runs`
+- `MGP-SRC-042-H092` — `## 66. API Provider Status Updates`
+- `MGP-SRC-042-H093` — `## 67. Feature Registry Updates`
+- `MGP-SRC-042-H094` — `## 68. Changelog Update`
+- `MGP-SRC-042-H095` — `## 69. Bugs And Fixes Update`
+- `MGP-SRC-042-H096` — `## 70. Manual Verification Update`
+- `MGP-SRC-042-H097` — `## 71. Security Checklist Update`
+- `MGP-SRC-042-H098` — `## 72. Performance Checklist Update`
+- `MGP-SRC-042-H099` — `## 73. Deployment Rollback Update`
+- `MGP-SRC-042-H100` — `## 74. Brain Update`
+- `MGP-SRC-042-H101` — `## 75. Expected Changed Files`
+- `MGP-SRC-042-H102` — `## 76. Expected Output From This Phase`
+- `MGP-SRC-042-H103` — `## 77. Forbidden Outcomes`
+- `MGP-SRC-042-H104` — `## 78. Phase Completion Status Rules`
+- `MGP-SRC-042-H105` — `### \`DONE\``
+- `MGP-SRC-042-H106` — `### \`PASS\``
+- `MGP-SRC-042-H107` — `### \`PARTIAL\``
+- `MGP-SRC-042-H108` — `### \`FAIL\``
+- `MGP-SRC-042-H109` — `### \`BLOCKED\``
+- `MGP-SRC-042-H110` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-042-H111` — `## 79. Final Response Required Format`
+- `MGP-SRC-042-H112` — `## 80. Matching Manual Verification Reminder`
+- `MGP-SRC-042-H113` — `## 81. Common Bugs To Watch For`
+- `MGP-SRC-042-H114` — `## 82. Quality Bar`
+- `MGP-SRC-042-H115` — `## 83. Final Rule For Prompt 08`
+
+### MGP-SRC-043 — `prompts/08_MANUAL_VERIFICATION_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md` — 92 headings
+
+- `MGP-SRC-043-H001` — `# prompts/08_MANUAL_VERIFICATION_LEADS_CRM_REQUIREMENTS_PROPOSALS_MESSAGES.md`
+- `MGP-SRC-043-H002` — `# My Gujarat Property — Prompt 08 Manual Verification: Leads, CRM, Requirements, Proposals And Messages`
+- `MGP-SRC-043-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-043-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-043-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-043-H006` — `## 4. Verification Scope`
+- `MGP-SRC-043-H007` — `## 5. Verification Method`
+- `MGP-SRC-043-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-043-H009` — `## 7. Migration Verification`
+- `MGP-SRC-043-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-043-H011` — `## 9. Inquiry Flow Verification`
+- `MGP-SRC-043-H012` — `## 10. Lead Creation Verification`
+- `MGP-SRC-043-H013` — `## 11. Duplicate Lead Prevention Verification`
+- `MGP-SRC-043-H014` — `## 12. Lead Participant Verification`
+- `MGP-SRC-043-H015` — `## 13. Lead Source Verification`
+- `MGP-SRC-043-H016` — `## 14. Lead Status And CRM Stage Verification`
+- `MGP-SRC-043-H017` — `## 15. Lead Timeline / Event Verification`
+- `MGP-SRC-043-H018` — `## 16. Lead Notes Verification`
+- `MGP-SRC-043-H019` — `## 17. Follow-Up Verification`
+- `MGP-SRC-043-H020` — `## 18. Contact Request Verification`
+- `MGP-SRC-043-H021` — `## 19. Contact Reveal Verification`
+- `MGP-SRC-043-H022` — `## 20. Contact Consent Verification`
+- `MGP-SRC-043-H023` — `## 21. Hidden Contact Deep Verification`
+- `MGP-SRC-043-H024` — `## 22. Proposal System Verification`
+- `MGP-SRC-043-H025` — `## 23. Proposal Status Verification`
+- `MGP-SRC-043-H026` — `## 24. Requirement Matching Verification`
+- `MGP-SRC-043-H027` — `## 25. Builder Matching Requirement Access Verification`
+- `MGP-SRC-043-H028` — `## 26. Messaging Thread Verification`
+- `MGP-SRC-043-H029` — `## 27. Message Sending Verification`
+- `MGP-SRC-043-H030` — `## 28. Message Status / Unread Verification`
+- `MGP-SRC-043-H031` — `## 29. Message Attachment Verification`
+- `MGP-SRC-043-H032` — `## 30. Message Privacy Verification`
+- `MGP-SRC-043-H033` — `## 31. Blocking / Reporting Verification`
+- `MGP-SRC-043-H034` — `## 32. Site Visit Verification`
+- `MGP-SRC-043-H035` — `## 33. Site Visit Status Verification`
+- `MGP-SRC-043-H036` — `## 34. Saved Items Verification`
+- `MGP-SRC-043-H037` — `## 35. Saved Searches Verification`
+- `MGP-SRC-043-H038` — `## 36. Recently Viewed Verification`
+- `MGP-SRC-043-H039` — `## 37. Notification Event Verification`
+- `MGP-SRC-043-H040` — `## 38. Dashboard Integration Verification`
+- `MGP-SRC-043-H041` — `### Owner`
+- `MGP-SRC-043-H042` — `### Broker`
+- `MGP-SRC-043-H043` — `### Builder`
+- `MGP-SRC-043-H044` — `## 39. Admin Oversight Verification`
+- `MGP-SRC-043-H045` — `## 40. RLS Enabled Verification`
+- `MGP-SRC-043-H046` — `## 41. RLS Policy Verification`
+- `MGP-SRC-043-H047` — `## 42. RLS Test Suggestions`
+- `MGP-SRC-043-H048` — `## 43. Direct URL Bypass Verification`
+- `MGP-SRC-043-H049` — `## 44. Private Noindex Verification`
+- `MGP-SRC-043-H050` — `## 45. Private Cache Verification`
+- `MGP-SRC-043-H051` — `## 46. Service Role / Secret Verification`
+- `MGP-SRC-043-H052` — `## 47. Fake Data Verification`
+- `MGP-SRC-043-H053` — `## 48. Rate Limit / Abuse Verification`
+- `MGP-SRC-043-H054` — `## 49. UI Verification — Lead List`
+- `MGP-SRC-043-H055` — `## 50. UI Verification — Lead Detail`
+- `MGP-SRC-043-H056` — `## 51. UI Verification — CRM Board/List`
+- `MGP-SRC-043-H057` — `## 52. UI Verification — Proposal Pages`
+- `MGP-SRC-043-H058` — `## 53. UI Verification — Message Threads`
+- `MGP-SRC-043-H059` — `## 54. UI Verification — Site Visits`
+- `MGP-SRC-043-H060` — `## 55. UI Verification — Saved Items/Searches/Recent`
+- `MGP-SRC-043-H061` — `## 56. Notification UI Verification`
+- `MGP-SRC-043-H062` — `## 57. Responsive Verification`
+- `MGP-SRC-043-H063` — `## 58. Accessibility Verification`
+- `MGP-SRC-043-H064` — `## 59. Performance Verification`
+- `MGP-SRC-043-H065` — `## 60. Build / Lint / Typecheck Verification`
+- `MGP-SRC-043-H066` — `## 61. Manual Smoke Test Matrix`
+- `MGP-SRC-043-H067` — `## 62. Documentation Update Verification`
+- `MGP-SRC-043-H068` — `## 63. Feature Registry Verification`
+- `MGP-SRC-043-H069` — `## 64. Changelog Verification`
+- `MGP-SRC-043-H070` — `## 65. Bugs And Fixes Verification`
+- `MGP-SRC-043-H071` — `## 66. Manual Verification Doc Update`
+- `MGP-SRC-043-H072` — `## 67. Security Checklist Verification`
+- `MGP-SRC-043-H073` — `## 68. Performance Checklist Verification`
+- `MGP-SRC-043-H074` — `## 69. Deployment Rollback Verification`
+- `MGP-SRC-043-H075` — `## 70. API Provider Status Verification`
+- `MGP-SRC-043-H076` — `## 71. Brain Update Verification`
+- `MGP-SRC-043-H077` — `## 72. Verification Result Decision`
+- `MGP-SRC-043-H078` — `### PASS`
+- `MGP-SRC-043-H079` — `### PARTIAL`
+- `MGP-SRC-043-H080` — `### FAIL`
+- `MGP-SRC-043-H081` — `### BLOCKED`
+- `MGP-SRC-043-H082` — `### SETUP_REQUIRED`
+- `MGP-SRC-043-H083` — `## 73. Prompt 09 Readiness Checklist`
+- `MGP-SRC-043-H084` — `## 74. Required Manual Verification Entry Format`
+- `MGP-SRC-043-H085` — `## Prompt 08 Verification — Leads, CRM, Requirements, Proposals And Messages`
+- `MGP-SRC-043-H086` — `## 75. Required Final Response Format`
+- `MGP-SRC-043-H087` — `## 76. If Verification Fails`
+- `MGP-SRC-043-H088` — `## 77. If Verification Is Partial`
+- `MGP-SRC-043-H089` — `## 78. If Verification Passes`
+- `MGP-SRC-043-H090` — `## 79. What Not To Do In This Verification`
+- `MGP-SRC-043-H091` — `## 80. Quality Bar`
+- `MGP-SRC-043-H092` — `## 81. Final Rule For Prompt 08 Verification`
+
+### MGP-SRC-044 — `prompts/09_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md` — 108 headings
+
+- `MGP-SRC-044-H001` — `# prompts/09_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`
+- `MGP-SRC-044-H002` — `# My Gujarat Property — Prompt 09: Billing, Payment, Subscription, Trial And GST`
+- `MGP-SRC-044-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-044-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-044-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-044-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-044-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-044-H008` — `### 5.1 Plan Catalog`
+- `MGP-SRC-044-H009` — `### 5.2 Subscription System`
+- `MGP-SRC-044-H010` — `### 5.3 Posting Gates`
+- `MGP-SRC-044-H011` — `### 5.4 Razorpay Payment Foundation`
+- `MGP-SRC-044-H012` — `### 5.5 Invoices And GST`
+- `MGP-SRC-044-H013` — `### 5.6 Trial / Coupon / Add-On Foundation`
+- `MGP-SRC-044-H014` — `### 5.7 Refund / Credit Note Foundation`
+- `MGP-SRC-044-H015` — `### 5.8 Admin Billing Foundation`
+- `MGP-SRC-044-H016` — `### 5.9 Docs`
+- `MGP-SRC-044-H017` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-044-H018` — `## 7. Hard Payment Rules`
+- `MGP-SRC-044-H019` — `## 8. Suggested Database Tables`
+- `MGP-SRC-044-H020` — `## 9. Plan Model Requirements`
+- `MGP-SRC-044-H021` — `## 10. Plan Feature Examples`
+- `MGP-SRC-044-H022` — `## 11. Role-Wise Plan Rules`
+- `MGP-SRC-044-H023` — `### Owner Plans`
+- `MGP-SRC-044-H024` — `### Broker Plans`
+- `MGP-SRC-044-H025` — `### Builder Plans`
+- `MGP-SRC-044-H026` — `## 12. Subscription Status Values`
+- `MGP-SRC-044-H027` — `## 13. Payment Order Status Values`
+- `MGP-SRC-044-H028` — `## 14. Payment Status Values`
+- `MGP-SRC-044-H029` — `## 15. Invoice Status Values`
+- `MGP-SRC-044-H030` — `## 16. GST Requirements`
+- `MGP-SRC-044-H031` — `## 17. Invoice Numbering Rules`
+- `MGP-SRC-044-H032` — `## 18. Trial Rules`
+- `MGP-SRC-044-H033` — `## 19. Coupon Rules`
+- `MGP-SRC-044-H034` — `## 20. Add-On Rules`
+- `MGP-SRC-044-H035` — `## 21. Usage Counter Requirements`
+- `MGP-SRC-044-H036` — `## 22. Posting Gate Requirements`
+- `MGP-SRC-044-H037` — `## 23. Contact Unlock Gate Requirements`
+- `MGP-SRC-044-H038` — `## 24. Pricing Page Requirements`
+- `MGP-SRC-044-H039` — `## 25. Checkout Flow Requirements`
+- `MGP-SRC-044-H040` — `## 26. Razorpay Provider Requirements`
+- `MGP-SRC-044-H041` — `## 27. Webhook Requirements`
+- `MGP-SRC-044-H042` — `## 28. Webhook Event Types`
+- `MGP-SRC-044-H043` — `## 29. Idempotency Requirements`
+- `MGP-SRC-044-H044` — `## 30. Payment Reconciliation Requirements`
+- `MGP-SRC-044-H045` — `## 31. Refund Foundation`
+- `MGP-SRC-044-H046` — `## 32. Credit Note Foundation`
+- `MGP-SRC-044-H047` — `## 33. Cancellation And Downgrade Rules`
+- `MGP-SRC-044-H048` — `## 34. Grace Period Rules`
+- `MGP-SRC-044-H049` — `## 35. Billing Dashboard Requirements`
+- `MGP-SRC-044-H050` — `## 36. Role Dashboard Billing Integration`
+- `MGP-SRC-044-H051` — `## 37. Admin Billing Requirements`
+- `MGP-SRC-044-H052` — `## 38. Admin Permission Requirements`
+- `MGP-SRC-044-H053` — `## 39. Audit Requirements`
+- `MGP-SRC-044-H054` — `## 40. RLS Requirements`
+- `MGP-SRC-044-H055` — `## 41. Public Plan Data Rules`
+- `MGP-SRC-044-H056` — `## 42. RLS Table Expectations`
+- `MGP-SRC-044-H057` — `## 43. SQL Migration Rule`
+- `MGP-SRC-044-H058` — `## 44. Suggested Indexes`
+- `MGP-SRC-044-H059` — `### Plans`
+- `MGP-SRC-044-H060` — `### Subscriptions`
+- `MGP-SRC-044-H061` — `### Usage Counters`
+- `MGP-SRC-044-H062` — `### Payment Orders / Attempts`
+- `MGP-SRC-044-H063` — `### Payments`
+- `MGP-SRC-044-H064` — `### Webhook Events`
+- `MGP-SRC-044-H065` — `### Invoices`
+- `MGP-SRC-044-H066` — `### Coupons / Redemptions`
+- `MGP-SRC-044-H067` — `### Refunds / Credit Notes`
+- `MGP-SRC-044-H068` — `## 45. Server Action / API Requirements`
+- `MGP-SRC-044-H069` — `## 46. Error Handling Rules`
+- `MGP-SRC-044-H070` — `## 47. Input Validation Rules`
+- `MGP-SRC-044-H071` — `## 48. Subscription Gate Integration Points`
+- `MGP-SRC-044-H072` — `## 49. Posting Gate UI Requirements`
+- `MGP-SRC-044-H073` — `## 50. Trial UI Requirements`
+- `MGP-SRC-044-H074` — `## 51. Coupon UI Requirements`
+- `MGP-SRC-044-H075` — `## 52. Invoice UI Requirements`
+- `MGP-SRC-044-H076` — `## 53. GST Profile UI Requirements`
+- `MGP-SRC-044-H077` — `## 54. Refund / Cancellation UI Requirements`
+- `MGP-SRC-044-H078` — `## 55. Admin Billing UI Requirements`
+- `MGP-SRC-044-H079` — `## 56. Private Cache / Noindex Rules`
+- `MGP-SRC-044-H080` — `## 57. Security Deep Requirements`
+- `MGP-SRC-044-H081` — `## 58. Webhook Security Deep Requirements`
+- `MGP-SRC-044-H082` — `## 59. RLS / SQL Testing Expectations`
+- `MGP-SRC-044-H083` — `## 60. Tests / Checks To Run`
+- `MGP-SRC-044-H084` — `## 61. Manual Smoke Checks If App Runs`
+- `MGP-SRC-044-H085` — `## 62. API Provider Status Updates`
+- `MGP-SRC-044-H086` — `## 63. Feature Registry Updates`
+- `MGP-SRC-044-H087` — `## 64. Changelog Update`
+- `MGP-SRC-044-H088` — `## 65. Bugs And Fixes Update`
+- `MGP-SRC-044-H089` — `## 66. Manual Verification Update`
+- `MGP-SRC-044-H090` — `## 67. Security Checklist Update`
+- `MGP-SRC-044-H091` — `## 68. Performance Checklist Update`
+- `MGP-SRC-044-H092` — `## 69. Deployment Rollback Update`
+- `MGP-SRC-044-H093` — `## 70. Brain Update`
+- `MGP-SRC-044-H094` — `## 71. Expected Changed Files`
+- `MGP-SRC-044-H095` — `## 72. Expected Output From This Phase`
+- `MGP-SRC-044-H096` — `## 73. Forbidden Outcomes`
+- `MGP-SRC-044-H097` — `## 74. Phase Completion Status Rules`
+- `MGP-SRC-044-H098` — `### \`DONE\``
+- `MGP-SRC-044-H099` — `### \`PASS\``
+- `MGP-SRC-044-H100` — `### \`PARTIAL\``
+- `MGP-SRC-044-H101` — `### \`FAIL\``
+- `MGP-SRC-044-H102` — `### \`BLOCKED\``
+- `MGP-SRC-044-H103` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-044-H104` — `## 75. Final Response Required Format`
+- `MGP-SRC-044-H105` — `## 76. Matching Manual Verification Reminder`
+- `MGP-SRC-044-H106` — `## 77. Common Bugs To Watch For`
+- `MGP-SRC-044-H107` — `## 78. Quality Bar`
+- `MGP-SRC-044-H108` — `## 79. Final Rule For Prompt 09`
+
+### MGP-SRC-045 — `prompts/09_MANUAL_VERIFICATION_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md` — 97 headings
+
+- `MGP-SRC-045-H001` — `# prompts/09_MANUAL_VERIFICATION_BILLING_PAYMENT_SUBSCRIPTION_TRIAL_GST.md`
+- `MGP-SRC-045-H002` — `# My Gujarat Property — Prompt 09 Manual Verification: Billing, Payment, Subscription, Trial And GST`
+- `MGP-SRC-045-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-045-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-045-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-045-H006` — `## 4. Verification Scope`
+- `MGP-SRC-045-H007` — `## 5. Verification Method`
+- `MGP-SRC-045-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-045-H009` — `## 7. Migration Verification`
+- `MGP-SRC-045-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-045-H011` — `## 9. Pricing Page Verification`
+- `MGP-SRC-045-H012` — `## 10. Plan Catalog Verification`
+- `MGP-SRC-045-H013` — `## 11. Role-Wise Plan Verification`
+- `MGP-SRC-045-H014` — `### Owner`
+- `MGP-SRC-045-H015` — `### Broker`
+- `MGP-SRC-045-H016` — `### Builder`
+- `MGP-SRC-045-H017` — `## 12. Subscription Model Verification`
+- `MGP-SRC-045-H018` — `## 13. Subscription Lifecycle Verification`
+- `MGP-SRC-045-H019` — `## 14. Plan Gate Helper Verification`
+- `MGP-SRC-045-H020` — `## 15. Posting Gate Verification`
+- `MGP-SRC-045-H021` — `## 16. Usage Counter Verification`
+- `MGP-SRC-045-H022` — `## 17. Checkout Order Verification`
+- `MGP-SRC-045-H023` — `## 18. Razorpay Provider Setup Verification`
+- `MGP-SRC-045-H024` — `## 19. Client Callback Verification`
+- `MGP-SRC-045-H025` — `## 20. Webhook Endpoint Verification`
+- `MGP-SRC-045-H026` — `## 21. Webhook Signature Verification`
+- `MGP-SRC-045-H027` — `## 22. Webhook Idempotency Verification`
+- `MGP-SRC-045-H028` — `## 23. Webhook Event Type Verification`
+- `MGP-SRC-045-H029` — `## 24. Payment Record Verification`
+- `MGP-SRC-045-H030` — `## 25. Payment Reconciliation Verification`
+- `MGP-SRC-045-H031` — `## 26. Invoice Generation Verification`
+- `MGP-SRC-045-H032` — `## 27. Invoice Numbering Verification`
+- `MGP-SRC-045-H033` — `## 28. GST Profile Verification`
+- `MGP-SRC-045-H034` — `## 29. GST Invoice Breakdown Verification`
+- `MGP-SRC-045-H035` — `## 30. Trial Verification`
+- `MGP-SRC-045-H036` — `## 31. Coupon Verification`
+- `MGP-SRC-045-H037` — `## 32. Add-On Verification`
+- `MGP-SRC-045-H038` — `## 33. Refund Verification`
+- `MGP-SRC-045-H039` — `## 34. Credit Note Verification`
+- `MGP-SRC-045-H040` — `## 35. Cancellation / Downgrade Verification`
+- `MGP-SRC-045-H041` — `## 36. Grace Period Verification`
+- `MGP-SRC-045-H042` — `## 37. Billing Dashboard Verification`
+- `MGP-SRC-045-H043` — `## 38. Owner/Broker/Builder Billing Integration Verification`
+- `MGP-SRC-045-H044` — `### Owner`
+- `MGP-SRC-045-H045` — `### Broker`
+- `MGP-SRC-045-H046` — `### Builder`
+- `MGP-SRC-045-H047` — `## 39. Admin Billing Verification`
+- `MGP-SRC-045-H048` — `## 40. Admin Billing Permission Verification`
+- `MGP-SRC-045-H049` — `## 41. Billing Audit Verification`
+- `MGP-SRC-045-H050` — `## 42. RLS Enabled Verification`
+- `MGP-SRC-045-H051` — `## 43. RLS Policy Verification`
+- `MGP-SRC-045-H052` — `## 44. RLS Test Suggestions`
+- `MGP-SRC-045-H053` — `## 45. Direct URL Bypass Verification`
+- `MGP-SRC-045-H054` — `## 46. Private Noindex Verification`
+- `MGP-SRC-045-H055` — `## 47. Private Cache Verification`
+- `MGP-SRC-045-H056` — `## 48. Service Role / Secret Verification`
+- `MGP-SRC-045-H057` — `## 49. Client Price Trust Verification`
+- `MGP-SRC-045-H058` — `## 50. Fake Payment / Billing Data Verification`
+- `MGP-SRC-045-H059` — `## 51. Payment Provider Setup-Required Verification`
+- `MGP-SRC-045-H060` — `## 52. Invoice PDF / Email Verification`
+- `MGP-SRC-045-H061` — `## 53. Posting Gate Smoke Verification`
+- `MGP-SRC-045-H062` — `## 54. Contact Unlock Gate Verification`
+- `MGP-SRC-045-H063` — `## 55. Public Plan Data Verification`
+- `MGP-SRC-045-H064` — `## 56. Admin Manual Grant Verification`
+- `MGP-SRC-045-H065` — `## 57. Admin Refund / Credit Note Verification`
+- `MGP-SRC-045-H066` — `## 58. Responsive Verification`
+- `MGP-SRC-045-H067` — `## 59. Accessibility Verification`
+- `MGP-SRC-045-H068` — `## 60. Performance Verification`
+- `MGP-SRC-045-H069` — `## 61. Build / Lint / Typecheck Verification`
+- `MGP-SRC-045-H070` — `## 62. Webhook Test Suggestions`
+- `MGP-SRC-045-H071` — `## 63. Manual Smoke Test Matrix`
+- `MGP-SRC-045-H072` — `## 64. Documentation Update Verification`
+- `MGP-SRC-045-H073` — `## 65. Feature Registry Verification`
+- `MGP-SRC-045-H074` — `## 66. Changelog Verification`
+- `MGP-SRC-045-H075` — `## 67. Bugs And Fixes Verification`
+- `MGP-SRC-045-H076` — `## 68. Manual Verification Doc Update`
+- `MGP-SRC-045-H077` — `## 69. Security Checklist Verification`
+- `MGP-SRC-045-H078` — `## 70. Performance Checklist Verification`
+- `MGP-SRC-045-H079` — `## 71. Deployment Rollback Verification`
+- `MGP-SRC-045-H080` — `## 72. API Provider Status Verification`
+- `MGP-SRC-045-H081` — `## 73. Brain Update Verification`
+- `MGP-SRC-045-H082` — `## 74. Verification Result Decision`
+- `MGP-SRC-045-H083` — `### PASS`
+- `MGP-SRC-045-H084` — `### PARTIAL`
+- `MGP-SRC-045-H085` — `### FAIL`
+- `MGP-SRC-045-H086` — `### BLOCKED`
+- `MGP-SRC-045-H087` — `### SETUP_REQUIRED`
+- `MGP-SRC-045-H088` — `## 75. Prompt 10 Readiness Checklist`
+- `MGP-SRC-045-H089` — `## 76. Required Manual Verification Entry Format`
+- `MGP-SRC-045-H090` — `## Prompt 09 Verification — Billing, Payment, Subscription, Trial And GST`
+- `MGP-SRC-045-H091` — `## 77. Required Final Response Format`
+- `MGP-SRC-045-H092` — `## 78. If Verification Fails`
+- `MGP-SRC-045-H093` — `## 79. If Verification Is Partial`
+- `MGP-SRC-045-H094` — `## 80. If Verification Passes`
+- `MGP-SRC-045-H095` — `## 81. What Not To Do In This Verification`
+- `MGP-SRC-045-H096` — `## 82. Quality Bar`
+- `MGP-SRC-045-H097` — `## 83. Final Rule For Prompt 09 Verification`
+
+### MGP-SRC-046 — `prompts/10_MANUAL_VERIFICATION_MEDIA_STORAGE_UPLOADS_R2_CDN.md` — 103 headings
+
+- `MGP-SRC-046-H001` — `# prompts/10_MANUAL_VERIFICATION_MEDIA_STORAGE_UPLOADS_R2_CDN.md`
+- `MGP-SRC-046-H002` — `# My Gujarat Property — Prompt 10 Manual Verification: Media Storage, Uploads, R2 And CDN`
+- `MGP-SRC-046-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-046-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-046-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-046-H006` — `## 4. Verification Scope`
+- `MGP-SRC-046-H007` — `## 5. Verification Method`
+- `MGP-SRC-046-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-046-H009` — `## 7. Migration Verification`
+- `MGP-SRC-046-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-046-H011` — `## 9. Provider Configuration Verification`
+- `MGP-SRC-046-H012` — `## 10. Provider Choice Verification`
+- `MGP-SRC-046-H013` — `## 11. Public / Private Bucket Strategy Verification`
+- `MGP-SRC-046-H014` — `## 12. Object Key Verification`
+- `MGP-SRC-046-H015` — `## 13. Upload Session Verification`
+- `MGP-SRC-046-H016` — `## 14. Signed Upload URL Verification`
+- `MGP-SRC-046-H017` — `## 15. Signed Download URL Verification`
+- `MGP-SRC-046-H018` — `## 16. Upload Completion Verification`
+- `MGP-SRC-046-H019` — `## 17. Server Upload Endpoint Verification`
+- `MGP-SRC-046-H020` — `## 18. File Type Validation Verification`
+- `MGP-SRC-046-H021` — `## 19. File Size / Dimension Verification`
+- `MGP-SRC-046-H022` — `## 20. Media Category Verification`
+- `MGP-SRC-046-H023` — `## 21. Property Media Verification`
+- `MGP-SRC-046-H024` — `## 22. Project Media Verification`
+- `MGP-SRC-046-H025` — `## 23. Requirement Media Verification`
+- `MGP-SRC-046-H026` — `## 24. Profile Media Verification`
+- `MGP-SRC-046-H027` — `## 25. Message Attachment Verification`
+- `MGP-SRC-046-H028` — `## 26. Verification / Admin Document Verification`
+- `MGP-SRC-046-H029` — `## 27. Ads Banner Boundary Verification`
+- `MGP-SRC-046-H030` — `## 28. Image Processing Verification`
+- `MGP-SRC-046-H031` — `## 29. WebP / AVIF Verification`
+- `MGP-SRC-046-H032` — `## 30. HEIC / HEIF Verification`
+- `MGP-SRC-046-H033` — `## 31. EXIF / Metadata Verification`
+- `MGP-SRC-046-H034` — `## 32. SVG Safety Verification`
+- `MGP-SRC-046-H035` — `## 33. PDF Verification`
+- `MGP-SRC-046-H036` — `## 34. Video Verification`
+- `MGP-SRC-046-H037` — `## 35. Virtual Tour URL Verification`
+- `MGP-SRC-046-H038` — `## 36. Malware Scan Verification`
+- `MGP-SRC-046-H039` — `## 37. Media Variant Verification`
+- `MGP-SRC-046-H040` — `## 38. Entity Media Link Verification`
+- `MGP-SRC-046-H041` — `## 39. Cover Image Verification`
+- `MGP-SRC-046-H042` — `## 40. Reorder Verification`
+- `MGP-SRC-046-H043` — `## 41. Delete / Soft Delete Verification`
+- `MGP-SRC-046-H044` — `## 42. Restore Verification`
+- `MGP-SRC-046-H045` — `## 43. Public Media View Verification`
+- `MGP-SRC-046-H046` — `## 44. Public Search / Detail Integration Verification`
+- `MGP-SRC-046-H047` — `### Search Cards`
+- `MGP-SRC-046-H048` — `### Property Detail`
+- `MGP-SRC-046-H049` — `### Project Detail`
+- `MGP-SRC-046-H050` — `### Profiles`
+- `MGP-SRC-046-H051` — `## 45. Dashboard Media Manager Verification`
+- `MGP-SRC-046-H052` — `## 46. Admin Media Verification`
+- `MGP-SRC-046-H053` — `## 47. Upload Security Deep Check`
+- `MGP-SRC-046-H054` — `## 48. Plan / Billing Limit Verification`
+- `MGP-SRC-046-H055` — `## 49. Hidden Contact Media Metadata Verification`
+- `MGP-SRC-046-H056` — `## 50. Provider Secret / Service Role Verification`
+- `MGP-SRC-046-H057` — `## 51. Fake Media Verification`
+- `MGP-SRC-046-H058` — `## 52. CDN / Cache Verification`
+- `MGP-SRC-046-H059` — `## 53. Orphan Cleanup Verification`
+- `MGP-SRC-046-H060` — `## 54. Media Audit Verification`
+- `MGP-SRC-046-H061` — `## 55. Direct URL / Object Access Verification`
+- `MGP-SRC-046-H062` — `## 56. Private Noindex Verification`
+- `MGP-SRC-046-H063` — `## 57. Private Cache Verification`
+- `MGP-SRC-046-H064` — `## 58. RLS Enabled Verification`
+- `MGP-SRC-046-H065` — `## 59. RLS Policy Verification`
+- `MGP-SRC-046-H066` — `## 60. RLS Test Suggestions`
+- `MGP-SRC-046-H067` — `## 61. Public Media API Verification`
+- `MGP-SRC-046-H068` — `## 62. Upload UI Verification`
+- `MGP-SRC-046-H069` — `## 63. Gallery UI Verification`
+- `MGP-SRC-046-H070` — `## 64. Crop / Rotate / Reorder UI Verification`
+- `MGP-SRC-046-H071` — `## 65. Public Image Performance Verification`
+- `MGP-SRC-046-H072` — `## 66. Build / Lint / Typecheck Verification`
+- `MGP-SRC-046-H073` — `## 67. Upload Test Suggestions`
+- `MGP-SRC-046-H074` — `## 68. Manual Smoke Test Matrix`
+- `MGP-SRC-046-H075` — `## 69. Responsive Verification`
+- `MGP-SRC-046-H076` — `## 70. Accessibility Verification`
+- `MGP-SRC-046-H077` — `## 71. Performance Verification`
+- `MGP-SRC-046-H078` — `## 72. Documentation Update Verification`
+- `MGP-SRC-046-H079` — `## 73. Feature Registry Verification`
+- `MGP-SRC-046-H080` — `## 74. Changelog Verification`
+- `MGP-SRC-046-H081` — `## 75. Bugs And Fixes Verification`
+- `MGP-SRC-046-H082` — `## 76. Manual Verification Doc Update`
+- `MGP-SRC-046-H083` — `## 77. Security Checklist Verification`
+- `MGP-SRC-046-H084` — `## 78. Performance Checklist Verification`
+- `MGP-SRC-046-H085` — `## 79. Deployment Rollback Verification`
+- `MGP-SRC-046-H086` — `## 80. API Provider Status Verification`
+- `MGP-SRC-046-H087` — `## 81. Brain Update Verification`
+- `MGP-SRC-046-H088` — `## 82. Verification Result Decision`
+- `MGP-SRC-046-H089` — `### PASS`
+- `MGP-SRC-046-H090` — `### PARTIAL`
+- `MGP-SRC-046-H091` — `### FAIL`
+- `MGP-SRC-046-H092` — `### BLOCKED`
+- `MGP-SRC-046-H093` — `### SETUP_REQUIRED`
+- `MGP-SRC-046-H094` — `## 83. Prompt 11 Readiness Checklist`
+- `MGP-SRC-046-H095` — `## 84. Required Manual Verification Entry Format`
+- `MGP-SRC-046-H096` — `## Prompt 10 Verification — Media Storage, Uploads, R2 And CDN`
+- `MGP-SRC-046-H097` — `## 85. Required Final Response Format`
+- `MGP-SRC-046-H098` — `## 86. If Verification Fails`
+- `MGP-SRC-046-H099` — `## 87. If Verification Is Partial`
+- `MGP-SRC-046-H100` — `## 88. If Verification Passes`
+- `MGP-SRC-046-H101` — `## 89. What Not To Do In This Verification`
+- `MGP-SRC-046-H102` — `## 90. Quality Bar`
+- `MGP-SRC-046-H103` — `## 91. Final Rule For Prompt 10 Verification`
+
+### MGP-SRC-047 — `prompts/10_MEDIA_STORAGE_UPLOADS_R2_CDN.md` — 116 headings
+
+- `MGP-SRC-047-H001` — `# prompts/10_MEDIA_STORAGE_UPLOADS_R2_CDN.md`
+- `MGP-SRC-047-H002` — `# My Gujarat Property — Prompt 10: Media Storage, Uploads, R2 And CDN`
+- `MGP-SRC-047-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-047-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-047-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-047-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-047-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-047-H008` — `### 5.1 Storage Provider Foundation`
+- `MGP-SRC-047-H009` — `### 5.2 Media Tables`
+- `MGP-SRC-047-H010` — `### 5.3 Image Uploads`
+- `MGP-SRC-047-H011` — `### 5.4 PDF Uploads`
+- `MGP-SRC-047-H012` — `### 5.5 Video Uploads`
+- `MGP-SRC-047-H013` — `### 5.6 360 / Virtual Tour Links`
+- `MGP-SRC-047-H014` — `### 5.7 Upload UI`
+- `MGP-SRC-047-H015` — `### 5.8 Public Delivery`
+- `MGP-SRC-047-H016` — `### 5.9 Docs`
+- `MGP-SRC-047-H017` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-047-H018` — `## 7. Hard Media Safety Rules`
+- `MGP-SRC-047-H019` — `## 8. Provider Configuration`
+- `MGP-SRC-047-H020` — `## 9. Storage Bucket Strategy`
+- `MGP-SRC-047-H021` — `## 10. Object Key Strategy`
+- `MGP-SRC-047-H022` — `## 11. File Type Rules`
+- `MGP-SRC-047-H023` — `## 12. Size And Dimension Rules`
+- `MGP-SRC-047-H024` — `## 13. Media Category Rules`
+- `MGP-SRC-047-H025` — `## 14. Property Media Rules`
+- `MGP-SRC-047-H026` — `## 15. Project Media Rules`
+- `MGP-SRC-047-H027` — `## 16. Requirement Media Rules`
+- `MGP-SRC-047-H028` — `## 17. Profile Media Rules`
+- `MGP-SRC-047-H029` — `## 18. Message Attachment Rules`
+- `MGP-SRC-047-H030` — `## 19. Verification / Admin Document Rules`
+- `MGP-SRC-047-H031` — `## 20. Ads Banner Boundary`
+- `MGP-SRC-047-H032` — `## 21. Upload Session Requirements`
+- `MGP-SRC-047-H033` — `## 22. Media Asset Fields`
+- `MGP-SRC-047-H034` — `## 23. Media Variant Fields`
+- `MGP-SRC-047-H035` — `## 24. Entity Media Link Fields`
+- `MGP-SRC-047-H036` — `## 25. Upload Processing Job Fields`
+- `MGP-SRC-047-H037` — `## 26. Image Processing Requirements`
+- `MGP-SRC-047-H038` — `## 27. HEIC / HEIF Handling`
+- `MGP-SRC-047-H039` — `## 28. SVG Safety Handling`
+- `MGP-SRC-047-H040` — `## 29. PDF Processing Requirements`
+- `MGP-SRC-047-H041` — `## 30. Video Processing Requirements`
+- `MGP-SRC-047-H042` — `## 31. 360 / Virtual Tour URL Requirements`
+- `MGP-SRC-047-H043` — `## 32. Gallery UX Requirements`
+- `MGP-SRC-047-H044` — `## 33. Crop / Rotate / Reorder Rules`
+- `MGP-SRC-047-H045` — `## 34. Alt Text / Caption Rules`
+- `MGP-SRC-047-H046` — `## 35. Public Media Delivery Rules`
+- `MGP-SRC-047-H047` — `## 36. Private Media Delivery Rules`
+- `MGP-SRC-047-H048` — `## 37. Signed URL Requirements`
+- `MGP-SRC-047-H049` — `## 38. Upload Security Validation`
+- `MGP-SRC-047-H050` — `## 39. Plan / Billing Limit Integration`
+- `MGP-SRC-047-H051` — `## 40. Role Permission Rules`
+- `MGP-SRC-047-H052` — `### Owner`
+- `MGP-SRC-047-H053` — `### Broker`
+- `MGP-SRC-047-H054` — `### Builder`
+- `MGP-SRC-047-H055` — `### Admin/Staff`
+- `MGP-SRC-047-H056` — `## 41. Media Moderation Foundation`
+- `MGP-SRC-047-H057` — `## 42. Malware Scan Placeholder`
+- `MGP-SRC-047-H058` — `## 43. Upload Rate Limit / Abuse Foundation`
+- `MGP-SRC-047-H059` — `## 44. Orphan Cleanup Requirements`
+- `MGP-SRC-047-H060` — `## 45. Delete / Restore Rules`
+- `MGP-SRC-047-H061` — `## 46. CDN Cache / Purge Requirements`
+- `MGP-SRC-047-H062` — `## 47. Public Search / Detail Integration`
+- `MGP-SRC-047-H063` — `## 48. Dashboard Integration`
+- `MGP-SRC-047-H064` — `## 49. Admin Integration`
+- `MGP-SRC-047-H065` — `## 50. API Routes / Server Actions`
+- `MGP-SRC-047-H066` — `## 51. Error Handling Rules`
+- `MGP-SRC-047-H067` — `## 52. Input Validation Rules`
+- `MGP-SRC-047-H068` — `## 53. RLS Requirements`
+- `MGP-SRC-047-H069` — `## 54. Public Media View Requirements`
+- `MGP-SRC-047-H070` — `## 55. RLS Table Expectations`
+- `MGP-SRC-047-H071` — `## 56. SQL Migration Rule`
+- `MGP-SRC-047-H072` — `## 57. Suggested Indexes`
+- `MGP-SRC-047-H073` — `### Upload Sessions`
+- `MGP-SRC-047-H074` — `### Media Assets`
+- `MGP-SRC-047-H075` — `### Media Variants`
+- `MGP-SRC-047-H076` — `### Entity Media Links`
+- `MGP-SRC-047-H077` — `### Processing Jobs`
+- `MGP-SRC-047-H078` — `### Audit/Cleanup`
+- `MGP-SRC-047-H079` — `## 58. Storage Provider Client Rules`
+- `MGP-SRC-047-H080` — `## 59. Upload Flow Requirements`
+- `MGP-SRC-047-H081` — `## 60. Fallback Upload Flow`
+- `MGP-SRC-047-H082` — `## 61. Public Image Component Requirements`
+- `MGP-SRC-047-H083` — `## 62. Gallery Interaction Requirements`
+- `MGP-SRC-047-H084` — `## 63. Cover Image Rules`
+- `MGP-SRC-047-H085` — `## 64. Reorder Rules`
+- `MGP-SRC-047-H086` — `## 65. Delete Rules`
+- `MGP-SRC-047-H087` — `## 66. Public Detail Media Requirements`
+- `MGP-SRC-047-H088` — `## 67. Dashboard Media Manager Requirements`
+- `MGP-SRC-047-H089` — `## 68. Admin Media Status Requirements`
+- `MGP-SRC-047-H090` — `## 69. CDN / Cache Headers`
+- `MGP-SRC-047-H091` — `## 70. Cleanup / Lifecycle Policy`
+- `MGP-SRC-047-H092` — `## 71. Rollback Requirements`
+- `MGP-SRC-047-H093` — `## 72. Provider Status Updates`
+- `MGP-SRC-047-H094` — `## 73. Feature Registry Updates`
+- `MGP-SRC-047-H095` — `## 74. Changelog Update`
+- `MGP-SRC-047-H096` — `## 75. Bugs And Fixes Update`
+- `MGP-SRC-047-H097` — `## 76. Manual Verification Update`
+- `MGP-SRC-047-H098` — `## 77. Security Checklist Update`
+- `MGP-SRC-047-H099` — `## 78. Performance Checklist Update`
+- `MGP-SRC-047-H100` — `## 79. Deployment Rollback Update`
+- `MGP-SRC-047-H101` — `## 80. Brain Update`
+- `MGP-SRC-047-H102` — `## 81. Expected Changed Files`
+- `MGP-SRC-047-H103` — `## 82. Expected Output From This Phase`
+- `MGP-SRC-047-H104` — `## 83. Forbidden Outcomes`
+- `MGP-SRC-047-H105` — `## 84. Phase Completion Status Rules`
+- `MGP-SRC-047-H106` — `### \`DONE\``
+- `MGP-SRC-047-H107` — `### \`PASS\``
+- `MGP-SRC-047-H108` — `### \`PARTIAL\``
+- `MGP-SRC-047-H109` — `### \`FAIL\``
+- `MGP-SRC-047-H110` — `### \`BLOCKED\``
+- `MGP-SRC-047-H111` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-047-H112` — `## 85. Final Response Required Format`
+- `MGP-SRC-047-H113` — `## 86. Matching Manual Verification Reminder`
+- `MGP-SRC-047-H114` — `## 87. Common Bugs To Watch For`
+- `MGP-SRC-047-H115` — `## 88. Quality Bar`
+- `MGP-SRC-047-H116` — `## 89. Final Rule For Prompt 10`
+
+### MGP-SRC-048 — `prompts/11_LOCATION_SEARCH_SEO_CMS_LEGAL.md` — 107 headings
+
+- `MGP-SRC-048-H001` — `# prompts/11_LOCATION_SEARCH_SEO_CMS_LEGAL.md`
+- `MGP-SRC-048-H002` — `# My Gujarat Property — Prompt 11: Location, Search, SEO, CMS And Legal`
+- `MGP-SRC-048-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-048-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-048-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-048-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-048-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-048-H008` — `### 5.1 Location Foundation`
+- `MGP-SRC-048-H009` — `### 5.2 Search Refinement`
+- `MGP-SRC-048-H010` — `### 5.3 SEO Foundation`
+- `MGP-SRC-048-H011` — `### 5.4 CMS Foundation`
+- `MGP-SRC-048-H012` — `### 5.5 Legal Foundation`
+- `MGP-SRC-048-H013` — `### 5.6 Admin Integration`
+- `MGP-SRC-048-H014` — `### 5.7 Docs`
+- `MGP-SRC-048-H015` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-048-H016` — `## 7. Hard SEO And Legal Rules`
+- `MGP-SRC-048-H017` — `## 8. Location Hierarchy Requirements`
+- `MGP-SRC-048-H018` — `## 9. Location Status Values`
+- `MGP-SRC-048-H019` — `## 10. Location Tables`
+- `MGP-SRC-048-H020` — `## 11. Location Fields`
+- `MGP-SRC-048-H021` — `## 12. Gujarati / Hindi / English Support`
+- `MGP-SRC-048-H022` — `## 13. Cascading Dropdown Requirements`
+- `MGP-SRC-048-H023` — `## 14. Missing Location Request Requirements`
+- `MGP-SRC-048-H024` — `## 15. Admin Location Management`
+- `MGP-SRC-048-H025` — `## 16. Search Parameter Normalization`
+- `MGP-SRC-048-H026` — `## 17. Search Filter Requirements`
+- `MGP-SRC-048-H027` — `## 18. Search Page SEO Rules`
+- `MGP-SRC-048-H028` — `## 19. SEO Landing Page Types`
+- `MGP-SRC-048-H029` — `## 20. SEO Metadata Requirements`
+- `MGP-SRC-048-H030` — `## 21. Canonical Rules`
+- `MGP-SRC-048-H031` — `## 22. Robots Rules`
+- `MGP-SRC-048-H032` — `## 23. Sitemap Requirements`
+- `MGP-SRC-048-H033` — `## 24. Structured Data / Schema Rules`
+- `MGP-SRC-048-H034` — `## 25. Redirect Manager Foundation`
+- `MGP-SRC-048-H035` — `## 26. Sold / Rented / Expired Listing SEO`
+- `MGP-SRC-048-H036` — `## 27. CMS Page Requirements`
+- `MGP-SRC-048-H037` — `## 28. Legal Page Requirements`
+- `MGP-SRC-048-H038` — `## 29. Consent Foundation`
+- `MGP-SRC-048-H039` — `## 30. Cookie / Privacy Preference Foundation`
+- `MGP-SRC-048-H040` — `## 31. Blog Foundation`
+- `MGP-SRC-048-H041` — `## 32. Support / Help Foundation`
+- `MGP-SRC-048-H042` — `## 33. Grievance / Takedown Foundation`
+- `MGP-SRC-048-H043` — `## 34. Admin SEO / CMS / Legal Requirements`
+- `MGP-SRC-048-H044` — `## 35. Admin Permission Requirements`
+- `MGP-SRC-048-H045` — `## 36. CMS HTML Safety`
+- `MGP-SRC-048-H046` — `## 37. SEO Content Quality Rules`
+- `MGP-SRC-048-H047` — `## 38. Location SEO Page Rules`
+- `MGP-SRC-048-H048` — `## 39. Search Result Count Rules`
+- `MGP-SRC-048-H049` — `## 40. Search Sorting Rules`
+- `MGP-SRC-048-H050` — `## 41. Search Pagination Rules`
+- `MGP-SRC-048-H051` — `## 42. Map / Nearby Boundary`
+- `MGP-SRC-048-H052` — `## 43. CMS / Blog Media Integration`
+- `MGP-SRC-048-H053` — `## 44. Public Legal Footer / Header Integration`
+- `MGP-SRC-048-H054` — `## 45. Footer / Sitemap Consistency`
+- `MGP-SRC-048-H055` — `## 46. Support Contact Rules`
+- `MGP-SRC-048-H056` — `## 47. Data Privacy / DPDP Foundation`
+- `MGP-SRC-048-H057` — `## 48. Platform Disclaimer Rules`
+- `MGP-SRC-048-H058` — `## 49. Redirect / 404 / 410 Rules`
+- `MGP-SRC-048-H059` — `## 50. Error Handling Rules`
+- `MGP-SRC-048-H060` — `## 51. Input Validation Rules`
+- `MGP-SRC-048-H061` — `## 52. RLS Requirements`
+- `MGP-SRC-048-H062` — `## 53. Suggested Tables`
+- `MGP-SRC-048-H063` — `## 54. RLS Table Expectations`
+- `MGP-SRC-048-H064` — `## 55. SQL Migration Rule`
+- `MGP-SRC-048-H065` — `## 56. Suggested Indexes`
+- `MGP-SRC-048-H066` — `### Locations`
+- `MGP-SRC-048-H067` — `### Aliases / Translations`
+- `MGP-SRC-048-H068` — `### Missing Requests`
+- `MGP-SRC-048-H069` — `### Search Support`
+- `MGP-SRC-048-H070` — `### SEO/CMS`
+- `MGP-SRC-048-H071` — `### Redirects`
+- `MGP-SRC-048-H072` — `### Consent`
+- `MGP-SRC-048-H073` — `## 57. Server Action / API Requirements`
+- `MGP-SRC-048-H074` — `## 58. Public Search / SEO Integration With Existing Work`
+- `MGP-SRC-048-H075` — `## 59. Public Requirement SEO Boundary`
+- `MGP-SRC-048-H076` — `## 60. Admin Direct URL Protection`
+- `MGP-SRC-048-H077` — `## 61. Public Direct URL Handling`
+- `MGP-SRC-048-H078` — `## 62. Private Cache / Noindex Rules`
+- `MGP-SRC-048-H079` — `## 63. Performance Requirements`
+- `MGP-SRC-048-H080` — `## 64. Accessibility Requirements`
+- `MGP-SRC-048-H081` — `## 65. Responsive Requirements`
+- `MGP-SRC-048-H082` — `## 66. Tests / Checks To Run`
+- `MGP-SRC-048-H083` — `## 67. Manual Smoke Checks If App Runs`
+- `MGP-SRC-048-H084` — `## 68. API Provider Status Updates`
+- `MGP-SRC-048-H085` — `## 69. Feature Registry Updates`
+- `MGP-SRC-048-H086` — `## 70. Changelog Update`
+- `MGP-SRC-048-H087` — `## 71. Bugs And Fixes Update`
+- `MGP-SRC-048-H088` — `## 72. Manual Verification Update`
+- `MGP-SRC-048-H089` — `## 73. Security Checklist Update`
+- `MGP-SRC-048-H090` — `## 74. Performance Checklist Update`
+- `MGP-SRC-048-H091` — `## 75. Deployment Rollback Update`
+- `MGP-SRC-048-H092` — `## 76. Brain Update`
+- `MGP-SRC-048-H093` — `## 77. Expected Changed Files`
+- `MGP-SRC-048-H094` — `## 78. Expected Output From This Phase`
+- `MGP-SRC-048-H095` — `## 79. Forbidden Outcomes`
+- `MGP-SRC-048-H096` — `## 80. Phase Completion Status Rules`
+- `MGP-SRC-048-H097` — `### \`DONE\``
+- `MGP-SRC-048-H098` — `### \`PASS\``
+- `MGP-SRC-048-H099` — `### \`PARTIAL\``
+- `MGP-SRC-048-H100` — `### \`FAIL\``
+- `MGP-SRC-048-H101` — `### \`BLOCKED\``
+- `MGP-SRC-048-H102` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-048-H103` — `## 81. Final Response Required Format`
+- `MGP-SRC-048-H104` — `## 82. Matching Manual Verification Reminder`
+- `MGP-SRC-048-H105` — `## 83. Common Bugs To Watch For`
+- `MGP-SRC-048-H106` — `## 84. Quality Bar`
+- `MGP-SRC-048-H107` — `## 85. Final Rule For Prompt 11`
+
+### MGP-SRC-049 — `prompts/11_MANUAL_VERIFICATION_LOCATION_SEARCH_SEO_CMS_LEGAL.md` — 91 headings
+
+- `MGP-SRC-049-H001` — `# prompts/11_MANUAL_VERIFICATION_LOCATION_SEARCH_SEO_CMS_LEGAL.md`
+- `MGP-SRC-049-H002` — `# My Gujarat Property — Prompt 11 Manual Verification: Location, Search, SEO, CMS And Legal`
+- `MGP-SRC-049-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-049-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-049-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-049-H006` — `## 4. Verification Scope`
+- `MGP-SRC-049-H007` — `## 5. Verification Method`
+- `MGP-SRC-049-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-049-H009` — `## 7. Migration Verification`
+- `MGP-SRC-049-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-049-H011` — `## 9. Location Hierarchy Verification`
+- `MGP-SRC-049-H012` — `## 10. Gujarat Location Data Verification`
+- `MGP-SRC-049-H013` — `## 11. Location Status Verification`
+- `MGP-SRC-049-H014` — `## 12. Location Alias / Translation Verification`
+- `MGP-SRC-049-H015` — `## 13. Cascading Dropdown Verification`
+- `MGP-SRC-049-H016` — `## 14. Missing Location Request Verification`
+- `MGP-SRC-049-H017` — `## 15. Admin Location Management Verification`
+- `MGP-SRC-049-H018` — `## 16. Search Parameter Normalization Verification`
+- `MGP-SRC-049-H019` — `## 17. Search Filter Verification`
+- `MGP-SRC-049-H020` — `## 18. Search Sort Verification`
+- `MGP-SRC-049-H021` — `## 19. Search Pagination Verification`
+- `MGP-SRC-049-H022` — `## 20. Public Search Data Source Verification`
+- `MGP-SRC-049-H023` — `## 21. SEO Landing Page Verification`
+- `MGP-SRC-049-H024` — `## 22. SEO Metadata Verification`
+- `MGP-SRC-049-H025` — `## 23. Canonical URL Verification`
+- `MGP-SRC-049-H026` — `## 24. Robots Verification`
+- `MGP-SRC-049-H027` — `## 25. Sitemap Verification`
+- `MGP-SRC-049-H028` — `## 26. Sitemap Splitting Verification`
+- `MGP-SRC-049-H029` — `## 27. Structured Data / Schema Verification`
+- `MGP-SRC-049-H030` — `## 28. Hidden Contact SEO Deep Check`
+- `MGP-SRC-049-H031` — `## 29. Fake SEO Data Verification`
+- `MGP-SRC-049-H032` — `## 30. Sold / Rented / Expired SEO Verification`
+- `MGP-SRC-049-H033` — `## 31. Redirect Manager Verification`
+- `MGP-SRC-049-H034` — `## 32. 404 / 410 Verification`
+- `MGP-SRC-049-H035` — `## 33. CMS Page Verification`
+- `MGP-SRC-049-H036` — `## 34. CMS HTML Sanitizer Verification`
+- `MGP-SRC-049-H037` — `## 35. Blog Verification`
+- `MGP-SRC-049-H038` — `## 36. Legal Page Verification`
+- `MGP-SRC-049-H039` — `## 37. Platform Disclaimer Verification`
+- `MGP-SRC-049-H040` — `## 38. Consent Record Verification`
+- `MGP-SRC-049-H041` — `## 39. Cookie / Privacy Preference Verification`
+- `MGP-SRC-049-H042` — `## 40. Grievance / Takedown Verification`
+- `MGP-SRC-049-H043` — `## 41. Privacy Request Verification`
+- `MGP-SRC-049-H044` — `## 42. Support / Help Page Verification`
+- `MGP-SRC-049-H045` — `## 43. Public Footer / Link Verification`
+- `MGP-SRC-049-H046` — `## 44. Admin SEO / CMS / Legal / Location Verification`
+- `MGP-SRC-049-H047` — `## 45. Admin Permission Verification`
+- `MGP-SRC-049-H048` — `## 46. Admin Direct URL Verification`
+- `MGP-SRC-049-H049` — `## 47. Public Direct URL Verification`
+- `MGP-SRC-049-H050` — `## 48. RLS Enabled Verification`
+- `MGP-SRC-049-H051` — `## 49. RLS Policy Verification`
+- `MGP-SRC-049-H052` — `## 50. RLS Test Suggestions`
+- `MGP-SRC-049-H053` — `## 51. Private Noindex / Cache Verification`
+- `MGP-SRC-049-H054` — `## 52. CMS / Blog / Legal Cache Verification`
+- `MGP-SRC-049-H055` — `## 53. Search SQL Injection / Unsafe Query Verification`
+- `MGP-SRC-049-H056` — `## 54. SEO Spam / Thin Page Verification`
+- `MGP-SRC-049-H057` — `## 55. Legal Placeholder Verification`
+- `MGP-SRC-049-H058` — `## 56. No Fake Legal / Verification Claims`
+- `MGP-SRC-049-H059` — `## 57. Provider Setup Status Verification`
+- `MGP-SRC-049-H060` — `## 58. Responsive Verification`
+- `MGP-SRC-049-H061` — `## 59. Accessibility Verification`
+- `MGP-SRC-049-H062` — `## 60. Performance Verification`
+- `MGP-SRC-049-H063` — `## 61. Build / Lint / Typecheck Verification`
+- `MGP-SRC-049-H064` — `## 62. Automated Test Suggestions`
+- `MGP-SRC-049-H065` — `## 63. Manual Smoke Test Matrix`
+- `MGP-SRC-049-H066` — `## 64. Documentation Update Verification`
+- `MGP-SRC-049-H067` — `## 65. Feature Registry Verification`
+- `MGP-SRC-049-H068` — `## 66. Changelog Verification`
+- `MGP-SRC-049-H069` — `## 67. Bugs And Fixes Verification`
+- `MGP-SRC-049-H070` — `## 68. Manual Verification Doc Update`
+- `MGP-SRC-049-H071` — `## 69. Security Checklist Verification`
+- `MGP-SRC-049-H072` — `## 70. Performance Checklist Verification`
+- `MGP-SRC-049-H073` — `## 71. Deployment Rollback Verification`
+- `MGP-SRC-049-H074` — `## 72. API Provider Status Verification`
+- `MGP-SRC-049-H075` — `## 73. Brain Update Verification`
+- `MGP-SRC-049-H076` — `## 74. Verification Result Decision`
+- `MGP-SRC-049-H077` — `### PASS`
+- `MGP-SRC-049-H078` — `### PARTIAL`
+- `MGP-SRC-049-H079` — `### FAIL`
+- `MGP-SRC-049-H080` — `### BLOCKED`
+- `MGP-SRC-049-H081` — `### SETUP_REQUIRED`
+- `MGP-SRC-049-H082` — `## 75. Prompt 12 Readiness Checklist`
+- `MGP-SRC-049-H083` — `## 76. Required Manual Verification Entry Format`
+- `MGP-SRC-049-H084` — `## Prompt 11 Verification — Location, Search, SEO, CMS And Legal`
+- `MGP-SRC-049-H085` — `## 77. Required Final Response Format`
+- `MGP-SRC-049-H086` — `## 78. If Verification Fails`
+- `MGP-SRC-049-H087` — `## 79. If Verification Is Partial`
+- `MGP-SRC-049-H088` — `## 80. If Verification Passes`
+- `MGP-SRC-049-H089` — `## 81. What Not To Do In This Verification`
+- `MGP-SRC-049-H090` — `## 82. Quality Bar`
+- `MGP-SRC-049-H091` — `## 83. Final Rule For Prompt 11 Verification`
+
+### MGP-SRC-050 — `prompts/12_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md` — 116 headings
+
+- `MGP-SRC-050-H001` — `# prompts/12_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`
+- `MGP-SRC-050-H002` — `# My Gujarat Property — Prompt 12: Ads, Promotion, Notifications And Providers`
+- `MGP-SRC-050-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-050-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-050-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-050-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-050-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-050-H008` — `### 5.1 Builder Ads / Promotions`
+- `MGP-SRC-050-H009` — `### 5.2 Admin Ads Moderation`
+- `MGP-SRC-050-H010` — `### 5.3 Ad Serving Foundation`
+- `MGP-SRC-050-H011` — `### 5.4 Notification Foundation`
+- `MGP-SRC-050-H012` — `### 5.5 Provider Foundation`
+- `MGP-SRC-050-H013` — `### 5.6 Docs`
+- `MGP-SRC-050-H014` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-050-H015` — `## 7. Hard Ads And Provider Rules`
+- `MGP-SRC-050-H016` — `## 8. Suggested Database Tables`
+- `MGP-SRC-050-H017` — `## 9. Ad Campaign Status Values`
+- `MGP-SRC-050-H018` — `## 10. Creative Status Values`
+- `MGP-SRC-050-H019` — `## 11. Ad Placement Values`
+- `MGP-SRC-050-H020` — `## 12. Builder Ad Requirements`
+- `MGP-SRC-050-H021` — `## 13. Owner/Broker Ads Boundary`
+- `MGP-SRC-050-H022` — `## 14. Project Eligibility For Ads`
+- `MGP-SRC-050-H023` — `## 15. RERA Disclosure Requirements`
+- `MGP-SRC-050-H024` — `## 16. Ad Targeting Requirements`
+- `MGP-SRC-050-H025` — `## 17. Ad Scheduling Requirements`
+- `MGP-SRC-050-H026` — `## 18. Ad Payment / Credit Gate Requirements`
+- `MGP-SRC-050-H027` — `## 19. Ad Creative Requirements`
+- `MGP-SRC-050-H028` — `## 20. Ad Review Workflow`
+- `MGP-SRC-050-H029` — `## 21. Ad Serving Rules`
+- `MGP-SRC-050-H030` — `## 22. Sponsored Label Requirements`
+- `MGP-SRC-050-H031` — `## 23. Impression Tracking Foundation`
+- `MGP-SRC-050-H032` — `## 24. Click Tracking Foundation`
+- `MGP-SRC-050-H033` — `## 25. Ad Metrics Requirements`
+- `MGP-SRC-050-H034` — `## 26. Ad Fraud / Abuse Foundation`
+- `MGP-SRC-050-H035` — `## 27. Frequency Cap Foundation`
+- `MGP-SRC-050-H036` — `## 28. Ad Rotation / Priority Foundation`
+- `MGP-SRC-050-H037` — `## 29. Notification Event Types`
+- `MGP-SRC-050-H038` — `## 30. Notification Status Values`
+- `MGP-SRC-050-H039` — `## 31. Notification Center Requirements`
+- `MGP-SRC-050-H040` — `## 32. Notification Bell Requirements`
+- `MGP-SRC-050-H041` — `## 33. Notification Preferences Requirements`
+- `MGP-SRC-050-H042` — `## 34. Notification Templates`
+- `MGP-SRC-050-H043` — `## 35. Notification Deep Links`
+- `MGP-SRC-050-H044` — `## 36. Provider Modes`
+- `MGP-SRC-050-H045` — `## 37. Email Provider Foundation`
+- `MGP-SRC-050-H046` — `## 38. SMS Provider Foundation`
+- `MGP-SRC-050-H047` — `## 39. WhatsApp Provider Foundation`
+- `MGP-SRC-050-H048` — `## 40. Push Provider Foundation`
+- `MGP-SRC-050-H049` — `## 41. OTP Provider Boundary`
+- `MGP-SRC-050-H050` — `## 42. Payment Provider Boundary`
+- `MGP-SRC-050-H051` — `## 43. Maps Provider Boundary`
+- `MGP-SRC-050-H052` — `## 44. Media/CDN Provider Boundary`
+- `MGP-SRC-050-H053` — `## 45. Captcha / Anti-Abuse Provider Foundation`
+- `MGP-SRC-050-H054` — `## 46. Provider Registry Requirements`
+- `MGP-SRC-050-H055` — `## 47. Provider Delivery Logs`
+- `MGP-SRC-050-H056` — `## 48. Retry / DLQ Foundation`
+- `MGP-SRC-050-H057` — `## 49. Provider Webhook / Callback Foundation`
+- `MGP-SRC-050-H058` — `## 50. Notification Privacy Rules`
+- `MGP-SRC-050-H059` — `## 51. Notification Role Rules`
+- `MGP-SRC-050-H060` — `## 52. Notification Template Safety`
+- `MGP-SRC-050-H061` — `## 53. Notification Digest / Quiet Hours Foundation`
+- `MGP-SRC-050-H062` — `## 54. Provider Rate Limit And Cost Controls`
+- `MGP-SRC-050-H063` — `## 55. Provider Secret Rules`
+- `MGP-SRC-050-H064` — `## 56. RLS Requirements`
+- `MGP-SRC-050-H065` — `## 57. Public Ads View Requirements`
+- `MGP-SRC-050-H066` — `## 58. RLS Table Expectations`
+- `MGP-SRC-050-H067` — `## 59. SQL Migration Rule`
+- `MGP-SRC-050-H068` — `## 60. Suggested Indexes`
+- `MGP-SRC-050-H069` — `### Ad Campaigns`
+- `MGP-SRC-050-H070` — `### Ad Targets`
+- `MGP-SRC-050-H071` — `### Ad Events`
+- `MGP-SRC-050-H072` — `### Notifications`
+- `MGP-SRC-050-H073` — `### Notification Deliveries`
+- `MGP-SRC-050-H074` — `### Provider Logs`
+- `MGP-SRC-050-H075` — `### Provider Webhook Events`
+- `MGP-SRC-050-H076` — `## 61. Server Action / API Requirements`
+- `MGP-SRC-050-H077` — `## 62. Error Handling Rules`
+- `MGP-SRC-050-H078` — `## 63. Input Validation Rules`
+- `MGP-SRC-050-H079` — `## 64. Admin Permission Requirements`
+- `MGP-SRC-050-H080` — `## 65. Admin Ads UI Requirements`
+- `MGP-SRC-050-H081` — `## 66. Builder Ads UI Requirements`
+- `MGP-SRC-050-H082` — `## 67. Public Ad UI Requirements`
+- `MGP-SRC-050-H083` — `## 68. Notification UI Requirements`
+- `MGP-SRC-050-H084` — `## 69. Provider Admin UI Requirements`
+- `MGP-SRC-050-H085` — `## 70. Provider Setup Required UX`
+- `MGP-SRC-050-H086` — `## 71. In-App Notifications Versus External Delivery`
+- `MGP-SRC-050-H087` — `## 72. Notification Source Integration`
+- `MGP-SRC-050-H088` — `## 73. Idempotency Requirements`
+- `MGP-SRC-050-H089` — `## 74. Rate Limit Requirements`
+- `MGP-SRC-050-H090` — `## 75. Security / Privacy Deep Requirements`
+- `MGP-SRC-050-H091` — `## 76. Public SEO Boundary`
+- `MGP-SRC-050-H092` — `## 77. Public Search / SEO Ad Boundary`
+- `MGP-SRC-050-H093` — `## 78. API Provider Status Updates`
+- `MGP-SRC-050-H094` — `## 79. Feature Registry Updates`
+- `MGP-SRC-050-H095` — `## 80. Changelog Update`
+- `MGP-SRC-050-H096` — `## 81. Bugs And Fixes Update`
+- `MGP-SRC-050-H097` — `## 82. Manual Verification Update`
+- `MGP-SRC-050-H098` — `## 83. Security Checklist Update`
+- `MGP-SRC-050-H099` — `## 84. Performance Checklist Update`
+- `MGP-SRC-050-H100` — `## 85. Deployment Rollback Update`
+- `MGP-SRC-050-H101` — `## 86. Brain Update`
+- `MGP-SRC-050-H102` — `## 87. Expected Changed Files`
+- `MGP-SRC-050-H103` — `## 88. Expected Output From This Phase`
+- `MGP-SRC-050-H104` — `## 89. Forbidden Outcomes`
+- `MGP-SRC-050-H105` — `## 90. Phase Completion Status Rules`
+- `MGP-SRC-050-H106` — `### \`DONE\``
+- `MGP-SRC-050-H107` — `### \`PASS\``
+- `MGP-SRC-050-H108` — `### \`PARTIAL\``
+- `MGP-SRC-050-H109` — `### \`FAIL\``
+- `MGP-SRC-050-H110` — `### \`BLOCKED\``
+- `MGP-SRC-050-H111` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-050-H112` — `## 91. Final Response Required Format`
+- `MGP-SRC-050-H113` — `## 92. Matching Manual Verification Reminder`
+- `MGP-SRC-050-H114` — `## 93. Common Bugs To Watch For`
+- `MGP-SRC-050-H115` — `## 94. Quality Bar`
+- `MGP-SRC-050-H116` — `## 95. Final Rule For Prompt 12`
+
+### MGP-SRC-051 — `prompts/12_MANUAL_VERIFICATION_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md` — 115 headings
+
+- `MGP-SRC-051-H001` — `# prompts/12_MANUAL_VERIFICATION_ADS_PROMOTION_NOTIFICATIONS_PROVIDERS.md`
+- `MGP-SRC-051-H002` — `# My Gujarat Property — Prompt 12 Manual Verification: Ads, Promotion, Notifications And Providers`
+- `MGP-SRC-051-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-051-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-051-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-051-H006` — `## 4. Verification Scope`
+- `MGP-SRC-051-H007` — `## 5. Verification Method`
+- `MGP-SRC-051-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-051-H009` — `## 7. Migration Verification`
+- `MGP-SRC-051-H010` — `## 8. Expected Table Verification`
+- `MGP-SRC-051-H011` — `## 9. Builder Ads Dashboard Verification`
+- `MGP-SRC-051-H012` — `## 10. Builder Campaign Creation Verification`
+- `MGP-SRC-051-H013` — `## 11. Project Eligibility Verification`
+- `MGP-SRC-051-H014` — `## 12. Owner/Broker Ads Boundary Verification`
+- `MGP-SRC-051-H015` — `## 13. Campaign Status Verification`
+- `MGP-SRC-051-H016` — `## 14. Creative Status Verification`
+- `MGP-SRC-051-H017` — `## 15. Ad Placement Verification`
+- `MGP-SRC-051-H018` — `## 16. RERA Gate Verification`
+- `MGP-SRC-051-H019` — `## 17. Payment / Ad Credit Gate Verification`
+- `MGP-SRC-051-H020` — `## 18. Ad Targeting Verification`
+- `MGP-SRC-051-H021` — `## 19. Ad Scheduling Verification`
+- `MGP-SRC-051-H022` — `## 20. Admin Ads Moderation Verification`
+- `MGP-SRC-051-H023` — `## 21. Public Ad Serving Verification`
+- `MGP-SRC-051-H024` — `## 22. Sponsored Label Verification`
+- `MGP-SRC-051-H025` — `## 23. Ad Click Tracking Verification`
+- `MGP-SRC-051-H026` — `## 24. Ad Impression Tracking Verification`
+- `MGP-SRC-051-H027` — `## 25. Ad Metrics Verification`
+- `MGP-SRC-051-H028` — `## 26. Ad Fraud Foundation Verification`
+- `MGP-SRC-051-H029` — `## 27. Frequency Cap Verification`
+- `MGP-SRC-051-H030` — `## 28. Ad Rotation / Priority Verification`
+- `MGP-SRC-051-H031` — `## 29. Notification Event Verification`
+- `MGP-SRC-051-H032` — `## 30. Notification Status Verification`
+- `MGP-SRC-051-H033` — `## 31. Notification Center Verification`
+- `MGP-SRC-051-H034` — `## 32. Notification Bell Verification`
+- `MGP-SRC-051-H035` — `## 33. Notification Preferences Verification`
+- `MGP-SRC-051-H036` — `## 34. Notification Template Verification`
+- `MGP-SRC-051-H037` — `## 35. Notification Deep Link Verification`
+- `MGP-SRC-051-H038` — `## 36. Notification Privacy Verification`
+- `MGP-SRC-051-H039` — `## 37. Role-Based Notification Verification`
+- `MGP-SRC-051-H040` — `### Owner`
+- `MGP-SRC-051-H041` — `### Broker`
+- `MGP-SRC-051-H042` — `### Builder`
+- `MGP-SRC-051-H043` — `### Admin/Staff`
+- `MGP-SRC-051-H044` — `## 38. Provider Registry Verification`
+- `MGP-SRC-051-H045` — `## 39. Provider Categories Verification`
+- `MGP-SRC-051-H046` — `## 40. Email Provider Verification`
+- `MGP-SRC-051-H047` — `## 41. SMS Provider Verification`
+- `MGP-SRC-051-H048` — `## 42. WhatsApp Provider Verification`
+- `MGP-SRC-051-H049` — `## 43. Push Provider Verification`
+- `MGP-SRC-051-H050` — `## 44. OTP Provider Boundary Verification`
+- `MGP-SRC-051-H051` — `## 45. Payment Provider Boundary Verification`
+- `MGP-SRC-051-H052` — `## 46. Maps / Geolocation Provider Boundary Verification`
+- `MGP-SRC-051-H053` — `## 47. Media/CDN Provider Boundary Verification`
+- `MGP-SRC-051-H054` — `## 48. Captcha / Anti-Abuse Provider Verification`
+- `MGP-SRC-051-H055` — `## 49. Provider Delivery Logs Verification`
+- `MGP-SRC-051-H056` — `## 50. Retry / DLQ Verification`
+- `MGP-SRC-051-H057` — `## 51. Provider Webhook / Callback Verification`
+- `MGP-SRC-051-H058` — `## 52. Provider Status Admin UI Verification`
+- `MGP-SRC-051-H059` — `## 53. Provider Secret Deep Check`
+- `MGP-SRC-051-H060` — `## 54. Hidden Contact Deep Check`
+- `MGP-SRC-051-H061` — `## 55. Fake Ads / Metrics Verification`
+- `MGP-SRC-051-H062` — `## 56. Fake Notifications Verification`
+- `MGP-SRC-051-H063` — `## 57. Fake Provider Delivery Verification`
+- `MGP-SRC-051-H064` — `## 58. RLS Enabled Verification`
+- `MGP-SRC-051-H065` — `## 59. RLS Policy Verification`
+- `MGP-SRC-051-H066` — `## 60. RLS Test Suggestions`
+- `MGP-SRC-051-H067` — `## 61. Public Active Ads View Verification`
+- `MGP-SRC-051-H068` — `## 62. Direct URL Bypass Verification`
+- `MGP-SRC-051-H069` — `## 63. Private Noindex Verification`
+- `MGP-SRC-051-H070` — `## 64. Open Redirect Verification`
+- `MGP-SRC-051-H071` — `## 65. Admin Permission Verification`
+- `MGP-SRC-051-H072` — `## 66. Audit Log Verification`
+- `MGP-SRC-051-H073` — `## 67. Rate Limit Verification`
+- `MGP-SRC-051-H074` — `## 68. Provider Setup Required Verification`
+- `MGP-SRC-051-H075` — `## 69. In-App Vs External Notification Verification`
+- `MGP-SRC-051-H076` — `### In-app`
+- `MGP-SRC-051-H077` — `### External`
+- `MGP-SRC-051-H078` — `## 70. Provider Webhook Security Verification`
+- `MGP-SRC-051-H079` — `## 71. Public SEO Boundary Verification`
+- `MGP-SRC-051-H080` — `## 72. UI Verification — Ads`
+- `MGP-SRC-051-H081` — `## 73. UI Verification — Public Ads`
+- `MGP-SRC-051-H082` — `## 74. UI Verification — Notifications`
+- `MGP-SRC-051-H083` — `## 75. UI Verification — Providers`
+- `MGP-SRC-051-H084` — `## 76. Responsive Verification`
+- `MGP-SRC-051-H085` — `## 77. Accessibility Verification`
+- `MGP-SRC-051-H086` — `## 78. Performance Verification`
+- `MGP-SRC-051-H087` — `## 79. Build / Lint / Typecheck Verification`
+- `MGP-SRC-051-H088` — `## 80. Automated Test Suggestions`
+- `MGP-SRC-051-H089` — `## 81. Manual Smoke Test Matrix`
+- `MGP-SRC-051-H090` — `## 82. Documentation Update Verification`
+- `MGP-SRC-051-H091` — `## 83. Feature Registry Verification`
+- `MGP-SRC-051-H092` — `## 84. Changelog Verification`
+- `MGP-SRC-051-H093` — `## 85. Bugs And Fixes Verification`
+- `MGP-SRC-051-H094` — `## 86. Manual Verification Doc Update`
+- `MGP-SRC-051-H095` — `## 87. Security Checklist Verification`
+- `MGP-SRC-051-H096` — `## 88. Performance Checklist Verification`
+- `MGP-SRC-051-H097` — `## 89. Deployment Rollback Verification`
+- `MGP-SRC-051-H098` — `## 90. API Provider Status Verification`
+- `MGP-SRC-051-H099` — `## 91. Brain Update Verification`
+- `MGP-SRC-051-H100` — `## 92. Verification Result Decision`
+- `MGP-SRC-051-H101` — `### PASS`
+- `MGP-SRC-051-H102` — `### PARTIAL`
+- `MGP-SRC-051-H103` — `### FAIL`
+- `MGP-SRC-051-H104` — `### BLOCKED`
+- `MGP-SRC-051-H105` — `### SETUP_REQUIRED`
+- `MGP-SRC-051-H106` — `## 93. Prompt 13 Readiness Checklist`
+- `MGP-SRC-051-H107` — `## 94. Required Manual Verification Entry Format`
+- `MGP-SRC-051-H108` — `## Prompt 12 Verification — Ads, Promotion, Notifications And Providers`
+- `MGP-SRC-051-H109` — `## 95. Required Final Response Format`
+- `MGP-SRC-051-H110` — `## 96. If Verification Fails`
+- `MGP-SRC-051-H111` — `## 97. If Verification Is Partial`
+- `MGP-SRC-051-H112` — `## 98. If Verification Passes`
+- `MGP-SRC-051-H113` — `## 99. What Not To Do In This Verification`
+- `MGP-SRC-051-H114` — `## 100. Quality Bar`
+- `MGP-SRC-051-H115` — `## 101. Final Rule For Prompt 12 Verification`
+
+### MGP-SRC-052 — `prompts/13_MANUAL_VERIFICATION_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md` — 104 headings
+
+- `MGP-SRC-052-H001` — `# prompts/13_MANUAL_VERIFICATION_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`
+- `MGP-SRC-052-H002` — `# My Gujarat Property — Prompt 13 Manual Verification: Security, Privacy, Fraud And Rate Limits`
+- `MGP-SRC-052-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-052-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-052-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-052-H006` — `## 4. Verification Scope`
+- `MGP-SRC-052-H007` — `## 5. Verification Method`
+- `MGP-SRC-052-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-052-H009` — `## 7. Migration Verification`
+- `MGP-SRC-052-H010` — `## 8. Route Protection Inventory Verification`
+- `MGP-SRC-052-H011` — `## 9. API Route Classification Verification`
+- `MGP-SRC-052-H012` — `## 10. Auth Guard Verification`
+- `MGP-SRC-052-H013` — `## 11. Role Guard Verification`
+- `MGP-SRC-052-H014` — `## 12. Admin Security Verification`
+- `MGP-SRC-052-H015` — `## 13. Direct URL Bypass Verification`
+- `MGP-SRC-052-H016` — `## 14. Disabled / Suspended / Deleted Account Verification`
+- `MGP-SRC-052-H017` — `## 15. RLS Inventory Verification`
+- `MGP-SRC-052-H018` — `## 16. RLS Enabled Verification`
+- `MGP-SRC-052-H019` — `## 17. RLS Policy Verification`
+- `MGP-SRC-052-H020` — `## 18. Public View Verification`
+- `MGP-SRC-052-H021` — `## 19. Sensitive Field Classification Verification`
+- `MGP-SRC-052-H022` — `## 20. Hidden Contact Deep Verification`
+- `MGP-SRC-052-H023` — `## 21. Private Document Verification`
+- `MGP-SRC-052-H024` — `## 22. Private Media Verification`
+- `MGP-SRC-052-H025` — `## 23. Lead / Message / Proposal / Site Visit Privacy Verification`
+- `MGP-SRC-052-H026` — `## 24. Billing / Payment Privacy Verification`
+- `MGP-SRC-052-H027` — `## 25. Notification / Ads / Provider Privacy Verification`
+- `MGP-SRC-052-H028` — `## 26. CMS / SEO Privacy Verification`
+- `MGP-SRC-052-H029` — `## 27. Service Role Verification`
+- `MGP-SRC-052-H030` — `## 28. Provider Secret Verification`
+- `MGP-SRC-052-H031` — `## 29. Environment File Verification`
+- `MGP-SRC-052-H032` — `## 30. Input Validation Verification`
+- `MGP-SRC-052-H033` — `## 31. Output Sanitization / XSS Verification`
+- `MGP-SRC-052-H034` — `## 32. CMS Sanitizer Verification`
+- `MGP-SRC-052-H035` — `## 33. Security Headers Verification`
+- `MGP-SRC-052-H036` — `## 34. CSP Verification`
+- `MGP-SRC-052-H037` — `## 35. CORS Verification`
+- `MGP-SRC-052-H038` — `## 36. CSRF Verification`
+- `MGP-SRC-052-H039` — `## 37. SSRF Verification`
+- `MGP-SRC-052-H040` — `## 38. Open Redirect Verification`
+- `MGP-SRC-052-H041` — `## 39. Rate Limit Helper Verification`
+- `MGP-SRC-052-H042` — `## 40. Rate-Limited Action Coverage Verification`
+- `MGP-SRC-052-H043` — `## 41. OTP Abuse Verification`
+- `MGP-SRC-052-H044` — `## 42. Login Attempt Verification`
+- `MGP-SRC-052-H045` — `## 43. Scraping Protection Verification`
+- `MGP-SRC-052-H046` — `## 44. Spam Protection Verification`
+- `MGP-SRC-052-H047` — `## 45. Fraud Report Verification`
+- `MGP-SRC-052-H048` — `## 46. Suspicious Activity Verification`
+- `MGP-SRC-052-H049` — `## 47. Block / Report User Verification`
+- `MGP-SRC-052-H050` — `## 48. Audit Log Verification`
+- `MGP-SRC-052-H051` — `## 49. Log Redaction Verification`
+- `MGP-SRC-052-H052` — `## 50. Error Handling Verification`
+- `MGP-SRC-052-H053` — `## 51. Webhook Security Verification`
+- `MGP-SRC-052-H054` — `## 52. Payment Security Review Verification`
+- `MGP-SRC-052-H055` — `## 53. Upload Security Review Verification`
+- `MGP-SRC-052-H056` — `## 54. Provider Security Review Verification`
+- `MGP-SRC-052-H057` — `## 55. Notification Security Review Verification`
+- `MGP-SRC-052-H058` — `## 56. Ads Security Review Verification`
+- `MGP-SRC-052-H059` — `## 57. CMS / SEO Security Review Verification`
+- `MGP-SRC-052-H060` — `## 58. Private Noindex / No-Store Verification`
+- `MGP-SRC-052-H061` — `## 59. Data Retention Verification`
+- `MGP-SRC-052-H062` — `## 60. Soft Delete / Hard Delete Verification`
+- `MGP-SRC-052-H063` — `## 61. Privacy Request Verification`
+- `MGP-SRC-052-H064` — `## 62. Consent Hardening Verification`
+- `MGP-SRC-052-H065` — `## 63. Backup / Restore Readiness Verification`
+- `MGP-SRC-052-H066` — `## 64. Incident Response Verification`
+- `MGP-SRC-052-H067` — `## 65. Security Incident Foundation Verification`
+- `MGP-SRC-052-H068` — `## 66. Export Security Verification`
+- `MGP-SRC-052-H069` — `## 67. Admin Sensitive View Verification`
+- `MGP-SRC-052-H070` — `## 68. Public API Limits Verification`
+- `MGP-SRC-052-H071` — `## 69. Admin / Staff Permission Review`
+- `MGP-SRC-052-H072` — `## 70. Fake Security Status Verification`
+- `MGP-SRC-052-H073` — `## 71. Automated Checks To Run`
+- `MGP-SRC-052-H074` — `## 72. Secret Scan Suggestions`
+- `MGP-SRC-052-H075` — `## 73. Hidden Contact Scan Suggestions`
+- `MGP-SRC-052-H076` — `## 74. RLS Test Suggestions`
+- `MGP-SRC-052-H077` — `## 75. Manual Smoke Test Matrix`
+- `MGP-SRC-052-H078` — `## 76. Responsive / UI Security State Verification`
+- `MGP-SRC-052-H079` — `## 77. Documentation Update Verification`
+- `MGP-SRC-052-H080` — `## 78. Feature Registry Verification`
+- `MGP-SRC-052-H081` — `## 79. Changelog Verification`
+- `MGP-SRC-052-H082` — `## 80. Bugs And Fixes Verification`
+- `MGP-SRC-052-H083` — `## 81. Manual Verification Doc Update`
+- `MGP-SRC-052-H084` — `## 82. Security Checklist Verification`
+- `MGP-SRC-052-H085` — `## 83. Performance Checklist Verification`
+- `MGP-SRC-052-H086` — `## 84. Deployment Rollback Verification`
+- `MGP-SRC-052-H087` — `## 85. API Provider Status Verification`
+- `MGP-SRC-052-H088` — `## 86. Brain Update Verification`
+- `MGP-SRC-052-H089` — `## 87. Verification Result Decision`
+- `MGP-SRC-052-H090` — `### PASS`
+- `MGP-SRC-052-H091` — `### PARTIAL`
+- `MGP-SRC-052-H092` — `### FAIL`
+- `MGP-SRC-052-H093` — `### BLOCKED`
+- `MGP-SRC-052-H094` — `### SETUP_REQUIRED`
+- `MGP-SRC-052-H095` — `## 88. Prompt 14 Readiness Checklist`
+- `MGP-SRC-052-H096` — `## 89. Required Manual Verification Entry Format`
+- `MGP-SRC-052-H097` — `## Prompt 13 Verification — Security, Privacy, Fraud And Rate Limits`
+- `MGP-SRC-052-H098` — `## 90. Required Final Response Format`
+- `MGP-SRC-052-H099` — `## 91. If Verification Fails`
+- `MGP-SRC-052-H100` — `## 92. If Verification Is Partial`
+- `MGP-SRC-052-H101` — `## 93. If Verification Passes`
+- `MGP-SRC-052-H102` — `## 94. What Not To Do In This Verification`
+- `MGP-SRC-052-H103` — `## 95. Quality Bar`
+- `MGP-SRC-052-H104` — `## 96. Final Rule For Prompt 13 Verification`
+
+### MGP-SRC-053 — `prompts/13_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md` — 108 headings
+
+- `MGP-SRC-053-H001` — `# prompts/13_SECURITY_PRIVACY_FRAUD_RATE_LIMITS.md`
+- `MGP-SRC-053-H002` — `# My Gujarat Property — Prompt 13: Security, Privacy, Fraud And Rate Limits`
+- `MGP-SRC-053-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-053-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-053-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-053-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-053-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-053-H008` — `### 5.1 Auth And Route Security`
+- `MGP-SRC-053-H009` — `### 5.2 RLS Hardening`
+- `MGP-SRC-053-H010` — `### 5.3 Privacy Hardening`
+- `MGP-SRC-053-H011` — `### 5.4 Fraud / Abuse / Rate Limits`
+- `MGP-SRC-053-H012` — `### 5.5 Web / App Security`
+- `MGP-SRC-053-H013` — `### 5.6 Provider / Payment / Upload Security`
+- `MGP-SRC-053-H014` — `### 5.7 Docs`
+- `MGP-SRC-053-H015` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-053-H016` — `## 7. Hard Security Rules`
+- `MGP-SRC-053-H017` — `## 8. Security Inventory Required`
+- `MGP-SRC-053-H018` — `## 9. Route Protection Inventory`
+- `MGP-SRC-053-H019` — `## 10. Auth Guard Requirements`
+- `MGP-SRC-053-H020` — `## 11. Role Guard Requirements`
+- `MGP-SRC-053-H021` — `## 12. Admin Security Requirements`
+- `MGP-SRC-053-H022` — `## 13. Direct URL Bypass Hardening`
+- `MGP-SRC-053-H023` — `## 14. API Route Security Requirements`
+- `MGP-SRC-053-H024` — `## 15. RLS Final Pass Requirements`
+- `MGP-SRC-053-H025` — `## 16. Public View Requirements`
+- `MGP-SRC-053-H026` — `## 17. Sensitive Field Classification`
+- `MGP-SRC-053-H027` — `## 18. Hidden Contact Protection`
+- `MGP-SRC-053-H028` — `## 19. Private Document Protection`
+- `MGP-SRC-053-H029` — `## 20. Private Message / Lead Protection`
+- `MGP-SRC-053-H030` — `## 21. Billing / Payment Privacy Protection`
+- `MGP-SRC-053-H031` — `## 22. Provider Secret Protection`
+- `MGP-SRC-053-H032` — `## 23. Service Role Rules`
+- `MGP-SRC-053-H033` — `## 24. Input Validation Hardening`
+- `MGP-SRC-053-H034` — `## 25. Output Sanitization / XSS Prevention`
+- `MGP-SRC-053-H035` — `## 26. CSRF Protection Foundation`
+- `MGP-SRC-053-H036` — `## 27. CORS Requirements`
+- `MGP-SRC-053-H037` — `## 28. Security Headers Requirements`
+- `MGP-SRC-053-H038` — `## 29. CSP Foundation`
+- `MGP-SRC-053-H039` — `## 30. SSRF Prevention`
+- `MGP-SRC-053-H040` — `## 31. Open Redirect Prevention`
+- `MGP-SRC-053-H041` — `## 32. Rate Limit Foundation`
+- `MGP-SRC-053-H042` — `## 33. Rate-Limited Actions`
+- `MGP-SRC-053-H043` — `## 34. OTP Abuse Protection`
+- `MGP-SRC-053-H044` — `## 35. Login Attempt Protection`
+- `MGP-SRC-053-H045` — `## 36. Scraping Protection Foundation`
+- `MGP-SRC-053-H046` — `## 37. Spam Protection Foundation`
+- `MGP-SRC-053-H047` — `## 38. Fraud Report Foundation`
+- `MGP-SRC-053-H048` — `## 39. Suspicious Activity Logs`
+- `MGP-SRC-053-H049` — `## 40. Account Status Hardening`
+- `MGP-SRC-053-H050` — `## 41. Block / Report User Hardening`
+- `MGP-SRC-053-H051` — `## 42. Audit Log Hardening`
+- `MGP-SRC-053-H052` — `## 43. Log Redaction Requirements`
+- `MGP-SRC-053-H053` — `## 44. Error Handling Hardening`
+- `MGP-SRC-053-H054` — `## 45. Webhook Security Review`
+- `MGP-SRC-053-H055` — `## 46. Payment Security Review`
+- `MGP-SRC-053-H056` — `## 47. Upload Security Review`
+- `MGP-SRC-053-H057` — `## 48. Notification / Provider Security Review`
+- `MGP-SRC-053-H058` — `## 49. CMS / SEO Security Review`
+- `MGP-SRC-053-H059` — `## 50. Data Retention Foundation`
+- `MGP-SRC-053-H060` — `## 51. Soft Delete / Restore / Hard Delete Rules`
+- `MGP-SRC-053-H061` — `## 52. Privacy Request Foundation`
+- `MGP-SRC-053-H062` — `## 53. Consent Hardening`
+- `MGP-SRC-053-H063` — `## 54. Backup / Restore Readiness Foundation`
+- `MGP-SRC-053-H064` — `## 55. Incident Response Foundation`
+- `MGP-SRC-053-H065` — `## 56. Security Headers / Middleware Implementation`
+- `MGP-SRC-053-H066` — `## 57. Rate Limit Storage Table`
+- `MGP-SRC-053-H067` — `## 58. Fraud / Abuse Tables`
+- `MGP-SRC-053-H068` — `## 59. Security Incident Status Values`
+- `MGP-SRC-053-H069` — `## 60. RLS / Security Migration Rule`
+- `MGP-SRC-053-H070` — `## 61. Suggested Indexes`
+- `MGP-SRC-053-H071` — `### Rate Limits`
+- `MGP-SRC-053-H072` — `### Suspicious Activity`
+- `MGP-SRC-053-H073` — `### Fraud Reports`
+- `MGP-SRC-053-H074` — `### Security Incidents`
+- `MGP-SRC-053-H075` — `### Audit Logs`
+- `MGP-SRC-053-H076` — `## 62. Security Helper Requirements`
+- `MGP-SRC-053-H077` — `## 63. Safe Public Payload Helpers`
+- `MGP-SRC-053-H078` — `## 64. Admin Sensitive View Controls`
+- `MGP-SRC-053-H079` — `## 65. Export Security`
+- `MGP-SRC-053-H080` — `## 66. Search / Public API Limits`
+- `MGP-SRC-053-H081` — `## 67. Admin / Staff Permission Review`
+- `MGP-SRC-053-H082` — `## 68. No Fake Security Status`
+- `MGP-SRC-053-H083` — `## 69. Test / Check Commands`
+- `MGP-SRC-053-H084` — `## 70. Manual Smoke Checks If App Runs`
+- `MGP-SRC-053-H085` — `## 71. Provider Status Updates`
+- `MGP-SRC-053-H086` — `## 72. Feature Registry Updates`
+- `MGP-SRC-053-H087` — `## 73. Changelog Update`
+- `MGP-SRC-053-H088` — `## 74. Bugs And Fixes Update`
+- `MGP-SRC-053-H089` — `## 75. Manual Verification Update`
+- `MGP-SRC-053-H090` — `## 76. Security Checklist Update`
+- `MGP-SRC-053-H091` — `## 77. Performance Checklist Update`
+- `MGP-SRC-053-H092` — `## 78. Deployment Rollback Update`
+- `MGP-SRC-053-H093` — `## 79. Brain Update`
+- `MGP-SRC-053-H094` — `## 80. Expected Changed Files`
+- `MGP-SRC-053-H095` — `## 81. Expected Output From This Phase`
+- `MGP-SRC-053-H096` — `## 82. Forbidden Outcomes`
+- `MGP-SRC-053-H097` — `## 83. Phase Completion Status Rules`
+- `MGP-SRC-053-H098` — `### \`DONE\``
+- `MGP-SRC-053-H099` — `### \`PASS\``
+- `MGP-SRC-053-H100` — `### \`PARTIAL\``
+- `MGP-SRC-053-H101` — `### \`FAIL\``
+- `MGP-SRC-053-H102` — `### \`BLOCKED\``
+- `MGP-SRC-053-H103` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-053-H104` — `## 84. Final Response Required Format`
+- `MGP-SRC-053-H105` — `## 85. Matching Manual Verification Reminder`
+- `MGP-SRC-053-H106` — `## 86. Common Bugs To Watch For`
+- `MGP-SRC-053-H107` — `## 87. Quality Bar`
+- `MGP-SRC-053-H108` — `## 88. Final Rule For Prompt 13`
+
+### MGP-SRC-054 — `prompts/14_MANUAL_VERIFICATION_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md` — 97 headings
+
+- `MGP-SRC-054-H001` — `# prompts/14_MANUAL_VERIFICATION_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`
+- `MGP-SRC-054-H002` — `# My Gujarat Property — Prompt 14 Manual Verification: Performance, Caching, Deployment And Launch`
+- `MGP-SRC-054-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-054-H004` — `## 2. Verification Purpose`
+- `MGP-SRC-054-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-054-H006` — `## 4. Verification Scope`
+- `MGP-SRC-054-H007` — `## 5. Verification Method`
+- `MGP-SRC-054-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-054-H009` — `## 7. Migration Verification`
+- `MGP-SRC-054-H010` — `## 8. Core Web Vitals Verification`
+- `MGP-SRC-054-H011` — `## 9. 1 Lakh Users Readiness Verification`
+- `MGP-SRC-054-H012` — `## 10. Public Page Performance Verification`
+- `MGP-SRC-054-H013` — `## 11. Private Page Performance Verification`
+- `MGP-SRC-054-H014` — `## 12. Public Cache Strategy Verification`
+- `MGP-SRC-054-H015` — `## 13. Private No-Store Verification`
+- `MGP-SRC-054-H016` — `## 14. Next.js Cache Verification`
+- `MGP-SRC-054-H017` — `## 15. Cache Tag Verification`
+- `MGP-SRC-054-H018` — `## 16. Cache Purge / Revalidation Verification`
+- `MGP-SRC-054-H019` — `## 17. CDN / Media Cache Verification`
+- `MGP-SRC-054-H020` — `## 18. Image And Gallery Verification`
+- `MGP-SRC-054-H021` — `## 19. Search Performance Verification`
+- `MGP-SRC-054-H022` — `## 20. Detail Page Performance Verification`
+- `MGP-SRC-054-H023` — `## 21. Dashboard Performance Verification`
+- `MGP-SRC-054-H024` — `## 22. Admin Performance Verification`
+- `MGP-SRC-054-H025` — `## 23. Notification Performance Verification`
+- `MGP-SRC-054-H026` — `## 24. Ads Performance Verification`
+- `MGP-SRC-054-H027` — `## 25. Billing Performance Verification`
+- `MGP-SRC-054-H028` — `## 26. Media Upload Performance Verification`
+- `MGP-SRC-054-H029` — `## 27. Provider / Webhook Performance Verification`
+- `MGP-SRC-054-H030` — `## 28. Database Index Review Verification`
+- `MGP-SRC-054-H031` — `### Public Listings`
+- `MGP-SRC-054-H032` — `### Projects`
+- `MGP-SRC-054-H033` — `### Requirements`
+- `MGP-SRC-054-H034` — `### Leads / Messages / Proposals / Site Visits`
+- `MGP-SRC-054-H035` — `### Billing`
+- `MGP-SRC-054-H036` — `### Media`
+- `MGP-SRC-054-H037` — `### Notifications`
+- `MGP-SRC-054-H038` — `### Ads`
+- `MGP-SRC-054-H039` — `### CMS/SEO/Location`
+- `MGP-SRC-054-H040` — `## 29. RLS Performance Verification`
+- `MGP-SRC-054-H041` — `## 30. Query Optimization Verification`
+- `MGP-SRC-054-H042` — `## 31. Bundle Optimization Verification`
+- `MGP-SRC-054-H043` — `## 32. Server / Client Component Boundary Verification`
+- `MGP-SRC-054-H044` — `## 33. Loading / Empty / Error State Verification`
+- `MGP-SRC-054-H045` — `## 34. Mobile Performance Verification`
+- `MGP-SRC-054-H046` — `## 35. SEO Performance Verification`
+- `MGP-SRC-054-H047` — `## 36. Sitemap / Robots Performance Verification`
+- `MGP-SRC-054-H048` — `## 37. Environment Validation Verification`
+- `MGP-SRC-054-H049` — `## 38. Provider Status Launch Review`
+- `MGP-SRC-054-H050` — `## 39. Feature Flag Verification`
+- `MGP-SRC-054-H051` — `## 40. Maintenance Mode Verification`
+- `MGP-SRC-054-H052` — `## 41. Deployment Environment Separation Verification`
+- `MGP-SRC-054-H053` — `## 42. Seed / Demo Data Verification`
+- `MGP-SRC-054-H054` — `## 43. Build Gate Verification`
+- `MGP-SRC-054-H055` — `## 44. Deployment Checklist Verification`
+- `MGP-SRC-054-H056` — `## 45. Migration Deployment Safety Verification`
+- `MGP-SRC-054-H057` — `## 46. Zero-Downtime Verification`
+- `MGP-SRC-054-H058` — `## 47. Rollback Playbook Verification`
+- `MGP-SRC-054-H059` — `## 48. Cache Purge / Revalidation Verification`
+- `MGP-SRC-054-H060` — `## 49. Monitoring Foundation Verification`
+- `MGP-SRC-054-H061` — `## 50. Health Endpoint Verification`
+- `MGP-SRC-054-H062` — `## 51. Logging Verification`
+- `MGP-SRC-054-H063` — `## 52. Error Boundary Verification`
+- `MGP-SRC-054-H064` — `## 53. Analytics Boundary Verification`
+- `MGP-SRC-054-H065` — `## 54. Accessibility Launch Check Verification`
+- `MGP-SRC-054-H066` — `## 55. Browser / Device Compatibility Verification`
+- `MGP-SRC-054-H067` — `## 56. Launch Freeze Checklist Verification`
+- `MGP-SRC-054-H068` — `## 57. Post-Deploy Smoke Check Verification`
+- `MGP-SRC-054-H069` — `## 58. Public Route Smoke Verification`
+- `MGP-SRC-054-H070` — `## 59. Private Route Smoke Verification`
+- `MGP-SRC-054-H071` — `## 60. API Smoke Verification`
+- `MGP-SRC-054-H072` — `## 61. Security Retained Verification`
+- `MGP-SRC-054-H073` — `## 62. \`PERFORMANCE_CHECKLIST.md\` Verification`
+- `MGP-SRC-054-H074` — `## 63. \`SECURITY_RLS_CHECKLIST.md\` Re-Check Verification`
+- `MGP-SRC-054-H075` — `## 64. \`API_PROVIDER_STATUS.md\` Verification`
+- `MGP-SRC-054-H076` — `## 65. Feature Registry Verification`
+- `MGP-SRC-054-H077` — `## 66. Changelog Verification`
+- `MGP-SRC-054-H078` — `## 67. Bugs And Fixes Verification`
+- `MGP-SRC-054-H079` — `## 68. Manual Verification Doc Update`
+- `MGP-SRC-054-H080` — `## 69. Deployment Rollback Verification`
+- `MGP-SRC-054-H081` — `## 70. Brain Update Verification`
+- `MGP-SRC-054-H082` — `## 71. Verification Result Decision`
+- `MGP-SRC-054-H083` — `### PASS`
+- `MGP-SRC-054-H084` — `### PARTIAL`
+- `MGP-SRC-054-H085` — `### FAIL`
+- `MGP-SRC-054-H086` — `### BLOCKED`
+- `MGP-SRC-054-H087` — `### SETUP_REQUIRED`
+- `MGP-SRC-054-H088` — `## 72. Prompt 15 Readiness Checklist`
+- `MGP-SRC-054-H089` — `## 73. Required Manual Verification Entry Format`
+- `MGP-SRC-054-H090` — `## Prompt 14 Verification — Performance, Caching, Deployment And Launch`
+- `MGP-SRC-054-H091` — `## 74. Required Final Response Format`
+- `MGP-SRC-054-H092` — `## 75. If Verification Fails`
+- `MGP-SRC-054-H093` — `## 76. If Verification Is Partial`
+- `MGP-SRC-054-H094` — `## 77. If Verification Passes`
+- `MGP-SRC-054-H095` — `## 78. What Not To Do In This Verification`
+- `MGP-SRC-054-H096` — `## 79. Quality Bar`
+- `MGP-SRC-054-H097` — `## 80. Final Rule For Prompt 14 Verification`
+
+### MGP-SRC-055 — `prompts/14_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md` — 107 headings
+
+- `MGP-SRC-055-H001` — `# prompts/14_PERFORMANCE_CACHING_DEPLOYMENT_LAUNCH.md`
+- `MGP-SRC-055-H002` — `# My Gujarat Property — Prompt 14: Performance, Caching, Deployment And Launch`
+- `MGP-SRC-055-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-055-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-055-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-055-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-055-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-055-H008` — `### 5.1 Performance`
+- `MGP-SRC-055-H009` — `### 5.2 Caching`
+- `MGP-SRC-055-H010` — `### 5.3 Database`
+- `MGP-SRC-055-H011` — `### 5.4 Deployment`
+- `MGP-SRC-055-H012` — `### 5.5 Launch Readiness`
+- `MGP-SRC-055-H013` — `### 5.6 Docs`
+- `MGP-SRC-055-H014` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-055-H015` — `## 7. Hard Performance And Deployment Rules`
+- `MGP-SRC-055-H016` — `## 8. Performance Targets`
+- `MGP-SRC-055-H017` — `## 9. 1 Lakh Users Readiness Foundation`
+- `MGP-SRC-055-H018` — `## 10. Public Page Performance Requirements`
+- `MGP-SRC-055-H019` — `## 11. Private Page Performance Requirements`
+- `MGP-SRC-055-H020` — `## 12. Next.js Caching Strategy`
+- `MGP-SRC-055-H021` — `## 13. Cache Tag Strategy`
+- `MGP-SRC-055-H022` — `## 14. Private Cache Control Requirements`
+- `MGP-SRC-055-H023` — `## 15. Public Cache Control Requirements`
+- `MGP-SRC-055-H024` — `## 16. CDN / Media Performance Requirements`
+- `MGP-SRC-055-H025` — `## 17. Image And Gallery Optimization`
+- `MGP-SRC-055-H026` — `## 18. Search Performance Requirements`
+- `MGP-SRC-055-H027` — `## 19. Detail Page Performance Requirements`
+- `MGP-SRC-055-H028` — `## 20. Dashboard Performance Requirements`
+- `MGP-SRC-055-H029` — `## 21. Admin Performance Requirements`
+- `MGP-SRC-055-H030` — `## 22. Notification Performance Requirements`
+- `MGP-SRC-055-H031` — `## 23. Ads Performance Requirements`
+- `MGP-SRC-055-H032` — `## 24. Billing Performance Requirements`
+- `MGP-SRC-055-H033` — `## 25. Media Upload Performance Requirements`
+- `MGP-SRC-055-H034` — `## 26. Provider / Webhook Performance Requirements`
+- `MGP-SRC-055-H035` — `## 27. Database Index Review`
+- `MGP-SRC-055-H036` — `### Public Listings`
+- `MGP-SRC-055-H037` — `### Projects`
+- `MGP-SRC-055-H038` — `### Requirements`
+- `MGP-SRC-055-H039` — `### Leads / Messages / Proposals / Site Visits`
+- `MGP-SRC-055-H040` — `### Billing`
+- `MGP-SRC-055-H041` — `### Media`
+- `MGP-SRC-055-H042` — `### Notifications`
+- `MGP-SRC-055-H043` — `### Ads`
+- `MGP-SRC-055-H044` — `### CMS/SEO/Location`
+- `MGP-SRC-055-H045` — `## 28. RLS Performance Review`
+- `MGP-SRC-055-H046` — `## 29. Query Optimization Requirements`
+- `MGP-SRC-055-H047` — `## 30. Bundle Optimization Requirements`
+- `MGP-SRC-055-H048` — `## 31. Server / Client Component Boundary`
+- `MGP-SRC-055-H049` — `## 32. Loading / Empty / Error States`
+- `MGP-SRC-055-H050` — `## 33. Mobile Performance Requirements`
+- `MGP-SRC-055-H051` — `## 34. SEO Performance Requirements`
+- `MGP-SRC-055-H052` — `## 35. Sitemap / Robots Performance`
+- `MGP-SRC-055-H053` — `## 36. Environment Validation Requirements`
+- `MGP-SRC-055-H054` — `## 37. Provider Status Pre-Launch Review`
+- `MGP-SRC-055-H055` — `## 38. Feature Flag Requirements`
+- `MGP-SRC-055-H056` — `## 39. Maintenance Mode Foundation`
+- `MGP-SRC-055-H057` — `## 40. Deployment Environment Separation`
+- `MGP-SRC-055-H058` — `## 41. Seed / Demo Data Rules`
+- `MGP-SRC-055-H059` — `## 42. Build Gate Requirements`
+- `MGP-SRC-055-H060` — `## 43. Deployment Checklist Requirements`
+- `MGP-SRC-055-H061` — `## 44. Migration Deployment Safety`
+- `MGP-SRC-055-H062` — `## 45. Zero-Downtime Considerations`
+- `MGP-SRC-055-H063` — `## 46. Rollback Requirements`
+- `MGP-SRC-055-H064` — `## 47. Cache Purge / Revalidation Requirements`
+- `MGP-SRC-055-H065` — `## 48. Monitoring Foundation`
+- `MGP-SRC-055-H066` — `## 49. Health Endpoint Foundation`
+- `MGP-SRC-055-H067` — `## 50. Logging Requirements`
+- `MGP-SRC-055-H068` — `## 51. Error Boundary Requirements`
+- `MGP-SRC-055-H069` — `## 52. Analytics Boundary`
+- `MGP-SRC-055-H070` — `## 53. Accessibility Launch Check Foundation`
+- `MGP-SRC-055-H071` — `## 54. Browser / Device Compatibility Foundation`
+- `MGP-SRC-055-H072` — `## 55. Launch Freeze Checklist`
+- `MGP-SRC-055-H073` — `## 56. Post-Deploy Smoke Check Foundation`
+- `MGP-SRC-055-H074` — `## 57. Core Public Routes To Smoke`
+- `MGP-SRC-055-H075` — `## 58. Core Private Routes To Smoke`
+- `MGP-SRC-055-H076` — `## 59. API Smoke Check Foundation`
+- `MGP-SRC-055-H077` — `## 60. Performance Checklist Update Requirements`
+- `MGP-SRC-055-H078` — `## 61. Security Checklist Re-Check`
+- `MGP-SRC-055-H079` — `## 62. API Provider Status Updates`
+- `MGP-SRC-055-H080` — `## 63. Feature Registry Updates`
+- `MGP-SRC-055-H081` — `## 64. Changelog Update`
+- `MGP-SRC-055-H082` — `## 65. Bugs And Fixes Update`
+- `MGP-SRC-055-H083` — `## 66. Manual Verification Update`
+- `MGP-SRC-055-H084` — `## 67. Deployment Rollback Update`
+- `MGP-SRC-055-H085` — `## 68. Brain Update`
+- `MGP-SRC-055-H086` — `## 69. Expected Changed Files`
+- `MGP-SRC-055-H087` — `## 70. SQL Migration Rule`
+- `MGP-SRC-055-H088` — `## 71. Feature Flag Table Foundation`
+- `MGP-SRC-055-H089` — `## 72. Maintenance Mode Table Foundation`
+- `MGP-SRC-055-H090` — `## 73. Health Status Table/Foundation`
+- `MGP-SRC-055-H091` — `## 74. Monitoring Event Foundation`
+- `MGP-SRC-055-H092` — `## 75. Final Pre-Launch Blockers`
+- `MGP-SRC-055-H093` — `## 76. Tests / Checks To Run`
+- `MGP-SRC-055-H094` — `## 77. Manual Smoke Checks If App Runs`
+- `MGP-SRC-055-H095` — `## 78. Launch Readiness Status Values`
+- `MGP-SRC-055-H096` — `## 79. Phase Completion Status Rules`
+- `MGP-SRC-055-H097` — `### \`DONE\``
+- `MGP-SRC-055-H098` — `### \`PASS\``
+- `MGP-SRC-055-H099` — `### \`PARTIAL\``
+- `MGP-SRC-055-H100` — `### \`FAIL\``
+- `MGP-SRC-055-H101` — `### \`BLOCKED\``
+- `MGP-SRC-055-H102` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-055-H103` — `## 80. Final Response Required Format`
+- `MGP-SRC-055-H104` — `## 81. Matching Manual Verification Reminder`
+- `MGP-SRC-055-H105` — `## 82. Common Bugs To Watch For`
+- `MGP-SRC-055-H106` — `## 83. Quality Bar`
+- `MGP-SRC-055-H107` — `## 84. Final Rule For Prompt 14`
+
+### MGP-SRC-056 — `prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md` — 106 headings
+
+- `MGP-SRC-056-H001` — `# prompts/15_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `MGP-SRC-056-H002` — `# My Gujarat Property — Prompt 15: Final Production API Testing And Signoff`
+- `MGP-SRC-056-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-056-H004` — `## 2. Phase Purpose`
+- `MGP-SRC-056-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-056-H006` — `## 4. Current Code Inspection Required`
+- `MGP-SRC-056-H007` — `## 5. Implementation Scope`
+- `MGP-SRC-056-H008` — `### 5.1 Final Test Plan`
+- `MGP-SRC-056-H009` — `### 5.2 Provider Readiness`
+- `MGP-SRC-056-H010` — `### 5.3 Final Safety Gates`
+- `MGP-SRC-056-H011` — `### 5.4 Docs`
+- `MGP-SRC-056-H012` — `## 6. Out Of Scope For This Phase`
+- `MGP-SRC-056-H013` — `## 7. Hard Final Signoff Rules`
+- `MGP-SRC-056-H014` — `## 8. Final Status Values`
+- `MGP-SRC-056-H015` — `## 9. Final Provider Status Rules`
+- `MGP-SRC-056-H016` — `## 10. Supabase Auth Final Test Plan`
+- `MGP-SRC-056-H017` — `## 11. Supabase Database / RLS Final Test Plan`
+- `MGP-SRC-056-H018` — `## 12. Supabase Storage / R2 / CDN Final Test Plan`
+- `MGP-SRC-056-H019` — `## 13. Razorpay Payment Final Test Plan`
+- `MGP-SRC-056-H020` — `## 14. GST / Invoice Final Test Plan`
+- `MGP-SRC-056-H021` — `## 15. OTP Provider Final Test Plan`
+- `MGP-SRC-056-H022` — `## 16. Email Provider Final Test Plan`
+- `MGP-SRC-056-H023` — `## 17. SMS Provider Final Test Plan`
+- `MGP-SRC-056-H024` — `## 18. WhatsApp Provider Final Test Plan`
+- `MGP-SRC-056-H025` — `## 19. Push / PWA Provider Final Test Plan`
+- `MGP-SRC-056-H026` — `## 20. Maps / Geocoding Final Test Plan`
+- `MGP-SRC-056-H027` — `## 21. Analytics / GSC Final Test Plan`
+- `MGP-SRC-056-H028` — `## 22. Error Monitoring Final Test Plan`
+- `MGP-SRC-056-H029` — `## 23. Captcha / WAF / Abuse Protection Final Test Plan`
+- `MGP-SRC-056-H030` — `## 24. Cron / Jobs Final Test Plan`
+- `MGP-SRC-056-H031` — `## 25. Malware Scan Final Test Plan`
+- `MGP-SRC-056-H032` — `## 26. Backup Provider Final Test Plan`
+- `MGP-SRC-056-H033` — `## 27. Hosting / Deployment Final Test Plan`
+- `MGP-SRC-056-H034` — `## 28. Environment Variable Final Validation`
+- `MGP-SRC-056-H035` — `## 29. Feature Flag Final Validation`
+- `MGP-SRC-056-H036` — `## 30. Fake / Mock / Demo Data Cleanup`
+- `MGP-SRC-056-H037` — `## 31. Test Mode Cleanup`
+- `MGP-SRC-056-H038` — `## 32. Final Route Smoke Test Plan`
+- `MGP-SRC-056-H039` — `## 33. Final API Smoke Test Plan`
+- `MGP-SRC-056-H040` — `## 34. Final Role Test Matrix`
+- `MGP-SRC-056-H041` — `### Guest`
+- `MGP-SRC-056-H042` — `### Owner`
+- `MGP-SRC-056-H043` — `### Broker`
+- `MGP-SRC-056-H044` — `### Builder`
+- `MGP-SRC-056-H045` — `### Admin/Staff`
+- `MGP-SRC-056-H046` — `### Super Admin`
+- `MGP-SRC-056-H047` — `## 35. Final RLS Test Matrix`
+- `MGP-SRC-056-H048` — `## 36. Hidden Contact Final Test Plan`
+- `MGP-SRC-056-H049` — `## 37. Private Sitemap / Robots Final Test Plan`
+- `MGP-SRC-056-H050` — `## 38. Private Cache Final Test Plan`
+- `MGP-SRC-056-H051` — `## 39. Security Header Final Test Plan`
+- `MGP-SRC-056-H052` — `## 40. Build / Type / Lint / Test Gate`
+- `MGP-SRC-056-H053` — `## 41. Manual Browser / Device Test Plan`
+- `MGP-SRC-056-H054` — `## 42. Final User Journey Test Plan`
+- `MGP-SRC-056-H055` — `### Guest`
+- `MGP-SRC-056-H056` — `### Owner`
+- `MGP-SRC-056-H057` — `### Broker`
+- `MGP-SRC-056-H058` — `### Builder`
+- `MGP-SRC-056-H059` — `### Admin/Staff`
+- `MGP-SRC-056-H060` — `### Super Admin`
+- `MGP-SRC-056-H061` — `## 43. Final Payment Journey Test Plan`
+- `MGP-SRC-056-H062` — `## 44. Final Media Journey Test Plan`
+- `MGP-SRC-056-H063` — `## 45. Final Lead / CRM / Message Journey Test Plan`
+- `MGP-SRC-056-H064` — `## 46. Final Ads / Notification Journey Test Plan`
+- `MGP-SRC-056-H065` — `## 47. Final CMS / SEO / Legal Journey Test Plan`
+- `MGP-SRC-056-H066` — `## 48. Final Support / Grievance / Privacy Journey Test Plan`
+- `MGP-SRC-056-H067` — `## 49. Final Security Regression Test Plan`
+- `MGP-SRC-056-H068` — `## 50. Final Performance Regression Test Plan`
+- `MGP-SRC-056-H069` — `## 51. Final Rollback Drill Plan`
+- `MGP-SRC-056-H070` — `## 52. Final Backup Drill Plan`
+- `MGP-SRC-056-H071` — `## 53. Final Launch Freeze Package`
+- `MGP-SRC-056-H072` — `## 54. Final Known Limitations List`
+- `MGP-SRC-056-H073` — `## 55. Final Launch Blockers`
+- `MGP-SRC-056-H074` — `## 56. Final Signoff Roles`
+- `MGP-SRC-056-H075` — `### Claude Code`
+- `MGP-SRC-056-H076` — `### Project Owner`
+- `MGP-SRC-056-H077` — `### Super Admin`
+- `MGP-SRC-056-H078` — `### Staff/Admin`
+- `MGP-SRC-056-H079` — `## 57. Super Admin Signoff Package`
+- `MGP-SRC-056-H080` — `## 58. Docs Update Requirements`
+- `MGP-SRC-056-H081` — `## 59. \`API_PROVIDER_STATUS.md\` Final Update`
+- `MGP-SRC-056-H082` — `## 60. \`MANUAL_VERIFICATION.md\` Final Update`
+- `MGP-SRC-056-H083` — `## 61. \`SECURITY_RLS_CHECKLIST.md\` Final Update`
+- `MGP-SRC-056-H084` — `## 62. \`PERFORMANCE_CHECKLIST.md\` Final Update`
+- `MGP-SRC-056-H085` — `## 63. \`DEPLOYMENT_ROLLBACK.md\` Final Update`
+- `MGP-SRC-056-H086` — `## 64. \`FEATURE_REGISTRY.md\` Final Update`
+- `MGP-SRC-056-H087` — `## 65. \`CHANGELOG.md\` Final Update`
+- `MGP-SRC-056-H088` — `## 66. \`BUGS_AND_FIXES.md\` Final Update`
+- `MGP-SRC-056-H089` — `## 67. \`brain.md\` Final Update`
+- `MGP-SRC-056-H090` — `## 68. Expected Changed Files`
+- `MGP-SRC-056-H091` — `## 69. SQL Migration Rule`
+- `MGP-SRC-056-H092` — `## 70. Commands / Checks To Run`
+- `MGP-SRC-056-H093` — `## 71. Final Manual Smoke Checks If App Runs`
+- `MGP-SRC-056-H094` — `## 72. Production Readiness Decision Rules`
+- `MGP-SRC-056-H095` — `### \`READY_FOR_FINAL_VERIFICATION\``
+- `MGP-SRC-056-H096` — `### \`READY_FOR_SUPER_ADMIN_REVIEW\``
+- `MGP-SRC-056-H097` — `### \`PRODUCTION_READY_AFTER_SIGNOFF\``
+- `MGP-SRC-056-H098` — `### \`PARTIAL_ACCEPTANCE_REQUIRED\``
+- `MGP-SRC-056-H099` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-056-H100` — `### \`BLOCKED\``
+- `MGP-SRC-056-H101` — `### \`NOT_READY\``
+- `MGP-SRC-056-H102` — `## 73. Final Response Required Format`
+- `MGP-SRC-056-H103` — `## 74. Matching Manual Verification Reminder`
+- `MGP-SRC-056-H104` — `## 75. Common Bugs To Watch For`
+- `MGP-SRC-056-H105` — `## 76. Quality Bar`
+- `MGP-SRC-056-H106` — `## 77. Final Rule For Prompt 15`
+
+### MGP-SRC-057 — `prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md` — 97 headings
+
+- `MGP-SRC-057-H001` — `# prompts/15_MANUAL_VERIFICATION_FINAL_PRODUCTION_API_TESTING_AND_SIGNOFF.md`
+- `MGP-SRC-057-H002` — `# My Gujarat Property — Prompt 15 Manual Verification: Final Production API Testing And Signoff`
+- `MGP-SRC-057-H003` — `## 1. Prompt Identity`
+- `MGP-SRC-057-H004` — `## 2. Final Verification Purpose`
+- `MGP-SRC-057-H005` — `## 3. Required Docs To Read First`
+- `MGP-SRC-057-H006` — `## 4. Final Verification Scope`
+- `MGP-SRC-057-H007` — `## 5. Final Verification Method`
+- `MGP-SRC-057-H008` — `## 6. Required File Inspection`
+- `MGP-SRC-057-H009` — `## 7. Final Provider Status Verification`
+- `MGP-SRC-057-H010` — `## 8. Supabase Auth Final Verification`
+- `MGP-SRC-057-H011` — `## 9. Supabase Database / RLS Final Verification`
+- `MGP-SRC-057-H012` — `## 10. RLS Final Test Matrix`
+- `MGP-SRC-057-H013` — `## 11. Storage / R2 / CDN Final Verification`
+- `MGP-SRC-057-H014` — `## 12. Razorpay Final Verification`
+- `MGP-SRC-057-H015` — `## 13. GST / Invoice Final Verification`
+- `MGP-SRC-057-H016` — `## 14. OTP Provider Final Verification`
+- `MGP-SRC-057-H017` — `## 15. Email Provider Final Verification`
+- `MGP-SRC-057-H018` — `## 16. SMS Provider Final Verification`
+- `MGP-SRC-057-H019` — `## 17. WhatsApp Provider Final Verification`
+- `MGP-SRC-057-H020` — `## 18. Push / PWA Final Verification`
+- `MGP-SRC-057-H021` — `## 19. Maps / Geocoding Final Verification`
+- `MGP-SRC-057-H022` — `## 20. Analytics / GSC Final Verification`
+- `MGP-SRC-057-H023` — `## 21. Error Monitoring Final Verification`
+- `MGP-SRC-057-H024` — `## 22. Captcha / WAF / Abuse Protection Final Verification`
+- `MGP-SRC-057-H025` — `## 23. Cron / Jobs Final Verification`
+- `MGP-SRC-057-H026` — `## 24. Malware Scan Final Verification`
+- `MGP-SRC-057-H027` — `## 25. Backup / Restore Final Verification`
+- `MGP-SRC-057-H028` — `## 26. Hosting / Deployment Final Verification`
+- `MGP-SRC-057-H029` — `## 27. Environment Variable Final Verification`
+- `MGP-SRC-057-H030` — `## 28. Feature Flag Final Verification`
+- `MGP-SRC-057-H031` — `## 29. Fake / Mock / Demo Data Final Verification`
+- `MGP-SRC-057-H032` — `## 30. Test Mode Cleanup Verification`
+- `MGP-SRC-057-H033` — `## 31. Final Route Smoke Verification`
+- `MGP-SRC-057-H034` — `## 32. Final API Smoke Verification`
+- `MGP-SRC-057-H035` — `## 33. Final Role Matrix Verification`
+- `MGP-SRC-057-H036` — `### Guest`
+- `MGP-SRC-057-H037` — `### Owner`
+- `MGP-SRC-057-H038` — `### Broker`
+- `MGP-SRC-057-H039` — `### Builder`
+- `MGP-SRC-057-H040` — `### Admin/Staff`
+- `MGP-SRC-057-H041` — `### Super Admin`
+- `MGP-SRC-057-H042` — `## 34. Hidden Contact Final Verification`
+- `MGP-SRC-057-H043` — `## 35. Private Sitemap / Robots Final Verification`
+- `MGP-SRC-057-H044` — `## 36. Private Cache Final Verification`
+- `MGP-SRC-057-H045` — `## 37. Security Header Final Verification`
+- `MGP-SRC-057-H046` — `## 38. Build / Type / Lint / Test Final Verification`
+- `MGP-SRC-057-H047` — `## 39. Browser / Device Final Verification`
+- `MGP-SRC-057-H048` — `## 40. Final Guest Journey Verification`
+- `MGP-SRC-057-H049` — `## 41. Final Owner Journey Verification`
+- `MGP-SRC-057-H050` — `## 42. Final Broker Journey Verification`
+- `MGP-SRC-057-H051` — `## 43. Final Builder Journey Verification`
+- `MGP-SRC-057-H052` — `## 44. Final Admin / Staff Journey Verification`
+- `MGP-SRC-057-H053` — `## 45. Final Super Admin Journey Verification`
+- `MGP-SRC-057-H054` — `## 46. Final Payment Journey Verification`
+- `MGP-SRC-057-H055` — `## 47. Final Media Journey Verification`
+- `MGP-SRC-057-H056` — `## 48. Final Lead / CRM / Message Journey Verification`
+- `MGP-SRC-057-H057` — `## 49. Final Ads / Notification Journey Verification`
+- `MGP-SRC-057-H058` — `## 50. Final CMS / SEO / Legal Journey Verification`
+- `MGP-SRC-057-H059` — `## 51. Final Support / Grievance / Privacy Journey Verification`
+- `MGP-SRC-057-H060` — `## 52. Final Security Regression Verification`
+- `MGP-SRC-057-H061` — `## 53. Final Performance Regression Verification`
+- `MGP-SRC-057-H062` — `## 54. Final Rollback Drill Verification`
+- `MGP-SRC-057-H063` — `## 55. Final Backup Drill Verification`
+- `MGP-SRC-057-H064` — `## 56. Final Launch Freeze Package Verification`
+- `MGP-SRC-057-H065` — `## 57. Final Known Limitations Verification`
+- `MGP-SRC-057-H066` — `## 58. Final Launch Blocker Verification`
+- `MGP-SRC-057-H067` — `## 59. Final Signoff Package Verification`
+- `MGP-SRC-057-H068` — `## 60. Super Admin Signoff Verification`
+- `MGP-SRC-057-H069` — `## 61. Documentation Update Verification`
+- `MGP-SRC-057-H070` — `## 62. \`API_PROVIDER_STATUS.md\` Final Verification`
+- `MGP-SRC-057-H071` — `## 63. \`SECURITY_RLS_CHECKLIST.md\` Final Verification`
+- `MGP-SRC-057-H072` — `## 64. \`PERFORMANCE_CHECKLIST.md\` Final Verification`
+- `MGP-SRC-057-H073` — `## 65. \`DEPLOYMENT_ROLLBACK.md\` Final Verification`
+- `MGP-SRC-057-H074` — `## 66. \`FEATURE_REGISTRY.md\` Final Verification`
+- `MGP-SRC-057-H075` — `## 67. \`CHANGELOG.md\` Final Verification`
+- `MGP-SRC-057-H076` — `## 68. \`BUGS_AND_FIXES.md\` Final Verification`
+- `MGP-SRC-057-H077` — `## 69. \`MANUAL_VERIFICATION.md\` Final Entry`
+- `MGP-SRC-057-H078` — `## Prompt 15 Final Verification — Production API Testing And Signoff`
+- `MGP-SRC-057-H079` — `## 70. \`brain.md\` Final Update`
+- `MGP-SRC-057-H080` — `## 71. Final Result Decision Rules`
+- `MGP-SRC-057-H081` — `### \`PRODUCTION_READY_AFTER_SIGNOFF\``
+- `MGP-SRC-057-H082` — `### \`READY_FOR_SUPER_ADMIN_REVIEW\``
+- `MGP-SRC-057-H083` — `### \`PARTIAL_ACCEPTANCE_REQUIRED\``
+- `MGP-SRC-057-H084` — `### \`SETUP_REQUIRED\``
+- `MGP-SRC-057-H085` — `### \`BLOCKED\``
+- `MGP-SRC-057-H086` — `### \`NOT_READY\``
+- `MGP-SRC-057-H087` — `### \`READY_FOR_FINAL_VERIFICATION\``
+- `MGP-SRC-057-H088` — `## 72. Launch Allowed Rules`
+- `MGP-SRC-057-H089` — `## 73. Required Final Response Format`
+- `MGP-SRC-057-H090` — `## 74. If Final Verification Fails`
+- `MGP-SRC-057-H091` — `## 75. If Final Verification Is Partial`
+- `MGP-SRC-057-H092` — `## 76. If Final Verification Passes But Signoff Pending`
+- `MGP-SRC-057-H093` — `## 77. If Super Admin Approves`
+- `MGP-SRC-057-H094` — `## 78. What Not To Do In Final Verification`
+- `MGP-SRC-057-H095` — `## 79. Final Quality Bar`
+- `MGP-SRC-057-H096` — `## 80. Final Rule For Prompt 15 Verification`
+- `MGP-SRC-057-H097` — `## 81. End Of Prompt Pack`
+
+### MGP-SRC-058 — `SECURITY_RLS_CHECKLIST.md` — 130 headings
+
+- `MGP-SRC-058-H001` — `# SECURITY_RLS_CHECKLIST.md`
+- `MGP-SRC-058-H002` — `# My Gujarat Property — Security, RLS, Privacy And Access Control Checklist`
+- `MGP-SRC-058-H003` — `## 1. Purpose`
+- `MGP-SRC-058-H004` — `## 2. Absolute Security Rules`
+- `MGP-SRC-058-H005` — `## 3. Security Status Values`
+- `MGP-SRC-058-H006` — `## 4. Security Severity Values`
+- `MGP-SRC-058-H007` — `## 5. Security Verification Values`
+- `MGP-SRC-058-H008` — `## 6. Required Security Entry Format`
+- `MGP-SRC-058-H009` — `## SECURITY-CHECK-YYYYMMDD-000 — Check Title`
+- `MGP-SRC-058-H010` — `### Status`
+- `MGP-SRC-058-H011` — `### Severity`
+- `MGP-SRC-058-H012` — `### Area`
+- `MGP-SRC-058-H013` — `### Scope`
+- `MGP-SRC-058-H014` — `### Expected Security Behavior`
+- `MGP-SRC-058-H015` — `### Actual Security Behavior`
+- `MGP-SRC-058-H016` — `### Verification Steps`
+- `MGP-SRC-058-H017` — `### Verification Result`
+- `MGP-SRC-058-H018` — `### Evidence`
+- `MGP-SRC-058-H019` — `### Bugs Created`
+- `MGP-SRC-058-H020` — `### Fix / Mitigation`
+- `MGP-SRC-058-H021` — `### Docs Updated`
+- `MGP-SRC-058-H022` — `### Final Status`
+- `MGP-SRC-058-H023` — `## 7. Auth Security Checklist`
+- `MGP-SRC-058-H024` — `### 7.1 Public Auth Rules`
+- `MGP-SRC-058-H025` — `### 7.2 Admin/Staff Auth Rules`
+- `MGP-SRC-058-H026` — `## 8. Role-Based Access Control Checklist`
+- `MGP-SRC-058-H027` — `### 8.1 Role Definitions`
+- `MGP-SRC-058-H028` — `### 8.2 Owner Access Rules`
+- `MGP-SRC-058-H029` — `### 8.3 Broker Access Rules`
+- `MGP-SRC-058-H030` — `### 8.4 Builder Access Rules`
+- `MGP-SRC-058-H031` — `### 8.5 Super Admin Access Rules`
+- `MGP-SRC-058-H032` — `### 8.6 Admin And Staff Access Rules`
+- `MGP-SRC-058-H033` — `## 9. RLS Master Rules`
+- `MGP-SRC-058-H034` — `## 10. Required RLS Test Matrix`
+- `MGP-SRC-058-H035` — `## 11. Expected RLS Coverage By Table/Area`
+- `MGP-SRC-058-H036` — `## 12. Public-Safe View Rules`
+- `MGP-SRC-058-H037` — `## 13. Hidden Contact Privacy Checklist`
+- `MGP-SRC-058-H038` — `### 13.1 Contact Must Not Leak In`
+- `MGP-SRC-058-H039` — `### 13.2 Contact Reveal Rules`
+- `MGP-SRC-058-H040` — `## 14. Private Document Security Checklist`
+- `MGP-SRC-058-H041` — `## 15. Server-Side Authorization Checklist`
+- `MGP-SRC-058-H042` — `## 16. Direct URL Bypass Checklist`
+- `MGP-SRC-058-H043` — `## 17. Payment Security Checklist`
+- `MGP-SRC-058-H044` — `## 18. Provider Secret Security Checklist`
+- `MGP-SRC-058-H045` — `## 19. Upload And Media Security Checklist`
+- `MGP-SRC-058-H046` — `## 20. Admin And Staff Security Checklist`
+- `MGP-SRC-058-H047` — `## 21. Audit Log Checklist`
+- `MGP-SRC-058-H048` — `## 22. Soft Delete, Retention And Hard Delete Checklist`
+- `MGP-SRC-058-H049` — `## 23. Rate Limit And Abuse Protection Checklist`
+- `MGP-SRC-058-H050` — `## 24. Input Validation Checklist`
+- `MGP-SRC-058-H051` — `## 25. Web Security Checklist`
+- `MGP-SRC-058-H052` — `### 25.1 XSS Protection`
+- `MGP-SRC-058-H053` — `### 25.2 CSRF Protection`
+- `MGP-SRC-058-H054` — `### 25.3 SSRF Protection`
+- `MGP-SRC-058-H055` — `### 25.4 Open Redirect Protection`
+- `MGP-SRC-058-H056` — `### 25.5 CORS Checklist`
+- `MGP-SRC-058-H057` — `### 25.6 Security Headers Checklist`
+- `MGP-SRC-058-H058` — `## 26. Logging And Error Safety Checklist`
+- `MGP-SRC-058-H059` — `## 27. SEO And Privacy Security Checklist`
+- `MGP-SRC-058-H060` — `## 28. Consent, Privacy And Legal Security Checklist`
+- `MGP-SRC-058-H061` — `## 29. Fraud, Report And Abuse Checklist`
+- `MGP-SRC-058-H062` — `## 30. Module-Specific Security Checklist`
+- `MGP-SRC-058-H063` — `### 30.1 Property Security`
+- `MGP-SRC-058-H064` — `### 30.2 Project Security`
+- `MGP-SRC-058-H065` — `### 30.3 Requirement Security`
+- `MGP-SRC-058-H066` — `### 30.4 Leads CRM Security`
+- `MGP-SRC-058-H067` — `### 30.5 Messaging Security`
+- `MGP-SRC-058-H068` — `### 30.6 Billing Security`
+- `MGP-SRC-058-H069` — `### 30.7 Ads Security`
+- `MGP-SRC-058-H070` — `### 30.8 CMS/SEO/Legal Security`
+- `MGP-SRC-058-H071` — `## 31. SQL Migration Security Checklist`
+- `MGP-SRC-058-H072` — `## 32. Security Testing Commands / Methods`
+- `MGP-SRC-058-H073` — `### 32.1 Build/Bundle Secret Check`
+- `MGP-SRC-058-H074` — `### 32.2 RLS SQL Tests`
+- `MGP-SRC-058-H075` — `### 32.3 Route/API Tests`
+- `MGP-SRC-058-H076` — `### 32.4 UI Security Tests`
+- `MGP-SRC-058-H077` — `## 33. Security Bug Rules`
+- `MGP-SRC-058-H078` — `## 34. Production Security Final Pass`
+- `MGP-SRC-058-H079` — `### 34.1 Required Final PASS Items`
+- `MGP-SRC-058-H080` — `### 34.2 Allowed Production Exceptions`
+- `MGP-SRC-058-H081` — `## 35. Current Security/RLS Status`
+- `MGP-SRC-058-H082` — `## 36. Current Open Security Risks`
+- `MGP-SRC-058-H083` — `## SECURITY-RISK-20260629-001 — RLS Not Implemented Yet`
+- `MGP-SRC-058-H084` — `### Status`
+- `MGP-SRC-058-H085` — `### Severity`
+- `MGP-SRC-058-H086` — `### Risk`
+- `MGP-SRC-058-H087` — `### Required Action`
+- `MGP-SRC-058-H088` — `### Launch Impact`
+- `MGP-SRC-058-H089` — `## SECURITY-RISK-20260629-002 — Provider Secrets Not Configured Yet`
+- `MGP-SRC-058-H090` — `### Status`
+- `MGP-SRC-058-H091` — `### Severity`
+- `MGP-SRC-058-H092` — `### Risk`
+- `MGP-SRC-058-H093` — `### Required Action`
+- `MGP-SRC-058-H094` — `### Launch Impact`
+- `MGP-SRC-058-H095` — `## SECURITY-RISK-20260629-003 — Payment Webhook Security Not Implemented Yet`
+- `MGP-SRC-058-H096` — `### Status`
+- `MGP-SRC-058-H097` — `### Severity`
+- `MGP-SRC-058-H098` — `### Risk`
+- `MGP-SRC-058-H099` — `### Required Action`
+- `MGP-SRC-058-H100` — `### Launch Impact`
+- `MGP-SRC-058-H101` — `## SECURITY-RISK-20260629-004 — Private Document Storage Not Implemented Yet`
+- `MGP-SRC-058-H102` — `### Status`
+- `MGP-SRC-058-H103` — `### Severity`
+- `MGP-SRC-058-H104` — `### Risk`
+- `MGP-SRC-058-H105` — `### Required Action`
+- `MGP-SRC-058-H106` — `### Launch Impact`
+- `MGP-SRC-058-H107` — `## SECURITY-RISK-20260629-005 — Manual Security Verification Not Run Yet`
+- `MGP-SRC-058-H108` — `### Status`
+- `MGP-SRC-058-H109` — `### Severity`
+- `MGP-SRC-058-H110` — `### Risk`
+- `MGP-SRC-058-H111` — `### Required Action`
+- `MGP-SRC-058-H112` — `### Launch Impact`
+- `MGP-SRC-058-H113` — `## 37. Documentation Generation Progress`
+- `MGP-SRC-058-H114` — `## 38. Security Final Response Rule`
+- `MGP-SRC-058-H115` — `## Security / RLS Result`
+- `MGP-SRC-058-H116` — `## Scope`
+- `MGP-SRC-058-H117` — `## Changed Files`
+- `MGP-SRC-058-H118` — `## SQL / Migration Files`
+- `MGP-SRC-058-H119` — `## RLS Changes`
+- `MGP-SRC-058-H120` — `## Access Tests`
+- `MGP-SRC-058-H121` — `## Privacy Checks`
+- `MGP-SRC-058-H122` — `## Provider / Payment Security`
+- `MGP-SRC-058-H123` — `## Tests Run`
+- `MGP-SRC-058-H124` — `## Manual Verification`
+- `MGP-SRC-058-H125` — `## Bugs Found`
+- `MGP-SRC-058-H126` — `## Docs Updated`
+- `MGP-SRC-058-H127` — `## Pending Issues`
+- `MGP-SRC-058-H128` — `## 39. Security Update Checklist`
+- `MGP-SRC-058-H129` — `## 40. Resume Guide For Future Claude`
+- `MGP-SRC-058-H130` — `## 41. Final Rule`
+
+---
+
+## Appendix B — PDF Phase Coverage Manifest
+
+`MGP-SRC-005` (`Calude Prompt.pdf`) contains the following execution structure, verified from its 20 rendered pages and extracted text:
+
+- Prompt 00 start-project rules;
+- Prompt 01 implementation;
+- Prompt 01 verification instructions, despite the referenced verifier file being absent;
+- Prompt 02 implementation;
+- Prompt 02 verification;
+- Prompt 03 implementation;
+- Prompt 03 verification;
+- Prompt 04 implementation;
+- Prompt 04 verification;
+- Prompt 05 implementation;
+- Prompt 05 verification;
+- Prompt 06 implementation;
+- Prompt 06 verification;
+- Prompt 07 implementation;
+- Prompt 07 verification;
+- Prompt 08 implementation;
+- Prompt 08 verification;
+- Prompt 09 implementation;
+- Prompt 09 verification;
+- Prompt 10 implementation;
+- Prompt 10 verification;
+- Prompt 11 implementation;
+- Prompt 11 verification;
+- Prompt 12 implementation;
+- Prompt 12 verification;
+- Prompt 13 implementation;
+- Prompt 13 verification;
+- Prompt 14 implementation;
+- Prompt 14 verification;
+- Prompt 15 implementation;
+- Prompt 15 verification;
+- final readiness summary and next-step sequencing;
+- recurring requirements to read source files, update control documents, run checks, report honest status and avoid fake PASS;
+- provider/API, security/RLS, media, performance, deployment and production sign-off checks.
+
+The legacy phase sequence is evidence only. The new phase order and all executable wording are generated in File 46 after the regenerated specifications and QA matrices are complete.
+
+---
+
+## Final Status
+
+- **Document:** File 5 of 47
+- **Archive members inventoried:** 58 of 58
+- **Markdown heading manifests included:** 57 of 57
+- **PDFs rendered/inspected:** 1 of 1
+- **Source files without destination mapping:** 0
+- **Known missing concrete source file recorded:** `prompts/01_MANUAL_VERIFICATION_PROJECT_SETUP_BASELINE.md`
+- **Legacy prompts approved for direct execution:** 0
+- **Next file:** `00_CONTROL_AND_SOURCE/05_REQUIREMENT_PRIORITY_CONFLICT_AND_DECISION_RULES.md`
+
+File 5 is complete when its inventory remains unchanged unless a newly supplied source file is added. Any new source must receive a new source ID, hash, treatment, destination mapping and requirement-traceability update.
