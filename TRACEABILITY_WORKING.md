@@ -26,3 +26,18 @@ Working traceability sheet linking phase work to the canonical matrix (`00_CONTR
 | UI vs UX requirements (no old-screenshot authority) | Files 20–28 | P02 | route matrix §D dead-buttons; full UX regen in P04+ | DONE (audit level) |
 | Deliverables: gap register, matrices, plans, risks, graph, tests, rollback | P02 required output | P02 | GAP_REGISTER.md + audit/*.md | DONE |
 | No implementation performed during audit | P02 rule | P02 | git status unchanged in C:\mgpweb | DONE |
+
+## Phase P03 rows
+
+| Item | Canonical ref | Phase | Evidence | Status |
+|---|---|---|---|---|
+| Stack conformance (App Router/React19/strict TS/Tailwind/Supabase/Zod) | File 29 | P03 | package.json + tsconfig + ADR-001 | DONE (preserved) |
+| Folder architecture (app/modules/components/server/lib/config) | File 29 | P03 | src tree + src/modules/README + ADR-002 | DONE |
+| Server-only secrets/providers | MGP-CONST-095 | P03 | "server-only" imports in src/server/*; env.ts server schema | DONE |
+| Composition root (single controlled) | File 31 | P03 | src/server/index.ts + integration tests | DONE |
+| Centralized env validation | File 37 | P03 | src/config/env.ts + tests/unit/env.test.ts | DONE |
+| Deterministic scripts (format/lint/typecheck/unit/integration/e2e/build) | File 37 | P03 | package.json scripts; `check` composite | DONE |
+| Synthetic actor/workspace fixtures | File 40/45 | P03 | tests/fixtures/actors.ts + fixture tests | DONE |
+| Production guards (seed/debug/dev-OTP/mock-provider) | MGP-CONST-050/140 | P03 | src/config/guards.ts + 6 guard unit tests + container prod test | DONE |
+| ADRs for deviations | File 29 | P03 | docs/adr/ADR-001..004 | DONE |
+| No monorepo/microservice complexity | P03 rule | P03 | single Next app retained | DONE |
