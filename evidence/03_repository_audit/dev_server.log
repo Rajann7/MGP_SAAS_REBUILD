@@ -1,0 +1,13 @@
+
+> my-gujarat-property@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.109.225.250:3000
+- Environments: .env.local
+✓ Ready in 3.1s
+
+ GET / 200 in 7.4s (next.js: 2.6s, proxy.ts: 884ms, application-code: 4.0s)
+ GET / 200 in 1406ms (next.js: 10ms, proxy.ts: 34ms, application-code: 1362ms)
+ GET / 200 in 1117ms (next.js: 7ms, proxy.ts: 11ms, application-code: 1100ms)
