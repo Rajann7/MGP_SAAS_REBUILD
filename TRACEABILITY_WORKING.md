@@ -41,3 +41,18 @@ Working traceability sheet linking phase work to the canonical matrix (`00_CONTR
 | Production guards (seed/debug/dev-OTP/mock-provider) | MGP-CONST-050/140 | P03 | src/config/guards.ts + 6 guard unit tests + container prod test | DONE |
 | ADRs for deviations | File 29 | P03 | docs/adr/ADR-001..004 | DONE |
 | No monorepo/microservice complexity | P03 rule | P03 | single Next app retained | DONE |
+
+## Phase P04 rows
+
+| Item | Canonical ref | Phase | Evidence | Status |
+|---|---|---|---|---|
+| 9 canonical actor types | File 09 | P04 | src/modules/identity/actors.ts + 8 actor tests | DONE |
+| Broker Agent invitation-only | Files 09/30 | P04 | migration 20260712100000 (invitation_id NOT NULL, security-definer accept fn) + resolver test | DONE (schema pending db push) |
+| Public registration = owner/broker/builder only | MGP-CONST-032 | P04 | RegisterRoleForm verified + isRegistrableRole tests | DONE |
+| Remove Buyer/Tenant/BuilderAgent/Agency/Groups | REM-005/009 | P04 | builder-agents route deleted; audit: no role-level support remains; quarantine on legacy roles | DONE |
+| Canonical hosts (public/broker./builder./account.) | Files 09/21 | P04 | src/config/hosts.ts + proxy + 5 host tests + live curl evidence | DONE |
+| /account/* distinct from account.<domain> | MGP-IA rule | P04 | host test "customer /account stays public" | DONE |
+| Wrong-host redirect + forbidden/restricted/gone/unavailable | MGP-CONST-027 | P04 | live curls: 4×200, 4×307 correct targets | DONE |
+| Static/runtime/test guards vs removed features | REM-001..009 / MGP-CONST-137 | P04 | scan-legacy.mjs in `check`; removed-features.ts; 15 tests | DONE |
+| Legacy scan scripts | P04 rule 9 | P04 | scripts/scan-legacy.mjs (baseline shrink-only policy) | DONE |
+| Quarantine, no guessed conversions | P04 rule 10 | P04 | legacy_quarantine.records migration + LEGACY_QUARANTINE throws | DONE |

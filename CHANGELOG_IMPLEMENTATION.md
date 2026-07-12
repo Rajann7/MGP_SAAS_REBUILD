@@ -37,3 +37,15 @@ Branch `phase/03-foundations` in C:\mgpweb (base: development@3fbe734).
 - **ADRs:** 001 Next 16 retained · 002 incremental modules · 003 test stack · 004 env+guards (existing inline OTP guards retained until P05 port migration).
 - **Packages added (justified):** vitest, @playwright/test (devDeps only).
 - **Results:** format:check ✅, lint ✅ 0 warnings, typecheck ✅, unit 12/12 ✅, integration 6/6 ✅, build → evidence/03_repository_audit/p03_build.log.
+
+## 2026-07-12 — Phase 4 (P04) canonical roles, hosts, legacy guards
+
+Branch `phase/04-roles-hosts-guards` in C:\mgpweb (base: development@cedc808).
+
+- **Actor model** `src/modules/identity/actors.ts`: 9 canonical types (guest, authenticated_account, owner/broker/builder principals, broker_agent, internal_staff, super_admin, service_principal); Broker Agent resolvable ONLY via invitation-backed membership; legacy roles (buyer/tenant/builder_agent/agency/groups) throw LEGACY_QUARANTINE — never auto-converted. Registration already limited to owner/broker/builder (verified).
+- **Removed:** `/dashboard/builder/agents` route + "Agents / Team" nav (REM-005); disabled "Site Visits" nav entries (REM-003 UI). Audited buyer/tenant/agency: only GST invoice terminology, copy text and broker business-name column remain — no role-level support.
+- **Hosts** `src/config/hosts.ts` + proxy middleware: broker./builder./account. subdomains, wrong-host 307 redirection, subdomain-root workspace entry redirects, customer /account/* kept on public host, no dynamic tenant subdomains. Live-verified with Host-header curls.
+- **SYS states:** /forbidden, /restricted, /gone, /unavailable pages (all HTTP 200, no dead ends); existing reason-aware /unauthorized preserved until P09 reference migration.
+- **Migration** `20260712100000_broker_memberships_and_legacy_quarantine.sql`: broker_agent_invitations + broker_team_members (invitation_id NOT NULL; membership writes only via security-definer mgp_accept_broker_invitation), legacy_quarantine.records (RLS-locked, verbatim payload parking; no ownership guessing). **Not yet applied — db push awaits user approval.**
+- **Guards:** `scripts/scan-legacy.mjs` (static; 61 baselined pending-cleanup hits, fails on NEW occurrences; wired into `npm run check`), `src/config/removed-features.ts` (runtime channel/feature guards), 15 new unit tests (27 total).
+- **Results:** `npm run check` exit 0 (format/lint/tsc/scan/unit/integration), live host+SYS verification recorded, build → evidence/03_repository_audit/p04_build.log.

@@ -6,8 +6,14 @@
 - Local:         http://localhost:3000
 - Network:       http://10.109.225.250:3000
 - Environments: .env.local
-✓ Ready in 3.1s
+✓ Ready in 9.5s
+○ Compiling proxy ...
 
- GET / 200 in 7.4s (next.js: 2.6s, proxy.ts: 884ms, application-code: 4.0s)
- GET / 200 in 1406ms (next.js: 10ms, proxy.ts: 34ms, application-code: 1362ms)
- GET / 200 in 1117ms (next.js: 7ms, proxy.ts: 11ms, application-code: 1100ms)
+ GET / 200 in 6.0s (next.js: 2.1s, proxy.ts: 25ms, application-code: 4.0s)
+✓ Compiled in 692ms
+ GET /pricing 200 in 2.3s (next.js: 455ms, proxy.ts: 354ms, application-code: 1515ms)
+○ Compiling /forbidden ...
+ GET /forbidden 200 in 3.9s (next.js: 3.7s, proxy.ts: 26ms, application-code: 172ms)
+ GET /restricted 200 in 2.2s (next.js: 2.0s, proxy.ts: 14ms, application-code: 115ms)
+ GET /gone 200 in 2.2s (next.js: 2.1s, proxy.ts: 15ms, application-code: 148ms)
+ GET /unavailable 200 in 2.2s (next.js: 2.1s, proxy.ts: 14ms, application-code: 108ms)
