@@ -9,7 +9,7 @@ Canonical authority: `00_CONTROL_AND_SOURCE/01_PROJECT_CONSTITUTION_AND_NON_NEGO
 |---|---|---|---|---|
 | P01 | Repository audit, baseline, working files, skill review | PASSED | VP-P01 PASSED 2026-07-12 (independent re-run: format/lint/tsc/build all exit 0; git-safety, secret-scan, server-health verified — see EV-VP01-001..004) | Completed 2026-07-12 |
 | P02 | Deep repository audit + gap register + implementation plan | PASSED | VP-P02 PASSED 2026-07-12 (deliverables verified; claims spot-checked against repo+canon: builder-agents page, site_visits, contact_reveal_events, /compare all confirmed present; 217-route TSV exact; no /messages in canon; app repo untouched — 117 dirty files unchanged, no session-added files; server HTTP 200) | Completed 2026-07-12 |
-| P03 | Repository architecture + test foundation | IMPLEMENTED | VP-P03 pending | 2026-07-12 — branch phase/03-foundations in C:\mgpweb; env validation, guards, ports+composition root, vitest+playwright, fixtures, ADR-001..004; 18 tests green |
+| P03 | Repository architecture + test foundation | PASSED | VP-P03 PASSED 2026-07-12 (clean npm ci; all checks green after reinstall; bundle secret scan 0 hits; no dup clients; 0 ts-ignore/as-any; no seed/reset; boundaries enforced; server restarted for npm ci per MGP-CONST-131 and re-verified HTTP 200) | 2026-07-12 — branch phase/03-foundations in C:\mgpweb; env validation, guards, ports+composition root, vitest+playwright, fixtures, ADR-001..004; 18 tests green |
 | P04–P17 | See File 07 §6 phase registry | NOT_STARTED | — | Blocked until P03 verification PASSED. Note: schema/legacy-removal migrations from audit plan were NOT in this P03 prompt scope — they follow in their owning phases (DEC-012 still open) |
 
 ## Application Repository Record (P01)

@@ -1,0 +1,112 @@
+
+> my-gujarat-property@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 42s
+  Running TypeScript ...
+  Finished TypeScript in 27.1s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/40) ...
+  Generating static pages using 3 workers (10/40) 
+  Generating static pages using 3 workers (20/40) 
+  Generating static pages using 3 workers (30/40) 
+✓ Generating static pages using 3 workers (40/40) in 1459ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ○ /_not-found
+├ ƒ /admin
+├ ƒ /admin/audit
+├ ƒ /admin/billing
+├ ƒ /admin/cms
+├ ○ /admin/invite
+├ ƒ /admin/leads
+├ ○ /admin/login
+├ ƒ /admin/moderation
+├ ƒ /admin/moderation/projects
+├ ƒ /admin/moderation/properties
+├ ƒ /admin/moderation/requirements
+├ ƒ /admin/providers
+├ ƒ /admin/settings
+├ ƒ /admin/staff
+├ ƒ /admin/staff/[id]
+├ ○ /admin/staff/invites
+├ ƒ /admin/support
+├ ƒ /admin/users
+├ ƒ /admin/users/[id]
+├ ƒ /admin/verification
+├ ƒ /api/webhooks/razorpay
+├ ƒ /auth/callback
+├ ƒ /broker/[slug]
+├ ƒ /builder/[slug]
+├ ƒ /compare
+├ ƒ /dashboard
+├ ƒ /dashboard/billing/gst
+├ ƒ /dashboard/broker
+├ ƒ /dashboard/broker/billing
+├ ƒ /dashboard/broker/leads
+├ ƒ /dashboard/broker/notifications
+├ ƒ /dashboard/broker/properties
+├ ƒ /dashboard/broker/properties/[id]/edit
+├ ƒ /dashboard/broker/properties/new
+├ ƒ /dashboard/broker/proposals
+├ ƒ /dashboard/broker/public-profile
+├ ƒ /dashboard/broker/requirements
+├ ƒ /dashboard/broker/requirements/[id]/edit
+├ ƒ /dashboard/broker/requirements/new
+├ ƒ /dashboard/broker/saved
+├ ƒ /dashboard/broker/verification
+├ ƒ /dashboard/builder
+├ ƒ /dashboard/builder/ads
+├ ƒ /dashboard/builder/agents
+├ ƒ /dashboard/builder/billing
+├ ƒ /dashboard/builder/leads
+├ ƒ /dashboard/builder/notifications
+├ ƒ /dashboard/builder/projects
+├ ƒ /dashboard/builder/projects/[id]/edit
+├ ƒ /dashboard/builder/projects/[id]/units
+├ ƒ /dashboard/builder/projects/new
+├ ƒ /dashboard/builder/public-profile
+├ ƒ /dashboard/builder/requirements
+├ ƒ /dashboard/builder/verification
+├ ƒ /dashboard/leads/[id]
+├ ƒ /dashboard/messages
+├ ƒ /dashboard/owner
+├ ƒ /dashboard/owner/billing
+├ ƒ /dashboard/owner/leads
+├ ƒ /dashboard/owner/notifications
+├ ƒ /dashboard/owner/properties
+├ ƒ /dashboard/owner/properties/[id]/edit
+├ ƒ /dashboard/owner/properties/new
+├ ƒ /dashboard/owner/requirements
+├ ƒ /dashboard/owner/requirements/[id]/edit
+├ ƒ /dashboard/owner/requirements/[id]/proposals
+├ ƒ /dashboard/owner/requirements/new
+├ ƒ /dashboard/owner/saved
+├ ƒ /dashboard/owner/verification
+├ ƒ /legal/privacy
+├ ƒ /legal/refund
+├ ƒ /legal/terms
+├ ○ /login
+├ ƒ /owner/[id]
+├ ƒ /pricing
+├ ƒ /profile
+├ ƒ /project/[slug]
+├ ƒ /property/[slug]
+├ ○ /robots.txt
+├ ƒ /search
+├ ƒ /sitemap.xml
+├ ƒ /support
+└ ƒ /unauthorized
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
